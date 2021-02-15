@@ -1,1 +1,1 @@
-# segelcamp
+# Segelcamp Verwaltungs- und Anmeldewebseite - SLS
