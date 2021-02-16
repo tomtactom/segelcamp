@@ -1,9 +1,21 @@
 <!DOCTYPE HTML>
 <html lang="de">
 	<head>
+        <meta charset="utf-8" />
 		<title>Segelcamp 2021 | Seglergemeinschaft Lohheider See e.V.</title>
-		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="language" content="de">
+        <meta name="keywords" content="Segelcamp, Sommercamp, Ferienangebot, Segeln, Lohheider See">
+        <meta name="audience" content="Kinder, Eltern, Familien, Segler">
+        <meta name="page-type" content="Formular">
+        <meta name="page-topic" content="Ferienfreizeit">
+        <meta name="description" content="Melde dein Kind jetzt für das Segelcamp 2021 an und erfahre weitere Informationen über dieses. Wir freuen uns auf Euch.">
+        <meta name="robots" content="index, follow">
+        <meta http-equiv="language" content="german, de">
+        <meta name="author" content="Tom Aschmann">
+        <meta name="copyright" content="Tom Aschmann">
+        <meta name="publisher" content="Seglergemeinschaft Lohheider See e.V.">
+        <meta name="date" content="2021-02-15">
         <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
         <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
@@ -74,22 +86,21 @@
                                         <form method="post" action="#">
 														<div class="row gtr-uniform">
 															<div class="col-6 col-12-xsmall">
-																<input type="text" name="name_child" id="name_child" value="" placeholder="Name des Kindes" required />
+																<input type="text" name="name_child" id="name_child" value="" placeholder="Vor- & Nachname des Kindes" pattern="[a-zA-ZÁÀȦÂÄǞǍĂĀÃÅǺǼǢĆĊĈČĎḌḐḒÉÈĖÊËĚĔĒẼE̊ẸǴĠĜǦĞG̃ĢĤḤáàȧâäǟǎăāãåǻǽǣćċĉčďḍḑḓéèėêëěĕēẽe̊ẹǵġĝǧğg̃ģĥḥÍÌİÎÏǏĬĪĨỊĴĶǨĹĻĽĿḼM̂M̄ʼNŃN̂ṄN̈ŇN̄ÑŅṊÓÒȮȰÔÖȪǑŎŌÕȬŐỌǾƠíìiîïǐĭīĩịĵķǩĺļľŀḽm̂m̄ŉńn̂ṅn̈ňn̄ñņṋóòôȯȱöȫǒŏōõȭőọǿơP̄ŔŘŖŚŜṠŠȘṢŤȚṬṰÚÙÛÜǓŬŪŨŰŮỤẂẀŴẄÝỲŶŸȲỸŹŻŽẒǮp̄ŕřŗśŝṡšşṣťțṭṱúùûüǔŭūũűůụẃẁŵẅýỳŷÿȳỹźżžẓǯßœŒçÇ \-]*" title="Bitte gebe den gültigen Vor und Nachnamen des Kindes an." minlenght="2" maxlength="32" required />
 															</div>
 															<div class="col-6 col-12-xsmall">
                                                                 Geburtsdatum
-																<input type="date" name="birthdate" id="birthdate" value="" placeholder="Geburtsdatum" min="" max="" required />
+																<input type="date" name="birthdate" id="birthdate" value="" placeholder="Geburtsdatum" min="2009-08-01" max="2014-06-01" required />
 															</div>
                                                             <div class="col-6 col-12-xsmall">
-																<input type="text" name="allergy" id="allergy" value="" placeholder="Allergien / Unverträglichkeiten" />
+																<input type="text" name="allergy" id="allergy" value="" placeholder="Allergien / Unverträglichkeiten" minlength="2" maxlength="255" />
 															</div>
 															<div class="col-6 col-12-xsmall">
-																<input type="email" name="medication" id="medication" value="" placeholder="Vorerkrankungen / Medikamente" />
+																<input type="email" name="medication" id="medication" value="" placeholder="Vorerkrankungen / Medikamente" minlength="2" maxlength="255" />
 															</div>
                                                             <div class="col-6 col-12-xsmall">
                                                                 Schwimmabzeichen
 																<select name="swimmingbadge" id="swimmingbadge" required>
-                                                                    <option value=""></option>
 																	<option value="1">Keins und kann nicht schwimmen</option>
                                                                     <option value="2">Keins aber kann schwimmen</option>
 																	<option value="3">Seepferdchen</option>
@@ -101,7 +112,6 @@
 															<div class="col-6 col-12-xsmall">
 																Segelerfahrung
 																<select name="sailingexperience" id="sailingexperience" required>
-                                                                    <option value=""></option>
 																	<option value="1">Keine</option>
                                                                     <option value="2">Auf Boot mitgefahren</option>
 																	<option value="3">Schonmal selbst gesegelt</option>
@@ -113,7 +123,6 @@
                                                             <div class="col-6 col-12-xsmall">
                                                                 T-Shirt Größe
 																<select name="clothingsize" id="clothingsize" required>
-                                                                    <option value=""></option>
 																	<option value="1">122</option>
                                                                     <option value="2">128</option>
 																	<option value="3">134</option>
@@ -133,36 +142,36 @@
                                                             </div>
                                                             <!-- Erstes Elternteil -->
                                                             <div class="col-6 col-12-xsmall">
-                                                                <input type="text" name="firstname_parent1" id="firstname_parent1" value="" placeholder="Vorname" required />
-                                                                <input type="text" name="lastname_parent1" id="lastname_parent1" value="" placeholder="Nachname" required />
-                                                                <input type="email" name="email_parent1" id="email_parent1" value="" placeholder="E-Mail-Adresse" required />
-                                                                <input type="tel" name="mobilenumber_parent1" id="mobilenumber_parent1" value="" placeholder="Handynummer" required />
-                                                                <input type="tel" name="phonenumber_parent1" id="phonenumber_parent1" value="" placeholder="Telefonnummer (Festnetz)" />
+                                                                <input type="text" name="firstname_parent1" id="firstname_parent1" value="" placeholder="Vorname" pattern="[a-zA-ZÁÀȦÂÄǞǍĂĀÃÅǺǼǢĆĊĈČĎḌḐḒÉÈĖÊËĚĔĒẼE̊ẸǴĠĜǦĞG̃ĢĤḤáàȧâäǟǎăāãåǻǽǣćċĉčďḍḑḓéèėêëěĕēẽe̊ẹǵġĝǧğg̃ģĥḥÍÌİÎÏǏĬĪĨỊĴĶǨĹĻĽĿḼM̂M̄ʼNŃN̂ṄN̈ŇN̄ÑŅṊÓÒȮȰÔÖȪǑŎŌÕȬŐỌǾƠíìiîïǐĭīĩịĵķǩĺļľŀḽm̂m̄ŉńn̂ṅn̈ňn̄ñņṋóòôȯȱöȫǒŏōõȭőọǿơP̄ŔŘŖŚŜṠŠȘṢŤȚṬṰÚÙÛÜǓŬŪŨŰŮỤẂẀŴẄÝỲŶŸȲỸŹŻŽẒǮp̄ŕřŗśŝṡšşṣťțṭṱúùûüǔŭūũűůụẃẁŵẅýỳŷÿȳỹźżžẓǯßœŒçÇ \-]*" title="Bitte gebe den gültigen Vor und Nachnamen des Kindes an." minlenght="2" maxlength="32" required />
+                                                                <input type="text" name="lastname_parent1" id="lastname_parent1" value="" placeholder="Nachname" pattern="[a-zA-ZÁÀȦÂÄǞǍĂĀÃÅǺǼǢĆĊĈČĎḌḐḒÉÈĖÊËĚĔĒẼE̊ẸǴĠĜǦĞG̃ĢĤḤáàȧâäǟǎăāãåǻǽǣćċĉčďḍḑḓéèėêëěĕēẽe̊ẹǵġĝǧğg̃ģĥḥÍÌİÎÏǏĬĪĨỊĴĶǨĹĻĽĿḼM̂M̄ʼNŃN̂ṄN̈ŇN̄ÑŅṊÓÒȮȰÔÖȪǑŎŌÕȬŐỌǾƠíìiîïǐĭīĩịĵķǩĺļľŀḽm̂m̄ŉńn̂ṅn̈ňn̄ñņṋóòôȯȱöȫǒŏōõȭőọǿơP̄ŔŘŖŚŜṠŠȘṢŤȚṬṰÚÙÛÜǓŬŪŨŰŮỤẂẀŴẄÝỲŶŸȲỸŹŻŽẒǮp̄ŕřŗśŝṡšşṣťțṭṱúùûüǔŭūũűůụẃẁŵẅýỳŷÿȳỹźżžẓǯßœŒçÇ \-]*" title="Bitte gebe den gültigen Vor und Nachnamen des Kindes an." minlenght="2" maxlength="32" required />
+                                                                <input type="email" name="email_parent1" id="email_parent1" value="" placeholder="E-Mail-Adresse" required minlength="8" maxlength="64" />
+                                                                <input type="tel" name="mobilenumber_parent1" id="mobilenumber_parent1" value="" placeholder="Handynummer" pattern="(((\+49|\(\+49\)|\(0049\)|0049) ?)|0)[0-9 \-\/]*" minlenght="8" maxlength="15" title="Bitte gebe eine gültige Handynummer ein" required />
+                                                                <input type="tel" name="phonenumber_parent1" id="phonenumber_parent1" value="" placeholder="Telefonnummer (Festnetz)" pattern="(((\+49|\(\+49\)|\(0049\)|0049) ?)|0)[0-9 \-\/]*" minlenght="8" maxlength="15" title="Bitte gebe eine gültige Telefonnummer ein" />
                                                                 <input type="text" name="town_parent1" id="town_parent1" value="" placeholder="PLZ, Ort" required />
-                                                                <input type="text" name="street_parent1" id="street_parent1" value="" placeholder="Straße, Hausnummer" required />
+                                                                <input type="text" name="street_parent1" id="street_parent1" value="" placeholder="Straße, Hausnummer" minlength="4" maxlength="64" required />
                                                             </div>
                                                             
                                                             <!-- Zweites Elternteil -->
                                                             <div class="col-6 col-12-xsmall">
-                                                                <input type="text" name="firstname_parent2" id="firstname_parent2" value="" placeholder="Vorname" />
+                                                                <input type="text" name="firstname_parent2" id="firstname_parent2" value="" placeholder="Vorname" pattern="[a-zA-ZÁÀȦÂÄǞǍĂĀÃÅǺǼǢĆĊĈČĎḌḐḒÉÈĖÊËĚĔĒẼE̊ẸǴĠĜǦĞG̃ĢĤḤáàȧâäǟǎăāãåǻǽǣćċĉčďḍḑḓéèėêëěĕēẽe̊ẹǵġĝǧğg̃ģĥḥÍÌİÎÏǏĬĪĨỊĴĶǨĹĻĽĿḼM̂M̄ʼNŃN̂ṄN̈ŇN̄ÑŅṊÓÒȮȰÔÖȪǑŎŌÕȬŐỌǾƠíìiîïǐĭīĩịĵķǩĺļľŀḽm̂m̄ŉńn̂ṅn̈ňn̄ñņṋóòôȯȱöȫǒŏōõȭőọǿơP̄ŔŘŖŚŜṠŠȘṢŤȚṬṰÚÙÛÜǓŬŪŨŰŮỤẂẀŴẄÝỲŶŸȲỸŹŻŽẒǮp̄ŕřŗśŝṡšşṣťțṭṱúùûüǔŭūũűůụẃẁŵẅýỳŷÿȳỹźżžẓǯßœŒçÇ \-]*" title="Bitte gebe den gültigen Vor und Nachnamen des Kindes an." minlenght="2" maxlength="32" />
                                                                 <details style="cursor: pointer;">
                                                                     <summary>Nachname abweichend</summary>
-                                                                    <input type="text" name="lastname_parent2" id="lastname_parent2" value="" placeholder="Nachname" />
+                                                                    <input type="text" name="lastname_parent2" id="lastname_parent2" value="" placeholder="Nachname" pattern="[a-zA-ZÁÀȦÂÄǞǍĂĀÃÅǺǼǢĆĊĈČĎḌḐḒÉÈĖÊËĚĔĒẼE̊ẸǴĠĜǦĞG̃ĢĤḤáàȧâäǟǎăāãåǻǽǣćċĉčďḍḑḓéèėêëěĕēẽe̊ẹǵġĝǧğg̃ģĥḥÍÌİÎÏǏĬĪĨỊĴĶǨĹĻĽĿḼM̂M̄ʼNŃN̂ṄN̈ŇN̄ÑŅṊÓÒȮȰÔÖȪǑŎŌÕȬŐỌǾƠíìiîïǐĭīĩịĵķǩĺļľŀḽm̂m̄ŉńn̂ṅn̈ňn̄ñņṋóòôȯȱöȫǒŏōõȭőọǿơP̄ŔŘŖŚŜṠŠȘṢŤȚṬṰÚÙÛÜǓŬŪŨŰŮỤẂẀŴẄÝỲŶŸȲỸŹŻŽẒǮp̄ŕřŗśŝṡšşṣťțṭṱúùûüǔŭūũűůụẃẁŵẅýỳŷÿȳỹźżžẓǯßœŒçÇ \-]*" title="Bitte gebe den gültigen Vor und Nachnamen des Kindes an." minlenght="2" maxlength="32" />
                                                                 </details>
-                                                                <input type="email" name="email_parent2" id="email_parent2" value="" placeholder="E-Mail-Adresse" />
-                                                                <input type="tel" name="mobilenumber_parent2" id="mobilenumber_parent2" value="" placeholder="Handynummer" />
+                                                                <input type="email" name="email_parent2" id="email_parent2" value="" placeholder="E-Mail-Adresse" minlength="8" maxlength="64" />
+                                                                <input type="tel" name="mobilenumber_parent2" id="mobilenumber_parent2" value="" placeholder="Handynummer" pattern="(((\+49|\(\+49\)|\(0049\)|0049) ?)|0)[0-9 \-\/]*" minlenght="8" maxlength="15" title="Bitte gebe eine gültige Handynummer ein" />
                                                                 <details style="cursor: pointer;">
                                                                     <summary>Festnetz abweichend</summary>
-                                                                    <input type="tel" name="phonenumber_parent2" id="phonenumber_parent2" value="" placeholder="Telefonnummer (Festnetz)" />
+                                                                    <input type="tel" name="phonenumber_parent2" id="phonenumber_parent2" value="" placeholder="Telefonnummer (Festnetz)" pattern="(((\+49|\(\+49\)|\(0049\)|0049) ?)|0)[0-9 \-\/]*" minlenght="8" maxlength="15" title="Bitte gebe eine gültige Telefonnummer ein" />
                                                                 </details>
                                                                 <details style="cursor: pointer;">
                                                                     <summary>Adresse abweichend</summary>
                                                                     <input type="text" name="town_parent2" id="town_parent2" value="" placeholder="PLZ, Ort" />
-                                                                    <input type="text" name="street_parent2" id="street_parent2" value="" placeholder="Straße, Hausnummer" />
+                                                                    <input type="text" name="street_parent2" id="street_parent2" value="" placeholder="Straße, Hausnummer" minlength="4" maxlength="64" />
                                                                 </details>
                                                             </div>
                                                             <div class="col-12">
-																<textarea name="other" id="other" placeholder="Sonstiges" rows="5"></textarea>
+																<textarea name="other" id="other" placeholder="Sonstiges" rows="5" minlength="3" maxlength="1024"></textarea>
 															</div>
                                                             <div class="col-12">
                                                                 <input type="checkbox" id="disclaimer" name="disclaimer" required>
@@ -180,10 +189,10 @@
 																<label for="coronasymptoms">Ich bestätige, dass wenn mein Kind innerhalb 14 Tage vor und/oder während dem Segelcamp Corona-Symptome (Husten, Fieber (37,9+ °C), Schnupfen, Störung des Geruchs- und/oder Geschmackssinns) hat, es nur mit einem negativen PCR-Test an dem Camp teilnehmen kann. Sollte kein PCR-Test vorliegen oder dieser positiv sein, kann das Geld leider nicht erstattet werden. Wenn das Segelcamp aufgrund der <abbr title="Coronaschutzverordnung: Verordnung zum Schutz vor Neuinfizierungen mit dem Coronavirus SARS-CoV-2">CoronaSchVO</abbr> ausfallen muss, wird das Geld erstattet.</label>
                                                                 
                                                                 <input type="checkbox" id="whatsapp" name="whatsapp">
-																<label for="whatsapp">Ich bin damit einverstanden, dass die oben angegebenen Telefonnummern und vollen Namen in eine WhatsApp-Gruppe hinzugefügt werden und die Kommunikation, auch über personenbezogene Daten per WhatsApp stattfinden darf. Ich erkläre mich damit einverstanden die geteilten personenbezogenen Daten der anderen nicht weiterzugeben. Die WhatsApp-Gruppe nutzen wir um alle Eltern und Erziehungsberechtigten auf dem laufenden zu halten. Diese Einwilligung ist freiwillig und kann jederzeit widerrufen werden, indem die WhatsApp-Gruppe verlassen wird.</label>
+                                                                <label for="whatsapp">Ich bin damit einverstanden, dass die oben angegebenen Telefonnummern und vollen Namen in eine WhatsApp-Gruppe hinzugefügt werden und die Kommunikation, auch über personenbezogene Daten, per WhatsApp stattfinden darf. Ich erkläre mich damit einverstanden die geteilten personenbezogenen Daten der anderen nicht weiterzugeben. Die WhatsApp-Gruppe nutzen wir um alle Eltern und Erziehungsberechtigten auf dem laufenden zu halten. <i>Diese Einwilligung ist freiwillig und kann jederzeit widerrufen werden, indem die WhatsApp-Gruppe verlassen wird.</i></label>
                                                                 
                                                                 <input type="checkbox" id="publishphotos" name="publishphotos">
-                                                                <label for="publishphotos">Ich bin damit einverstanden, dass Fotografien und der Name meines Kindes, im Zusammenhang des Segelcamps in der WhatsApp Gruppe mit allen teilnehmenden Eltern, auf der Homepage (<a href="https://lohheider-see.de" target="_blank">lohheider-see.de</a>) und auf Instagram (<a href="https://www.instagram.com/sls_jugend" target="_blank">@sls_jugend</a>) veröffentlicht werden dürfen. Diese Einwilligung ist freiwillig und kann jederzeit widerrufen werden.</label>
+                                                                <label for="publishphotos">Ich bin damit einverstanden, dass Fotografien und der Name meines Kindes, im Zusammenhang des Segelcamps in der WhatsApp Gruppe mit allen teilnehmenden Eltern, auf der Homepage (<a href="https://lohheider-see.de" target="_blank">lohheider-see.de</a>) und auf Instagram (<a href="https://www.instagram.com/sls_jugend" target="_blank">@sls_jugend</a>) veröffentlicht werden dürfen. <i>Diese Einwilligung ist freiwillig und kann jederzeit widerrufen werden.</i></label>
                                                             </div>
                                                             
                                                             <div class="col-12">
@@ -207,7 +216,7 @@
 											<span class="icon solid fa-paper-plane"></span>
 											<div class="content">
 												<h3>Gute Kommunikation</h3>
-												<p>Nicht nur Spaß, sondern auch Erfahrung bleibt an den Kindern hängen. Wir halten euch während des gesamten Camps auf dem laufenden. Sollte die  <abbr title="Coronaschutzverordnung: Verordnung zum Schutz vor Neuinfizierungen mit dem Coronavirus SARS-CoV-2">CoronaSchVO</abbr> dies zulassen, könnt ihr am letzen Tag euren Kindern bei ihren Segelfortschritten zusehen. Das gemeinsame grillen muss leider ausfallen. Nach dem Camü besteht weiterhin die Möglichkeit, einmal die Woche am Segeltraining teilzunehmen.</p>
+												<p>Nicht nur Spaß, sondern auch Erfahrung bleibt an den Kindern hängen. Wir halten euch während des gesamten Camps auf dem laufenden. Sollte die  <abbr title="Coronaschutzverordnung: Verordnung zum Schutz vor Neuinfizierungen mit dem Coronavirus SARS-CoV-2">CoronaSchVO</abbr> dies zulassen, könnt ihr am letzen Tag euren Kindern bei ihren Segelfortschritten zusehen. Das gemeinsame grillen muss leider ausfallen. Nach dem Camp besteht weiterhin die Möglichkeit, einmal die Woche am Segeltraining teilzunehmen.</p>
 											</div>
 										</article>
 										<article>
