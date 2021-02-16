@@ -3,8 +3,6 @@
 
 ![](https://repository-images.githubusercontent.com/339183906/232ce380-7049-11eb-86fe-c897b2c37710)
 
-In ein bis zwei Absätze über das Produkt erzählen und erklären wie es funktioniert.
-
 ## Voraussetzungen
 * Um die Webseite als Besucher zu benutzen benötigen Sie keine weiteren Kenntnisse. Für die Anmeldung wird lediglich eine E-Mail-Adresse und eine Handynummer benötigt. Außerdem muss ein Wohnsitz in Deutschland vorhanden sein.
 * Deutsch Kenntnisse, da das gesamte System auf Deutsch läuft. _(Knowledge of German, as the entire system runs in German.)_
