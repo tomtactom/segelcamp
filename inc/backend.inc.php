@@ -1,5 +1,5 @@
 <?php
-  if(isset($_POST['sendform'])) {
+/*  if(isset($_POST['sendform'])) {
     if(empty($_POST['name_child']) || empty($_POST['birthdate']) || empty($_POST['swimmingbadge']) || empty($_POST['sailingexperience']) || empty($_POST['clothingsize']) || empty($_POST['firstname_parent1']) || empty($_POST['lastname_parent1']) || empty($_POST['email_parent1']) || empty($_POST['mobilenumber_parent1']) || empty($_POST['town_parent1']) || empty($_POST['street_parent1']) || empty($_POST['housenumber_parent1']) || empty($_POST['disclaimer']) || empty($_POST['correctinformation']) || empty($_POST['coronasymptoms'])) {
       $msg = "Bitte achten Sie darauf alle Pflichtfelder, welche mit einem * gekennzeichnet sind auszuwählen und auszufüllen.";
       $error = true;
