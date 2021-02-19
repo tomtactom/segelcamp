@@ -4,12 +4,13 @@ error_reporting(-1);
 # Konfigurationsdaten - Werden noch in eine andere Datei verlegt.
 $min_birthday = '2009-08-01';
 $max_birthday = '2014-06-01';
+/*
 $db_host = 'localhost';
 $db_name = '';
 $db_user = '';
 $db_password = '';
 $pdo = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_password);
-
+*/
 
 if(isset($_POST['sendform'])) {
     $name_child = ucfirst(trim($_POST['name_child']));
