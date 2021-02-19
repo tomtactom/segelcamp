@@ -1,4 +1,6 @@
 <?php
+error_reporting(-1);
+
 # Konfigurationsdaten - Werden noch in eine andere Datei verlegt.
 $min_birthday = '2009-08-01';
 $max_birthday = '2014-06-01';
