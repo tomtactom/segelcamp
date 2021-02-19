@@ -1,12 +1,333 @@
 <?php
-/*  if(isset($_POST['sendform'])) {
-    if(empty($_POST['name_child']) || empty($_POST['birthdate']) || empty($_POST['swimmingbadge']) || empty($_POST['sailingexperience']) || empty($_POST['clothingsize']) || empty($_POST['firstname_parent1']) || empty($_POST['lastname_parent1']) || empty($_POST['email_parent1']) || empty($_POST['mobilenumber_parent1']) || empty($_POST['town_parent1']) || empty($_POST['street_parent1']) || empty($_POST['housenumber_parent1']) || empty($_POST['disclaimer']) || empty($_POST['correctinformation']) || empty($_POST['coronasymptoms'])) {
+# Konfigurationsdaten - Werden noch in eine andere Datei verlegt.
+$min_birthday = '2009-08-01';
+$max_birthday = '2014-06-01';
+$db_host = 'localhost';
+$db_name = '';
+$db_user = '';
+$db_password = '';
+$pdo = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_password);
+
+
+if(isset($_POST['sendform'])) {
+    $name_child = ucfirst(trim($_POST['name_child']));
+    $birthdate = trim($_POST['birthdate']);
+    $allergy = trim($_POST['allergy']);
+    $medication = trim($_POST['medication']);
+    $swimmingbadge = trim($_POST['swimmingbadge']);
+    $sailingexperience = trim($_POST['sailingexperience']);
+    $clothingsize = trim($_POST['clothingsize']);
+    $lifejacket = trim($_POST['lifejacket']);
+    $firstname_parent1 = ucfirst(trim($_POST['firstname_parent1']));
+    $lastname_parent1 = trim($_POST['lastname_parent1']);
+    $email_parent1 = strtolower(trim($_POST['email_parent1']));
+    $mobilenumber_parent1 = trim($_POST['mobilenumber_parent1']);
+    $phonenumber_parent1 = trim($_POST['phonenumber_parent1']);
+    $plz_parent1 = trim($_POST['plz_parent1']);
+    $town_parent1 = ucfirst(trim($_POST['town_parent1']));
+    $street_parent1 = ucfirst(trim($_POST['street_parent1']));
+    $housenumber_parent1 = strtolower(trim($_POST['housenumber_parent1']));
+    $firstname_parent2 = ucfirst(trim($_POST['firstname_parent2']));
+    $lastname_parent2 = trim($_POST['lastname_parent2']);
+    $email_parent2 = strtolower(trim($_POST['email_parent2']));
+    $mobilenumber_parent2 = trim($_POST['mobilenumber_parent2']);
+    $phonenumber_parent2 = trim($_POST['phonenumber_parent2']);
+    $plz_parent2 = trim($_POST['plz_parent2']);
+    $town_parent2 = ucfirst(trim($_POST['town_parent2']));
+    $street_parent2 = ucfirst(trim($_POST['street_parent2']));
+    $housenumber_parent2 = strtolower(trim($_POST['housenumber_parent2']));
+    $other = trim($_POST['other']);
+    $disclaimer = trim($_POST['disclaimer']);
+    $coronasymptoms = trim($_POST['coronasymptoms']);
+    $whatsapp = trim($_POST['whatsapp']);
+    $correctinformation = trim($_POST['correctinformation']);
+    $publishphotos = trim($_POST['publishphotos']);
+    if(
+      empty($name_child)
+      || empty($birthdate)
+      || empty($swimmingbadge)
+      || empty($sailingexperience)
+      || empty($clothingsize)
+      || empty($firstname_parent1)
+      || empty($lastname_parent1)
+      || empty($email_parent1)
+      || empty($mobilenumber_parent1)
+      || empty($town_parent1)
+      || empty($street_parent1)
+      || empty($housenumber_parent1)
+      || empty($disclaimer)
+      || empty($correctinformation)
+      || empty($coronasymptoms)
+    ) {
       $msg = "Bitte achten Sie darauf alle Pflichtfelder, welche mit einem * gekennzeichnet sind auszuwählen und auszufüllen.";
       $error = true;
-    } elseif(strlen($_POST['name_child']) > 32 || strlen($_POST['birthdate']) > 10 || (!empty($_POST['allergy']) && strlen($_POST['allergy']) > 255) || (!empty($_POST['medication']) && strlen($_POST['medication']) > 255) || strlen($_POST['firstname_parent1']) > 32 || strlen($_POST['lastname_parent1']) > 32 || strlen($_POST['email_parent1']) > 64 || strlen($_POST['mobilenumber_parent1']) > 17 || strlen($_POST['phonenumber_parent1']) > 17 || strlen($_POST['plz_parent1']) > 5 || strlen($_POST['town_parent1']) > 32 || strlen($_POST['street_parent1']) > 39 || strlen($_POST['housenumber_parent1']) > 6 || strlen($_POST['']) >  || strlen($_POST['']) >  || strlen($_POST['']) >  || strlen($_POST['']) >  || strlen($_POST['']) >  || strlen($_POST['']) >  || strlen($_POST['']) > ) {
-
+    } elseif(
+      strlen($name_child) > 32
+      || strlen($birthdate) > 10
+      || (!empty($allergy) && strlen($allergy) > 255)
+      || (!empty($medication) && strlen($medication) > 255)
+      || strlen($firstname_parent1) > 32
+      || strlen($lastname_parent1) > 32
+      || strlen($email_parent1) > 64
+      || strlen($mobilenumber_parent1) > 17
+      || strlen($phonenumber_parent1) > 17
+      || strlen($plz_parent1) > 5
+      || strlen($town_parent1) > 32
+      || strlen($street_parent1) > 39
+      || strlen($housenumber_parent1) > 6
+      || (!empty($firstname_parent2) && strlen($firstname_parent2) > 32)
+      || (!empty($lastname_parent2) && strlen($lastname_parent2) > 32)
+      || (!empty($email_parent2) && strlen($email_parent2) > 64)
+      || (!empty($mobilenumber_parent2) && strlen($mobilenumber_parent2) > 17)
+      || (!empty($phonenumber_parent2) && strlen($phonenumber_parent2) > 17)
+      || (!empty($plz_parent2) && strlen($plz_parent2) > 5)
+      || (!empty($town_parent2) && strlen($town_parent2) > 32)
+      || (!empty($street_parent2) && strlen($street_parent2) > 39)
+      || (!empty($housenumber_parent2) && strlen($housenumber_parent2) > 6)
+      || (!empty($other) && strlen($other) > 1024)
+    ) {
+      $msg = "Bitte achte auf die maximale Anzahl an Zeichen in den einzelnen Ferldern.";
+      $error = true;
+    } elseif(
+      strlen($name_child) < 2
+      || strlen($birthdate) < 10
+      || (!empty($allergy) && strlen($allergy) < 2)
+      || (!empty($medication) && strlen($medication) < 2)
+      || strlen($firstname_parent1) < 2
+      || strlen($lastname_parent1) < 2
+      || strlen($email_parent1) < 8
+      || strlen($mobilenumber_parent1) < 8
+      || strlen($phonenumber_parent1) < 8
+      || strlen($plz_parent1) < 5
+      || strlen($town_parent1) < 2
+      || strlen($street_parent1) < 3
+      || (!empty($firstname_parent2) && strlen($firstname_parent2) < 2)
+      || (!empty($lastname_parent2) && strlen($lastname_parent2) < 2)
+      || (!empty($email_parent2) && strlen($email_parent2) < 8)
+      || (!empty($mobilenumber_parent2) && strlen($mobilenumber_parent2) < 8)
+      || (!empty($phonenumber_parent2) && strlen($phonenumber_parent2) < 8)
+      || (!empty($plz_parent2) && strlen($plz_parent2) < 5)
+      || (!empty($town_parent2) && strlen($town_parent2) < 2)
+      || (!empty($street_parent2) && strlen($street_parent2) < 3)
+      || (!empty($other) && strlen($other) < 3)
+    ) {
+      $msg = "Bitte achte auf die minimale Anzahl an Zeichen in den einzelnen Ferldern.";
+      $error = true;
+    } elseif(
+      (!empty($firstname_parent2) && empty($email_parent2)) ||
+      (!empty($firstname_parent2) && empty($mobilenumber_parent2)) ||
+      (!empty($email_parent2) && empty($firstname_parent2)) ||
+      (!empty($email_parent2) && empty($mobilenumber_parent2)) ||
+      (!empty($mobilenumber_parent2) && empty($firstname_parent2)) ||
+      (!empty($lastname_parent2) && empty($firstname_parent2)) ||
+      (!empty($phonenumber_parent2) && empty($firstname_parent2)) ||
+      (!empty($plz_parent2) && empty($firstname_parent2)) ||
+      (!empty($plz_parent2) && empty($town_parent2)) ||
+      (!empty($town_parent2) && empty($plz_parent2)) ||
+      (!empty($street_parent2) && empty($firstname_parent2)) ||
+      (!empty($street_parent2) && empty($housenumber_parent2)) ||
+      (!empty($housenumber_parent2) && empty($street_parent2)) ||
+      (!empty($plz_parent2) && empty($street_parent2)) ||
+      (!empty($plz_parent2) && empty($housenumber_parent2)) ||
+      (!empty($town_parent2) && empty($street_parent2)) ||
+      (!empty($town_parent2) && empty($housenumber_parent2)) ||
+      (!empty($street_parent2) && empty($town_parent2)) ||
+      (!empty($housenumber_parent2) && empty($town_parent2)) ||
+      (!empty($housenumber_parent2) && empty($plz_parent2)) ||
+      (!empty($street_parent2) && empty($plz_parent2)) ||
+      (!empty($town_parent2) && empty($firstname_parent2)) ||
+      (!empty($housenumber_parent2) && empty($firstname_parent2))
+    ) {
+      $msg = "Wenn Ihr Kind zwei Elternteile hat müssen alle Daten angegeben werden. Wenn das zweite Elternteil eine andere Adresse hat, muss die vollständige Adresse angegeben werden.";
+      $error = true;
+    } elseif($email_parent1 == $email_parent2) {
+      $msg = "Bitte geben Sie pro Elternteil eine eigene E-Mail-Adresse ein.";
+      $error = true;
+    } elseif (
+      ($mobilenumber_parent1 == $phonenumber_parent1) ||
+      (($mobilenumber_parent2 == $phonenumber_parent2) && !empty($mobilenumber_parent2)) ||
+      ($mobilenumber_parent1 == $mobilenumber_parent2) ||
+      ($mobilenumber_parent1 == $phonenumber_parent2) ||
+      (($phonenumber_parent1 == $phonenumber_parent2) && !empty($phonenumber_parent1)) ||
+      (($phonenumber_parent1 == $mobilenumber_parent2) && !empty($phonenumber_parent1))
+    ) {
+      $msg = "Bitte geben Sie keine Telefonnummern doppelt an.";
+      $error = true;
+    } elseif(!preg_match("/[a-zA-ZÁÀȦÂÄǞǍĂĀÃÅǺǼǢĆĊĈČĎḌḐḒÉÈĖÊËĚĔĒẼE̊ẸǴĠĜǦĞG̃ĢĤḤáàȧâäǟǎăāãåǻǽǣćċĉčďḍḑḓéèėêëěĕēẽe̊ẹǵġĝǧğg̃ģĥḥÍÌİÎÏǏĬĪĨỊĴĶǨĹĻĽĿḼM̂M̄ʼNŃN̂ṄN̈ŇN̄ÑŅṊÓÒȮȰÔÖȪǑŎŌÕȬŐỌǾƠíìiîïǐĭīĩịĵķǩĺļľŀḽm̂m̄ŉńn̂ṅn̈ňn̄ñņṋóòôȯȱöȫǒŏōõȭőọǿơP̄ŔŘŖŚŜṠŠȘṢŤȚṬṰÚÙÛÜǓŬŪŨŰŮỤẂẀŴẄÝỲŶŸȲỸŹŻŽẒǮp̄ŕřŗśŝṡšşṣťțṭṱúùûüǔŭūũűůụẃẁŵẅýỳŷÿȳỹźżžẓǯßœŒçÇ \-]$/", $name_child)) {
+      $msg = "Bitte halten Sie sich bei dem Namen des Kindes an die Vorgaben.";
+      $error = true;
+    } elseif(count(explode('-', $birthdate)) != 3) {
+      $msg = "Leider stimmt etwas mit der Formatierung des Geburtsdatum nicht. Schreiben Sie: YYYY-MM-DD";
+      $error = true;
+    } elseif(!is_numeric($explode('-', $birthdate)[0]) || !is_numeric($explode('-', $birthdate)[1]) || !is_numeric($explode('-', $birthdate)[2])) {
+      $msg = "Leider stimmt etwas mit der Formatierung des Geburtsdatum nicht. Schreiben Sie: YYYY-MM-DD";
+      $error = true;
+    } elseif(!checkdate(int($explode('-', $birthdate)[1]), int($explode('-', $birthdate)[2]), int($explode('-', $birthdate)[0]))) {
+      $msg = "Leider stimmt etwas mit der Formatierung des Geburtsdatum nicht. Schreiben Sie: YYYY-MM-DD";
+      $error = true;
+    } elseif(explode('-', $max_birthday)[0] < explode('-', $birthdate)[0]) {
+      $msg = "Leider ist das Kind schon zu alt für dieses Segelcamp.";
+      $error = true;
+  	} elseif((explode('-', $max_birthday)[0] == explode('-', $birthdate)[0]) && (explode('-', $max_birthday)[1] < explode('-', $birthdate)[1])) {
+      $msg = "Leider ist das Kind schon zu alt für dieses Segelcamp.";
+      $error = true;
+  	} elseif((explode('-', $max_birthday)[1] == explode('-', $birthdate)[1]) && (explode('-', $max_birthday)[2] < explode('-', $birthdate)[2])) {
+      $msg = "Leider ist das Kind schon zu alt für dieses Segelcamp.";
+      $error = true;
+  	} elseif(explode('-', $min_birthday)[0] > explode('-', $birthdate)[0]) {
+  		$msg = 'Leider ist das Kind noch zu jung für dieses Segelcamp.';
+      $error = true;
+  	} elseif((explode('-', $min_birthday)[0] == explode('-', $birthdate)[0]) && (explode('-', $min_birthday)[1] > explode('-', $birthdate)[1])) {
+  		$msg = 'Leider ist das Kind noch zu jung für dieses Segelcamp.';
+      $error = true;
+  	} elseif((explode('-', $min_birthday)[1] == explode('-', $birthdate)[1]) && (explode('-', $min_birthday)[2] > explode('-', $birthdate)[2])) {
+  		$msg = 'Leider ist das Kind noch zu jung für dieses Segelcamp.';
+      $error = true;
+  	} elseif($swimmingbadge != "1" || $swimmingbadge != "2" || $swimmingbadge != "3" || $swimmingbadge != "4") {
+      $msg = 'Bitte wählen Sie ein gültiges Schwimmabzeichen des Kindes aus.';
+      $error = true;
+    } elseif($sailingexperience != "1" || $sailingexperience != "2" || $sailingexperience != "3" || $sailingexperience != "4" || $sailingexperience != "5" || $sailingexperience != "6") {
+      $msg = 'Bitte wählen Sie die Segelerfahrung des Kindes aus.';
+      $error = true;
+    } elseif($clothingsize != "1" || $clothingsize != "2" || $clothingsize != "3" || $clothingsize != "4" || $clothingsize != "5" || $clothingsize != "6" || $clothingsize != "7" || $clothingsize != "8") {
+      $msg = 'Bitte wählen Sie die T-Shirt Größe des Kindes aus.';
+      $error = true;
+    } elseif(!empty($lifejacket) && $lifejacket != "1") {
+      $msg = 'Etwas scheint mit dem Auswahlfeld, ob das Kind eine eigene Schwimmweste besitzt, nicht geklappt zu haben.';
+      $error = true;
+    } elseif(!preg_match("/[a-zA-ZÁÀȦÂÄǞǍĂĀÃÅǺǼǢĆĊĈČĎḌḐḒÉÈĖÊËĚĔĒẼE̊ẸǴĠĜǦĞG̃ĢĤḤáàȧâäǟǎăāãåǻǽǣćċĉčďḍḑḓéèėêëěĕēẽe̊ẹǵġĝǧğg̃ģĥḥÍÌİÎÏǏĬĪĨỊĴĶǨĹĻĽĿḼM̂M̄ʼNŃN̂ṄN̈ŇN̄ÑŅṊÓÒȮȰÔÖȪǑŎŌÕȬŐỌǾƠíìiîïǐĭīĩịĵķǩĺļľŀḽm̂m̄ŉńn̂ṅn̈ňn̄ñņṋóòôȯȱöȫǒŏōõȭőọǿơP̄ŔŘŖŚŜṠŠȘṢŤȚṬṰÚÙÛÜǓŬŪŨŰŮỤẂẀŴẄÝỲŶŸȲỸŹŻŽẒǮp̄ŕřŗśŝṡšşṣťțṭṱúùûüǔŭūũűůụẃẁŵẅýỳŷÿȳỹźżžẓǯßœŒçÇ \-]$/", $firstname_parent1)) {
+      $msg = 'Bitte halten Sie sich bei dem Vornamen des ersten angegebenen Elternteils an die Vorgaben.';
+      $error = true;
+    } elseif(!preg_match("/[a-zA-ZÁÀȦÂÄǞǍĂĀÃÅǺǼǢĆĊĈČĎḌḐḒÉÈĖÊËĚĔĒẼE̊ẸǴĠĜǦĞG̃ĢĤḤáàȧâäǟǎăāãåǻǽǣćċĉčďḍḑḓéèėêëěĕēẽe̊ẹǵġĝǧğg̃ģĥḥÍÌİÎÏǏĬĪĨỊĴĶǨĹĻĽĿḼM̂M̄ʼNŃN̂ṄN̈ŇN̄ÑŅṊÓÒȮȰÔÖȪǑŎŌÕȬŐỌǾƠíìiîïǐĭīĩịĵķǩĺļľŀḽm̂m̄ŉńn̂ṅn̈ňn̄ñņṋóòôȯȱöȫǒŏōõȭőọǿơP̄ŔŘŖŚŜṠŠȘṢŤȚṬṰÚÙÛÜǓŬŪŨŰŮỤẂẀŴẄÝỲŶŸȲỸŹŻŽẒǮp̄ŕřŗśŝṡšşṣťțṭṱúùûüǔŭūũűůụẃẁŵẅýỳŷÿȳỹźżžẓǯßœŒçÇ \-]$/", $lastname_parent1)) {
+      $msg = 'Bitte halten Sie sich bei dem Nachnamen des ersten angegebenen Elternteils an die Vorgaben.';
+      $error = true;
+    } elseif(!filter_var($email_parent1, FILTER_VALIDATE_EMAIL)) {
+      $msg = 'Es scheint so, als wäre die E-Mail-Adresse des ersten angegebenen Elternteils nicht gültig.';
+      $error = true;
+    } elseif(!preg_match("/(((\+49|\(\+49\)|\(0049\)|0049) ?)|0)[0-9 \-\/]$/", $mobilenumber_parent1)) {
+      $msg = 'Bitte geben Sie bei dem ersten angegebenen Elternteil eine gültige Handynummer ein.';
+      $error = true;
+    } elseif(!empty($phonenumber_parent1) && !preg_match("/(((\+49|\(\+49\)|\(0049\)|0049) ?)|0)[0-9 \-\/]$/", $phonenumber_parent1)) {
+      $msg = 'Bitte geben Sie bei dem ersten angegebenen Elternteil eine gültige Telefonnummer (Festznetz) ein.';
+      $error = true;
+    } elseif(!preg_match("/[0-9]$/", $plz_parent1)) {
+      $msg = 'Bitte geben Sie bei dem ersten angegebenen Elternteil eine gültige Postleitzahl ein.';
+      $error = true;
+    } elseif(!preg_match("/[a-zA-ZÁÀȦÂÄǞǍĂĀÃÅǺǼǢĆĊĈČĎḌḐḒÉÈĖÊËĚĔĒẼE̊ẸǴĠĜǦĞG̃ĢĤḤáàȧâäǟǎăāãåǻǽǣćċĉčďḍḑḓéèėêëěĕēẽe̊ẹǵġĝǧğg̃ģĥḥÍÌİÎÏǏĬĪĨỊĴĶǨĹĻĽĿḼM̂M̄ʼNŃN̂ṄN̈ŇN̄ÑŅṊÓÒȮȰÔÖȪǑŎŌÕȬŐỌǾƠíìiîïǐĭīĩịĵķǩĺļľŀḽm̂m̄ŉńn̂ṅn̈ňn̄ñņṋóòôȯȱöȫǒŏōõȭőọǿơP̄ŔŘŖŚŜṠŠȘṢŤȚṬṰÚÙÛÜǓŬŪŨŰŮỤẂẀŴẄÝỲŶŸȲỸŹŻŽẒǮp̄ŕřŗśŝṡšşṣťțṭṱúùûüǔŭūũűůụẃẁŵẅýỳŷÿȳỹźżžẓǯßœŒçÇ \-.]$/", $town_parent1)) {
+      $msg = 'Bitte geben Sie bei dem ersten angegebenen Elternteil einen gültigen Ortsnamen ein.';
+      $error = true;
+    } elseif(!preg_match("/[a-zA-ZÁÀȦÂÄǞǍĂĀÃÅǺǼǢĆĊĈČĎḌḐḒÉÈĖÊËĚĔĒẼE̊ẸǴĠĜǦĞG̃ĢĤḤáàȧâäǟǎăāãåǻǽǣćċĉčďḍḑḓéèėêëěĕēẽe̊ẹǵġĝǧğg̃ģĥḥÍÌİÎÏǏĬĪĨỊĴĶǨĹĻĽĿḼM̂M̄ʼNŃN̂ṄN̈ŇN̄ÑŅṊÓÒȮȰÔÖȪǑŎŌÕȬŐỌǾƠíìiîïǐĭīĩịĵķǩĺļľŀḽm̂m̄ŉńn̂ṅn̈ňn̄ñņṋóòôȯȱöȫǒŏōõȭőọǿơP̄ŔŘŖŚŜṠŠȘṢŤȚṬṰÚÙÛÜǓŬŪŨŰŮỤẂẀŴẄÝỲŶŸȲỸŹŻŽẒǮp̄ŕřŗśŝṡšşṣťțṭṱúùûüǔŭūũűůụẃẁŵẅýỳŷÿȳỹźżžẓǯßœŒçÇ \-.]$/", $street_parent1)) {
+      $msg = 'Bitte geben Sie bei dem ersten angegebenen Elternteil einen gültigen Straßennamen ein.';
+      $error = true;
+    } elseif(!preg_match("/[0-9]+[a-z]|[0-9]*|[0-9]+[ ][a-z]|[0-9]+[A-Z]|[0-9]+[ ][A-Z]$/", $housenumber_parent1)) {
+      $msg = 'Bitte geben Sie bei dem ersten angegebenen Elternteil eine gültige Hausnummer ein.';
+      $error = true;
+    } elseif(!empty($firstname_parent2) && !preg_match("/[a-zA-ZÁÀȦÂÄǞǍĂĀÃÅǺǼǢĆĊĈČĎḌḐḒÉÈĖÊËĚĔĒẼE̊ẸǴĠĜǦĞG̃ĢĤḤáàȧâäǟǎăāãåǻǽǣćċĉčďḍḑḓéèėêëěĕēẽe̊ẹǵġĝǧğg̃ģĥḥÍÌİÎÏǏĬĪĨỊĴĶǨĹĻĽĿḼM̂M̄ʼNŃN̂ṄN̈ŇN̄ÑŅṊÓÒȮȰÔÖȪǑŎŌÕȬŐỌǾƠíìiîïǐĭīĩịĵķǩĺļľŀḽm̂m̄ŉńn̂ṅn̈ňn̄ñņṋóòôȯȱöȫǒŏōõȭőọǿơP̄ŔŘŖŚŜṠŠȘṢŤȚṬṰÚÙÛÜǓŬŪŨŰŮỤẂẀŴẄÝỲŶŸȲỸŹŻŽẒǮp̄ŕřŗśŝṡšşṣťțṭṱúùûüǔŭūũűůụẃẁŵẅýỳŷÿȳỹźżžẓǯßœŒçÇ \-]$/", $firstname_parent2)) {
+      $msg = 'Bitte halten Sie sich bei dem Vornamen des zweiten angegebenen Elternteils an die Vorgaben.';
+      $error = true;
+    } elseif(!empty($lastname_parent2) && !preg_match("/[a-zA-ZÁÀȦÂÄǞǍĂĀÃÅǺǼǢĆĊĈČĎḌḐḒÉÈĖÊËĚĔĒẼE̊ẸǴĠĜǦĞG̃ĢĤḤáàȧâäǟǎăāãåǻǽǣćċĉčďḍḑḓéèėêëěĕēẽe̊ẹǵġĝǧğg̃ģĥḥÍÌİÎÏǏĬĪĨỊĴĶǨĹĻĽĿḼM̂M̄ʼNŃN̂ṄN̈ŇN̄ÑŅṊÓÒȮȰÔÖȪǑŎŌÕȬŐỌǾƠíìiîïǐĭīĩịĵķǩĺļľŀḽm̂m̄ŉńn̂ṅn̈ňn̄ñņṋóòôȯȱöȫǒŏōõȭőọǿơP̄ŔŘŖŚŜṠŠȘṢŤȚṬṰÚÙÛÜǓŬŪŨŰŮỤẂẀŴẄÝỲŶŸȲỸŹŻŽẒǮp̄ŕřŗśŝṡšşṣťțṭṱúùûüǔŭūũűůụẃẁŵẅýỳŷÿȳỹźżžẓǯßœŒçÇ \-]$/", $lastname_parent2)) {
+      $msg = 'Bitte halten Sie sich bei dem Nachnamen des zweiten angegebenen Elternteils an die Vorgaben.';
+      $error = true;
+    } elseif(!empty($lastname_parent2) && !filter_var($email_parent2, FILTER_VALIDATE_EMAIL)) {
+      $msg = 'Es scheint so, als wäre die E-Mail-Adresse des zweiten angegebenen Elternteils nicht gültig.';
+      $error = true;
+    } elseif(!empty($mobilenumber_parent2) && !preg_match("/(((\+49|\(\+49\)|\(0049\)|0049) ?)|0)[0-9 \-\/]$/", $mobilenumber_parent2)) {
+      $msg = 'Bitte geben Sie bei dem zweiten angegebenen Elternteil eine gültige Handynummer ein.';
+      $error = true;
+    } elseif(!empty($phonenumber_parent2) && !preg_match("/(((\+49|\(\+49\)|\(0049\)|0049) ?)|0)[0-9 \-\/]$/", $phonenumber_parent2)) {
+      $msg = 'Bitte geben Sie bei dem zweiten angegebenen Elternteil eine gültige Telefonnummer (Festznetz) ein.';
+      $error = true;
+    } elseif(!empty($plz_parent2) && !preg_match("/[0-9]$/", $plz_parent2)) {
+      $msg = 'Bitte geben Sie bei dem zweiten angegebenen Elternteil eine gültige Postleitzahl ein.';
+      $error = true;
+    } elseif(!empty($town_parent2) && !preg_match("/[a-zA-ZÁÀȦÂÄǞǍĂĀÃÅǺǼǢĆĊĈČĎḌḐḒÉÈĖÊËĚĔĒẼE̊ẸǴĠĜǦĞG̃ĢĤḤáàȧâäǟǎăāãåǻǽǣćċĉčďḍḑḓéèėêëěĕēẽe̊ẹǵġĝǧğg̃ģĥḥÍÌİÎÏǏĬĪĨỊĴĶǨĹĻĽĿḼM̂M̄ʼNŃN̂ṄN̈ŇN̄ÑŅṊÓÒȮȰÔÖȪǑŎŌÕȬŐỌǾƠíìiîïǐĭīĩịĵķǩĺļľŀḽm̂m̄ŉńn̂ṅn̈ňn̄ñņṋóòôȯȱöȫǒŏōõȭőọǿơP̄ŔŘŖŚŜṠŠȘṢŤȚṬṰÚÙÛÜǓŬŪŨŰŮỤẂẀŴẄÝỲŶŸȲỸŹŻŽẒǮp̄ŕřŗśŝṡšşṣťțṭṱúùûüǔŭūũűůụẃẁŵẅýỳŷÿȳỹźżžẓǯßœŒçÇ \-.]$/", $town_parent2)) {
+      $msg = 'Bitte geben Sie bei dem zweiten angegebenen Elternteil einen gültigen Ortsnamen ein.';
+      $error = true;
+    } elseif(!empty($street_parent2) && !preg_match("/[a-zA-ZÁÀȦÂÄǞǍĂĀÃÅǺǼǢĆĊĈČĎḌḐḒÉÈĖÊËĚĔĒẼE̊ẸǴĠĜǦĞG̃ĢĤḤáàȧâäǟǎăāãåǻǽǣćċĉčďḍḑḓéèėêëěĕēẽe̊ẹǵġĝǧğg̃ģĥḥÍÌİÎÏǏĬĪĨỊĴĶǨĹĻĽĿḼM̂M̄ʼNŃN̂ṄN̈ŇN̄ÑŅṊÓÒȮȰÔÖȪǑŎŌÕȬŐỌǾƠíìiîïǐĭīĩịĵķǩĺļľŀḽm̂m̄ŉńn̂ṅn̈ňn̄ñņṋóòôȯȱöȫǒŏōõȭőọǿơP̄ŔŘŖŚŜṠŠȘṢŤȚṬṰÚÙÛÜǓŬŪŨŰŮỤẂẀŴẄÝỲŶŸȲỸŹŻŽẒǮp̄ŕřŗśŝṡšşṣťțṭṱúùûüǔŭūũűůụẃẁŵẅýỳŷÿȳỹźżžẓǯßœŒçÇ \-.]$/", $street_parent2)) {
+      $msg = 'Bitte geben Sie bei dem zweiten angegebenen Elternteil einen gültigen Straßennamen ein.';
+      $error = true;
+    } elseif(!empty($housenumber_parent2) && !preg_match("/[0-9]+[a-z]|[0-9]*|[0-9]+[ ][a-z]|[0-9]+[A-Z]|[0-9]+[ ][A-Z]$/", $housenumber_parent2)) {
+      $msg = 'Bitte geben Sie bei dem zweiten angegebenen Elternteil eine gültige Hausnummer ein.';
+      $error = true;
+    } elseif($disclaimer != "1") {
+      $msg = 'Etwas scheint mit dem Auswahlfeld, des Haftungsausschlusses, nicht geklappt zu haben.';
+      $error = true;
+    } elseif($correctinformation != "1") {
+      $msg = 'Etwas scheint mit dem Auswahlfeld, dass Sie bestätigt haben, dass alle Angaben richtig sind, nicht geklappt zu haben.';
+      $error = true;
+    } elseif($coronasymptoms != "1") {
+      $msg = 'Etwas scheint mit dem Auswahlfeld, der Corona-Informationen, nicht geklappt zu haben.';
+      $error = true;
+    } elseif(!empty($whatsapp) && $whatsapp != "1") {
+      $msg = 'Etwas scheint mit dem Auswahlfeld, dass Sie bestätigen in die WhatsApp-Gruppe hinzugefügt zu werden, nicht geklappt zu haben.';
+      $error = true;
+    } elseif(!empty($publishphotos) && $publishphotos != "1") {
+      $msg = 'Etwas scheint mit dem Auswahlfeld, dass Sie bestätigen, dass wir Bilder von Ihrem Kind hochladen dürfen, nicht geklappt zu haben.';
+      $error = true;
     } else {
-      // Daten zur Datenbank hinzufügen
+      $name_child = htmlspecialchars($name_child);
+      $birthdate = htmlspecialchars($birthdate);
+      $allergy = htmlspecialchars($allergy);
+      $medication = htmlspecialchars($medication);
+      $swimmingbadge = intval($swimmingbadge);
+      $sailingexperience = intval($sailingexperience);
+      $clothingsize = intval($clothingsize);
+      if($lifejacket == "1") {
+        $lifejacket = 1;
+      } else {
+        $lifejacket = 0;
+      }
+      $firstname_parent1 = htmlspecialchars($firstname_parent1);
+      $lastname_parent1 = htmlspecialchars($lastname_parent1);
+      $email_parent1 = htmlspecialchars($email_parent1);
+      $mobilenumber_parent1 = htmlspecialchars($mobilenumber_parent1);
+      $phonenumber_parent1 = htmlspecialchars($phonenumber_parent1);
+      $plz_parent1 = htmlspecialchars($plz_parent1);
+      $town_parent1 = htmlspecialchars($town_parent1);
+      $street_parent1 = htmlspecialchars($street_parent1);
+      $housenumber_parent1 = htmlspecialchars($housenumber_parent1);
+      $firstname_parent2 = htmlspecialchars($firstname_parent2);
+      $lastname_parent2 = htmlspecialchars($lastname_parent2);
+      $email_parent2 = htmlspecialchars($email_parent2);
+      $mobilenumber_parent2 = htmlspecialchars($mobilenumber_parent2);
+      $phonenumber_parent2 = htmlspecialchars($phonenumber_parent2);
+      $plz_parent2 = htmlspecialchars($plz_parent2);
+      $town_parent2 = htmlspecialchars($town_parent2);
+      $street_parent2 = htmlspecialchars($street_parent2);
+      $housenumber_parent2 = htmlspecialchars($housenumber_parent2);
+      $other = htmlspecialchars($other);
+      if($correctinformation == "1") {
+        $correctinformation = 1;
+      } else {
+        $correctinformation = 0;
+      }
+      if($disclaimer == "1") {
+        $disclaimer = 1;
+      } else {
+        $disclaimer = 0;
+      }
+      if($coronasymptoms == "1") {
+        $coronasymptoms = 1;
+      } else {
+        $coronasymptoms = 0;
+      }
+      if($whatsapp == "1") {
+        $whatsapp = 1;
+      } else {
+        $whatsapp = 0;
+      }
+      if($publishphotos == "1") {
+        $publishphotos = 1;
+      } else {
+        $publishphotos = 0;
+      }
+      $user_ip = htmlspecialchars(trim($_SERVER['REMOTE_ADDR']));
+      $user_useragent = htmlspecialchars(trim($_SERVER['HTTP_USER_AGENT']));
+
+      /*
+      $statement = $pdo->prepare("INSERT INTO datenbankname (wert1, wert2 wert3) VALUES (:wert1, :wert2, :wert3)");
+			$result = $statement->execute(array('wert1' => $wert1, 'wert2' => $wert2, 'wert3' => $wert3));
+      */
     }
   }
   if($error == true && !empty($msg)) {
