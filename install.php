@@ -121,7 +121,7 @@ UNIQUE (`name_child`)
 								<section id="banner">
 									<div class="content">
 										 <header>
-										   <h1>Anmeldewebseite installieren</h1>
+										   <h2>Anmeldewebseite installieren</h2>
                        <p><?php if(isset($msg)) { echo $msg; } ?></p>
 										</header>
                     <?php if($show_form = true) { ?>
