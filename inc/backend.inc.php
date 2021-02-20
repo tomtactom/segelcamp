@@ -211,7 +211,7 @@ if(isset($_POST['sendform'])) {
     } elseif($mobilenumber_parent1[0] != "0" || !is_numeric(str_replace('/', '', str_replace('-', '', str_replace(' ', '', $mobilenumber_parent1))))) {
       $msg = 'Bitte geben Sie bei dem ersten angegebenen Elternteil eine gültige Handynummer ein.';
       $error = true;
-    } elseif(!empty($phonenumber_parent1) && $phonenumber_parent1[0] != "0" || !is_numeric(str_replace('/', '', str_replace('-', '', str_replace(' ', '', $phonenumber_parent1))))) {
+    } elseif(!empty($phonenumber_parent1) && ($phonenumber_parent1[0] != "0" || !is_numeric(str_replace('/', '', str_replace('-', '', str_replace(' ', '', $phonenumber_parent1)))))) {
       $msg = 'Bitte geben Sie bei dem ersten angegebenen Elternteil eine gültige Telefonnummer (Festznetz) ein.';
       $error = true;
     } elseif(!preg_match("/[0-9]$/", $plz_parent1)) {
@@ -235,10 +235,10 @@ if(isset($_POST['sendform'])) {
     } elseif(!empty($lastname_parent2) && !filter_var($email_parent2, FILTER_VALIDATE_EMAIL)) {
       $msg = 'Es scheint so, als wäre die E-Mail-Adresse des zweiten angegebenen Elternteils nicht gültig.';
       $error = true;
-    } elseif(!empty($mobilenumber_parent2) && $mobilenumber_parent2[0] != "0" || !is_numeric(str_replace('/', '', str_replace('-', '', str_replace(' ', '', $mobilenumber_parent2))))) {
+    } elseif(!empty($mobilenumber_parent2) && ($mobilenumber_parent2[0] != "0" || !is_numeric(str_replace('/', '', str_replace('-', '', str_replace(' ', '', $mobilenumber_parent2)))))) {
       $msg = 'Bitte geben Sie bei dem zweiten angegebenen Elternteil eine gültige Handynummer ein.';
       $error = true;
-    } elseif(!empty($phonenumber_parent2) && $phonenumber_parent2[0] != "0" || !is_numeric(str_replace('/', '', str_replace('-', '', str_replace(' ', '', $phonenumber_parent2))))) {
+    } elseif(!empty($phonenumber_parent2) && ($phonenumber_parent2[0] != "0" || !is_numeric(str_replace('/', '', str_replace('-', '', str_replace(' ', '', $phonenumber_parent2)))))) {
       $msg = 'Bitte geben Sie bei dem zweiten angegebenen Elternteil eine gültige Telefonnummer (Festznetz) ein.';
       $error = true;
     } elseif(!empty($plz_parent2) && !preg_match("/[0-9]$/", $plz_parent2)) {
