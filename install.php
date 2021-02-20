@@ -145,7 +145,7 @@ UNIQUE (`name_child`)
                     </div>
                     <div class="col-6 col-12-xsmall">
                       * Maximalgeburtsdatum
-                      <input type="date" name="max_birthday" id="max_birthday" value="<?php if(!empty($max_birthday)) { echo $max_birthday; } else { '2014-06-01'; } ?>" placeholder="* Maximalgeburtsdatum" minlength="10" maxlength="10" required />
+                      <input type="date" name="max_birthday" id="max_birthday" value="<?php if(!empty($max_birthday)) { echo $max_birthday; } else { echo '2014-06-01'; } ?>" placeholder="* Maximalgeburtsdatum" minlength="10" maxlength="10" required />
                     </div>
                     <div class="col-6 col-12-xsmall">
                       <input type="submit" name="database_form" value="Anmelden">
