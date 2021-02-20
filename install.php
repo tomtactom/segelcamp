@@ -12,7 +12,7 @@ if (isset($_POST['database_form'])) {
   $min_birthday = trim($_POST['min_birthday']);
   $max_birthday = trim($_POST['max_birthday']);
 
-  // check connection
+  // Check connection
   $connection = @new mysqli($host, $username, $password, $database);
   if ($connection->connect_errno) {
     $msg = "Es konnte sich leider nicht mit dem MySQL-Server verbunden werden. Bitte überprüfen Sie, ob Ihre Eingaben korrekt waren und versuchen Sie es erneut. (".$connection->connect_errno.") ".$connection->connect_error;
