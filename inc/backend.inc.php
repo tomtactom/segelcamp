@@ -284,21 +284,21 @@ if(isset($_POST['sendform'])) {
       $firstname_parent1 = htmlspecialchars($firstname_parent1);
       $lastname_parent1 = htmlspecialchars($lastname_parent1);
       $email_parent1 = htmlspecialchars($email_parent1);
-      $mobilenumber_parent1 = htmlspecialchars($mobilenumber_parent1);
-      $phonenumber_parent1 = htmlspecialchars($phonenumber_parent1);
+      $mobilenumber_parent1 = htmlspecialchars(str_replace('/', '', str_replace('-', '', str_replace(' ', '', $mobilenumber_parent1))));
+      $phonenumber_parent1 = htmlspecialchars(str_replace('/', '', str_replace('-', '', str_replace(' ', '', $phonenumber_parent1))));
       $plz_parent1 = htmlspecialchars($plz_parent1);
       $town_parent1 = htmlspecialchars($town_parent1);
       $street_parent1 = htmlspecialchars($street_parent1);
-      $housenumber_parent1 = htmlspecialchars($housenumber_parent1);
+      $housenumber_parent1 = htmlspecialchars(str_replace(' ', '', $housenumber_parent1));
       $firstname_parent2 = htmlspecialchars($firstname_parent2);
       $lastname_parent2 = htmlspecialchars($lastname_parent2);
       $email_parent2 = htmlspecialchars($email_parent2);
-      $mobilenumber_parent2 = htmlspecialchars($mobilenumber_parent2);
-      $phonenumber_parent2 = htmlspecialchars($phonenumber_parent2);
+      $mobilenumber_parent2 = htmlspecialchars(str_replace('/', '', str_replace('-', '', str_replace(' ', '', $mobilenumber_parent2))));
+      $phonenumber_parent2 = htmlspecialchars(str_replace('/', '', str_replace('-', '', str_replace(' ', '', $phonenumber_parent2))));
       $plz_parent2 = htmlspecialchars($plz_parent2);
       $town_parent2 = htmlspecialchars($town_parent2);
       $street_parent2 = htmlspecialchars($street_parent2);
-      $housenumber_parent2 = htmlspecialchars($housenumber_parent2);
+      $housenumber_parent2 = htmlspecialchars(str_replace(' ', '', $housenumber_parent2));
       $other = htmlspecialchars($other);
       if($correctinformation == "1") {
         $correctinformation = 1;
