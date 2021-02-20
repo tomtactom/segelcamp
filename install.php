@@ -21,20 +21,51 @@ $db_user = "'.$username.'";
 $db_password = "'.$password.'";
 $pdo = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_password);');
 
-      $query = '';
-      $sqlScript = file('./inc/import.sql');
-      foreach ($sqlScript as $line)	{
-        $startWith = substr(trim($line), 0 ,2);
-        $endWith = substr(trim($line), -1 ,1);
-        if (empty($line) || $startWith == '--' || $startWith == '/*' || $startWith == '//') {
-          continue;
-        }
-        $query = $query . $line;
-        if ($endWith == ';') {
-          mysqli_query($connection,$query) or die('Problem beim Ausführen der SQL-Abfrage <b>'.$query.'</b>');
-          echo '<pre>'.$query.'</pre>';
-        }
-      }
+    $query = "CREATE TABLE IF NOT EXISTS `registrations` (
+`id` INT unsigned NOT NULL AUTO_INCREMENT,
+`name_child` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+`birthdate` TEXT COLLATE utf8_unicode_ci NOT NULL,
+`allergy` TEXT COLLATE utf8_unicode_ci DEFAULT NULL,
+`medication` TEXT COLLATE utf8_unicode_ci DEFAULT NULL,
+`swimmingbadge` INT COLLATE utf8_unicode_ci DEFAULT 0,
+`sailingexperience` INT COLLATE utf8_unicode_ci NOT NULL,
+`clothingsize` INT COLLATE utf8_unicode_ci NOT NULL,
+`lifejacket` INT COLLATE utf8_unicode_ci DEFAULT 0,
+`firstname_parent1` TEXT COLLATE utf8_unicode_ci NOT NULL,
+`lastname_parent1` TEXT COLLATE utf8_unicode_ci NOT NULL,
+`email_parent1` TEXT COLLATE utf8_unicode_ci NOT NULL,
+`mobilenumber_parent1` TEXT COLLATE utf8_unicode_ci NOT NULL,
+`phonenumber_parent1` TEXT COLLATE utf8_unicode_ci NOT NULL,
+`plz_parent1` TEXT COLLATE utf8_unicode_ci NOT NULL,
+`town_parent1` TEXT COLLATE utf8_unicode_ci NOT NULL,
+`street_parent1` TEXT COLLATE utf8_unicode_ci NOT NULL,
+`housenumber_parent1` TEXT COLLATE utf8_unicode_ci NOT NULL,
+`firstname_parent2` TEXT COLLATE utf8_unicode_ci NOT NULL,
+`lastname_parent2` TEXT COLLATE utf8_unicode_ci NOT NULL,
+`email_parent2` TEXT COLLATE utf8_unicode_ci NOT NULL,
+`mobilenumber_parent2` TEXT COLLATE utf8_unicode_ci NOT NULL,
+`phonenumber_parent2` TEXT COLLATE utf8_unicode_ci NOT NULL,
+`plz_parent2` TEXT COLLATE utf8_unicode_ci NOT NULL,
+`town_parent2` TEXT COLLATE utf8_unicode_ci NOT NULL,
+`street_parent2` TEXT COLLATE utf8_unicode_ci NOT NULL,
+`housenumber_parent2` TEXT COLLATE utf8_unicode_ci NOT NULL,
+`other` TEXT COLLATE utf8_unicode_ci NOT NULL,
+`correctinformation` INT COLLATE utf8_unicode_ci NOT NULL,
+`disclaimer` INT COLLATE utf8_unicode_ci NOT NULL,
+`coronasymptoms` INT COLLATE utf8_unicode_ci NOT NULL,
+`whatsapp` INT COLLATE utf8_unicode_ci DEFAULT 0,
+`publishphotos` INT COLLATE utf8_unicode_ci DEFAULT 0,
+`user_ip` TEXT COLLATE utf8_unicode_ci NOT NULL,
+`user_useragent` TEXT COLLATE utf8_unicode_ci DEFAULT NULL,
+`accepted` INT COLLATE utf8_unicode_ci DEFAULT 0,
+`amount_payed` TEXT COLLATE utf8_unicode_ci DEFAULT '0,00 €',
+`boat_name` TEXT COLLATE utf8_unicode_ci DEFAULT NULL,
+`created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+PRIMARY KEY (`id`),
+UNIQUE (`name_child`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;";
+
+      mysqli_query($connection,$query) or die('Problem beim Ausführen der SQL-Abfrage <b>'.$query.'</b>');
       $msg = "Die grundlegenden Einstellungen konnten alle vorgenommen werden.";
     }
   }
