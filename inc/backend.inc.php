@@ -187,13 +187,13 @@ if(isset($_POST['sendform'])) {
   	} elseif((explode('-', $min_birthday)[1] == explode('-', $birthdate)[1]) && (explode('-', $min_birthday)[2] > explode('-', $birthdate)[2])) {
   		$msg = 'Leider ist das Kind noch zu jung für dieses Segelcamp.';
       $error = true;
-  	} elseif($swimmingbadge != "1" || $swimmingbadge != "2" || $swimmingbadge != "3" || $swimmingbadge != "4") {
-      $msg = 'Bitte wählen Sie ein gültiges Schwimmabzeichen des Kindes aus.'.$swimmingbadge;
+  	} elseif($swimmingbadge != "1" && $swimmingbadge != "2" && $swimmingbadge != "3" && $swimmingbadge != "4") {
+      $msg = 'Bitte wählen Sie ein gültiges Schwimmabzeichen des Kindes aus.';
       $error = true;
-    } elseif($sailingexperience != "1" || $sailingexperience != "2" || $sailingexperience != "3" || $sailingexperience != "4" || $sailingexperience != "5" || $sailingexperience != "6") {
+    } elseif($sailingexperience != "1" && $sailingexperience != "2" && $sailingexperience != "3" && $sailingexperience != "4" && $sailingexperience != "5" && $sailingexperience != "6") {
       $msg = 'Bitte wählen Sie die Segelerfahrung des Kindes aus.';
       $error = true;
-    } elseif($clothingsize != "1" || $clothingsize != "2" || $clothingsize != "3" || $clothingsize != "4" || $clothingsize != "5" || $clothingsize != "6" || $clothingsize != "7" || $clothingsize != "8") {
+    } elseif($clothingsize != "1" && $clothingsize != "2" && $clothingsize != "3" && $clothingsize != "4" && $clothingsize != "5" && $clothingsize != "6" && $clothingsize != "7" && $clothingsize != "8") {
       $msg = 'Bitte wählen Sie die T-Shirt Größe des Kindes aus.';
       $error = true;
     } elseif(!empty($lifejacket) && $lifejacket != "1") {
