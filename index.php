@@ -150,7 +150,7 @@
                                                             <div class="col-6 col-12-xsmall">
                                                                 * Schwimmabzeichen
 																<select name="swimmingbadge" id="swimmingbadge" required>
-																	<option value="1">Seepferdchen</option>
+																	<option value="1" selected>Seepferdchen</option>
 																	<option value="2">Bronze</option>
 																	<option value="3">Silber</option>
 																	<option value="4">Gold</option>
@@ -159,7 +159,7 @@
 															<div class="col-6 col-12-xsmall">
 																* Segelerfahrung
 																<select name="sailingexperience" id="sailingexperience" required>
-																	<option value="1">Keine</option>
+																	<option value="1" selected>Keine</option>
                                                                     <option value="2">Auf Boot mitgefahren</option>
 																	<option value="3">Schonmal selbst gesegelt</option>
 																	<option value="4">Kann alleine segeln</option>
@@ -170,7 +170,7 @@
                               <div class="col-6 col-12-xsmall">
                                   * T-Shirt Größe
 																<select name="clothingsize" id="clothingsize" required>
-																	<option value="1">122</option>
+																	<option value="1" selected>122</option>
 																	<option value="2">128</option>
 																	<option value="3">134</option>
 																	<option value="4">140</option>
