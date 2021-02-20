@@ -21,21 +21,22 @@ $db_user = "'.$username.'";
 $db_password = "'.$password.'";
 $pdo = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_password);');
 
-    $query = '';
-    $sqlScript = file('./inc/import.sql');
-    foreach ($sqlScript as $line)	{
-      $startWith = substr(trim($line), 0 ,2);
-      $endWith = substr(trim($line), -1 ,1);
-      if (empty($line) || $startWith == '--' || $startWith == '/*' || $startWith == '//') {
-        continue;
+      $query = '';
+      $sqlScript = file('./inc/import.sql');
+      foreach ($sqlScript as $line)	{
+        $startWith = substr(trim($line), 0 ,2);
+        $endWith = substr(trim($line), -1 ,1);
+        if (empty($line) || $startWith == '--' || $startWith == '/*' || $startWith == '//') {
+          continue;
+        }
+        $query = $query . $line;
+        if ($endWith == ';') {
+          mysqli_query($connection,$query) or die('Problem beim Ausführen der SQL-Abfrage <b>'.$query.'</b>');
+          echo '<pre>'.$query.'</pre>';
+        }
       }
-      $query = $query . $line;
-      if ($endWith == ';') {
-        mysqli_query($connection,$query) or die('Problem beim Ausführen der SQL-Abfrage <b>'.$query.'</b>');
-        echo '<pre>'.$query.'</pre>';
-      }
+      $msg = "Die grundlegenden Einstellungen konnten alle vorgenommen werden.";
     }
-    $msg = "Die grundlegenden Einstellungen konnten alle vorgenommen werden.";
   }
 ?>
 
