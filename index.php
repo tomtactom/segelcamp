@@ -132,7 +132,7 @@
                                         </style>
                                         <p>(*) Erforderliche Felder</p>
 																				<?php if(isset($msg_field)) { echo $msg_field; } ?>
-                                        <form method="post" action="#anmelden">
+                                        <form method="post">
 														<div class="row gtr-uniform">
 															<div class="col-6 col-12-xsmall">
 																<input type="text" name="name_child" id="name_child" value="<?php if(!empty($_POST['name_child'])) { echo $_POST['name_child']; } ?>" placeholder="* Vor- und Nachname des Kindes" pattern="[a-zA-ZÁÀȦÂÄǞǍĂĀÃÅǺǼǢĆĊĈČĎḌḐḒÉÈĖÊËĚĔĒẼE̊ẸǴĠĜǦĞG̃ĢĤḤáàȧâäǟǎăāãåǻǽǣćċĉčďḍḑḓéèėêëěĕēẽe̊ẹǵġĝǧğg̃ģĥḥÍÌİÎÏǏĬĪĨỊĴĶǨĹĻĽĿḼM̂M̄ʼNŃN̂ṄN̈ŇN̄ÑŅṊÓÒȮȰÔÖȪǑŎŌÕȬŐỌǾƠíìiîïǐĭīĩịĵķǩĺļľŀḽm̂m̄ŉńn̂ṅn̈ňn̄ñņṋóòôȯȱöȫǒŏōõȭőọǿơP̄ŔŘŖŚŜṠŠȘṢŤȚṬṰÚÙÛÜǓŬŪŨŰŮỤẂẀŴẄÝỲŶŸȲỸŹŻŽẒǮp̄ŕřŗśŝṡšşṣťțṭṱúùûüǔŭūũűůụẃẁŵẅýỳŷÿȳỹźżžẓǯßœŒçÇ \-]*" title="Bitte gebe den gültigen Vor und Nachnamen des Kindes an." minlenght="2" maxlength="32" required />
