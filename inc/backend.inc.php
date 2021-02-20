@@ -100,7 +100,7 @@ if(isset($_POST['sendform'])) {
       || strlen($lastname_parent1) < 2
       || strlen($email_parent1) < 8
       || strlen($mobilenumber_parent1) < 8
-      || strlen($phonenumber_parent1) < 8
+      || (!empty($phonenumber_parent1) && strlen($phonenumber_parent1) < 8)
       || strlen($plz_parent1) < 5
       || strlen($town_parent1) < 2
       || strlen($street_parent1) < 3
@@ -114,7 +114,7 @@ if(isset($_POST['sendform'])) {
       || (!empty($street_parent2) && strlen($street_parent2) < 3)
       || (!empty($other) && strlen($other) < 3)
     ) {
-      $msg = "Bitte achte auf die minimale Anzahl an Zeichen in den einzelnen Ferldern.";
+      $msg = "Bitte achten Sie auf die minimale Anzahl an Zeichen in den einzelnen Ferldern.";
       $error = true;
     } elseif(
       (!empty($firstname_parent2) && empty($email_parent2)) ||
