@@ -1,5 +1,5 @@
 <?php
-if (isset($_POST['database'])) {
+if (isset($_POST['database_form'])) {
   $database = trim($_POST['database']);
   $username = trim($_POST['username']);
   $password = $_POST['password'];
@@ -49,5 +49,5 @@ $pdo = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_password);')
   <input type="date" name="min_birthday" id="min_birthday" value="2009-08-01" placeholder="* Mindestgeburtsdatum" minlength="10" maxlength="10" required />
   * Maximalgeburtsdatum
   <input type="date" name="max_birthday" id="max_birthday" value="2014-06-01" placeholder="* Maximalgeburtsdatum" minlength="10" maxlength="10" required />
-  <input type="submit" name="database" value="Anmelden">
+  <input type="submit" name="database_form" value="Anmelden">
 </form>
