@@ -64,21 +64,75 @@ $pdo = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_password);')
 PRIMARY KEY (`id`),
 UNIQUE (`name_child`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;";
-
-      mysqli_query($connection,$query) or die('Problem beim Ausführen der SQL-Abfrage <b>'.$query.'</b>');
+      mysqli_query($connection,$query) or die('Problem beim Ausführen der SQL-Abfrage.');
       $msg = "Die grundlegenden Einstellungen konnten alle vorgenommen werden.";
     }
+  } else {
+    $show_form = true;
   }
 ?>
-<p><?php if(isset($msg)) { echo $msg; } ?></p>
-<form method="post">
-  <input type="text" name="database" id="database" placeholder="* Datenbankname" title="Bitte geben Sie einen gültigen Datenbanknamen einer existierenden Datenbank an." minlenght="2" maxlength="64" required />
-  <input type="text" name="username" id="username" placeholder="* MySQL-Nutzername" title="Bitte geben Sie einen MySQL-Nutzernamen an, der berechtigt ist auf die oben angegebene Datenbank zuzugreifen." minlenght="2" maxlength="64" required />
-  <input type="password" name="password" id="password" placeholder="* MySQL-Passwort" title="Bitte geben Sie das zum MySQL-Nutzernamen zugehörige Passwort an. Dieses sollte aus Sicherheitsgründen mindestens 8 Zeichen entsprechen." minlenght="8" maxlength="64" required />
-  <input type="text" name="host" id="host" placeholder="* MySQL-Hostname/IP" title="Bitte geben Sie den Hostname oder die IP ein, über welche der MySQL-Server erreichbar ist. Sollte dieser, üblicherweise, auf dem gleichen Server laufen, auf dem auch diese Webseite läuft, geben Sie 'localhost' ein." value="localhost" minlenght="2" maxlength="64" required />
-  * Mindestgeburtsdatum
-  <input type="date" name="min_birthday" id="min_birthday" value="2009-08-01" placeholder="* Mindestgeburtsdatum" minlength="10" maxlength="10" required />
-  * Maximalgeburtsdatum
-  <input type="date" name="max_birthday" id="max_birthday" value="2014-06-01" placeholder="* Maximalgeburtsdatum" minlength="10" maxlength="10" required />
-  <input type="submit" name="database_form" value="Anmelden">
-</form>
+<!DOCTYPE HTML>
+<html lang="de">
+	<head>
+        <meta charset="utf-8" />
+		<title>Installieren...</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="language" content="de">
+        <meta name="audience" content="Administrator">
+        <meta name="page-type" content="Formular">
+        <meta name="description" content="Über diese Seite können Sie das Tool installieren. Sollten Sie nicht berechtigt sein, diese Seite zu betreten, verlassen Sie diese bitte wieder und geben dem Administrator der Webseite bescheid.">
+        <meta name="robots" content="noindex, nofollow">
+        <meta http-equiv="language" content="german, de">
+        <meta name="author" content="Tom Aschmann">
+        <meta name="copyright" content="Tom Aschmann">
+        <meta name="publisher" content="Seglergemeinschaft Lohheider See e.V.">
+        <meta name="date" content="2021-02-15">
+        <link rel="apple-touch-icon" sizes="57x57" href="./assets/icons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="./assets/icons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="./assets/icons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="./assets/icons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="./assets/icons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="./assets/icons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="./assets/icons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="./assets/icons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="./assets/icons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="./assets/icons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
+        <link rel="manifest" href="./assets/icons/manifest.json">
+        <meta name="msapplication-TileColor" content="#f56a6a">
+        <meta name="msapplication-TileImage" content="./assets/icons/ms-icon-144x144.png">
+        <meta name="theme-color" content="#f56a6a">
+		<link rel="stylesheet" href="./assets/css/main.css">
+	</head>
+	<body class="is-preload">
+			<div id="wrapper">
+					<div id="main">
+						 <div class="inner">
+								<section id="banner">
+									<div class="content">
+										 <header>
+										   <h1>Anmeldewebseite installieren</h1>
+                       <p><?php if(isset($msg)) { echo $msg; } ?></p>
+										</header>
+                    <?php if($show_form = true) { ?>
+                    <form method="post">
+                      <input type="text" name="database" id="database" value="<?php if(!empty($database)) { echo $database; } ?>" placeholder="* Datenbankname" title="Bitte geben Sie einen gültigen Datenbanknamen einer existierenden Datenbank an." minlenght="2" maxlength="64" required />
+                      <input type="text" name="username" id="username"  value="<?php if(!empty($username)) { echo $username; } ?>" placeholder="* MySQL-Nutzername" title="Bitte geben Sie einen MySQL-Nutzernamen an, der berechtigt ist auf die oben angegebene Datenbank zuzugreifen." minlenght="2" maxlength="64" required />
+                      <input type="password" name="password" id="password" placeholder="* MySQL-Passwort" title="Bitte geben Sie das zum MySQL-Nutzernamen zugehörige Passwort an. Dieses sollte aus Sicherheitsgründen mindestens 8 Zeichen entsprechen." minlenght="8" maxlength="64" required />
+                      <input type="text" name="host" id="host" value="<?php if(!empty($host)) { echo $host; } ?>" placeholder="* MySQL-Hostname/IP" title="Bitte geben Sie den Hostname oder die IP ein, über welche der MySQL-Server erreichbar ist. Sollte dieser, üblicherweise, auf dem gleichen Server laufen, auf dem auch diese Webseite läuft, geben Sie 'localhost' ein." value="localhost" minlenght="2" maxlength="64" required />
+                      * Mindestgeburtsdatum
+                      <input type="date" name="min_birthday" id="min_birthday" value="<?php if(!empty($min_birthday)) { echo $min_birthday; } ?>" value="2009-08-01" placeholder="* Mindestgeburtsdatum" minlength="10" maxlength="10" required />
+                      * Maximalgeburtsdatum
+                      <input type="date" name="max_birthday" id="max_birthday" value="<?php if(!empty($max_birthday)) { echo $max_birthday; } ?>" value="2014-06-01" placeholder="* Maximalgeburtsdatum" minlength="10" maxlength="10" required />
+                      <input type="submit" name="database_form" value="Anmelden">
+                    </form>
+                    <?php } ?>
+									  </div>
+								  </section>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
