@@ -1,5 +1,7 @@
 <?php
-error_reporting(-1);
+if (!file_exists('./inc/config.inc.php')) {
+  die('Bitte nehmen Sie die grundlegenden Einstellungen vor.');
+}
 
 # Konfigurationsdaten - Werden noch in eine andere Datei verlegt.
 $min_birthday = '2009-08-01';
