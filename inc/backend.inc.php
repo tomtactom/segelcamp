@@ -327,7 +327,7 @@ if(isset($_POST['sendform'])) {
       }
       $user_ip = htmlspecialchars(trim($_SERVER['REMOTE_ADDR']));
       $user_useragent = htmlspecialchars(trim($_SERVER['HTTP_USER_AGENT']));
-
+      echo "Es scheint alles geklappt zu haben";
       /*
       $statement = $pdo->prepare("INSERT INTO datenbankname (wert1, wert2 wert3) VALUES (:wert1, :wert2, :wert3)");
 			$result = $statement->execute(array('wert1' => $wert1, 'wert2' => $wert2, 'wert3' => $wert3));
