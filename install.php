@@ -1,4 +1,9 @@
 <?php
+if (file_exists('./inc/config.inc.php')) {
+  unlink('./install.php');
+  header('Location: /');
+}
+
 if (isset($_POST['database_form'])) {
   $database = trim($_POST['database']);
   $username = trim($_POST['username']);
@@ -66,6 +71,9 @@ UNIQUE (`name_child`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;";
       mysqli_query($connection,$query) or die('Problem beim Ausführen der SQL-Abfrage.');
       $msg = "Die grundlegenden Einstellungen konnten alle vorgenommen werden.";
+      unlink('./install.php');
+      header('Location: /');
+
     }
   } else {
     $show_form = true;
