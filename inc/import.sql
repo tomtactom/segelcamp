@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS `registrations` (
   `id` INT unsigned NOT NULL AUTO_INCREMENT,
-  `name_child` TEXT COLLATE utf8_unicode_ci NOT NULL,
+  `name_child` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `birthdate` TEXT COLLATE utf8_unicode_ci NOT NULL,
   `allergy` TEXT COLLATE utf8_unicode_ci DEFAULT NULL,
   `medication` TEXT COLLATE utf8_unicode_ci DEFAULT NULL,
