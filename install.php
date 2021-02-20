@@ -137,15 +137,15 @@ UNIQUE (`name_child`)
                       <input type="password" name="password" id="password" placeholder="* MySQL-Passwort" title="Bitte geben Sie das zum MySQL-Nutzernamen zugehörige Passwort an. Dieses sollte aus Sicherheitsgründen mindestens 8 Zeichen entsprechen." minlenght="8" maxlength="64" required />
                     </div>
                     <div class="col-6 col-12-xsmall">
-                      <input type="text" name="host" id="host" value="<?php if(!empty($host)) { echo $host; } ?>" placeholder="* MySQL-Hostname/IP" title="Bitte geben Sie den Hostname oder die IP ein, über welche der MySQL-Server erreichbar ist. Sollte dieser, üblicherweise, auf dem gleichen Server laufen, auf dem auch diese Webseite läuft, geben Sie 'localhost' ein." value="localhost" minlenght="2" maxlength="64" required />
+                      <input type="text" name="host" id="host" value="<?php if(!empty($host)) { echo $host; } else { echo 'localhost'; } ?>" placeholder="* MySQL-Hostname/IP" title="Bitte geben Sie den Hostname oder die IP ein, über welche der MySQL-Server erreichbar ist. Sollte dieser, üblicherweise, auf dem gleichen Server laufen, auf dem auch diese Webseite läuft, geben Sie 'localhost' ein." value="localhost" minlenght="2" maxlength="64" required />
                     </div>
                     <div class="col-6 col-12-xsmall">
                       * Mindestgeburtsdatum
-                      <input type="date" name="min_birthday" id="min_birthday" value="<?php if(!empty($min_birthday)) { echo $min_birthday; } ?>" value="2009-08-01" placeholder="* Mindestgeburtsdatum" minlength="10" maxlength="10" required />
+                      <input type="date" name="min_birthday" id="min_birthday" value="<?php if(!empty($min_birthday)) { echo $min_birthday; } else { echo '2009-08-01'; } ?>" placeholder="* Mindestgeburtsdatum" minlength="10" maxlength="10" required />
                     </div>
                     <div class="col-6 col-12-xsmall">
                       * Maximalgeburtsdatum
-                      <input type="date" name="max_birthday" id="max_birthday" value="<?php if(!empty($max_birthday)) { echo $max_birthday; } ?>" value="2014-06-01" placeholder="* Maximalgeburtsdatum" minlength="10" maxlength="10" required />
+                      <input type="date" name="max_birthday" id="max_birthday" value="<?php if(!empty($max_birthday)) { echo $max_birthday; } else { '2014-06-01'; } ?>" placeholder="* Maximalgeburtsdatum" minlength="10" maxlength="10" required />
                     </div>
                     <div class="col-6 col-12-xsmall">
                       <input type="submit" name="database_form" value="Anmelden">
