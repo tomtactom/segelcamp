@@ -131,6 +131,7 @@
                                             }
                                         </style>
                                         <p>(*) Erforderliche Felder</p>
+																				<?php if(isset($msg_field)) { echo $msg_field; } ?>
                                         <form method="post">
 														<div class="row gtr-uniform">
 															<div class="col-6 col-12-xsmall">
