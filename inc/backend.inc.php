@@ -1,6 +1,6 @@
 <?php
 if (!file_exists('./inc/config.inc.php')) {
-  die('Bitte nehmen Sie die grundlegenden Einstellungen vor.');
+  die('<span style="font-family: sans-serif;">Bitte nehmen Sie die grundlegenden Einstellungen vor.</span>');
 }
 
 # Konfigurationsdaten - Werden noch in eine andere Datei verlegt.
