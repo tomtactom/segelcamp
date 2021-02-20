@@ -23,6 +23,31 @@ section, summary, time, mark, audio, video {
   font: inherit;
   vertical-align: baseline; }
 
+*::selection {
+  background: #f56a6a;
+  color: #ffffff;
+}
+
+.message {
+    margin: 15px auto;
+    padding: 12px;
+    background-color: #f56a6a;
+    color: #ffffff;
+    border-radius: 2px;
+}
+
+.message span:first-child {
+    margin-left: 15px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.message span:first-child:hover {
+    color: #f56a6a;
+}
+
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block; }
