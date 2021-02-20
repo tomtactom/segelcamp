@@ -118,6 +118,7 @@ UNIQUE (`name_child`)
 										</header>
                     <?php if($show_form = true) { ?>
                     <form method="post">
+                      <div class="row gtr-uniform">
                       <div class="col-6 col-12-xsmall">
                       <input type="text" name="database" id="database" value="<?php if(!empty($database)) { echo $database; } ?>" placeholder="* Datenbankname" title="Bitte geben Sie einen gültigen Datenbanknamen einer existierenden Datenbank an." minlenght="2" maxlength="64" required />
                     </div>
@@ -141,6 +142,7 @@ UNIQUE (`name_child`)
                     <div class="col-6 col-12-xsmall">
                       <input type="submit" name="database_form" value="Anmelden">
                     </div>
+                  </div>
                     </form>
                     <?php } ?>
 									  </div>
