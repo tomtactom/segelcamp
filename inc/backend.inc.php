@@ -188,7 +188,7 @@ if(isset($_POST['sendform'])) {
   		$msg = 'Leider ist das Kind noch zu jung für dieses Segelcamp.';
       $error = true;
   	} elseif($swimmingbadge != "1" || $swimmingbadge != "2" || $swimmingbadge != "3" || $swimmingbadge != "4") {
-      $msg = 'Bitte wählen Sie ein gültiges Schwimmabzeichen des Kindes aus.';
+      $msg = 'Bitte wählen Sie ein gültiges Schwimmabzeichen des Kindes aus.'.$swimmingbadge;
       $error = true;
     } elseif($sailingexperience != "1" || $sailingexperience != "2" || $sailingexperience != "3" || $sailingexperience != "4" || $sailingexperience != "5" || $sailingexperience != "6") {
       $msg = 'Bitte wählen Sie die Segelerfahrung des Kindes aus.';
