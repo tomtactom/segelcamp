@@ -1,0 +1,6 @@
+RewriteEngine On
+<FilesMatch "\.inc.php$">
+	Require all denied
+</FilesMatch>
+
+Options -Indexes
