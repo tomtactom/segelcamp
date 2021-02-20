@@ -166,7 +166,7 @@ if(isset($_POST['sendform'])) {
       !is_numeric(explode('-', $birthdate)[0]) || !is_numeric(explode('-', $birthdate)[1]) || !is_numeric(explode('-', $birthdate)[2])) {
       $msg = "Leider stimmt etwas mit der Formatierung des Geburtsdatum nicht. Schreiben Sie: YYYY-MM-DD";
       $error = true;
-    } elseif(!checkdate(int(explode('-', $birthdate)[1]), int(explode('-', $birthdate)[2]), int(explode('-', $birthdate)[0]))) {
+    } elseif(!checkdate(intval(explode('-', $birthdate)[1]), intval(explode('-', $birthdate)[2]), intval(explode('-', $birthdate)[0]))) {
       $msg = "Leider stimmt etwas mit der Formatierung des Geburtsdatum nicht. Schreiben Sie: YYYY-MM-DD";
       $error = true;
     } elseif(explode('-', $max_birthday)[0] < explode('-', $birthdate)[0]) {
