@@ -167,17 +167,17 @@
 																	<option value="6">Fortgeschritten</option>
 																</select>
 															</div>
-                                                            <div class="col-6 col-12-xsmall">
-                                                                * T-Shirt Größe
+                              <div class="col-6 col-12-xsmall">
+                                  * T-Shirt Größe
 																<select name="clothingsize" id="clothingsize" required>
 																	<option value="1">122</option>
-                                                                    <option value="2">128</option>
+																	<option value="2">128</option>
 																	<option value="3">134</option>
 																	<option value="4">140</option>
 																	<option value="5">152</option>
 																	<option value="6">158</option>
-                                                                    <option value="7">164</option>
-                                                                    <option value="8">170</option>
+	                                <option value="7">164</option>
+	                                <option value="8">170</option>
 																</select>
                                                             </div>
                                                             <div class="col-6 col-12-xsmall">
@@ -215,7 +215,7 @@
                                                                 </details>
                                                                 <details style="cursor: pointer;">
                                                                     <summary>Adresse abweichend</summary>
-                                                                    <input type="text" name="plz_parent2" id="plz_parent2" value="" placeholder="PLZ" required minlength="5" maxlength="5" style="width: 26%; display: inline;" pattern="[0-9]*"/>
+                                                                    <input type="text" name="plz_parent2" id="plz_parent2" value="" placeholder="PLZ" minlength="5" maxlength="5" style="width: 26%; display: inline;" pattern="[0-9]*"/>
                                                                 <input type="text" name="town_parent2" id="town_parent2" value="" placeholder="Ort" minlenght="2" maxlength="32" pattern="[a-zA-ZÁÀȦÂÄǞǍĂĀÃÅǺǼǢĆĊĈČĎḌḐḒÉÈĖÊËĚĔĒẼE̊ẸǴĠĜǦĞG̃ĢĤḤáàȧâäǟǎăāãåǻǽǣćċĉčďḍḑḓéèėêëěĕēẽe̊ẹǵġĝǧğg̃ģĥḥÍÌİÎÏǏĬĪĨỊĴĶǨĹĻĽĿḼM̂M̄ʼNŃN̂ṄN̈ŇN̄ÑŅṊÓÒȮȰÔÖȪǑŎŌÕȬŐỌǾƠíìiîïǐĭīĩịĵķǩĺļľŀḽm̂m̄ŉńn̂ṅn̈ňn̄ñņṋóòôȯȱöȫǒŏōõȭőọǿơP̄ŔŘŖŚŜṠŠȘṢŤȚṬṰÚÙÛÜǓŬŪŨŰŮỤẂẀŴẄÝỲŶŸȲỸŹŻŽẒǮp̄ŕřŗśŝṡšşṣťțṭṱúùûüǔŭūũűůụẃẁŵẅýỳŷÿȳỹźżžẓǯßœŒçÇ \-.]*" style="width: 56%; display: inline;" />
                                                                 <input type="text" name="street_parent2" id="street_parent2" value="" placeholder="Straße" minlength="3" maxlength="39" pattern="[a-zA-ZÁÀȦÂÄǞǍĂĀÃÅǺǼǢĆĊĈČĎḌḐḒÉÈĖÊËĚĔĒẼE̊ẸǴĠĜǦĞG̃ĢĤḤáàȧâäǟǎăāãåǻǽǣćċĉčďḍḑḓéèėêëěĕēẽe̊ẹǵġĝǧğg̃ģĥḥÍÌİÎÏǏĬĪĨỊĴĶǨĹĻĽĿḼM̂M̄ʼNŃN̂ṄN̈ŇN̄ÑŅṊÓÒȮȰÔÖȪǑŎŌÕȬŐỌǾƠíìiîïǐĭīĩịĵķǩĺļľŀḽm̂m̄ŉńn̂ṅn̈ňn̄ñņṋóòôȯȱöȫǒŏōõȭőọǿơP̄ŔŘŖŚŜṠŠȘṢŤȚṬṰÚÙÛÜǓŬŪŨŰŮỤẂẀŴẄÝỲŶŸȲỸŹŻŽẒǮp̄ŕřŗśŝṡšşṣťțṭṱúùûüǔŭūũűůụẃẁŵẅýỳŷÿȳỹźżžẓǯßœŒçÇ \-.]*" style="width: 56%; display: inline;" />
                                                                 <input type="text" name="housenumber_parent2" id="housenumber_parent2" value="" placeholder="Hausnummer" pattern="[0-9]+[a-z]|[0-9]*|[0-9]+[ ][a-z]|[0-9]+[A-Z]|[0-9]+[ ][A-Z]" maxlength="6" style="width: 26%; display: inline;" />
