@@ -10,7 +10,7 @@ if (isset($_POST['database'])) {
   // check connection
   $connection = @new mysqli($host, $username, $password, $database);
   if ($connection->connect_errno) {
-    $msg = "Es konnte sich leider nicht mit dem MySQL-Server verbunden werden. Bitte überprüfen Sie, ob Ihre Eingaben korrekt waren und versuchen Sie es erneut.";
+    $msg = "Es konnte sich leider nicht mit dem MySQL-Server verbunden werden. Bitte überprüfen Sie, ob Ihre Eingaben korrekt waren und versuchen Sie es erneut. (".$connection->connect_errno.") ".$connection->connect_error;
   } else {
     // Informationen in ./inc/config.inc.php schreiben
     file_put_contents('./inc/config.inc.php', '$min_birthday = "'.$min_birthday.'";
