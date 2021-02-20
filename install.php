@@ -39,7 +39,7 @@ $pdo = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_password);')
     }
   }
 ?>
-
+<p><?php if(isset($msg)) { echo $msg; } ?></p>
 <form method="post">
   <input type="text" name="database" id="database" placeholder="* Datenbankname" title="Bitte geben Sie einen gültigen Datenbanknamen einer existierenden Datenbank an." minlenght="2" maxlength="64" required />
   <input type="text" name="username" id="username" placeholder="* MySQL-Nutzername" title="Bitte geben Sie einen MySQL-Nutzernamen an, der berechtigt ist auf die oben angegebene Datenbank zuzugreifen." minlenght="2" maxlength="64" required />
