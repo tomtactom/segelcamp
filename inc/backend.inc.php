@@ -363,7 +363,7 @@ if(isset($_POST['sendform'])) {
       $user_useragent = htmlspecialchars(trim($_SERVER['HTTP_USER_AGENT']));
       echo "Es scheint alles geklappt zu haben";
 
-      $statement = $pdo->prepare("INSERT INTO `registrations` (
+      $statement = $pdo->prepare("INSERT INTO registrations (
         name_child,
         birthdate,
         allergy,
