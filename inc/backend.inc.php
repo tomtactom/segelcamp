@@ -379,134 +379,134 @@ if(isset($_POST['sendform'])) {
   }
 
   if(!empty($_COOKIE['name_child'])) {
-    $msg = trim($_COOKIE['name_child']);
+    $name_child = trim($_COOKIE['name_child']);
     setcookie('name_child', '', time() - 3600);
   }
   if(!empty($_COOKIE['birthdate'])) {
-    $msg = trim($_COOKIE['birthdate']);
+    $birthdate = trim($_COOKIE['birthdate']);
     setcookie('birthdate', '', time() - 3600);
   }
   if(!empty($_COOKIE['allergy'])) {
-    $msg = trim($_COOKIE['allergy']);
+    $allergy = trim($_COOKIE['allergy']);
     setcookie('allergy', '', time() - 3600);
   }
   if(!empty($_COOKIE['medication'])) {
-    $msg = trim($_COOKIE['medication']);
+    $medication = trim($_COOKIE['medication']);
     setcookie('medication', '', time() - 3600);
   }
   if(!empty($_COOKIE['swimmingbadge'])) {
-    $msg = trim($_COOKIE['swimmingbadge']);
+    $swimmingbadge = trim($_COOKIE['swimmingbadge']);
     setcookie('swimmingbadge', '', time() - 3600);
   }
   if(!empty($_COOKIE['sailingexperience'])) {
-    $msg = trim($_COOKIE['sailingexperience']);
+    $sailingexperience = trim($_COOKIE['sailingexperience']);
     setcookie('sailingexperience', '', time() - 3600);
   }
   if(!empty($_COOKIE['clothingsize'])) {
-    $msg = trim($_COOKIE['clothingsize']);
+    $clothingsize = trim($_COOKIE['clothingsize']);
     setcookie('clothingsize', '', time() - 3600);
   }
   if(!empty($_COOKIE['lifejacket'])) {
-    $msg = trim($_COOKIE['lifejacket']);
+    $lifejacket = trim($_COOKIE['lifejacket']);
     setcookie('lifejacket', '', time() - 3600);
   }
   if(!empty($_COOKIE['firstname_parent1'])) {
-    $msg = trim($_COOKIE['firstname_parent1']);
+    $firstname_parent1 = trim($_COOKIE['firstname_parent1']);
     setcookie('firstname_parent1', '', time() - 3600);
   }
   if(!empty($_COOKIE['lastname_parent1'])) {
-    $msg = trim($_COOKIE['lastname_parent1']);
+    $lastname_parent1 = trim($_COOKIE['lastname_parent1']);
     setcookie('lastname_parent1', '', time() - 3600);
   }
   if(!empty($_COOKIE['email_parent1'])) {
-    $msg = trim($_COOKIE['email_parent1']);
+    $email_parent1 = trim($_COOKIE['email_parent1']);
     setcookie('email_parent1', '', time() - 3600);
   }
   if(!empty($_COOKIE['mobilenumber_parent1'])) {
-    $msg = trim($_COOKIE['mobilenumber_parent1']);
+    $mobilenumber_parent1 = trim($_COOKIE['mobilenumber_parent1']);
     setcookie('mobilenumber_parent1', '', time() - 3600);
   }
   if(!empty($_COOKIE['phonenumber_parent1'])) {
-    $msg = trim($_COOKIE['phonenumber_parent1']);
+    $phonenumber_parent1 = trim($_COOKIE['phonenumber_parent1']);
     setcookie('phonenumber_parent1', '', time() - 3600);
   }
   if(!empty($_COOKIE['plz_parent1'])) {
-    $msg = trim($_COOKIE['plz_parent1']);
+    $plz_parent1 = trim($_COOKIE['plz_parent1']);
     setcookie('plz_parent1', '', time() - 3600);
   }
   if(!empty($_COOKIE['town_parent1'])) {
-    $msg = trim($_COOKIE['town_parent1']);
+    $town_parent1 = trim($_COOKIE['town_parent1']);
     setcookie('town_parent1', '', time() - 3600);
   }
   if(!empty($_COOKIE['street_parent1'])) {
-    $msg = trim($_COOKIE['street_parent1']);
+    $street_parent1 = trim($_COOKIE['street_parent1']);
     setcookie('street_parent1', '', time() - 3600);
   }
   if(!empty($_COOKIE['housenumber_parent1'])) {
-    $msg = trim($_COOKIE['housenumber_parent1']);
+    $housenumber_parent1 = trim($_COOKIE['housenumber_parent1']);
     setcookie('housenumber_parent1', '', time() - 3600);
   }
   if(!empty($_COOKIE['firstname_parent2'])) {
-    $msg = trim($_COOKIE['firstname_parent2']);
+    $firstname_parent2 = trim($_COOKIE['firstname_parent2']);
     setcookie('firstname_parent2', '', time() - 3600);
   }
   if(!empty($_COOKIE['lastname_parent2'])) {
-    $msg = trim($_COOKIE['lastname_parent2']);
+    $lastname_parent2 = trim($_COOKIE['lastname_parent2']);
     setcookie('lastname_parent2', '', time() - 3600);
   }
   if(!empty($_COOKIE['email_parent2'])) {
-    $msg = trim($_COOKIE['email_parent2']);
+    $email_parent2 = trim($_COOKIE['email_parent2']);
     setcookie('email_parent2', '', time() - 3600);
   }
   if(!empty($_COOKIE['mobilenumber_parent2'])) {
-    $msg = trim($_COOKIE['mobilenumber_parent2']);
+    $mobilenumber_parent2 = trim($_COOKIE['mobilenumber_parent2']);
     setcookie('mobilenumber_parent2', '', time() - 3600);
   }
   if(!empty($_COOKIE['phonenumber_parent2'])) {
-    $msg = trim($_COOKIE['phonenumber_parent2']);
+    $phonenumber_parent2 = trim($_COOKIE['phonenumber_parent2']);
     setcookie('phonenumber_parent2', '', time() - 3600);
   }
   if(!empty($_COOKIE['plz_parent2'])) {
-    $msg = trim($_COOKIE['plz_parent2']);
+    $plz_parent2 = trim($_COOKIE['plz_parent2']);
     setcookie('plz_parent2', '', time() - 3600);
   }
   if(!empty($_COOKIE['town_parent2'])) {
-    $msg = trim($_COOKIE['town_parent2']);
+    $town_parent2 = trim($_COOKIE['town_parent2']);
     setcookie('town_parent2', '', time() - 3600);
   }
   if(!empty($_COOKIE['street_parent2'])) {
-    $msg = trim($_COOKIE['street_parent2']);
+    $street_parent2 = trim($_COOKIE['street_parent2']);
     setcookie('street_parent2', '', time() - 3600);
   }
   if(!empty($_COOKIE['housenumber_parent2'])) {
-    $msg = trim($_COOKIE['housenumber_parent2']);
+    $housenumber_parent2 = trim($_COOKIE['housenumber_parent2']);
     setcookie('housenumber_parent2', '', time() - 3600);
   }
   if(!empty($_COOKIE['other'])) {
-    $msg = trim($_COOKIE['other']);
+    $other = trim($_COOKIE['other']);
     setcookie('other', '', time() - 3600);
   }
   if(!empty($_COOKIE['disclaimer'])) {
-    $msg = trim($_COOKIE['disclaimer']);
+    $disclaimer = trim($_COOKIE['disclaimer']);
     setcookie('disclaimer', '', time() - 3600);
   }
   if(!empty($_COOKIE['coronasymptoms'])) {
-    $msg = trim($_COOKIE['coronasymptoms']);
+    $coronasymptoms = trim($_COOKIE['coronasymptoms']);
     setcookie('coronasymptoms', '', time() - 3600);
   }
   if(!empty($_COOKIE['whatsapp'])) {
-    $msg = trim($_COOKIE['whatsapp']);
+    $whatsapp = trim($_COOKIE['whatsapp']);
     setcookie('whatsapp', '', time() - 3600);
   }
   if(!empty($_COOKIE['correctinformation'])) {
-    $msg = trim($_COOKIE['correctinformation']);
+    $correctinformation = trim($_COOKIE['correctinformation']);
     setcookie('correctinformation', '', time() - 3600);
   }
   if(!empty($_COOKIE['publishphotos'])) {
-    $msg = trim($_COOKIE['publishphotos']);
+    $publishphotos = trim($_COOKIE['publishphotos']);
     setcookie('publishphotos', '', time() - 3600);
   }
-  
+
   if(isset($msg)) {
     $msg_field = '<div class="message"><span onclick="this.parentElement.style.display=\'none\';" style="float: right; cursor: pointer;">×</span> '.trim($msg).'&nbsp;&nbsp;&nbsp;</div>';
   }
