@@ -65,6 +65,7 @@ section, summary, time, mark, audio, video {
   line-height: 60px;
   background: #303030;
   color: #fff;
+  font-size: 69%;
 }
 
 #footer-cookie a {
@@ -83,6 +84,10 @@ section, summary, time, mark, audio, video {
   border: 1px solid #fff;
   padding: 5px 10px;
   text-decoration: none;
+}
+
+footer {
+  margin-bottom: 115px;
 }
 
 @media (max-width: 1200px) {

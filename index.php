@@ -302,11 +302,6 @@
 							  </div>
 
 							  <script>
-							    /*
-							      www.dakitec.de - Cookie Banner
-							      https://dakitec.de/blog/cookie-banner-selbst-erstellen
-							      Dieses Skript zeigt den Banner an, wenn er noch nicht bestätigt wurde
-							    */
 							    var footerCookie = document.querySelector("#footer-cookie");
 							    var footerCookieAccept = document.querySelector("#accept");
 
