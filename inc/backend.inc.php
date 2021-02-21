@@ -452,6 +452,7 @@ if(isset($_POST['sendform'])) {
         'town_parent2' => $town_parent2,
         'street_parent2' => $street_parent2,
         'housenumber_parent2' => $housenumber_parent2,
+        'other' => $other,
         'correctinformation' => $correctinformation,
         'disclaimer' => $disclaimer,
         'coronasymptoms' => $coronasymptoms,
