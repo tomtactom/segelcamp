@@ -16,37 +16,69 @@ $pdo = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_password);
 
 if(isset($_POST['sendform'])) {
     $name_child = ucfirst(trim($_POST['name_child']));
+    setcookie('name_child', $name_child, time() + 60);
     $birthdate = trim($_POST['birthdate']);
+    setcookie('birthdate', $birthdate, time() + 60);
     $allergy = trim($_POST['allergy']);
+    setcookie('allergy', $allergy, time() + 60);
     $medication = trim($_POST['medication']);
+    setcookie('medication', $medication, time() + 60);
     $swimmingbadge = trim($_POST['swimmingbadge']);
+    setcookie('swimmingbadge', $swimmingbadge, time() + 60);
     $sailingexperience = trim($_POST['sailingexperience']);
+    setcookie('sailingexperience', $sailingexperience, time() + 60);
     $clothingsize = trim($_POST['clothingsize']);
+    setcookie('clothingsize', $clothingsize, time() + 60);
     $lifejacket = trim($_POST['lifejacket']);
+    setcookie('lifejacket', $lifejacket, time() + 60);
     $firstname_parent1 = ucfirst(trim($_POST['firstname_parent1']));
+    setcookie('firstname_parent1', $firstname_parent1, time() + 60);
     $lastname_parent1 = trim($_POST['lastname_parent1']);
+    setcookie('lastname_parent1', $lastname_parent1, time() + 60);
     $email_parent1 = strtolower(trim($_POST['email_parent1']));
+    setcookie('email_parent1', $email_parent1, time() + 60);
     $mobilenumber_parent1 = trim($_POST['mobilenumber_parent1']);
+    setcookie('mobilenumber_parent1', $mobilenumber_parent1, time() + 60);
     $phonenumber_parent1 = trim($_POST['phonenumber_parent1']);
+    setcookie('phonenumber_parent1', $phonenumber_parent1, time() + 60);
     $plz_parent1 = trim($_POST['plz_parent1']);
+    setcookie('plz_parent1', $plz_parent1, time() + 60);
     $town_parent1 = ucfirst(trim($_POST['town_parent1']));
+    setcookie('town_parent1', $town_parent1, time() + 60);
     $street_parent1 = ucfirst(trim($_POST['street_parent1']));
+    setcookie('street_parent1', $street_parent1, time() + 60);
     $housenumber_parent1 = strtolower(trim($_POST['housenumber_parent1']));
+    setcookie('housenumber_parent1', $housenumber_parent1, time() + 60);
     $firstname_parent2 = ucfirst(trim($_POST['firstname_parent2']));
+    setcookie('firstname_parent2', $firstname_parent2, time() + 60);
     $lastname_parent2 = trim($_POST['lastname_parent2']);
+    setcookie('lastname_parent2', $lastname_parent2, time() + 60);
     $email_parent2 = strtolower(trim($_POST['email_parent2']));
+    setcookie('email_parent2', $email_parent2, time() + 60);
     $mobilenumber_parent2 = trim($_POST['mobilenumber_parent2']);
+    setcookie('mobilenumber_parent2', $mobilenumber_parent2, time() + 60);
     $phonenumber_parent2 = trim($_POST['phonenumber_parent2']);
+    setcookie('phonenumber_parent2', $phonenumber_parent2, time() + 60);
     $plz_parent2 = trim($_POST['plz_parent2']);
+    setcookie('plz_parent2', $plz_parent2, time() + 60);
     $town_parent2 = ucfirst(trim($_POST['town_parent2']));
+    setcookie('town_parent2', $town_parent2, time() + 60);
     $street_parent2 = ucfirst(trim($_POST['street_parent2']));
+    setcookie('street_parent2', $street_parent2, time() + 60);
     $housenumber_parent2 = strtolower(trim($_POST['housenumber_parent2']));
+    setcookie('housenumber_parent2', $housenumber_parent2, time() + 60);
     $other = trim($_POST['other']);
+    setcookie('other', $other, time() + 60);
     $disclaimer = trim($_POST['disclaimer']);
+    setcookie('disclaimer', $disclaimer, time() + 60);
     $coronasymptoms = trim($_POST['coronasymptoms']);
+    setcookie('coronasymptoms', $coronasymptoms, time() + 60);
     $whatsapp = trim($_POST['whatsapp']);
+    setcookie('whatsapp', $whatsapp, time() + 60);
     $correctinformation = trim($_POST['correctinformation']);
+    setcookie('correctinformation', $correctinformation, time() + 60);
     $publishphotos = trim($_POST['publishphotos']);
+    setcookie('publishphotos', $publishphotos, time() + 60);
     if(
       empty($name_child)
       || empty($birthdate)
@@ -345,6 +377,136 @@ if(isset($_POST['sendform'])) {
     $msg = trim($_COOKIE['msg']);
     setcookie('msg', '', time() - 3600);
   }
+
+  if(!empty($_COOKIE['name_child'])) {
+    $msg = trim($_COOKIE['name_child']);
+    setcookie('name_child', '', time() - 3600);
+  }
+  if(!empty($_COOKIE['birthdate'])) {
+    $msg = trim($_COOKIE['birthdate']);
+    setcookie('birthdate', '', time() - 3600);
+  }
+  if(!empty($_COOKIE['allergy'])) {
+    $msg = trim($_COOKIE['allergy']);
+    setcookie('allergy', '', time() - 3600);
+  }
+  if(!empty($_COOKIE['medication'])) {
+    $msg = trim($_COOKIE['medication']);
+    setcookie('medication', '', time() - 3600);
+  }
+  if(!empty($_COOKIE['swimmingbadge'])) {
+    $msg = trim($_COOKIE['swimmingbadge']);
+    setcookie('swimmingbadge', '', time() - 3600);
+  }
+  if(!empty($_COOKIE['sailingexperience'])) {
+    $msg = trim($_COOKIE['sailingexperience']);
+    setcookie('sailingexperience', '', time() - 3600);
+  }
+  if(!empty($_COOKIE['clothingsize'])) {
+    $msg = trim($_COOKIE['clothingsize']);
+    setcookie('clothingsize', '', time() - 3600);
+  }
+  if(!empty($_COOKIE['lifejacket'])) {
+    $msg = trim($_COOKIE['lifejacket']);
+    setcookie('lifejacket', '', time() - 3600);
+  }
+  if(!empty($_COOKIE['firstname_parent1'])) {
+    $msg = trim($_COOKIE['firstname_parent1']);
+    setcookie('firstname_parent1', '', time() - 3600);
+  }
+  if(!empty($_COOKIE['lastname_parent1'])) {
+    $msg = trim($_COOKIE['lastname_parent1']);
+    setcookie('lastname_parent1', '', time() - 3600);
+  }
+  if(!empty($_COOKIE['email_parent1'])) {
+    $msg = trim($_COOKIE['email_parent1']);
+    setcookie('email_parent1', '', time() - 3600);
+  }
+  if(!empty($_COOKIE['mobilenumber_parent1'])) {
+    $msg = trim($_COOKIE['mobilenumber_parent1']);
+    setcookie('mobilenumber_parent1', '', time() - 3600);
+  }
+  if(!empty($_COOKIE['phonenumber_parent1'])) {
+    $msg = trim($_COOKIE['phonenumber_parent1']);
+    setcookie('phonenumber_parent1', '', time() - 3600);
+  }
+  if(!empty($_COOKIE['plz_parent1'])) {
+    $msg = trim($_COOKIE['plz_parent1']);
+    setcookie('plz_parent1', '', time() - 3600);
+  }
+  if(!empty($_COOKIE['town_parent1'])) {
+    $msg = trim($_COOKIE['town_parent1']);
+    setcookie('town_parent1', '', time() - 3600);
+  }
+  if(!empty($_COOKIE['street_parent1'])) {
+    $msg = trim($_COOKIE['street_parent1']);
+    setcookie('street_parent1', '', time() - 3600);
+  }
+  if(!empty($_COOKIE['housenumber_parent1'])) {
+    $msg = trim($_COOKIE['housenumber_parent1']);
+    setcookie('housenumber_parent1', '', time() - 3600);
+  }
+  if(!empty($_COOKIE['firstname_parent2'])) {
+    $msg = trim($_COOKIE['firstname_parent2']);
+    setcookie('firstname_parent2', '', time() - 3600);
+  }
+  if(!empty($_COOKIE['lastname_parent2'])) {
+    $msg = trim($_COOKIE['lastname_parent2']);
+    setcookie('lastname_parent2', '', time() - 3600);
+  }
+  if(!empty($_COOKIE['email_parent2'])) {
+    $msg = trim($_COOKIE['email_parent2']);
+    setcookie('email_parent2', '', time() - 3600);
+  }
+  if(!empty($_COOKIE['mobilenumber_parent2'])) {
+    $msg = trim($_COOKIE['mobilenumber_parent2']);
+    setcookie('mobilenumber_parent2', '', time() - 3600);
+  }
+  if(!empty($_COOKIE['phonenumber_parent2'])) {
+    $msg = trim($_COOKIE['phonenumber_parent2']);
+    setcookie('phonenumber_parent2', '', time() - 3600);
+  }
+  if(!empty($_COOKIE['plz_parent2'])) {
+    $msg = trim($_COOKIE['plz_parent2']);
+    setcookie('plz_parent2', '', time() - 3600);
+  }
+  if(!empty($_COOKIE['town_parent2'])) {
+    $msg = trim($_COOKIE['town_parent2']);
+    setcookie('town_parent2', '', time() - 3600);
+  }
+  if(!empty($_COOKIE['street_parent2'])) {
+    $msg = trim($_COOKIE['street_parent2']);
+    setcookie('street_parent2', '', time() - 3600);
+  }
+  if(!empty($_COOKIE['housenumber_parent2'])) {
+    $msg = trim($_COOKIE['housenumber_parent2']);
+    setcookie('housenumber_parent2', '', time() - 3600);
+  }
+  if(!empty($_COOKIE['other'])) {
+    $msg = trim($_COOKIE['other']);
+    setcookie('other', '', time() - 3600);
+  }
+  if(!empty($_COOKIE['disclaimer'])) {
+    $msg = trim($_COOKIE['disclaimer']);
+    setcookie('disclaimer', '', time() - 3600);
+  }
+  if(!empty($_COOKIE['coronasymptoms'])) {
+    $msg = trim($_COOKIE['coronasymptoms']);
+    setcookie('coronasymptoms', '', time() - 3600);
+  }
+  if(!empty($_COOKIE['whatsapp'])) {
+    $msg = trim($_COOKIE['whatsapp']);
+    setcookie('whatsapp', '', time() - 3600);
+  }
+  if(!empty($_COOKIE['correctinformation'])) {
+    $msg = trim($_COOKIE['correctinformation']);
+    setcookie('correctinformation', '', time() - 3600);
+  }
+  if(!empty($_COOKIE['publishphotos'])) {
+    $msg = trim($_COOKIE['publishphotos']);
+    setcookie('publishphotos', '', time() - 3600);
+  }
+  
   if(isset($msg)) {
     $msg_field = '<div class="message"><span onclick="this.parentElement.style.display=\'none\';" style="float: right; cursor: pointer;">×</span> '.trim($msg).'&nbsp;&nbsp;&nbsp;</div>';
   }
