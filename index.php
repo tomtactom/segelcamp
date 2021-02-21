@@ -296,7 +296,7 @@
                 </footer>
 								<div id="footer-cookie">
 							    <span id="description">
-							      Wir nutzen Cookies, um Ihnen ein besseres Nutzererlebnis zu ermöglichen. Keine Sorge, wir speichern dadurch keine Daten von Ihnen. Mit Nutzung dieser Seite akzeptieren Sie funktionelle Cookies.  <a href="https://www.verbraucherzentrale.de/wissen/digitale-welt/datenschutz/cookies-kontrollieren-und-verwalten-11996#0" target="_blank">Was sind Cookies?</a> - <a href="#" target="_blank">Mehr erfahren</a>
+							      Wir nutzen Cookies, um Ihnen ein besseres Nutzererlebnis zu ermöglichen. Keine Sorge, wir speichern dadurch keine Daten von Ihnen. Mit Nutzung dieser Seite akzeptieren Sie funktionelle Cookies.  <a href="https://www.verbraucherzentrale.de/wissen/digitale-welt/datenschutz/cookies-kontrollieren-und-verwalten-11996#0" target="_blank">Was sind Cookies?</a><!-- - <a href="#" target="_blank">Mehr erfahren</a>-->
 							    </span>
 							    <span id="accept"><a href="javascript:void(0)" title="Ok, verstanden">Ok, verstanden</a></span>
 							  </div>
