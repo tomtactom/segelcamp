@@ -2,7 +2,7 @@
 <?php $page_title = 'Impressum'; ?>
 <?php require('./inc/header.inc.php'); ?>
 <section>
-	<header class="major" id="anmelden">
+	<header class="major">
 		<h2>Impressum</h2>
 	</header>
   <div class="content" style="max-width: 900px; margin: auto;">
