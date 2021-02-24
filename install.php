@@ -66,6 +66,7 @@ $pdo = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_password);')
 `accepted` INT COLLATE utf8_unicode_ci DEFAULT 0,
 `amount_payed` TEXT COLLATE utf8_unicode_ci DEFAULT '0,00 €',
 `boat_name` TEXT COLLATE utf8_unicode_ci DEFAULT NULL,
+`changed_by_admin` TEXT COLLATE utf8_unicode_ci DEFAULT NULL,
 `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
 PRIMARY KEY (`id`),
 UNIQUE (`name_child`)
