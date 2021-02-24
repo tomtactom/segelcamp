@@ -1,5 +1,5 @@
 <?php require('./inc/backend.inc.php'); ?>
-<?php $page_title = 'Segelcamp 2021'; ?>
+<?php $page_title = 'Datenschutzerklärung'; ?>
 <?php require('./inc/header.inc.php'); ?>
 <section>
 	<header class="major" id="anmelden">
