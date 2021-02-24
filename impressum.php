@@ -21,7 +21,7 @@
       E-Mail-Adresse: <a href="mailto:info@lohheider-see.de">info@lohheider-see.de</a><br>
       E-Mail-Adresse: <a href="mailto:segelcamp@lohheider-see.de">segelcamp@lohheider-see.de</a><br>
       <br>
-      <strong>Sonstiges: </strong>
+      <strong>Sonstiges: </strong><br>
       Gläubiger-Identifikationsnummer: DE72ZZZ00000129235<br>
       DSV Nr.: NW 190<br><br>
       <strong>Copyright: </strong><br>
