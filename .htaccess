@@ -2,6 +2,8 @@ RewriteEngine On
 RewriteBase /
 RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule (.*) $1.php
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 <FilesMatch "\.inc.php$">
 	Require all denied
 </FilesMatch>
