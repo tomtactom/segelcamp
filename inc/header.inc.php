@@ -40,7 +40,7 @@
 					<div id="main">
 						<div class="inner">
 							<header id="header">
-								<span class="logo"><strong>Segelcamp</strong> Seglergemeinschaft Lohheider See e.V.</span>
+								<span class="logo"><a href="/"><strong>Segelcamp</strong> Seglergemeinschaft Lohheider See e.V.</a></span>
 								<ul class="icons">
 									<li><a href="https://www.facebook.com/segelvereinsls" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 									<li><a href="https://www.instagram.com/sls_jugend" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
