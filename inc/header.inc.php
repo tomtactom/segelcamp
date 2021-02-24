@@ -2,7 +2,7 @@
 <html lang="de">
 	<head>
         <meta charset="utf-8" />
-		<title><?php if(!empty(!$page_title)) { echo $page_title.' | '; } ?>Seglergemeinschaft Lohheider See e.V.</title>
+		<title><?php if(!empty($page_title)) { echo $page_title.' | '; } ?>Seglergemeinschaft Lohheider See e.V.</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <meta name="language" content="de">
         <meta name="keywords" content="Segelcamp, Sommercamp, Ferienangebot, Segeln, Lohheider See">
