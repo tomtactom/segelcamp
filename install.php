@@ -29,6 +29,8 @@ if (isset($_POST['database_form'])) {
   if ($connection->connect_errno) {
     $msg = "Es konnte sich leider nicht mit dem MySQL-Server verbunden werden. Bitte überprüfen Sie, ob Ihre Eingaben korrekt waren und versuchen Sie es erneut. (".$connection->connect_errno.") ".$connection->connect_error;
   } else {
+    $salt1 = generateRandomString();
+    $salt2 = generateRandomString();
     // Informationen in ./inc/config.inc.php schreiben
     file_put_contents('./inc/config.inc.php', '<?php
 $min_birthday = "'.$min_birthday.'";
@@ -37,8 +39,8 @@ $db_host = "'.$host.'";
 $db_name = "'.$database.'";
 $db_user = "'.$username.'";
 $db_password = "'.$password.'";
-$salt1 = "'.generateRandomString().'";
-$salt2 = "'.generateRandomString().'";
+$salt1 = "'.$salt1.'";
+$salt2 = "'.$salt2.'";
 $admin_password = "'.hash('sha256', $salt1.$admin_password.$salt2).'";
 $admin_cookie_hash = "'.generateRandomString(32).'";
 $pdo = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_password);');
