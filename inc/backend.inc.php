@@ -10,7 +10,7 @@ if(isset($_POST['admin_login'])) {
     setcookie("token", $admin_cookie_hash, time()+(3600*24)); # 24 Stunden
     unset($_POST['password']);
   } else {
-    echo hash('sha256', $salt1.$_POST['password'].$salt2).' und '.hash('sha256', $salt1.$admin_password.$salt2);
+    echo hash('sha256', $salt1.$_POST['password'].$salt2).' und '.$admin_password;
   }
 }
 
