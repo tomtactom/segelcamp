@@ -19,7 +19,13 @@
 					</div>
 				</form>
 			</div>
-		<?php } else { ?>
+		<?php
+			} else {
+				$statement = $pdo->prepare("SELECT * FROM `registrations` ORDER BY id");
+				$result = $statement->execute();
+				print_r($result);
+				$count = 1;
+		?>
 			<table id="sort">
 				<thead>
 					<tr>
@@ -36,9 +42,6 @@
 				</thead>
 				<tbody>
 					<?php
-						$statement = $pdo->prepare("SELECT * FROM `registrations` ORDER BY id");
-						$result = $statement->execute();
-						$count = 1;
 						while($row = $statement->fetch()) {
 					?>
 					<tr>
