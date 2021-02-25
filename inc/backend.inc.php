@@ -16,8 +16,8 @@ if(isset($_POST['admin_login'])) {
 }
 
 if(isset($_GET['logout'])) {
-  setcookie("token", "", time()-3600)
-  header('Location: /')
+  setcookie("token", "", time()-3600);
+  header('Location: /');
 }
 
 if(isset($_POST['sendform'])) {
