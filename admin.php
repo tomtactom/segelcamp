@@ -26,7 +26,7 @@
 				$count = 1;
 				if(!$statement->fetch()) {
 					?>
-					<h2>Bis jetzt hat sich noch kein Kind für das Sommercamp angemeldet.</h2>
+					<h3>Bis jetzt hat sich noch kein Kind für das Sommercamp angemeldet.</h3>
 					<?php
 				} else {
 		?>
