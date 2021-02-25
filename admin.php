@@ -20,7 +20,41 @@
 				</form>
 			</div>
 		<?php } else { ?>
-			Sie sind erfolgreich eingeloggt!
+			<table id="sort">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Name Kind</th>
+						<th>Geburtsdatum</th>
+						<th>Allergie</th>
+						<th>Medikamete</th>
+						<th>Schwimmabzeichen</th>
+						<th>Segelerfahrung</th>
+						<th>Kleidungsgröße</th>
+						<th>Schwimmweste</th>
+					</tr>
+				</thead>
+				<tbody>
+					<?php
+						$statement = $pdo->prepare("SELECT * FROM `registrations` ORDER BY id");
+						$result = $statement->execute();
+						$count = 1;
+						while($row = $statement->fetch()) {
+					?>
+					<tr>
+						<td scope="row"><?php echo $count++ ?></td>
+						<td><?php echo $row['name_child'] ?></td>
+						<td><?php echo $row['birthdate'] ?></td>
+						<td><?php echo $row['allergy'] ?></td>
+						<td><?php echo $row['medication'] ?></td>
+						<td><?php echo $row['swimmingbadge'] ?></td>
+						<td><?php echo $row['sailingexperience'] ?></td>
+						<td><?php echo $row['clothingsize'] ?></td>
+						<td><?php echo $row['lifejacket'] ?></td>
+					</tr>
+				<?php } ?>
+				</tbody>
+			</table>
 		<?php } ?>
   </div>
 </section>
