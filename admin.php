@@ -42,6 +42,34 @@
 						<th>Segelerfahrung</th>
 						<th>Kleidungsgröße</th>
 						<th>Schwimmweste</th>
+						<th>Vorname 1. Elternteil</th>
+						<th>Nachname 1. Elternteil</th>
+						<th>E-Mail-Adresse 1. Elternteil</th>
+						<th>Handynummer 1. Elternteil</th>
+						<th>Telefonnummer 1. Elternteil</th>
+						<th>PLZ 1. Elternteil</th>
+						<th>Stadt 1. Elternteil</th>
+						<th>Straße 1. Elternteil</th>
+						<th>Hausnummer 1. Elternteil</th>
+						<th>Vorname 2. Elternteil</th>
+						<th>Nachname 2. Elternteil</th>
+						<th>E-Mail-Adresse 2. Elternteil</th>
+						<th>Handynummer 2. Elternteil</th>
+						<th>Telefonnummer 2. Elternteil</th>
+						<th>PLZ 2. Elternteil</th>
+						<th>Stadt 2. Elternteil</th>
+						<th>Straße 2. Elternteil</th>
+						<th>Hausnummer 2. Elternteil</th>
+						<th>Sonstiges</th>
+						<th>Datesnchutz WhatsApp</th>
+						<th>Datenschutz Foto hochladen</th>
+						<th>Nutzer IP</th>
+						<th>Nutzer Useragent</th>
+						<th>Wurde von uns akzeptiert</th>
+						<th>Beitrag überwiesen</th>
+						<th>Bootsname</th>
+						<th>Nachträglich geändert</th>
+						<th>Angemeldet am</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -57,7 +85,34 @@
 						<td><?php echo $row['swimmingbadge'] ?></td>
 						<td><?php echo $row['sailingexperience'] ?></td>
 						<td><?php echo $row['clothingsize'] ?></td>
-						<td><?php echo $row['lifejacket'] ?></td>
+						<td><?php echo $row['firstname_parent1'] ?></td>
+						<td><?php echo $row['lastname_parent1'] ?></td>
+						<td><?php echo $row['email_parent1'] ?></td>
+						<td><?php echo $row['mobilenumber_parent1'] ?></td>
+						<td><?php echo $row['phonenumber_parent1'] ?></td>
+						<td><?php echo $row['plz_parent1'] ?></td>
+						<td><?php echo $row['town_parent1'] ?></td>
+						<td><?php echo $row['street_parent1'] ?></td>
+						<td><?php echo $row['housenumber_parent1'] ?></td>
+						<td><?php echo $row['firstname_parent2'] ?></td>
+						<td><?php echo $row['lastname_parent2'] ?></td>
+						<td><?php echo $row['email_parent2'] ?></td>
+						<td><?php echo $row['mobilenumber_parent2'] ?></td>
+						<td><?php echo $row['phonenumber_parent2'] ?></td>
+						<td><?php echo $row['plz_parent2'] ?></td>
+						<td><?php echo $row['town_parent2'] ?></td>
+						<td><?php echo $row['street_parent2'] ?></td>
+						<td><?php echo $row['housenumber_parent2'] ?></td>
+						<td><?php echo $row['other'] ?></td>
+						<td><?php echo $row['whatsapp'] ?></td>
+						<td><?php echo $row['publishphotos'] ?></td>
+						<td><?php echo $row['user_ip'] ?></td>
+						<td><?php echo $row['user_useragent'] ?></td>
+						<td><?php echo $row['accepted'] ?></td>
+						<td><?php echo $row['amount_payed'] ?></td>
+						<td><?php echo $row['boat_name'] ?></td>
+						<td><?php echo $row['changed_by_admin'] ?></td>
+						<td><?php echo $row['created_at'] ?></td>
 					</tr>
 				<?php } ?>
 				</tbody>
