@@ -20,7 +20,7 @@
 				</form>
 			</div>
 		<?php } else { ?>
-			Du bist erfolgreich eingeloggt!
+			Sie sind erfolgreich eingeloggt!
 		<?php } ?>
   </div>
 </section>
