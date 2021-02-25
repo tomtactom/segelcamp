@@ -23,8 +23,12 @@
 			} else {
 				$statement = $pdo->prepare("SELECT * FROM `registrations` ORDER BY id");
 				$result = $statement->execute();
-				print_r($statement->fetch());
 				$count = 1;
+				if(!$statement->fetch()) {
+					?>
+					<h2>Bis jetzt hat sich noch kein Kind für das Sommercamp angemeldet.</h2>
+					<?php
+				} else {
 		?>
 			<table id="sort">
 				<thead>
@@ -58,7 +62,10 @@
 				<?php } ?>
 				</tbody>
 			</table>
-		<?php } ?>
+		<?php
+			}
+			}
+	?>
   </div>
 </section>
 <?php require('./inc/footer.inc.php'); ?>
