@@ -6,7 +6,7 @@ if (!file_exists('./inc/config.inc.php')) {
 }
 
 if(isset($_POST['admin_login'])) {
-  if(hash('sha256', $salt1.$_POST['password'].$salt2) == hash('sha256', $salt1.$admin_password.$salt2)) {
+  if(hash('sha256', $salt1.$_POST['password'].$salt2) == $admin_password) {
     setcookie("token", $admin_cookie_hash, time()+(3600*24)); # 24 Stunden
     unset($_POST['password']);
   } else {
