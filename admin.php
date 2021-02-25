@@ -23,7 +23,7 @@
 			} else {
 				$statement = $pdo->prepare("SELECT * FROM `registrations` ORDER BY id");
 				$result = $statement->execute();
-				print_r($result);
+				print_r($statement->fetch());
 				$count = 1;
 		?>
 			<table id="sort">
