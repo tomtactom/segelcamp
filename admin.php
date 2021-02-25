@@ -23,7 +23,6 @@
 			} else {
 				$statement = $pdo->prepare("SELECT * FROM `registrations` ORDER BY id");
 				$result = $statement->execute();
-				$count = 1;
 				if(!$statement->fetch()) {
 					?>
 					<h3>Bis jetzt hat sich noch kein Kind für das Sommercamp angemeldet.</h3>
@@ -74,6 +73,9 @@
 				</thead>
 				<tbody>
 					<?php
+					$statement = $pdo->prepare("SELECT * FROM `registrations` ORDER BY id");
+					$result = $statement->execute();
+					$count = 1;
 						while($row = $statement->fetch()) {
 					?>
 					<tr>
