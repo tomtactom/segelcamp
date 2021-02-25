@@ -4,6 +4,17 @@ if (file_exists('./inc/config.inc.php')) {
   header('Location: /');
 }
 
+// https://stackoverflow.com/questions/4356289/php-random-string-generator
+function generateRandomString($length = 10) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
+}
+
 if (isset($_POST['database_form'])) {
   $database = trim($_POST['database']);
   $username = trim($_POST['username']);
@@ -11,6 +22,7 @@ if (isset($_POST['database_form'])) {
   $host = trim($_POST['host']);
   $min_birthday = trim($_POST['min_birthday']);
   $max_birthday = trim($_POST['max_birthday']);
+  $admin_password = $_POST['admin_password'];
 
   // Check connection
   $connection = @new mysqli($host, $username, $password, $database);
@@ -25,6 +37,10 @@ $db_host = "'.$host.'";
 $db_name = "'.$database.'";
 $db_user = "'.$username.'";
 $db_password = "'.$password.'";
+$salt1 = "'.generateRandomString().'";
+$salt2 = "'.generateRandomString().'";
+$admin_password = "'.hash('sha256', $salt1.$admin_password.$salt2).'";
+$admin_cookie_hash = "'.generateRandomString(32).'";
 $pdo = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_password);');
 
     $query = "CREATE TABLE IF NOT EXISTS `registrations` (
@@ -148,6 +164,10 @@ UNIQUE (`name_child`)
                     <div class="col-6 col-12-xsmall">
                       * Maximalgeburtsdatum
                       <input type="date" name="max_birthday" id="max_birthday" value="<?php if(!empty($max_birthday)) { echo $max_birthday; } else { echo '2014-06-01'; } ?>" placeholder="* Maximalgeburtsdatum" minlength="10" maxlength="10" required />
+                    </div>
+                    <div class="col-6 col-12-xsmall">
+                      * Administrationspasswort
+                      <input type="password" name="admin_password" id="admin_password" placeholder="* Administrationspasswort" minlength="8" maxlength="64" required />
                     </div>
                     <div class="col-6 col-12-xsmall">
                       <input type="submit" name="database_form" value="Anmelden">

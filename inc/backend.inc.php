@@ -5,6 +5,13 @@ if (!file_exists('./inc/config.inc.php')) {
   require('./inc/config.inc.php');
 }
 
+if(isset($_POST['admin_login'])) {
+  if(hash('sha256', $salt1.$_POST['password'].$salt2) == hash('sha256', $salt1.$admin_password.$salt2)) {
+    setcookie("token", $admin_cookie_hash, time()+(3600*24)); # 24 Stunden
+    unset($_POST['password']);
+  }
+}
+
 if(isset($_POST['sendform'])) {
     $name_child = ucfirst(trim($_POST['name_child']));
     setcookie('name_child', $name_child, time() + 60);
