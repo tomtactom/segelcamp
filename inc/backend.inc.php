@@ -15,6 +15,11 @@ if(isset($_POST['admin_login'])) {
   }
 }
 
+if(isset($_GET['logout'])) {
+  setcookie("token", "", time()-3600)
+  header('Location: /')
+}
+
 if(isset($_POST['sendform'])) {
     $name_child = ucfirst(trim($_POST['name_child']));
     setcookie('name_child', $name_child, time() + 60);

@@ -3,7 +3,7 @@
 <?php require('./inc/header.inc.php'); ?>
 <section>
 	<header class="major">
-		<h2>Administrator Bereich</h2>
+		<h2>Administrator Bereich<?php if(isset($_COOKIE['token']) { echo ' - <a href="?logout">Abmelden</a>'; }?>)</h2>
 	</header>
   <div class="content" style="max-width: 900px; margin: auto;">
 		<?php if(isset($msg_field)) { echo $msg_field; } ?>
