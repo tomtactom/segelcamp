@@ -96,7 +96,7 @@
 						<td><?php if($row['publishphotos'] == 1) { echo 'Ja'; } else { echo 'Nein'; } ?></td>
 						<td><?php echo $row['user_ip'] ?></td>
 						<td><small><?php echo $row['user_useragent'] ?></small></td>
-						<td><?php if($row['accepted'] == 1) { echo 'Ja'; } else { echo 'accepted'; } ?></td>
+						<td><?php if($row['accepted'] == 1) { echo 'Ja'; } else { echo 'Noch nicht'; } ?></td>
 						<td><?php if($row['amount_payed'] == "1") { echo 'Ja'; } elseif($row['amount_payed'] == "0" || $row['amount_payed'] == "0,00 €") { echo 'Nein'; } else { echo $row['amount_payed']; } ?></td>
 						<td><?php echo $row['boat_name'] ?></td>
 						<td><?php echo $row['changed_by_admin'] ?></td>
