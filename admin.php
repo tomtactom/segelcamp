@@ -42,24 +42,16 @@
 						<th>Segelerfahrung</th>
 						<th>Kleidungsgröße</th>
 						<th>Schwimmweste</th>
-						<th>Vorname 1. Elternteil</th>
-						<th>Nachname 1. Elternteil</th>
+						<th>Name 1. Elternteil</th>
 						<th>E-Mail-Adresse 1. Elternteil</th>
 						<th>Handynummer 1. Elternteil</th>
 						<th>Telefonnummer 1. Elternteil</th>
-						<th>PLZ 1. Elternteil</th>
-						<th>Stadt 1. Elternteil</th>
-						<th>Straße 1. Elternteil</th>
-						<th>Hausnummer 1. Elternteil</th>
-						<th>Vorname 2. Elternteil</th>
-						<th>Nachname 2. Elternteil</th>
+						<th>Adresse 1. Elternteil</th>
+						<th>Name 2. Elternteil</th>
 						<th>E-Mail-Adresse 2. Elternteil</th>
 						<th>Handynummer 2. Elternteil</th>
 						<th>Telefonnummer 2. Elternteil</th>
-						<th>PLZ 2. Elternteil</th>
-						<th>Stadt 2. Elternteil</th>
-						<th>Straße 2. Elternteil</th>
-						<th>Hausnummer 2. Elternteil</th>
+						<th>Adresse 2. Elternteil</th>
 						<th>Sonstiges</th>
 						<th>Datenschutz WhatsApp</th>
 						<th>Datenschutz Foto hochladen</th>
@@ -87,33 +79,25 @@
 						<td><?php echo $row['medication'] ?></td>
 						<td><?php if($row['swimmingbadge'] == 1) { echo 'Seepferdchen'; } elseif($row['swimmingbadge'] == 2) { echo 'Bronze'; } elseif($row['swimmingbadge'] == 3) { echo 'Silber'; } elseif($row['swimmingbadge'] == 4) { echo 'Gold'; } ?></td>
 						<td><?php if($row['sailingexperience'] == 1) { echo 'Keine'; } elseif($row['sailingexperience'] == 2) { echo 'Auf Boot mitgefahren'; } elseif($row['sailingexperience'] == 3) { echo 'Schonmal selbst gesegelt'; } elseif($row['sailingexperience'] == 4) { echo 'Kann alleine segeln'; } elseif($row['sailingexperience'] == 5) { echo 'Kann gut alleine segeln'; } elseif($row['sailingexperience'] == 6) { echo 'Fortgeschritten'; } ?></td>
-						<td><?php echo $row['clothingsize'] ?></td>
-						<td><?php echo $row['lifejacket'] ?></td>
-						<td><?php echo $row['firstname_parent1'] ?></td>
-						<td><?php echo $row['lastname_parent1'] ?></td>
+						<td><?php if($row['clothingsize'] == 1) { echo '122'; } elseif($row['clothingsize'] == 2) { echo '128'; } elseif($row['clothingsize'] == 3) { echo '134'; } elseif($row['clothingsize'] == 4) { echo '140'; } elseif($row['clothingsize'] == 5) { echo '152'; } elseif($row['clothingsize'] == 6) { echo '158'; } elseif($row['clothingsize'] == 7) { echo '164'; } elseif($row['clothingsize'] == 8) { echo '170'; } ?></td>
+						<td><?php if($row['lifejacket'] == 1) { echo 'Ja'; } else { echo 'Nein'; } ?></td>
+						<td><?php echo $row['firstname_parent1'].' '.$row['lastname_parent1'] ?></td>
 						<td><a href="mailto:<?php echo $row['email_parent1'] ?>"><?php echo $row['email_parent1'] ?></a></td>
 						<td><a href="tel:<?php echo $row['mobilenumber_parent1'] ?>"><?php echo $row['mobilenumber_parent1'] ?></a></td>
 						<td><a href="tel:<?php echo $row['phonenumber_parent1'] ?>"><?php echo $row['phonenumber_parent1'] ?></a></td>
-						<td><?php echo $row['plz_parent1'] ?></td>
-						<td><?php echo $row['town_parent1'] ?></td>
-						<td><?php echo $row['street_parent1'] ?></td>
-						<td><?php echo $row['housenumber_parent1'] ?></td>
-						<td><?php echo $row['firstname_parent2'] ?></td>
-						<td><?php echo $row['lastname_parent2'] ?></td>
+						<td><?php echo $row['plz_parent1'].' '.$row['town_parent1'].' '.$row['street_parent1'].' '.$row['housenumber_parent1'] ?></td>
+						<td><?php echo $row['firstname_parent2'].' '.$row['lastname_parent2'] ?></td>
 						<td><a href="mailto:<?php echo $row['email_parent2'] ?>"><?php echo $row['email_parent2'] ?></a></td>
 						<td><a href="tel:<?php echo $row['mobilenumber_parent2'] ?>"><?php echo $row['mobilenumber_parent2'] ?></a></td>
 						<td><a href="tel:<?php echo $row['phonenumber_parent2'] ?>"><?php echo $row['phonenumber_parent2'] ?></a></td>
-						<td><?php echo $row['plz_parent2'] ?></td>
-						<td><?php echo $row['town_parent2'] ?></td>
-						<td><?php echo $row['street_parent2'] ?></td>
-						<td><?php echo $row['housenumber_parent2'] ?></td>
+						<td><?php echo $row['plz_parent2'].' '.$row['town_parent2'].' '.$row['street_parent2'].' '.$row['housenumber_parent2'] ?></td>
 						<td><?php echo $row['other'] ?></td>
-						<td><?php echo $row['whatsapp'] ?></td>
-						<td><?php echo $row['publishphotos'] ?></td>
+						<td><?php echo if($row['whatsapp'] == 1) { echo 'Ja'; } else { echo 'Nein'; } ?></td>
+						<td><?php echo if($row['publishphotos'] == 1) { echo 'Ja'; } else { echo 'Nein'; } ?></td>
 						<td><?php echo $row['user_ip'] ?></td>
-						<td><?php echo $row['user_useragent'] ?></td>
-						<td><?php echo $row['accepted'] ?></td>
-						<td><?php echo $row['amount_payed'] ?></td>
+						<td><small><?php echo $row['user_useragent'] ?></small></td>
+						<td><?php echo if($row['accepted'] == 1) { echo 'Ja'; } else { echo 'accepted'; } ?></td>
+						<td><?php echo if($row['amount_payed'] == "1") { echo 'Ja'; } elseif($row['amount_payed'] == "0" || $row['amount_payed'] == "0,00 €") { echo 'Nein'; } else { echo $row['amount_payed']; } ?></td>
 						<td><?php echo $row['boat_name'] ?></td>
 						<td><?php echo $row['changed_by_admin'] ?></td>
 						<td><?php echo $row['created_at'] ?></td>
