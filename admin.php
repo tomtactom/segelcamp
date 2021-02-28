@@ -29,6 +29,7 @@
 					<?php
 				} else {
 		?>
+		<div class="table-scrollable">
 			<table id="sort">
 				<thead>
 					<tr>
@@ -120,6 +121,7 @@
 				<?php } ?>
 				</tbody>
 			</table>
+		</div>
 		<?php
 			}
 			}
