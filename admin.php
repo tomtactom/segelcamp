@@ -5,7 +5,7 @@
 	<header class="major">
 		<h2>Administrator Bereich<?php if(isset($_COOKIE['token'])) { echo ' - <u><a href="?logout">Abmelden</a></u>'; }?></h2>
 	</header>
-  <div class="content" style="max-width: 900px; margin: auto;">
+  <div class="content">
 		<?php if(isset($msg_field)) { echo $msg_field; } ?>
     <?php if($_COOKIE['token'] != $admin_cookie_hash) { ?>
 			<div class="row gtr-uniform">
@@ -60,7 +60,7 @@
 						<th>Straße 2. Elternteil</th>
 						<th>Hausnummer 2. Elternteil</th>
 						<th>Sonstiges</th>
-						<th>Datesnchutz WhatsApp</th>
+						<th>Datenschutz WhatsApp</th>
 						<th>Datenschutz Foto hochladen</th>
 						<th>Nutzer IP</th>
 						<th>Nutzer Useragent</th>
