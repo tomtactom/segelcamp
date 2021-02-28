@@ -85,7 +85,7 @@
 						<td><?php echo $row['birthdate'] ?></td>
 						<td><?php echo $row['allergy'] ?></td>
 						<td><?php echo $row['medication'] ?></td>
-						<td><?php if($row['swimmingbadge'] == 1) { echo 'Seepferdchen'; } elseif($row['swimmingbadge'] == 2) { echo 'Bronze'; } elseif($row['swimmingbadge'] == 3) { echo 'Silber' } elseif($row['swimmingbadge'] == 4) { echo 'Gold'; } ?></td>
+						<td><?php if($row['swimmingbadge'] == 1) { echo 'Seepferdchen'; } elseif($row['swimmingbadge'] == 2) { echo 'Bronze'; } elseif($row['swimmingbadge'] == 3) { echo 'Silber'; } elseif($row['swimmingbadge'] == 4) { echo 'Gold'; } ?></td>
 						<td><?php echo $row['sailingexperience'] ?></td>
 						<td><?php echo $row['clothingsize'] ?></td>
 						<td><?php echo $row['lifejacket'] ?></td>
