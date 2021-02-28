@@ -37,7 +37,7 @@
 						<th>Name Kind</th>
 						<th>Geburtsdatum</th>
 						<th>Allergie</th>
-						<th>Medikamete</th>
+						<th>Medikamente</th>
 						<th>Schwimmabzeichen</th>
 						<th>Segelerfahrung</th>
 						<th>Kleidungsgröße</th>
