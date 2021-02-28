@@ -86,7 +86,7 @@
 						<td><?php echo $row['allergy'] ?></td>
 						<td><?php echo $row['medication'] ?></td>
 						<td><?php if($row['swimmingbadge'] == 1) { echo 'Seepferdchen'; } elseif($row['swimmingbadge'] == 2) { echo 'Bronze'; } elseif($row['swimmingbadge'] == 3) { echo 'Silber'; } elseif($row['swimmingbadge'] == 4) { echo 'Gold'; } ?></td>
-						<td><?php echo $row['sailingexperience'] ?></td>
+						<td><?php if($row['sailingexperience'] == 1) { echo 'Keine'; } elseif($row['sailingexperience'] == 2) { echo 'Auf Boot mitgefahren'; } elseif($row['sailingexperience'] == 3) { echo 'Schonmal selbst gesegelt'; } elseif($row['sailingexperience'] == 4) { echo 'Kann alleine segeln'; } elseif($row['sailingexperience'] == 5) { echo 'Kann gut alleine segeln'; } elseif($row['sailingexperience'] == 6) { echo 'Fortgeschritten'; } ?></td>
 						<td><?php echo $row['clothingsize'] ?></td>
 						<td><?php echo $row['lifejacket'] ?></td>
 						<td><?php echo $row['firstname_parent1'] ?></td>
