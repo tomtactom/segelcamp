@@ -87,6 +87,7 @@
 						<td><?php echo $row['swimmingbadge'] ?></td>
 						<td><?php echo $row['sailingexperience'] ?></td>
 						<td><?php echo $row['clothingsize'] ?></td>
+						<td><?php echo $row['lifejacket'] ?></td>
 						<td><?php echo $row['firstname_parent1'] ?></td>
 						<td><?php echo $row['lastname_parent1'] ?></td>
 						<td><?php echo $row['email_parent1'] ?></td>
