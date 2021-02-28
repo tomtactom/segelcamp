@@ -91,18 +91,18 @@
 						<td><?php echo $row['lifejacket'] ?></td>
 						<td><?php echo $row['firstname_parent1'] ?></td>
 						<td><?php echo $row['lastname_parent1'] ?></td>
-						<td><?php echo $row['email_parent1'] ?></td>
-						<td><?php echo $row['mobilenumber_parent1'] ?></td>
-						<td><?php echo $row['phonenumber_parent1'] ?></td>
+						<td><a href="mailto:<?php echo $row['email_parent1'] ?>"><?php echo $row['email_parent1'] ?></a></td>
+						<td><a href="tel:<?php echo $row['mobilenumber_parent1'] ?>"><?php echo $row['mobilenumber_parent1'] ?></a></td>
+						<td><a href="tel:<?php echo $row['phonenumber_parent1'] ?>"><?php echo $row['phonenumber_parent1'] ?></a></td>
 						<td><?php echo $row['plz_parent1'] ?></td>
 						<td><?php echo $row['town_parent1'] ?></td>
 						<td><?php echo $row['street_parent1'] ?></td>
 						<td><?php echo $row['housenumber_parent1'] ?></td>
 						<td><?php echo $row['firstname_parent2'] ?></td>
 						<td><?php echo $row['lastname_parent2'] ?></td>
-						<td><?php echo $row['email_parent2'] ?></td>
-						<td><?php echo $row['mobilenumber_parent2'] ?></td>
-						<td><?php echo $row['phonenumber_parent2'] ?></td>
+						<td><a href="mailto:<?php echo $row['email_parent2'] ?>"><?php echo $row['email_parent2'] ?></a></td>
+						<td><a href="tel:<?php echo $row['mobilenumber_parent2'] ?>"><?php echo $row['mobilenumber_parent2'] ?></a></td>
+						<td><a href="tel:<?php echo $row['phonenumber_parent2'] ?>"><?php echo $row['phonenumber_parent2'] ?></a></td>
 						<td><?php echo $row['plz_parent2'] ?></td>
 						<td><?php echo $row['town_parent2'] ?></td>
 						<td><?php echo $row['street_parent2'] ?></td>
