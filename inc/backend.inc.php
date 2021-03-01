@@ -20,6 +20,17 @@ if(isset($_GET['logout'])) {
   header('Location: /');
 }
 
+function alter($geb_str) {
+  $geb_tag=substr($geb_str,0,2);
+  $geb_mon=substr($geb_str,3,2);
+  $geb_jahr=substr($geb_str,6,4);
+  $heute=time();
+  $geb_ts=mktime(0,0,0,$geb_mon,$geb_tag,date("Y",$heute));
+  $alter=date("Y",$heute)-$geb_jahr;
+  if ($heute<=$geb_ts) $alter--;
+  return $alter;
+}
+
 if(isset($_POST['sendform'])) {
     $name_child = ucfirst(trim($_POST['name_child']));
     setcookie('name_child', $name_child, time() + 60);

@@ -36,6 +36,7 @@
 						<th>ID</th>
 						<th>Name Kind</th>
 						<th>Geburtsdatum</th>
+						<th>Alter</th>
 						<th>Allergie</th>
 						<th>Medikamente</th>
 						<th>Schwimmabzeichen</th>
@@ -75,6 +76,7 @@
 						<td scope="row"><?php echo $count++ ?></td>
 						<td><?php echo $row['name_child'] ?></td>
 						<td><?php echo $row['birthdate'] ?></td>
+						<td><?php echo alter($row['birthdate']); ?></td>
 						<td><?php echo $row['allergy'] ?></td>
 						<td><?php echo $row['medication'] ?></td>
 						<td><?php if($row['swimmingbadge'] == 1) { echo 'Seepferdchen'; } elseif($row['swimmingbadge'] == 2) { echo 'Bronze'; } elseif($row['swimmingbadge'] == 3) { echo 'Silber'; } elseif($row['swimmingbadge'] == 4) { echo 'Gold'; } ?></td>
