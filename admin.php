@@ -79,7 +79,10 @@
 						<td><?php
 						$today = date("Y-m-d");
 					  $diff = date_diff(date_create($row['birthdate']), date_create($today));
-					  echo $diff->format('%y');
+					  echo $diff->format('%y').' Jahre';
+						if ($diff->format('%m') > 0) {
+							echo ' und'.$diff->format('%m').' Monate';
+						}
 						?></td>
 						<td><?php echo $row['allergy'] ?></td>
 						<td><?php echo $row['medication'] ?></td>
