@@ -76,7 +76,11 @@
 						<td scope="row"><?php echo $count++ ?></td>
 						<td><?php echo $row['name_child'] ?></td>
 						<td><?php echo $row['birthdate'] ?></td>
-						<td><?php echo alter($row['birthdate']); ?></td>
+						<td><?php
+						$today = date("Y-m-d")
+					  $diff = date_diff(date_create($row['birthdate']), date_create($today));
+					  echo $diff->format('%y');
+						?></td>
 						<td><?php echo $row['allergy'] ?></td>
 						<td><?php echo $row['medication'] ?></td>
 						<td><?php if($row['swimmingbadge'] == 1) { echo 'Seepferdchen'; } elseif($row['swimmingbadge'] == 2) { echo 'Bronze'; } elseif($row['swimmingbadge'] == 3) { echo 'Silber'; } elseif($row['swimmingbadge'] == 4) { echo 'Gold'; } ?></td>
