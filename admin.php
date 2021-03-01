@@ -77,7 +77,7 @@
 						<td><?php echo $row['name_child'] ?></td>
 						<td><?php echo $row['birthdate'] ?></td>
 						<td><?php
-						$today = date("Y-m-d")
+						$today = date("Y-m-d");
 					  $diff = date_diff(date_create($row['birthdate']), date_create($today));
 					  echo $diff->format('%y');
 						?></td>
