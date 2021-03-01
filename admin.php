@@ -73,19 +73,20 @@
 						while($row = $statement->fetch()) {
 					?>
 					<tr>
+						<form method="post">
 						<td scope="row"><?php echo $count++ ?></td>
-						<td><?php echo $row['name_child'] ?></td>
-						<td><?php echo $row['birthdate'] ?></td>
+						<td><input type="text" value="<?php echo $row['name_child'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
+						<td><input type="date" value="<?php echo $row['birthdate'] ?>" name="" placeholder="" minlenght="" maxlength="" min="" max="" required></td>
 						<td><?php
 						$today = date("Y-m-d");
 					  $diff = date_diff(date_create($row['birthdate']), date_create($today));
 					  echo $diff->format('%y').' Jahre';
 						if ($diff->format('%m') > 0) {
-							echo ' und'.$diff->format('%m').' Monate';
+							echo ' und '.$diff->format('%m').' Monate';
 						}
 						?></td>
-						<td><?php echo $row['allergy'] ?></td>
-						<td><?php echo $row['medication'] ?></td>
+						<td><input type="text" value="<?php echo $row['allergy'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
+						<td><input type="text" value="<?php echo $row['medication'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
 						<td><?php if($row['swimmingbadge'] == 1) { echo 'Seepferdchen'; } elseif($row['swimmingbadge'] == 2) { echo 'Bronze'; } elseif($row['swimmingbadge'] == 3) { echo 'Silber'; } elseif($row['swimmingbadge'] == 4) { echo 'Gold'; } ?></td>
 						<td><?php if($row['sailingexperience'] == 1) { echo 'Keine'; } elseif($row['sailingexperience'] == 2) { echo 'Auf Boot mitgefahren'; } elseif($row['sailingexperience'] == 3) { echo 'Schonmal selbst gesegelt'; } elseif($row['sailingexperience'] == 4) { echo 'Kann alleine segeln'; } elseif($row['sailingexperience'] == 5) { echo 'Kann gut alleine segeln'; } elseif($row['sailingexperience'] == 6) { echo 'Fortgeschritten'; } ?></td>
 						<td><?php if($row['clothingsize'] == 1) { echo '122'; } elseif($row['clothingsize'] == 2) { echo '128'; } elseif($row['clothingsize'] == 3) { echo '134'; } elseif($row['clothingsize'] == 4) { echo '140'; } elseif($row['clothingsize'] == 5) { echo '152'; } elseif($row['clothingsize'] == 6) { echo '158'; } elseif($row['clothingsize'] == 7) { echo '164'; } elseif($row['clothingsize'] == 8) { echo '170'; } ?></td>
