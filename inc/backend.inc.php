@@ -20,7 +20,8 @@ if(isset($_GET['logout'])) {
   header('Location: /');
 }
 
-function alter($geb_str, $today = date("Y-m-d")) {
+function alter($geb_str) {
+  $today = date("Y-m-d")
   $diff = date_diff(date_create($geb_str), date_create($today));
   return $diff->format('%y');
 }
