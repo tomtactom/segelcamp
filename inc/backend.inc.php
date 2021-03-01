@@ -20,15 +20,9 @@ if(isset($_GET['logout'])) {
   header('Location: /');
 }
 
-function alter($geb_str) {
-  $geb_tag=substr($geb_str,0,2);
-  $geb_mon=substr($geb_str,3,2);
-  $geb_jahr=substr($geb_str,6,4);
-  $heute=time();
-  $geb_ts=mktime(0,0,0,$geb_mon,$geb_tag,date("Y",$heute));
-  $alter=date("Y",$heute)-$geb_jahr;
-  if ($heute<=$geb_ts) $alter--;
-  return $alter;
+function alter($geb_str, $today = date("Y-m-d")) {
+  $diff = date_diff(date_create($geb_str), date_create($today));
+  return $diff->format('%y');
 }
 
 if(isset($_POST['sendform'])) {
