@@ -88,25 +88,40 @@
 						<td><input type="text" value="<?php echo $row['allergy'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
 						<td><input type="text" value="<?php echo $row['medication'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
 						<td><select name="swimmingbadge" required>
-							<option value="1"<?php if($row['swimmingbadge']=="1") { echo ' selected'; } ?>>Seepferdchen</option>
-							<option value="2"<?php if($row['swimmingbadge']=="2") { echo ' selected'; } ?>>Bronze</option>
-							<option value="3"<?php if($row['swimmingbadge']=="3") { echo ' selected'; } ?>>Silber</option>
-							<option value="4"<?php if($row['swimmingbadge']=="4") { echo ' selected'; } ?>>Gold</option>
+							<option value="1"<?php if($row['swimmingbadge']==1) { echo ' selected'; } ?>>Seepferdchen</option>
+							<option value="2"<?php if($row['swimmingbadge']==2) { echo ' selected'; } ?>>Bronze</option>
+							<option value="3"<?php if($row['swimmingbadge']==3) { echo ' selected'; } ?>>Silber</option>
+							<option value="4"<?php if($row['swimmingbadge']==4) { echo ' selected'; } ?>>Gold</option>
 						</select></td>
-						<td><?php if($row['sailingexperience'] == 1) { echo 'Keine'; } elseif($row['sailingexperience'] == 2) { echo 'Auf Boot mitgefahren'; } elseif($row['sailingexperience'] == 3) { echo 'Schonmal selbst gesegelt'; } elseif($row['sailingexperience'] == 4) { echo 'Kann alleine segeln'; } elseif($row['sailingexperience'] == 5) { echo 'Kann gut alleine segeln'; } elseif($row['sailingexperience'] == 6) { echo 'Fortgeschritten'; } ?></td>
-						<td><?php if($row['clothingsize'] == 1) { echo '122'; } elseif($row['clothingsize'] == 2) { echo '128'; } elseif($row['clothingsize'] == 3) { echo '134'; } elseif($row['clothingsize'] == 4) { echo '140'; } elseif($row['clothingsize'] == 5) { echo '152'; } elseif($row['clothingsize'] == 6) { echo '158'; } elseif($row['clothingsize'] == 7) { echo '164'; } elseif($row['clothingsize'] == 8) { echo '170'; } ?></td>
-						<td><?php if($row['lifejacket'] == 1) { echo 'Ja'; } else { echo 'Nein'; } ?></td>
-						<td><?php echo $row['firstname_parent1'].' '.$row['lastname_parent1'] ?></td>
-						<td><a href="mailto:<?php echo $row['email_parent1'] ?>"><?php echo $row['email_parent1'] ?></a></td>
-						<td><a href="tel:<?php echo $row['mobilenumber_parent1'] ?>"><?php echo $row['mobilenumber_parent1'] ?></a></td>
-						<td><a href="tel:<?php echo $row['phonenumber_parent1'] ?>"><?php echo $row['phonenumber_parent1'] ?></a></td>
-						<td><?php echo $row['plz_parent1'].' '.$row['town_parent1'].' '.$row['street_parent1'].' '.$row['housenumber_parent1'] ?></td>
-						<td><?php echo $row['firstname_parent2'].' '.$row['lastname_parent2'] ?></td>
-						<td><a href="mailto:<?php echo $row['email_parent2'] ?>"><?php echo $row['email_parent2'] ?></a></td>
-						<td><a href="tel:<?php echo $row['mobilenumber_parent2'] ?>"><?php echo $row['mobilenumber_parent2'] ?></a></td>
-						<td><a href="tel:<?php echo $row['phonenumber_parent2'] ?>"><?php echo $row['phonenumber_parent2'] ?></a></td>
-						<td><?php echo $row['plz_parent2'].' '.$row['town_parent2'].' '.$row['street_parent2'].' '.$row['housenumber_parent2'] ?></td>
-						<td><?php echo $row['other'] ?></td>
+						<td><select name="sailingexperience" required>
+							<option value="1"<?php if($row['sailingexperience']==1) { echo ' selected'; } ?>>Keine</option>
+							<option value="2"<?php if($row['sailingexperience']==2) { echo ' selected'; } ?>>Auf Boot mitgefahren</option>
+							<option value="3"<?php if($row['sailingexperience']==3) { echo ' selected'; } ?>>Schonmal selbst gesegelt</option>
+							<option value="4"<?php if($row['sailingexperience']==4) { echo ' selected'; } ?>>Kann alleine segeln</option>
+							<option value="5"<?php if($row['sailingexperience']==5) { echo ' selected'; } ?>>Kann gut alleine segeln</option>
+							<option value="6"<?php if($row['sailingexperience']==6) { echo ' selected'; } ?>>Fortgeschritten</option>
+						</select></td>
+						<td><select name="clothingsize" required>
+							<option value="1"<?php if($row['clothingsize']==1) { echo ' selected'; } ?>>122</option>
+							<option value="2"<?php if($row['clothingsize']==2) { echo ' selected'; } ?>>128</option>
+							<option value="3"<?php if($row['clothingsize']==3) { echo ' selected'; } ?>>134</option>
+							<option value="4"<?php if($row['clothingsize']==4) { echo ' selected'; } ?>>140</option>
+							<option value="5"<?php if($row['clothingsize']==5) { echo ' selected'; } ?>>152</option>
+							<option value="6"<?php if($row['clothingsize']==6) { echo ' selected'; } ?>>158</option>
+							<option value="7"<?php if($row['clothingsize']==7) { echo ' selected'; } ?>>164</option>
+							<option value="8"<?php if($row['clothingsize']==8) { echo ' selected'; } ?>>170</option>
+						</select></td>
+						<td><input type="text" value="<?php echo $row['firstname_parent1'].' '.$row['lastname_parent1'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
+						<td><input type="email" value="<?php echo $row['email_parent1'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
+						<td><input type="tel" value="<?php echo $row['mobilenumber_parent1'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
+						<td><input type="tel" value="<?php echo $row['phonenumber_parent1'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
+						<td><input type="text" value="<?php echo $row['plz_parent1'].' '.$row['town_parent1'].' '.$row['street_parent1'].' '.$row['housenumber_parent1'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
+						<td><input type="text" value="<?php echo $row['firstname_parent2'].' '.$row['lastname_parent2'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
+						<td><input type="email" value="<?php echo $row['email_parent2'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
+						<td><input type="tel" value="<?php echo $row['mobilenumber_parent2'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
+						<td><input type="tel" value="<?php echo $row['phonenumber_parent2'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
+						<td><input type="text" value="<?php echo $row['plz_parent2'].' '.$row['town_parent2'].' '.$row['street_parent2'].' '.$row['housenumber_parent2'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
+						<td><textarea name="" placeholder="" minlenght="" maxlength=""><?php echo $row['other'] ?></textarea></td>
 						<td><?php if($row['whatsapp'] == 1) { echo 'Ja'; } else { echo 'Nein'; } ?></td>
 						<td><?php if($row['publishphotos'] == 1) { echo 'Ja'; } else { echo 'Nein'; } ?></td>
 						<td><?php echo $row['user_ip'] ?></td>
