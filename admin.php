@@ -33,6 +33,7 @@
 			<table id="sort">
 				<thead>
 					<tr>
+						<th>Ändern</th>
 						<th>ID</th>
 						<th>Name Kind</th>
 						<th>Geburtsdatum</th>
@@ -123,11 +124,20 @@
 						<td><input type="tel" value="<?php echo $row['phonenumber_parent2'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
 						<td><input type="text" value="<?php echo $row['plz_parent2'].' '.$row['town_parent2'].' '.$row['street_parent2'].' '.$row['housenumber_parent2'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
 						<td><textarea name="" placeholder="" minlenght="" maxlength=""><?php echo $row['other'] ?></textarea></td>
-						<td><?php if($row['whatsapp'] == 1) { echo 'Ja'; } else { echo 'Nein'; } ?></td>
-						<td><?php if($row['publishphotos'] == 1) { echo 'Ja'; } else { echo 'Nein'; } ?></td>
+						<td><select name="whatsapp">
+							<option value="1"<?php if($row['whatsapp']==1) { echo ' selected'; } ?>>Ja</option>
+							<option value="0"<?php if($row['whatsapp']!=1) { echo ' selected'; } ?>>Nein</option>
+						</select></td>
+						<td><select name="publishphotos">
+							<option value="1"<?php if($row['publishphotos']==1) { echo ' selected'; } ?>>Ja</option>
+							<option value="0"<?php if($row['publishphotos']!=1) { echo ' selected'; } ?>>Nein</option>
+						</select></td>
 						<td><?php echo $row['user_ip'] ?></td>
 						<td><small><?php echo $row['user_useragent'] ?></small></td>
-						<td><?php if($row['accepted'] == 1) { echo 'Ja'; } else { echo 'Noch nicht'; } ?></td>
+						<td><select name="accepted">
+							<option value="1"<?php if($row['accepted']==1) { echo ' selected'; } ?>>Ja</option>
+							<option value="0"<?php if($row['accepted']!=1) { echo ' selected'; } ?>>Noch nicht</option>
+						</select></td>
 						<td><input type="text" value="<?php echo $row['amount_payed'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
 						<td><input type="text" value="<?php echo $row['boat_name'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
 						<td><input type="text" value="<?php echo $row['changed_by_admin'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
