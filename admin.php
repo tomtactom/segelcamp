@@ -87,7 +87,12 @@
 						?></td>
 						<td><input type="text" value="<?php echo $row['allergy'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
 						<td><input type="text" value="<?php echo $row['medication'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
-						<td><?php if($row['swimmingbadge'] == 1) { echo 'Seepferdchen'; } elseif($row['swimmingbadge'] == 2) { echo 'Bronze'; } elseif($row['swimmingbadge'] == 3) { echo 'Silber'; } elseif($row['swimmingbadge'] == 4) { echo 'Gold'; } ?></td>
+						<td><select name="swimmingbadge" required>
+							<option value="1"<?php if($row['swimmingbadge']=="1") { echo ' selected'; } ?>>Seepferdchen</option>
+							<option value="2"<?php if($row['swimmingbadge']=="2") { echo ' selected'; } ?>>Bronze</option>
+							<option value="3"<?php if($row['swimmingbadge']=="3") { echo ' selected'; } ?>>Silber</option>
+							<option value="4"<?php if($row['swimmingbadge']=="4") { echo ' selected'; } ?>>Gold</option>
+						</select></td>
 						<td><?php if($row['sailingexperience'] == 1) { echo 'Keine'; } elseif($row['sailingexperience'] == 2) { echo 'Auf Boot mitgefahren'; } elseif($row['sailingexperience'] == 3) { echo 'Schonmal selbst gesegelt'; } elseif($row['sailingexperience'] == 4) { echo 'Kann alleine segeln'; } elseif($row['sailingexperience'] == 5) { echo 'Kann gut alleine segeln'; } elseif($row['sailingexperience'] == 6) { echo 'Fortgeschritten'; } ?></td>
 						<td><?php if($row['clothingsize'] == 1) { echo '122'; } elseif($row['clothingsize'] == 2) { echo '128'; } elseif($row['clothingsize'] == 3) { echo '134'; } elseif($row['clothingsize'] == 4) { echo '140'; } elseif($row['clothingsize'] == 5) { echo '152'; } elseif($row['clothingsize'] == 6) { echo '158'; } elseif($row['clothingsize'] == 7) { echo '164'; } elseif($row['clothingsize'] == 8) { echo '170'; } ?></td>
 						<td><?php if($row['lifejacket'] == 1) { echo 'Ja'; } else { echo 'Nein'; } ?></td>
