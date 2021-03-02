@@ -113,6 +113,10 @@
 							<option value="7"<?php if($row['clothingsize']==7) { echo ' selected'; } ?>>164</option>
 							<option value="8"<?php if($row['clothingsize']==8) { echo ' selected'; } ?>>170</option>
 						</select></td>
+						<td><select name="lifejacket">
+							<option value="1"<?php if($row['lifejacket']==1) { echo ' selected'; } ?>>Ja</option>
+							<option value="0"<?php if($row['lifejacket']!=1) { echo ' selected'; } ?>>Nein</option>
+						</select></td>
 						<td><input type="text" value="<?php echo $row['firstname_parent1'].' '.$row['lastname_parent1'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
 						<td><input type="email" value="<?php echo $row['email_parent1'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
 						<td><input type="tel" value="<?php echo $row['mobilenumber_parent1'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
