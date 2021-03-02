@@ -74,6 +74,7 @@
 					?>
 					<tr>
 						<form method="post">
+						<td><button type="submit" name="update_user" value="<?php echo $row['id']; ?>">Ändern</button></td>
 						<td scope="row"><?php echo $count++ ?></td>
 						<td><input type="text" value="<?php echo $row['name_child'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
 						<td><input type="date" value="<?php echo $row['birthdate'] ?>" name="" placeholder="" minlenght="" maxlength="" min="" max="" required></td>
@@ -127,9 +128,9 @@
 						<td><?php echo $row['user_ip'] ?></td>
 						<td><small><?php echo $row['user_useragent'] ?></small></td>
 						<td><?php if($row['accepted'] == 1) { echo 'Ja'; } else { echo 'Noch nicht'; } ?></td>
-						<td><?php if($row['amount_payed'] == "1") { echo 'Ja'; } elseif($row['amount_payed'] == "0" || $row['amount_payed'] == "0,00 €") { echo 'Nein'; } else { echo $row['amount_payed']; } ?></td>
-						<td><?php echo $row['boat_name'] ?></td>
-						<td><?php echo $row['changed_by_admin'] ?></td>
+						<td><input type="text" value="<?php echo $row['amount_payed'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
+						<td><input type="text" value="<?php echo $row['boat_name'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
+						<td><input type="text" value="<?php echo $row['changed_by_admin'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
 						<td><?php echo $row['created_at'] ?></td>
 					</tr>
 				<?php } ?>
