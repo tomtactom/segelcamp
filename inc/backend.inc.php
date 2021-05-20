@@ -485,7 +485,7 @@ if(isset($_POST['sendform'])) {
   // Nachricht die in Cookie an die nächste Seite übermittelt wurde in $msg abspeichern
   if(!empty($_COOKIE['msg'])) {
     $msg = trim($_COOKIE['msg']);
-    setcookie('msg', '', time() - 3600);
+    setcookie('msg', '', time() + 60);
   }
 
   if(!empty($_COOKIE['name_child'])) {
