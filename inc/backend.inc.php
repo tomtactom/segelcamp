@@ -309,7 +309,7 @@ if(isset($_POST['sendform'])) {
       $msg = 'Etwas scheint mit dem Auswahlfeld, dass Sie bestätigen, dass wir Bilder von Ihrem Kind hochladen dürfen, nicht geklappt zu haben.';
       $error = true;
     }
-    $stmt = $pdo->prepare("SELECT * FROM users WHERE email=?");
+    $stmt = $pdo->prepare("SELECT * FROM registrations WHERE name_child=?");
     $stmt->execute([htmlspecialchars($name_child)]);
     if($error == true || $stmt->fetch()) {
       $msg = "Es wurde bereits ein Kind mit diesem Namen angemeldet.";
