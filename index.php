@@ -85,13 +85,18 @@
                           </style>
                           <p>(*) Erforderliche Felder</p>
 													<?php if(isset($msg_field)) { echo $msg_field; } ?>
+													<p>
+														Wir können nur eine bestimmte Anzahl an Kindern annehmen. Leider können wir die genaue Anzahl erst kurz vor dem Segelcamp erfahren, da dies von der aktuellen Coronasituation abhängt. Das Camp geht <strong>vom 26.07.2021 bis zum 30.07.2021, jeden Tag jeweils von 10:00 Uhr bis 18:00 Uhr</strong>.<br>
+														Die Kinder sollen, wenn vorhanden, Segelsachen mitbringen. Ansonsten Wetterabhängig Regensachen und auf jeden Fall wechselsachen. Wenn vorhanden auch gerne eine eigene Schwimmweste. Ansonsten werden welche vom Verein gestellt.<br>
+														Die Kosten des Segelcamps betragen <strong>XX,XX €</strong>, welche per Überweisung an die in der Bestätigungs-E-Mail stehenden Bankdaten überwiesen werden sollen.
+													</p>
                           <form method="post" action="#anmelden">
 														<div class="row gtr-uniform">
 															<div class="col-6 col-12-xsmall">
 																<input type="text" name="name_child" id="name_child" value="<?php if(!empty($name_child)) { echo $name_child; } ?>" placeholder="* Vor- und Nachname des Kindes" pattern="[a-zA-ZÁÀȦÂÄǞǍĂĀÃÅǺǼǢĆĊĈČĎḌḐḒÉÈĖÊËĚĔĒẼE̊ẸǴĠĜǦĞG̃ĢĤḤáàȧâäǟǎăāãåǻǽǣćċĉčďḍḑḓéèėêëěĕēẽe̊ẹǵġĝǧğg̃ģĥḥÍÌİÎÏǏĬĪĨỊĴĶǨĹĻĽĿḼM̂M̄ʼNŃN̂ṄN̈ŇN̄ÑŅṊÓÒȮȰÔÖȪǑŎŌÕȬŐỌǾƠíìiîïǐĭīĩịĵķǩĺļľŀḽm̂m̄ŉńn̂ṅn̈ňn̄ñņṋóòôȯȱöȫǒŏōõȭőọǿơP̄ŔŘŖŚŜṠŠȘṢŤȚṬṰÚÙÛÜǓŬŪŨŰŮỤẂẀŴẄÝỲŶŸȲỸŹŻŽẒǮp̄ŕřŗśŝṡšşṣťțṭṱúùûüǔŭūũűůụẃẁŵẅýỳŷÿȳỹźżžẓǯßœŒçÇ \-]*" title="Bitte gebe den gültigen Vor und Nachnamen des Kindes an." minlenght="2" maxlength="32" required />
 															</div>
 															<div class="col-6 col-12-xsmall">
-                                                                * Geburtsdatum
+                              	* Geburtsdatum
 																<input type="date" name="birthdate" id="birthdate" value="<?php if(!empty($birthdate)) { echo $birthdate; } ?>" placeholder="Geburtsdatum" minlength="10" maxlength="10" min="<?php echo $min_birthday; ?>" max="<?php echo $max_birthday; ?>" required />
 															</div>
                                                             <div class="col-6 col-12-xsmall">
@@ -121,7 +126,7 @@
 																</select>
 															</div>
                               <div class="col-6 col-12-xsmall">
-                                  * T-Shirt Größe
+                                * T-Shirt Größe
 																<select name="clothingsize" id="clothingsize" required>
 																	<option value="1"<?php if($clothingsize=="1") { echo ' selected'; } ?>>122</option>
 																	<option value="2"<?php if($clothingsize=="2") { echo ' selected'; } ?>>128</option>
@@ -213,7 +218,7 @@
 											<span class="icon fa-gem"></span>
 											<div class="content">
 												<h3>Erfahrene Segeltrainer</h3>
-												<p>Wir sind ein Team aus mehreren Segeltrainern zwischen 17 und 19 Jahren, bringen bereits seit mehreren Jahren Kindern das Segeln bei und haben in den letzten Jahren immer wieder mit viel Erfolg das Segelcamp geleitet und organisiert.</p>
+												<p>Wir sind ein Team aus mehreren Segeltrainern zwischen 18 und 19 Jahren, bringen bereits seit mehreren Jahren Kindern das Segeln bei und haben in den letzten Jahren immer wieder mit viel Erfolg das Segelcamp geleitet und organisiert.</p>
 											</div>
 										</article>
 										<article>
