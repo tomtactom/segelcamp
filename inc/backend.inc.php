@@ -308,6 +308,9 @@ if(isset($_POST['sendform'])) {
     } elseif(!empty($publishphotos) && $publishphotos != "1") {
       $msg = 'Etwas scheint mit dem Auswahlfeld, dass Sie bestätigen, dass wir Bilder von Ihrem Kind hochladen dürfen, nicht geklappt zu haben.';
       $error = true;
+    } elseif($pdo->query("SELECT * FROM registrations WHERE name_child = ".htmlspecialchars($name_child))) {
+      $msg = "Es wurde bereits ein Kind mit diesem Namen angemeldet.";
+      $error = true;
     } else {
       $name_child = htmlspecialchars($name_child);
       $birthdate = htmlspecialchars($birthdate);
