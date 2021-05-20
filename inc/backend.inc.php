@@ -5,7 +5,7 @@ if (!file_exists('./inc/config.inc.php')) {
   require('./inc/config.inc.php');
 }
 
-echo $pdo->query("SELECT * FROM registrations WHERE name_child = '".htmlspecialchars($name_child)."'");
+#echo $pdo->query("SELECT * FROM registrations WHERE name_child = '".htmlspecialchars($name_child)."'");
 
 if(isset($_POST['admin_login'])) {
   if(hash('sha256', $salt1.$_POST['password'].$salt2) == $admin_password) {
