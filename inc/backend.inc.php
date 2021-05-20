@@ -5,8 +5,6 @@ if (!file_exists('./inc/config.inc.php')) {
   require('./inc/config.inc.php');
 }
 
-echo $pdo->query("SELECT * FROM registrations WHERE name_child = ".htmlspecialchars($name_child)).'Hallo'.htmlspecialchars($name_child);
-
 if(isset($_POST['admin_login'])) {
   if(hash('sha256', $salt1.$_POST['password'].$salt2) == $admin_password) {
     setcookie("token", $admin_cookie_hash, time()+(3600*24)); # 24 Stunden
@@ -310,7 +308,7 @@ if(isset($_POST['sendform'])) {
     } elseif(!empty($publishphotos) && $publishphotos != "1") {
       $msg = 'Etwas scheint mit dem Auswahlfeld, dass Sie bestätigen, dass wir Bilder von Ihrem Kind hochladen dürfen, nicht geklappt zu haben.';
       $error = true;
-    } elseif($pdo->query("SELECT * FROM registrations WHERE name_child = ".htmlspecialchars($name_child))) {
+    } elseif($pdo->query("SELECT * FROM registrations WHERE name_child = '".htmlspecialchars($name_child)."'")) {
       $msg = "Es wurde bereits ein Kind mit diesem Namen angemeldet.";
       $error = true;
     } else {
