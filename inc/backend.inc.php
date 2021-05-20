@@ -367,7 +367,8 @@ if(isset($_POST['sendform'])) {
       }
       $user_ip = htmlspecialchars(trim($_SERVER['REMOTE_ADDR']));
       $user_useragent = htmlspecialchars(trim($_SERVER['HTTP_USER_AGENT']));
-      echo "Es scheint alles geklappt zu haben";
+      $msg = 'Ihr Kind wurde erfolgreich zum Segelcamp angemeldet. Wir melden und umgehend bei Ihnen.';
+      $registered = true;
 
       $statement = $pdo->prepare("INSERT INTO registrations (
         name_child,
@@ -440,7 +441,7 @@ if(isset($_POST['sendform'])) {
         :user_ip,
         :user_useragent
       )");
-			$result = $statement->execute(array(
+	$result = $statement->execute(array(
         'name_child' => $name_child,
         'birthdate' => $birthdate,
         'allergy' => $allergy,
@@ -487,7 +488,7 @@ if(isset($_POST['sendform'])) {
     $msg = trim($_COOKIE['msg']);
     setcookie('msg', '', time() + 60);
   }
-
+if(!isset($registered)) {
   if(!empty($_COOKIE['name_child'])) {
     $name_child = trim($_COOKIE['name_child']);
     setcookie('name_child', '', time() - 3600);
@@ -616,6 +617,7 @@ if(isset($_POST['sendform'])) {
     $publishphotos = trim($_COOKIE['publishphotos']);
     setcookie('publishphotos', '', time() - 3600);
   }
+}
 
   if(isset($msg)) {
     $msg_field = '<div class="message"><span onclick="this.parentElement.style.display=\'none\';" style="float: right; cursor: pointer;">×</span> '.trim($msg).'&nbsp;&nbsp;&nbsp;</div>';
