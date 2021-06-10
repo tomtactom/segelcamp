@@ -2387,3 +2387,7 @@ button,
     border-top: 0;
     margin-top: 0;
     padding-top: 0; }
+
+table input {
+  border: 0;
+}
