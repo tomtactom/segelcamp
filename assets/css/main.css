@@ -51,7 +51,7 @@ td textarea:focus {
   border: 0 !important;
   box-shadow: 0;
   outline-offset: 0px;
-  outline: none;
+  outline: none !important;
 }
 
 
