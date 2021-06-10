@@ -28,10 +28,8 @@ section, summary, time, mark, audio, video {
   color: #ffffff;
 }
 
-table input,
-table tr td input,
-table tbody tr td input,
-td input {
+td input,
+td input:active {
   border: 0 !important;
 }
 
