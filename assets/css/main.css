@@ -28,7 +28,8 @@ section, summary, time, mark, audio, video {
   color: #ffffff;
 }
 
-.reset-this {
+.reset-this,
+.reset-this:focus {
     animation : none;
     animation-delay : 0;
     animation-direction : normal;
