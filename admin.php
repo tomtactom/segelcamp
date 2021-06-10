@@ -45,16 +45,24 @@
 						<th>Segelerfahrung</th>
 						<th>Kleidungsgröße</th>
 						<th>Schwimmweste</th>
-						<th>Name 1. Elternteil</th>
+						<th>Vorname 1. Elternteil</th>
+						<th>Nachname 1. Elternteil</th>
 						<th>E-Mail-Adresse 1. Elternteil</th>
 						<th>Handynummer 1. Elternteil</th>
 						<th>Telefonnummer 1. Elternteil</th>
-						<th>Adresse 1. Elternteil</th>
-						<th>Name 2. Elternteil</th>
+						<th>PLZ 1. Elternteil</th>
+						<th>Stadt 1. Elternteil</th>
+						<th>Straße 1. Elternteil</th>
+						<th>Hausnummer 1. Elternteil</th>
+						<th>Vorname 2. Elternteil</th>
+						<th>Nachname 2. Elternteil</th>
 						<th>E-Mail-Adresse 2. Elternteil</th>
 						<th>Handynummer 2. Elternteil</th>
 						<th>Telefonnummer 2. Elternteil</th>
-						<th>Adresse 2. Elternteil</th>
+						<th>PLZ 2. Elternteil</th>
+						<th>Stadt 2. Elternteil</th>
+						<th>Straße 2. Elternteil</th>
+						<th>Hausnummer 2. Elternteil</th>
 						<th>Sonstiges</th>
 						<th>Datenschutz WhatsApp</th>
 						<th>Datenschutz Foto hochladen</th>
