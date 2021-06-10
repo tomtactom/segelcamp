@@ -77,12 +77,6 @@
 						<form method="post">
 						<td><button type="submit" name="update_user" value="<?php echo $row['id']; ?>">Ändern</button></td>
 						<td scope="row"><?php echo $count++ ?></td>
-						<style>
-							.reset-this:focus {
-								outline: none;
-								border: 0 !important;
-							}
-							</style>
 						<td><input class="reset-this" type="text" value="<?php echo $row['name_child'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
 						<td><input type="date" value="<?php echo $row['birthdate'] ?>" name="" placeholder="" minlenght="" maxlength="" min="" max="" required></td>
 						<td><?php
