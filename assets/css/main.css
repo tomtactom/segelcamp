@@ -28,6 +28,13 @@ section, summary, time, mark, audio, video {
   color: #ffffff;
 }
 
+table input,
+table tr td input,
+table tbody tr td input,
+td input {
+  border: 0 !important;
+}
+
 .message {
     margin: 15px auto;
     padding: 12px;
@@ -2387,10 +2394,3 @@ button,
     border-top: 0;
     margin-top: 0;
     padding-top: 0; }
-
-table input,
-table tr td input,
-table tbody tr td input,
-td input {
-  border: 0;
-}
