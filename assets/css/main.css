@@ -28,8 +28,10 @@ section, summary, time, mark, audio, video {
   color: #ffffff;
 }
 
-.reset-this {
-  all: revert;
+.resetthis {
+  all: revert !important;
+  outline: none !important;
+  border: 0 !important;
 }
 
 .message {
