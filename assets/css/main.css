@@ -2390,6 +2390,7 @@ button,
 
 table input,
 table tr td input,
-table tbody tr td input {
+table tbody tr td input,
+td input {
   border: 0;
 }
