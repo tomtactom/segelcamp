@@ -145,7 +145,7 @@
 						</select></td>
 						<td><input type="text" value="<?php echo $row['amount_payed'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
 						<td><input type="text" value="<?php echo $row['boat_name'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
-						<td><input type="text" value="<?php if (empty($row['changed_by_admin'])) { echo "Nein" } else { echo $row['changed_by_admin'] } ?>" disabled></td>
+						<td><input type="text" value="<?php if (empty($row['changed_by_admin'])) { echo "Nein"; } else { echo $row['changed_by_admin']; } ?>" disabled></td>
 						<td><?php echo $row['created_at'] ?></td>
 					</tr>
 				<?php } ?>
