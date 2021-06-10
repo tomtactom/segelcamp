@@ -29,6 +29,7 @@
 					<?php
 				} else {
 		?>
+		<p>Bitte achten Sie darauf, dass nach dem bearbeiten der jeweiligen Zeile mit dem „Ändern“ Button, nur die Änderungen der jeweiligen Zeile übernommen werden.</p>
 		<div class="table-scrollable">
 			<table id="sort">
 				<thead>
@@ -77,7 +78,7 @@
 						<form method="post">
 						<td><button type="submit" name="update_user" value="<?php echo $row['id']; ?>">Ändern</button></td>
 						<td scope="row"><?php echo $count++ ?></td>
-						<td><input class="resetthis" type="text" value="<?php echo $row['name_child'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
+						<td><input type="text" value="<?php echo $row['name_child'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
 						<td><input type="date" value="<?php echo $row['birthdate'] ?>" name="" placeholder="" minlenght="" maxlength="" min="" max="" required></td>
 						<td><?php
 						$today = date("Y-m-d");
@@ -117,25 +118,25 @@
 							<option value="1"<?php if($row['lifejacket']==1) { echo ' selected'; } ?>>Ja</option>
 							<option value="0"<?php if($row['lifejacket']!=1) { echo ' selected'; } ?>>Nein</option>
 						</select></td>
-						<td><input type="text" value="<?php echo $row['firstname_parent1'].' '.$row['lastname_parent1'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
+						<td><input type="text" value="<?php echo $row['firstname_parent1'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
+						<td><input type="text" value="<?php echo $row['lastname_parent1'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
 						<td><input type="email" value="<?php echo $row['email_parent1'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
 						<td><input type="tel" value="<?php echo $row['mobilenumber_parent1'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
 						<td><input type="tel" value="<?php echo $row['phonenumber_parent1'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
 						<td><input type="text" value="<?php echo $row['plz_parent1'].' '.$row['town_parent1'].' '.$row['street_parent1'].' '.$row['housenumber_parent1'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
-						<td><input type="text" value="<?php echo $row['firstname_parent2'].' '.$row['lastname_parent2'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
+						<td><input type="text" value="<?php echo $row['town_parent1'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
+						<td><input type="text" value="<?php echo $row['street_parent1'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
+						<td><input type="text" value="<?php echo $row['housenumber_parent1'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
+						<td><input type="text" value="<?php echo $row['firstname_parent2'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
+						<td><input type="text" value="<?php echo $row['lastname_parent2'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
 						<td><input type="email" value="<?php echo $row['email_parent2'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
 						<td><input type="tel" value="<?php echo $row['mobilenumber_parent2'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
 						<td><input type="tel" value="<?php echo $row['phonenumber_parent2'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
 						<td><input type="text" value="<?php echo $row['plz_parent2'].' '.$row['town_parent2'].' '.$row['street_parent2'].' '.$row['housenumber_parent2'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
-						<td><textarea name="" placeholder="" minlenght="" maxlength=""><?php echo $row['other'] ?></textarea></td>
-						<td><select name="whatsapp">
-							<option value="1"<?php if($row['whatsapp']==1) { echo ' selected'; } ?>>Ja</option>
-							<option value="0"<?php if($row['whatsapp']!=1) { echo ' selected'; } ?>>Nein</option>
-						</select></td>
-						<td><select name="publishphotos">
-							<option value="1"<?php if($row['publishphotos']==1) { echo ' selected'; } ?>>Ja</option>
-							<option value="0"<?php if($row['publishphotos']!=1) { echo ' selected'; } ?>>Nein</option>
-						</select></td>
+						<td><input type="text" value="<?php echo $row['town_parent2'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
+						<td><input type="text" value="<?php echo $row['street_parent2'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
+						<td><input type="text" value="<?php echo $row['housenumber_parent2'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
+						<td><input type="text" value="<?php echo $row['other'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
 						<td><?php echo $row['user_ip'] ?></td>
 						<td><small><?php echo $row['user_useragent'] ?></small></td>
 						<td><select name="accepted">
@@ -144,7 +145,7 @@
 						</select></td>
 						<td><input type="text" value="<?php echo $row['amount_payed'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
 						<td><input type="text" value="<?php echo $row['boat_name'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
-						<td><input type="text" value="<?php echo $row['changed_by_admin'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
+						<td><input type="text" value="<?php echo if (empty($row['changed_by_admin'])) { echo "Nein" } else { $row['changed_by_admin'] } ?>" disabled></td>
 						<td><?php echo $row['created_at'] ?></td>
 					</tr>
 				<?php } ?>
