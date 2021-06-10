@@ -29,7 +29,7 @@ section, summary, time, mark, audio, video {
 }
 
 td input,
-td input:active {
+td input:focus {
   border: 0 !important;
 }
 
