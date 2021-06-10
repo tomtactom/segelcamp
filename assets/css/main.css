@@ -28,7 +28,8 @@ section, summary, time, mark, audio, video {
   color: #ffffff;
 }
 
-.resetthis {
+td input,
+td select {
   all: revert !important;
   outline: none !important;
   border: 0 !important;
