@@ -28,12 +28,30 @@ section, summary, time, mark, audio, video {
   color: #ffffff;
 }
 
-td input,
-td input:focus {
+td input[type="text"],
+td input[type="password"],
+td input[type="email"],
+td input[type="tel"],
+td input[type="search"],
+td input[type="url"],
+td input[type="date"],
+td select,
+td textarea {
   border: 0 !important;
-  border-color: none;
+}
+td input[type="text"]:focus,
+td input[type="password"]:focus,
+td input[type="email"]:focus,
+td input[type="tel"]:focus,
+td input[type="search"]:focus,
+td input[type="url"]:focus,
+td input[type="date"]:focus,
+td select:focus,
+td textarea:focus {
+  border: 0 !important;
   box-shadow: 0 !important;
 }
+
 
 .message {
     margin: 15px auto;
