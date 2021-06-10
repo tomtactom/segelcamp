@@ -225,7 +225,7 @@
 											<span class="icon solid fa-paper-plane"></span>
 											<div class="content">
 												<h3>Gute Kommunikation</h3>
-												<p>Nicht nur Spaß, sondern auch Erfahrung bleibt an den Kindern hängen. Wir halten euch während des gesamten Camps auf dem Laufenden. Sollte die  <abbr title="Coronaschutzverordnung: Verordnung zum Schutz vor Neuinfizierungen mit dem Coronavirus SARS-CoV-2">CoronaSchVO</abbr> dies zulassen, könnt ihr am letzten Tag euren Kindern bei ihren Segelfortschritten zusehen. Das gemeinsame grillen muss leider ausfallen. Nach dem Camp besteht weiterhin die Möglichkeit, einmal die Woche am Segeltraining teilzunehmen.</p>
+												<p>Nicht nur Spaß, sondern auch Erfahrung bleibt an den Kindern hängen. Wir halten euch während des gesamten Camps auf dem Laufenden. Sollte die  <abbr title="Coronaschutzverordnung: Verordnung zum Schutz vor Neuinfizierungen mit dem Coronavirus SARS-CoV-2">CoronaSchVo</abbr> dies zulassen, könnt ihr am letzten Tag euren Kindern bei ihren Segelfortschritten zusehen. Das gemeinsame grillen muss leider ausfallen. Nach dem Camp besteht weiterhin die Möglichkeit, einmal die Woche am Segeltraining teilzunehmen.</p>
 											</div>
 										</article>
 										<article>
