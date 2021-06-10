@@ -31,6 +31,8 @@ section, summary, time, mark, audio, video {
 td input,
 td input:focus {
   border: 0 !important;
+  border-color: none;
+  box-shadow: 0 !important;
 }
 
 .message {
