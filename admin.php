@@ -82,6 +82,7 @@
 								outline: none;
 								border: 0 !important;
 							}
+							</style>
 						<td><input class="reset-this" type="text" value="<?php echo $row['name_child'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
 						<td><input type="date" value="<?php echo $row['birthdate'] ?>" name="" placeholder="" minlenght="" maxlength="" min="" max="" required></td>
 						<td><?php
