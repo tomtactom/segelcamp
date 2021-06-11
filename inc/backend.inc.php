@@ -28,7 +28,6 @@ function send_mail($empfaenger, $betreff, $text) {
   return $mail;
 }
 
-echo send_mail("tom.aschmann@t-online.de", "Test-Mail", "Test123");
 
 if(isset($_POST['sendform'])) {
     $name_child = ucfirst(trim($_POST['name_child']));
