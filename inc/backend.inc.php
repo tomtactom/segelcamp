@@ -527,7 +527,7 @@ if(isset($_POST['sendform'])) {
           amount_payed = :amount_payed,
           boat_name = :boat_name,
           changed_by_admin = :changed_by_admin
-          WHERE id = ".intval($_POST['update_user']);
+          WHERE id = ".intval($_POST['update_user']));
         $result = $statement->execute(array(
               'name_child' => htmlspecialchars($_POST['name_child']),
               'birthdate' => htmlspecialchars($_POST['birthdate']),
