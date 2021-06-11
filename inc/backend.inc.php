@@ -20,6 +20,16 @@ if(isset($_GET['logout'])) {
   header('Location: /');
 }
 
+function send_mail($empfaenger, $betreff, $text) {
+  $from = "From: SLS-Jugend <segelcamp@lohheider-see.de>\r\n";
+  $from .= "Reply-To: segelcamp@lohheider-see.de\r\n";
+  $from .= "Content-Type: text/html\r\n";
+  $mail = mail($empfaenger, $betreff, $text, $from);
+  return $mail;
+}
+
+echo send_mail("tom.aschmann@t-online.de", "Test-Mail", "Test123");
+
 if(isset($_POST['sendform'])) {
     $name_child = ucfirst(trim($_POST['name_child']));
     setcookie('name_child', $name_child, time() + 60);
