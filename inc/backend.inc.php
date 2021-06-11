@@ -528,7 +528,7 @@ if(isset($_POST['sendform'])) {
           boat_name = :boat_name,
           changed_by_admin = :changed_by_admin
           WHERE id = :id
-          "));
+          ");
         $result = $statement->execute(array(
               'name_child' => htmlspecialchars($_POST['name_child']),
               'birthdate' => htmlspecialchars($_POST['birthdate']),
