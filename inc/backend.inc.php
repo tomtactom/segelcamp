@@ -594,7 +594,6 @@ if(isset($_POST['sendform'])) {
               'boat_name' => htmlspecialchars($_POST['boat_name']),
               'changed_by_admin' => htmlspecialchars($_POST['changed_by_admin'])
             ));
-            echo $statement;
             echo '<strong>Hallo_Ende</strong>';
     }
   }
