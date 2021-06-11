@@ -86,8 +86,8 @@
 						<form method="post">
 						<td><button type="submit" name="update_user" value="<?php echo $row['id']; ?>">Ändern</button></td>
 						<td scope="row"><?php echo $count++ ?></td>
-						<td><input type="text" value="<?php echo $row['name_child'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
-						<td><input type="date" value="<?php echo $row['birthdate'] ?>" name="" placeholder="" minlenght="" maxlength="" min="" max="" required></td>
+						<td><input type="text" value="<?php echo $row['name_child'] ?>" name="name_child" placeholder="* Vor- und Nachname des Kindes" required></td>
+						<td><input type="date" value="<?php echo $row['birthdate'] ?>" name="birthdate" placeholder="* Geburtsdatum" minlenght="10" maxlength="10" required></td>
 						<td><?php
 						$today = date("Y-m-d");
 					  $diff = date_diff(date_create($row['birthdate']), date_create($today));
@@ -96,8 +96,8 @@
 							echo ' und '.$diff->format('%m').' Monate';
 						}
 						?></td>
-						<td><input type="text" value="<?php echo $row['allergy'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
-						<td><input type="text" value="<?php echo $row['medication'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
+						<td><input type="text" value="<?php echo $row['allergy'] ?>" name="allergy" placeholder="Allergien / Unverträglichkeiten"></td>
+						<td><input type="text" value="<?php echo $row['medication'] ?>" name="medication" placeholder="Vorerkrankungen / Medikamente"></td>
 						<td><select name="swimmingbadge" required>
 							<option value="1"<?php if($row['swimmingbadge']==1) { echo ' selected'; } ?>>Seepferdchen</option>
 							<option value="2"<?php if($row['swimmingbadge']==2) { echo ' selected'; } ?>>Bronze</option>
@@ -126,35 +126,35 @@
 							<option value="1"<?php if($row['lifejacket']==1) { echo ' selected'; } ?>>Ja</option>
 							<option value="0"<?php if($row['lifejacket']!=1) { echo ' selected'; } ?>>Nein</option>
 						</select></td>
-						<td><input type="text" value="<?php echo $row['firstname_parent1'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
-						<td><input type="text" value="<?php echo $row['lastname_parent1'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
-						<td><input type="email" value="<?php echo $row['email_parent1'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
-						<td><input type="tel" value="<?php echo $row['mobilenumber_parent1'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
-						<td><input type="tel" value="<?php echo $row['phonenumber_parent1'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
-						<td><input type="text" value="<?php echo $row['plz_parent1'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
-						<td><input type="text" value="<?php echo $row['town_parent1'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
-						<td><input type="text" value="<?php echo $row['street_parent1'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
-						<td><input type="text" value="<?php echo $row['housenumber_parent1'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
-						<td><input type="text" value="<?php echo $row['firstname_parent2'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
-						<td><input type="text" value="<?php echo $row['lastname_parent2'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
-						<td><input type="email" value="<?php echo $row['email_parent2'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
-						<td><input type="tel" value="<?php echo $row['mobilenumber_parent2'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
-						<td><input type="tel" value="<?php echo $row['phonenumber_parent2'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
-						<td><input type="text" value="<?php echo $row['plz_parent2'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
-						<td><input type="text" value="<?php echo $row['town_parent2'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
-						<td><input type="text" value="<?php echo $row['street_parent2'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
-						<td><input type="text" value="<?php echo $row['housenumber_parent2'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
-						<td><input type="text" value="<?php echo $row['other'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
-						<td><input type="text" value="<?php echo $row['whatsapp'] ?>" disabled></td>
-						<td><input type="text" value="<?php echo $row['publishphotos'] ?>" disabled></td>
+						<td><input type="text" value="<?php echo $row['firstname_parent1'] ?>" name="firstname_parent1" placeholder="* Vorname" required></td>
+						<td><input type="text" value="<?php echo $row['lastname_parent1'] ?>" name="lastname_parent1" placeholder="* Nachname" required></td>
+						<td><input type="email" value="<?php echo $row['email_parent1'] ?>" name="email_parent1" placeholder="* E-Mail-Adresse" required></td>
+						<td><input type="tel" value="<?php echo $row['mobilenumber_parent1'] ?>" name="mobilenumber_parent1" placeholder="* Handynummer" required></td>
+						<td><input type="tel" value="<?php echo $row['phonenumber_parent1'] ?>" name="phonenumber_parent1" placeholder="Telefonnummer (Festnetz)"></td>
+						<td><input type="text" value="<?php echo $row['plz_parent1'] ?>" name="plz_parent1" placeholder="* PLZ" minlenght="5" maxlength="5" required></td>
+						<td><input type="text" value="<?php echo $row['town_parent1'] ?>" name="town_parent1" placeholder="* Ort" required></td>
+						<td><input type="text" value="<?php echo $row['street_parent1'] ?>" name="street_parent1" placeholder="* Straße" required></td>
+						<td><input type="text" value="<?php echo $row['housenumber_parent1'] ?>" name="housenumber_parent1" placeholder="* Hausnummer" required></td>
+						<td><input type="text" value="<?php echo $row['firstname_parent2'] ?>" name="firstname_parent2" placeholder="Vorname"></td>
+						<td><input type="text" value="<?php echo $row['lastname_parent2'] ?>" name="lastname_parent2" placeholder="Nachname"></td>
+						<td><input type="email" value="<?php echo $row['email_parent2'] ?>" name="email_parent2" placeholder="E-Mail-Adresse"></td>
+						<td><input type="tel" value="<?php echo $row['mobilenumber_parent2'] ?>" name="mobilenumber_parent2" placeholder="Handynummer"></td>
+						<td><input type="tel" value="<?php echo $row['phonenumber_parent2'] ?>" name="phonenumber_parent2" placeholder="Telefonnummer (Festnetz)"></td>
+						<td><input type="text" value="<?php echo $row['plz_parent2'] ?>" name="plz_parent2" placeholder="PLZ"></td>
+						<td><input type="text" value="<?php echo $row['town_parent2'] ?>" name="town_parent2" placeholder="Ort"></td>
+						<td><input type="text" value="<?php echo $row['street_parent2'] ?>" name="street_parent2" placeholder="Straße"></td>
+						<td><input type="text" value="<?php echo $row['housenumber_parent2'] ?>" name="housenumber_parent2" placeholder="Hausnummer"></td>
+						<td><input type="text" value="<?php echo $row['other'] ?>" name="other" placeholder="Sonstiges"></td>
+						<td><input type="text" value="<?php if($row['whatsapp'] == 1) { echo 'Ja';} else { echo 'Nein'; } ?>" disabled></td>
+						<td><input type="text" value="<?php if($row['publishphotos'] == 1) { echo 'Ja';} else { echo 'Nein'; } ?>" disabled></td>
 						<td><?php echo $row['user_ip'] ?></td>
 						<td><small><?php echo $row['user_useragent'] ?></small></td>
 						<td><select name="accepted">
 							<option value="1"<?php if($row['accepted']==1) { echo ' selected'; } ?>>Ja</option>
 							<option value="0"<?php if($row['accepted']!=1) { echo ' selected'; } ?>>Noch nicht</option>
 						</select></td>
-						<td><input type="text" value="<?php echo $row['amount_payed'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
-						<td><input type="text" value="<?php echo $row['boat_name'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
+						<td><input type="text" value="<?php echo $row['amount_payed'] ?>" name="amount_payed" placeholder="Bezahlt?"></td>
+						<td><input type="text" value="<?php echo $row['boat_name'] ?>" name="boat_name" placeholder="Bootsname"></td>
 						<td><input type="text" value="<?php if (empty($row['changed_by_admin'])) { echo "Nein"; } else { echo $row['changed_by_admin']; } ?>" disabled></td>
 						<td><?php echo $row['created_at'] ?></td>
 					</tr>
