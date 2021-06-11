@@ -559,6 +559,7 @@ if(isset($_POST['sendform'])) {
           :changed_by_admin
         ) WHERE id = :id");
         $result = $statement->execute(array(
+              'id' => intval($_POST['update_user']),
               'name_child' => htmlspecialchars($_POST['name_child']),
               'birthdate' => htmlspecialchars($_POST['birthdate']),
               'allergy' => htmlspecialchars($_POST['allergy']),
