@@ -492,7 +492,9 @@ if(isset($_POST['sendform'])) {
 
   // Admin-Bereich
   if($_COOKIE['token'] == $admin_cookie_hash) {
+    echo '<strong>Hallo</strong>';
     if(isset($_POST['update_user'])) {
+      echo '<strong>Hallo 2</strong>';
       $statement = $pdo->prepare("UPDATE registrations SET (
           name_child,
           birthdate,
@@ -592,6 +594,8 @@ if(isset($_POST['sendform'])) {
               'boat_name' => htmlspecialchars($_POST['boat_name']),
               'changed_by_admin' => htmlspecialchars($_POST['changed_by_admin'])
             ));
+            echo $statement;
+            echo '<strong>Hallo_Ende</strong>';
     }
   }
 
