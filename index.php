@@ -8,8 +8,10 @@
 											<p>Segeln macht Fre(n)de</p>
 										</header>
                     <strong>Momentan sind leider noch keine Anmeldungen möglich und können noch nicht über das Anmeldeformular verarbeitet werden.</strong>
-                    <p>Unser Sommer Segelcamp für Anfänger und Fortgeschrittene findet auch dieses Jahr, vorausgesetzt die <abbr title="Coronaschutzverordnung: Verordnung zum Schutz vor Neuinfizierungen mit dem Coronavirus SARS-CoV-2">CoronaSchVO</abbr> lässt dies zu, statt und wird, wie in den letzten Jahren, von unserer Jugend geleitet.<br>
-                    Wir bieten das betreute Segeln lernen, in der vierten Woche in den Sommerferien an. Wir sorgen für das All-Inklusive-Essen und für die Boote, die Kinder müssen nur Spaß am Segeln mitbringen. <!-- Die Kinder können ab sofort auf dieser Webseite angemeldet werden. --> Wenn Sie noch Fragen haben, schreibe Sie uns einfach über <a href="https://www.instagram.com/sls_jugend" title="@sls_jugend">Instagram</a> oder per E-Mail <a href="mailto:segelcamp@lohheider-see.de">segelcamp@lohheider-see.de</a>. <br>Wir freuen uns auf eine schöne Segelwoche mit Euch 🙂.</p>
+                    <p>
+											Auch in diesem Jahr findet unser Sommer Segelcamp für eine Woche statt. Das Camp ist für Anfänger und Fortgeschrittene, um Segeln zu lernen oder die vorhandenen Fähigkeiten zu verbessern. Wie in den letzten Jahren wird das Camp von unserer Jugend geleitet. Wir sind derzeit 6 TrainerInnen, die Spaß an der Arbeit mit Kindern und am Segeln haben. Wir sorgen für die Getränke und das Mittagessen. Die Nutzung der Boote ist ebenfalls in dem Preis mit inbegriffen. Falls Sie weitere Fragen haben, schreiben Sie uns gerne über <a href="https://www.instagram.com/sls_jugend" title="@sls_jugend">Instagram</a> oder über unsere E-Mail-Adresse <a href="mailto:segelcamp@lohheider-see.de">segelcamp@lohheider-see.de</a> an. Die genauen Informationen, wie den Preis finden Sie über dem Anmeldeformular.<br>
+											Wir freuen uns auf eine schöne Segelwoche 🙂!
+										</p>
 										<ul class="actions">
 											<li><a href="#anmelden" class="button big">Jetzt Anmelden</a></li>
 										</ul>
@@ -25,48 +27,48 @@
 									<div class="posts">
 										<article>
 											<span class="image"><img src="images/pic01.jpg" alt="" /></span>
-											<h3>Interdum aenean</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<h3>Bootskontakt</h3>
+											<p>Die Kinder werden schon am ersten Tag an die Boote und das Wasser gewöhnt. Im Laufe der Woche werden die Kinder immer selbstständiger und können  am Ende der Woche schon alleine Segeln. Durch Spiele im und mit dem Boote wächst das Vertrauen in sich und dem Boot immer mehr.</p>
 										</article>
 										<article>
 											<span class="image"><img src="images/pic02.jpg" alt="" /></span>
-											<h3>Nulla amet dolore</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<h3>Theorie</h3>
+											<p>Theoretisch kann ich praktisch alles. In unserem Sommercamp werden auch theoretische Inhalte vermittelt. Durch verschiedene Spiele und Quizze wächst nicht nur der Zusammenhalt, sondern auch das Verständnis für die Segel-Theorie.</p>
 										</article>
 										<article>
 											<span class="image"><img src="images/pic03.jpg" alt="" /></span>
-											<h3>Tempus ullamcorper</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<h3>Vertrauen</h3>
+											<p>Das Vertrauen in sich selber und auch in das Boot sind für das Segeln sehr wichtig. Deswegen begleiten wir Kinder, die sich unsicher fühlen und nehmen ihnen diese Unsicherheit um den Spaß am Segeln zu ermöglichen. Dabei scheuen wir uns auch nicht, mit in die Boote zu steigen.</p>
 										</article>
 										<article>
 											<span class="image"><video style="width: 100%;" loop="true" autoplay="autoplay" muted><source src="images/video01.MP4" type="video/mp4"></video></span>
-											<h3>Sed etiam facilis</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<h3>Einzel- oder Mannschaftssport?</h3>
+											<p>Segeln ist keineswegs nur ein Einzelsport! Selbst wenn man ein Einmann-Boot segeln sollte, geht es beim Segeln um den Kontakt zu anderen und das gemeinsame Hobby. Daher trainieren wir in Gruppen und Teams um das Gemeinschaftsgefühl zu stärken.</p>
 										</article>
 										<article>
 											<span class="image"><img src="images/pic04.jpg" alt="" /></span>
-											<h3>Feugiat lorem aenean</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<h3>Training</h3>
+											<p>Bevor es mit den Booten raus auf den See geht, gibt es immer eine Besprechung, in welcher die nächsten Übungen besprochen, Fragen beantwortet und Tipps gegeben werden. Abends gibt es immer noch eine Abschlussbesprechung, in welcher wir und die Kinder den Tag reflektieren.</p>
 										</article>
 										<article>
 											<span class="image"><img src="images/pic05.jpg" alt="" /></span>
-											<h3>Amet varius aliquam</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<h3>Spaß</h3>
+											<p>In unserem Camp geht es nicht nur darum segeln zu lernen, sondern auch darum Spaß zu haben. Es werden Spiele an Land und auch im Wasser gespielt.</p>
 										</article>
-                                        <article>
+                    <article>
 											<span class="image"><img src="images/pic06.jpg" alt="" /></span>
-											<h3>Amet varius aliquam</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<h3>Naturschutzgebiet</h3>
+											<p>Der Lohheidersee ist ein Naturschutzgebiet. Hier leben viele verschiedene Tierarten, welche man von nahem oder auch weitem beobachten kann.</p>
 										</article>
-                                        <article>
+                    <article>
 											<span class="image"><img src="images/pic07.jpg" alt="" /></span>
-											<h3>Amet varius aliquam</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<h3>Ziele</h3>
+											<p>Unser Ziel ist es, dass die Kinder am Ende der Woche alleine Segeln können und auch Spaß daran haben. Wer nach dem Sommercamp gerne weiter Segeln möchte, kann sich bei uns im Verein anmelden und an unserem wöchentlichen Training teilnehmen.</p>
 										</article>
-                                        <article>
-                                            <span class="image"><img src="images/pic08.jpg" alt="" /></span>
-											<h3>Amet varius aliquam</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+                    <article>
+                      <span class="image"><img src="images/pic08.jpg" alt="" /></span>
+											<h3>Ein Segeltag geht zu Ende</h3>
+											<p>Am Ende des Tages sind nicht nur die Kinder, sondern auch die Trainer müde und hatten viel Spaß. Am nächsten Morgen geht es dann wieder um 10:00 Uhr los mit einem weiteren Segeltag.</p>
 										</article>
 
 									</div>
@@ -86,9 +88,8 @@
                           <p>(*) Erforderliche Felder</p>
 													<?php if(isset($msg_field)) { echo $msg_field; } ?>
 													<p>
-														Wir können nur eine bestimmte Anzahl an Kindern annehmen. Leider können wir die genaue Anzahl erst kurz vor dem Segelcamp erfahren, da dies von der aktuellen Coronasituation abhängt. Das Camp geht <strong>vom 26.07.2021 bis zum 30.07.2021, jeden Tag jeweils von 10:00 Uhr bis 18:00 Uhr</strong>.<br>
-														Die Kinder sollen, wenn vorhanden, Segelsachen mitbringen. Ansonsten Wetterabhängig Regensachen und auf jeden Fall wechselsachen. Wenn vorhanden auch gerne eine eigene Schwimmweste. Ansonsten werden welche vom Verein gestellt.<br>
-														Die Kosten des Segelcamps betragen <strong>XX,XX €</strong>, welche per Überweisung an die in der Bestätigungs-E-Mail stehenden Bankdaten überwiesen werden sollen.
+														Unsere Teilnehmeranzahl ist begrenzt und kann aufgrund der Coronasituation abweichen. Wir handeln nach der aktuellsten <abbr title="Coronaschutzverordnung: Verordnung zum Schutz vor Neuinfizierungen mit dem Coronavirus SARS-CoV-2">CoronaSchVO</abbr>, daher kann es zu kurzfristigen Änderungen des Sommercamps kommen. Das Camp findet <strong>vom 26.07.2021 bis zum 30.07.2021, jeweils von 10:00 bis 18:00 Uhr</strong>, statt. Die Kosten belaufen sich auf <strong>120 €</strong> inkl. Betreuung, Nutzung der Boote und Verpflegung. Das Geld wird an die, in der Bestätigungs-E-Mail stehenden Bankdaten überwiesen.
+														Die Kinder sollten, falls vorhanden, Segelsachen, Schwimmsachen, Wechselkleidung und Wetterabhängige Kleidung mitbringen. Wenn vorhanden auch gerne eine eigene Schwimmweste. Ansonsten werden welche vom Verein gestellt. Weitere Informationen dazu folgen, dann in der WhatsApp-Gruppe oder per E-Mail.
 													</p>
                           <form method="post" action="#anmelden">
 														<div class="row gtr-uniform">
