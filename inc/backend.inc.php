@@ -382,6 +382,182 @@ if(isset($_POST['sendform'])) {
       }
       $user_ip = htmlspecialchars(trim($_SERVER['REMOTE_ADDR']));
       $user_useragent = htmlspecialchars(trim($_SERVER['HTTP_USER_AGENT']));
+      $betreff_bestaetigung = "Bestätigung zur Anmeldung von ".$name_child." für das Sommercamp 2021 der SLS";
+
+      if(!empty($firstname_parent2)) {
+        if(!empty($housenumber_parent2)) {
+          if($housenumber_parent1 != $housenumber_parent2) {
+            $adress_parent2_for_mail = $plz_parent2." ".$town_parent2." ".$street_parent2." ".$housenumber_parent2;
+          } else {
+            $adress_parent2_for_mail = $plz_parent1." ".$town_parent1." ".$street_parent1." ".$housenumber_parent1;
+          }
+        }
+        if(!empty($lastname_parent2)) {
+          $lastname_parent2_for_mail = $lastname_parent2;
+        } else {
+          $lastname_parent2_for_mail = $lastname_parent1;
+        }
+        if(!empty($phonenumber_parent2)) {
+          $phonenumber_parent2_for_mail = $phonenumber_parent2;
+        } else {
+          $phonenumber_parent2_for_mail = $phonenumber_parent1;
+        }
+
+        $data_from_parent2_for_mail = $firstname_parent2." ".$lastname_parent2_for_mail." <br>
+        Adresse: ".$adress_parent2_for_mail." <br>
+        E-Mail-Adresse: ".$email_parent2."<br>
+        Handynummer: ".$mobilenumber_parent2."<br>
+        Telefonnummer (Festznetz): ".$phonenumber_parent2_for_mail."<br>";
+      } else {
+        $data_from_parent2_for_mail = "";
+      }
+
+      if($swimmingbadge == 1) {
+        $swimmingbadge_for_mail = "Seepferdchen";
+      } elseif($swimmingbadge == 2) {
+        $swimmingbadge_for_mail = "Bronze";
+      } elseif($swimmingbadge == 3) {
+        $swimmingbadge_for_mail = "Silber";
+      } elseif($swimmingbadge == 4) {
+        $swimmingbadge_for_mail = "Gold";
+      }
+
+      if($sailingexperience == 1) {
+        $sailingexperience_for_mail = "Keine";
+      } elseif($sailingexperience == 2) {
+        $sailingexperience_for_mail = "Auf Boot mitgefahren";
+      } elseif($sailingexperience == 3) {
+        $sailingexperience_for_mail = "Schonmal selbst gesegelt";
+      } elseif($sailingexperience == 4) {
+        $sailingexperience_for_mail = "Kann alleine segeln";
+      } elseif($sailingexperience == 5) {
+        $sailingexperience_for_mail = "Kann gut alleine segeln";
+      } elseif($sailingexperience == 6) {
+        $sailingexperience_for_mail = "Fortgeschritten";
+      }
+
+      if($clothingsize == 1) {
+        $clothingsize_for_mail = "122";
+      } elseif($clothingsize == 2) {
+        $clothingsize_for_mail = "128";
+      } elseif($clothingsize == 3) {
+        $clothingsize_for_mail = "134";
+      } elseif($clothingsize == 4) {
+        $clothingsize_for_mail = "140";
+      } elseif($clothingsize == 5) {
+        $clothingsize_for_mail = "152";
+      } elseif($clothingsize == 6) {
+        $clothingsize_for_mail = "158";
+      } elseif($clothingsize == 7) {
+       $clothingsize_for_mail = "164";
+     } elseif($clothingsize == 8) {
+       $clothingsize_for_mail = "170";
+     }
+
+     if($lifejacket == 1) {
+       $lifejacket_for_mail = "Ihr Kind besitzt eine eigene Schwimmwese, welche am Anfang der Woche mitgebracht wird und dann die Woche über am Verein bleibt.";
+     } else {
+       $lifejacket_for_mail = "Ihr Kind besitzt keine eigene Schwimmweste. Diese wird vom Verein für die Woche zur Verfügung gestellt.";
+     }
+
+     if($whatsapp == 1) {
+       $whatsapp_for_mail = "Sie sind damit einverstanden, dass die oben angegebenen Telefonnummern und vollen Namen in eine WhatsApp-Gruppe hinzugefügt werden und die Kommunikation, auch über personenbezogene Daten, per WhatsApp stattfinden darf. Sie erklären sich damit einverstanden die geteilten personenbezogenen Daten der anderen nicht weiterzugeben. Die WhatsApp-Gruppe nutzen wir um alle Eltern und Erziehungsberechtigten auf dem Laufenden zu halten. Da die Einwilligung freiwillig ist, können Sie diese jederzeit widerrufen, indem Sie die WhatsApp-Gruppe verlassen.";
+     } else {
+       $whatsapp_for_mail = "Sie sind nicht damit einverstanden in die WhatsApp-Gruppe hinzugefügt zu werden. Wir werden Sie nur per E-Mail kontaktieren. Die anderen teilnehmenden Eltern werden lediglich den Namen Ihres Kindes als personenbezogene Daten mitgeteilt bekommen. Sollten Sie doch zur WhatsApp-Gruppe hinzugefügt werden wollen, schreiben Sie uns dies gerne, dass Sie den Datanschutzbedingungen zustimmen.";
+     }
+
+     if($publishphotos == 1) {
+       $publishphotos_for_mail = "Sie sind damit einverstanden, dass Fotografien und der Name Ihres Kindes, im Zusammenhang des Segelcamps in der WhatsApp Gruppe mit allen teilnehmenden Eltern, auf der Homepage (und Subhomepages) (<a href='https://lohheider-see.de'>lohheider-see.de</a>) und auf Instagram (<a href='https://www.instagram.com/sls_jugend'>@sls_jugend</a>) veröffentlicht werden dürfen. <i>Diese Einwilligung ist freiwillig und kann jederzeit widerrufen werden. Schreiben Sie dazu eine E-Mail an <a href='mailto:info@lohheider-see.de'>info@lohheider-see.de</a>.</i>";
+     } else {
+       $publishphotos_for_mail = "Es werden keine Fotografien, auf denen Ihr Kind erkennbar ist und keine weiteren personenbezogenen Daten Ihres Kindes veröffentlicht. Als Ausnahme gilt, der Name in der WhatsApp-Gruppe. Dies ist aus organisatorischen Gründen leider nicht anders möglich.";
+     }
+
+      $text_bestaetigung1 = "Hallo ".$firstname_parent1." ".$lastname_parent1.", <br>Es freut uns, dass Ihr Kind ".$name_child." für das Sommercamp bei der Seglergemeinschaft Lohheider See e. V. (47199 Duisburg, Orsoyer Allee 121) angemeldet wurde. Dies ist die Bestätigungs-E-Mail für die Anmeldung. Bitte kontrollieren Sie ob die von Ihnen angegebenen Daten richtig sind:<br>
+      <strong>Eltern: </strong><br>
+      ".$firstname_parent1." ".$lastname_parent1." <br>
+      Adresse: ".$plz_parent1." ".$town_parent1." ".$street_parent1." ".$housenumber_parent1."<br>
+      E-Mail-Adresse: ".$email_parent1."<br>
+      Handynummer: ".$mobilenumber_parent1."<br>
+      Telefonnummer (Festznetz): ".$phonenumber_parent1."<br>
+      <br>
+      ".$data_from_parent2_for_mail."<br>
+      Kind: <br>
+      ".$name_child."<br>
+      Geburtsdatum: ".$birthdate."<br>
+      Allergien / Unverträglichkeiten: ".$allergy."<br>
+      Vorerkrankungen / Medikamente: ".$medication."<br>
+      Schwimmabzeichen: ".$swimmingbadge_for_mail."<br>
+      Segelerfahrung: ".$sailingexperience_for_mail."<br>
+      T-Shirt Größe: ".$clothingsize_for_mail."<br>
+      ".$lifejacket_for_mail."<br>
+      <br>
+      Sonstiges: ".$other."<br>
+      Sie, oder das andere Elternteil hat den Haftungsausschlusses bestätigt:<br>
+      <blockquote>Eine Haftung des Veranstalters, gleich aus welchem Rechtsgrund, für Sach- und Vermögensschäden jeder Art und deren Folgen, die dem Teilnehmer während oder im Zusammenhang mit der Teilnahme an der Veranstaltung durch ein Verhalten des Veranstalters, seiner Vertreter, Erfüllungsgehilfen oder Beauftragten entstehen, ist bei der Verletzung von Pflichten, die nicht Haupt-/bzw. vertragswesentliche Pflichten (Kardinalpflichten) sind, beschränkt auf Schäden, die vorsätzlich oder grob fahrlässig verursacht wurden. Bei der Verletzung von Kardinalpflichten ist die Haftung des Veranstalters in Fällen einfacher Fahrlässigkeit beschränkt auf vorhersehbare, typischerweise eintretende Schäden. Soweit die Schadenersatzhaftung des Veranstalters ausgeschlossen oder eingeschränkt ist, befreit der Teilnehmer von der persönlichen Schadenersatzhaftung auch alle anderen Personen, denen im Zusammenhang mit der Durchführung der Veranstaltung ein Auftrag erteilt worden ist.</blockquote><br>
+      Sie oder das andere Elternteil hat bestätigt, dass alle Angaben richtig sind, dem Kind erklärt, dass am, auf und im Wasser Schwimmwestenpflicht besteht und dem Kind die besonderen Coronaschutz Verhaltensregeln erklärt. Diese finden Sie unter <a href='https://www.land.nrw/corona'>land.nrw/corona</a>. Sollten Sie festgestellt haben, dass die Angaben doch nicht richtig sind, teilen Sie uns dies bitte mit, dann können wir diese für Sie anpassen. Dazu können Sie ganz einfach auf diese E-Mail antworten.<br>
+      Sie oder das andere Elternteil hat bestätigt, dass wenn Ihr Kind innerhalb 14 Tage vor und/oder während dem Segelcamp Corona-Symptome (Husten, Fieber (37,9+ °C), Schnupfen, Störung des Geruchs- und/oder Geschmackssinns) hat, es nur mit einem negativen <abbr title='Polymerase Chain Reaction Test; deutsch: Polymerasekettenreaktion-Test. Die Richtigkeit liegt bei 99 %.'>PCR-Test</abbr> an dem Camp teilnehmen kann. Gegebenenfalls reicht Situationsbedingt auch ein <abbr title='Point-of-Care-Antigen-Test auf SARS-CoV-2 (Schnelltest; Testergebnis nach weniger als 30 Minuten, jedoch mit einer höheren Falsch-Positiv-Rate)'>PoC-Test</abbr>. Sollte kein PCR-Test/PoC-Test vorliegen oder dieser positiv sein, kann das Geld von unserer Seite leider nicht erstattet werden. Wenn das Segelcamp aufgrund der <abbr title='Coronaschutzverordnung: Verordnung zum Schutz vor Neuinfizierungen mit dem Coronavirus SARS-CoV-2'>CoronaSchVO</abbr> ausfallen muss, wird das Geld erstattet.<br>
+      ".$whatsapp_for_mail."<br>
+      ".$publishphotos_for_mail."<br>
+      <hr>
+      Bitte überweisen Sie, nachdem Sie die Anmeldung von uns akzeptiert wurde, <strong>120 €</strong> an:<br>
+      Kontoinhaber: SLS Jugendabteilung<br>
+      IBAN: DE26 35461106 1200 7900 29<br>
+      BIC: GENODED1NRH
+      Verwendungszweck: Segelcamp ".$name_child."<br>
+      Betrag: 120 €<br>
+      <br>
+      Das Segelcamp findet vom <strong>26.07.2021 bis zum 30.07.2021, jeweils von 10:00 bis 18:00 Uhr</strong>, statt.
+      Leider können wir, aufgrund der Coronaschutz-Situation nur eine begrenzte Anzahl an Teilnehmern annehmen. Aus diesem Grund kann es sein, dass wir die Anmeldung leider nicht annehmen können. Sollte die Anmeldung von ".$name_child." angenommen werden, werden wir Sie umgehend per E-Mail oder WhatsApp kontaktieren.<br>
+      Die Kinder sollten, falls vorhanden, Segelsachen, Schwimmsachen, Wechselkleidung und Wetterabhängige Kleidung mitbringen. Sonnencreme, eine Kopfbedeckung und eine Sonnenbrille sind auch empfehlenswert.<br>
+      <br>
+      Wir freuen uns auf euch,<br>
+      Eure Jugend der Seglergemeinschaft Lohheider See e. V.";
+
+      $text_bestaetigung2 = "Hallo ".$firstname_parent1." ".$lastname_parent2_for_mail.", <br>Es freut uns, dass Ihr Kind ".$name_child." für das Sommercamp bei der Seglergemeinschaft Lohheider See e. V. (47199 Duisburg, Orsoyer Allee 121) angemeldet wurde. Dies ist die Bestätigungs-E-Mail für die Anmeldung. Bitte kontrollieren Sie ob die von Ihnen angegebenen Daten richtig sind:<br>
+      <strong>Eltern: </strong><br>
+      ".$firstname_parent1." ".$lastname_parent1." <br>
+      Adresse: ".$plz_parent1." ".$town_parent1." ".$street_parent1." ".$housenumber_parent1."<br>
+      E-Mail-Adresse: ".$email_parent1."<br>
+      Handynummer: ".$mobilenumber_parent1."<br>
+      Telefonnummer (Festznetz): ".$phonenumber_parent1."<br>
+      <br>
+      ".$data_from_parent2_for_mail."<br>
+      Kind: <br>
+      ".$name_child."<br>
+      Geburtsdatum: ".$birthdate."<br>
+      Allergien / Unverträglichkeiten: ".$allergy."<br>
+      Vorerkrankungen / Medikamente: ".$medication."<br>
+      Schwimmabzeichen: ".$swimmingbadge_for_mail."<br>
+      Segelerfahrung: ".$sailingexperience_for_mail."<br>
+      T-Shirt Größe: ".$clothingsize_for_mail."<br>
+      ".$lifejacket_for_mail."<br>
+      <br>
+      Sonstiges: ".$other."<br>
+      Sie, oder das andere Elternteil hat den Haftungsausschlusses bestätigt:<br>
+      <blockquote>Eine Haftung des Veranstalters, gleich aus welchem Rechtsgrund, für Sach- und Vermögensschäden jeder Art und deren Folgen, die dem Teilnehmer während oder im Zusammenhang mit der Teilnahme an der Veranstaltung durch ein Verhalten des Veranstalters, seiner Vertreter, Erfüllungsgehilfen oder Beauftragten entstehen, ist bei der Verletzung von Pflichten, die nicht Haupt-/bzw. vertragswesentliche Pflichten (Kardinalpflichten) sind, beschränkt auf Schäden, die vorsätzlich oder grob fahrlässig verursacht wurden. Bei der Verletzung von Kardinalpflichten ist die Haftung des Veranstalters in Fällen einfacher Fahrlässigkeit beschränkt auf vorhersehbare, typischerweise eintretende Schäden. Soweit die Schadenersatzhaftung des Veranstalters ausgeschlossen oder eingeschränkt ist, befreit der Teilnehmer von der persönlichen Schadenersatzhaftung auch alle anderen Personen, denen im Zusammenhang mit der Durchführung der Veranstaltung ein Auftrag erteilt worden ist.</blockquote><br>
+      Sie oder das andere Elternteil hat bestätigt, dass alle Angaben richtig sind, dem Kind erklärt, dass am, auf und im Wasser Schwimmwestenpflicht besteht und dem Kind die besonderen Coronaschutz Verhaltensregeln erklärt. Diese finden Sie unter <a href='https://www.land.nrw/corona'>land.nrw/corona</a>. Sollten Sie festgestellt haben, dass die Angaben doch nicht richtig sind, teilen Sie uns dies bitte mit, dann können wir diese für Sie anpassen. Dazu können Sie ganz einfach auf diese E-Mail antworten.<br>
+      Sie oder das andere Elternteil hat bestätigt, dass wenn Ihr Kind innerhalb 14 Tage vor und/oder während dem Segelcamp Corona-Symptome (Husten, Fieber (37,9+ °C), Schnupfen, Störung des Geruchs- und/oder Geschmackssinns) hat, es nur mit einem negativen <abbr title='Polymerase Chain Reaction Test; deutsch: Polymerasekettenreaktion-Test. Die Richtigkeit liegt bei 99 %.'>PCR-Test</abbr> an dem Camp teilnehmen kann. Gegebenenfalls reicht Situationsbedingt auch ein <abbr title='Point-of-Care-Antigen-Test auf SARS-CoV-2 (Schnelltest; Testergebnis nach weniger als 30 Minuten, jedoch mit einer höheren Falsch-Positiv-Rate)'>PoC-Test</abbr>. Sollte kein PCR-Test/PoC-Test vorliegen oder dieser positiv sein, kann das Geld von unserer Seite leider nicht erstattet werden. Wenn das Segelcamp aufgrund der <abbr title='Coronaschutzverordnung: Verordnung zum Schutz vor Neuinfizierungen mit dem Coronavirus SARS-CoV-2'>CoronaSchVO</abbr> ausfallen muss, wird das Geld erstattet.<br>
+      ".$whatsapp_for_mail."<br>
+      ".$publishphotos_for_mail."<br>
+      <hr>
+      Bitte überweisen Sie, nachdem Sie die Anmeldung von uns akzeptiert wurde, <strong>120 €</strong> an:<br>
+      Kontoinhaber: SLS Jugendabteilung<br>
+      IBAN: DE26 35461106 1200 7900 29<br>
+      BIC: GENODED1NRH
+      Verwendungszweck: Segelcamp ".$name_child."<br>
+      Betrag: 120 €<br>
+      <br>
+      Das Segelcamp findet vom <strong>26.07.2021 bis zum 30.07.2021, jeweils von 10:00 bis 18:00 Uhr</strong>, statt.
+      Leider können wir, aufgrund der Coronaschutz-Situation nur eine begrenzte Anzahl an Teilnehmern annehmen. Aus diesem Grund kann es sein, dass wir die Anmeldung leider nicht annehmen können. Sollte die Anmeldung von ".$name_child." angenommen werden, werden wir Sie umgehend per E-Mail oder WhatsApp kontaktieren.<br>
+      Die Kinder sollten, falls vorhanden, Segelsachen, Schwimmsachen, Wechselkleidung und Wetterabhängige Kleidung mitbringen. Sonnencreme, eine Kopfbedeckung und eine Sonnenbrille sind auch empfehlenswert.<br>
+      <br>
+      Wir freuen uns auf euch,<br>
+      Eure Jugend der Seglergemeinschaft Lohheider See e. V.";
+
+      $mail1 = send_mail($email_parent1, $betreff_bestaetigung, $text_bestaetigung1);
+      if(!empty($email_parent2)) {
+        $mail2 = send_mail($email_parent1, $betreff_bestaetigung, $text_bestaetigung2);
+      }
       $msg = 'Ihr Kind wurde erfolgreich zum Segelcamp angemeldet. Wir melden und umgehend bei Ihnen.';
       $registered = true;
 
