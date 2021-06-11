@@ -527,7 +527,8 @@ if(isset($_POST['sendform'])) {
           amount_payed = :amount_payed,
           boat_name = :boat_name,
           changed_by_admin = :changed_by_admin
-          WHERE id = ".intval($_POST['update_user']));
+          WHERE id = :id
+          "));
         $result = $statement->execute(array(
               'name_child' => htmlspecialchars($_POST['name_child']),
               'birthdate' => htmlspecialchars($_POST['birthdate']),
@@ -559,7 +560,8 @@ if(isset($_POST['sendform'])) {
               'accepted' => htmlspecialchars($_POST['accepted']),
               'amount_payed' => htmlspecialchars($_POST['amount_payed']),
               'boat_name' => htmlspecialchars($_POST['boat_name']),
-              'changed_by_admin' => htmlspecialchars($_POST['changed_by_admin'])
+              'changed_by_admin' => htmlspecialchars($_POST['changed_by_admin']),
+              'id' => intval($_POST['update_user'])
             ));
             echo '<strong>Hallo_Ende</strong>';
     }
