@@ -489,6 +489,113 @@ if(isset($_POST['sendform'])) {
     setcookie('msg', $msg, time() + 60);
     header('Location: /');
   }
+
+  // Admin-Bereich
+  if($_COOKIE['token'] == $admin_cookie_hash) {
+    if(isset($_POST['update_user'])) {
+      $statement = $pdo->prepare("UPDATE registrations SET (
+          name_child,
+          birthdate,
+          allergy,
+          medication,
+          swimmingbadge,
+          sailingexperience,
+          clothingsize,
+          lifejacket,
+          firstname_parent1,
+          lastname_parent1,
+          email_parent1,
+          mobilenumber_parent1,
+          phonenumber_parent1,
+          plz_parent1,
+          town_parent1,
+          street_parent1,
+          housenumber_parent1,
+          firstname_parent2,
+          lastname_parent2,
+          email_parent2,
+          mobilenumber_parent2,
+          phonenumber_parent2,
+          plz_parent2,
+          town_parent2,
+          street_parent2,
+          housenumber_parent2,
+          other,
+          accepted,
+          amount_payed,
+          boat_name,
+          changed_by_admin
+        ) VALUES (
+          :name_child,
+          :birthdate,
+          :allergy,
+          :medication,
+          :swimmingbadge,
+          :sailingexperience,
+          :clothingsize,
+          :lifejacket,
+          :firstname_parent1,
+          :lastname_parent1,
+          :email_parent1,
+          :mobilenumber_parent1,
+          :phonenumber_parent1,
+          :plz_parent1,
+          :town_parent1,
+          :street_parent1,
+          :housenumber_parent1,
+          :firstname_parent2,
+          :lastname_parent2,
+          :email_parent2,
+          :mobilenumber_parent2,
+          :phonenumber_parent2,
+          :plz_parent2,
+          :town_parent2,
+          :street_parent2,
+          :housenumber_parent2,
+          :other,
+          :accepted,
+          :amount_payed,
+          :boat_name,
+          :changed_by_admin
+        ) WHERE id = :id");
+        $result = $statement->execute(array(
+              'name_child' => htmlspecialchars($_POST['name_child']),
+              'birthdate' => htmlspecialchars($_POST['birthdate']),
+              'allergy' => htmlspecialchars($_POST['allergy']),
+              'medication' => htmlspecialchars($_POST['medication']),
+              'swimmingbadge' => htmlspecialchars($_POST['swimmingbadge']),
+              'sailingexperience' => htmlspecialchars($_POST['sailingexperience']),
+              'clothingsize' => htmlspecialchars($_POST['clothingsize']),
+              'lifejacket' => htmlspecialchars($_POST['lifejacket']),
+              'firstname_parent1' => htmlspecialchars($_POST['firstname_parent1']),
+              'lastname_parent1' => htmlspecialchars($_POST['lastname_parent1']),
+              'email_parent1' => htmlspecialchars($_POST['email_parent1']),
+              'mobilenumber_parent1' => htmlspecialchars($_POST['mobilenumber_parent1']),
+              'phonenumber_parent1' => htmlspecialchars($_POST['phonenumber_parent1']),
+              'plz_parent1' => htmlspecialchars($_POST['plz_parent1']),
+              'town_parent1' => htmlspecialchars($_POST['town_parent1']),
+              'street_parent1' => htmlspecialchars($_POST['street_parent1']),
+              'housenumber_parent1' => htmlspecialchars($_POST['housenumber_parent1']),
+              'firstname_parent2' => htmlspecialchars($_POST['firstname_parent2']),
+              'lastname_parent2' => htmlspecialchars($_POST['lastname_parent2']),
+              'email_parent2' => htmlspecialchars($_POST['email_parent2']),
+              'mobilenumber_parent2' => htmlspecialchars($_POST['mobilenumber_parent2']),
+              'phonenumber_parent2' => htmlspecialchars($_POST['phonenumber_parent2']),
+              'plz_parent2' => htmlspecialchars($_POST['plz_parent2']),
+              'town_parent2' => htmlspecialchars($_POST['town_parent2']),
+              'street_parent2' => htmlspecialchars($_POST['street_parent2']),
+              'housenumber_parent2' => htmlspecialchars($_POST['housenumber_parent2']),
+              'other' => htmlspecialchars($_POST['other']),
+              'accepted' => htmlspecialchars($_POST['accepted']),
+              'amount_payed' => htmlspecialchars($_POST['amount_payed']),
+              'boat_name' => htmlspecialchars($_POST['boat_name']),
+              'changed_by_admin' => htmlspecialchars($_POST['changed_by_admin'])
+            ));
+    }
+  }
+
+
+
   // Nachricht die in Cookie an die nächste Seite übermittelt wurde in $msg abspeichern
   if(!empty($_COOKIE['msg'])) {
     $msg = trim($_COOKIE['msg']);
