@@ -131,7 +131,7 @@
 						<td><input type="email" value="<?php echo $row['email_parent1'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
 						<td><input type="tel" value="<?php echo $row['mobilenumber_parent1'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
 						<td><input type="tel" value="<?php echo $row['phonenumber_parent1'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
-						<td><input type="text" value="<?php echo $row['plz_parent1'].' '.$row['town_parent1'].' '.$row['street_parent1'].' '.$row['housenumber_parent1'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
+						<td><input type="text" value="<?php echo $row['plz_parent1'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
 						<td><input type="text" value="<?php echo $row['town_parent1'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
 						<td><input type="text" value="<?php echo $row['street_parent1'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
 						<td><input type="text" value="<?php echo $row['housenumber_parent1'] ?>" name="" placeholder="" minlenght="" maxlength="" required></td>
@@ -140,11 +140,13 @@
 						<td><input type="email" value="<?php echo $row['email_parent2'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
 						<td><input type="tel" value="<?php echo $row['mobilenumber_parent2'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
 						<td><input type="tel" value="<?php echo $row['phonenumber_parent2'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
-						<td><input type="text" value="<?php echo $row['plz_parent2'].' '.$row['town_parent2'].' '.$row['street_parent2'].' '.$row['housenumber_parent2'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
+						<td><input type="text" value="<?php echo $row['plz_parent2'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
 						<td><input type="text" value="<?php echo $row['town_parent2'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
 						<td><input type="text" value="<?php echo $row['street_parent2'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
 						<td><input type="text" value="<?php echo $row['housenumber_parent2'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
 						<td><input type="text" value="<?php echo $row['other'] ?>" name="" placeholder="" minlenght="" maxlength=""></td>
+						<td><input type="text" value="<?php echo $row['whatsapp'] ?>" disabled></td>
+						<td><input type="text" value="<?php echo $row['publishphotos'] ?>" disabled></td>
 						<td><?php echo $row['user_ip'] ?></td>
 						<td><small><?php echo $row['user_useragent'] ?></small></td>
 						<td><select name="accepted">
