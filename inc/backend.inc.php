@@ -23,7 +23,7 @@ if(isset($_GET['logout'])) {
 function send_mail($empfaenger, $betreff, $text) {
   $from = "From: SLS-Jugend <segelcamp@lohheider-see.de>\r\n";
   $from .= "Reply-To: segelcamp@lohheider-see.de\r\n";
-  $from .= "Content-Type: text/html\r\n";
+  $from .= "Content-Type: text/html; charset=\"utf-8\"\r\n";
   $mail = mail($empfaenger, $betreff, $text, $from);
   return $mail;
 }
