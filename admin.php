@@ -153,7 +153,7 @@
 							<option value="1"<?php if($row['accepted']==1) { echo ' selected'; } ?>>Ja</option>
 							<option value="0"<?php if($row['accepted']!=1) { echo ' selected'; } ?>>Noch nicht</option>
 						</select></td>
-						<td><input type="text" value="<?php echo $row['amount_payed'] ?>" name="amount_payed" placeholder="Bezahlt?"></td>
+						<td><input type="text" value="<?php echo $row['amount_payed'] ?>" name="amount_payed" placeholder="Beitrag überwiesen?"></td>
 						<td><input type="text" value="<?php echo $row['boat_name'] ?>" name="boat_name" placeholder="Bootsname"></td>
 						<td><input type="text" value="<?php if (empty($row['changed_by_admin'])) { echo "Nein"; } else { echo $row['changed_by_admin']; } ?>" disabled></td>
 						<td><?php echo $row['created_at'] ?></td>
