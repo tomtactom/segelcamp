@@ -156,6 +156,7 @@
 						<td><input type="text" value="<?php echo $row['amount_payed'] ?>" name="amount_payed" placeholder="Beitrag überwiesen?"></td>
 						<td><input type="text" value="<?php echo $row['boat_name'] ?>" name="boat_name" placeholder="Bootsname"></td>
 						<td><input type="text" value="<?php if (empty($row['changed_by_admin'])) { echo "Nein"; } else { echo $row['changed_by_admin']; } ?>" disabled></td>
+						<input type="hidden" name="changed_by_admin" value="Ja">
 						<td><?php echo $row['created_at'] ?></td>
 					</tr>
 				<?php } ?>
