@@ -24,7 +24,7 @@ function send_mail($empfaenger, $betreff, $text) {
   $from = "From: SLS-Jugend <segelcamp@lohheider-see.de>\r\n";
   $from .= "Reply-To: segelcamp@lohheider-see.de\r\n";
   $from .= "Content-Type: text/html; charset=\"utf-8\"\r\n";
-  $mail = mail($empfaenger, $betreff, $text, $from);
+  $mail = mail($empfaenger, "=?utf-8?b?".base64_encode($betreff)."?=", $text, $from);
   return $mail;
 }
 
@@ -407,7 +407,7 @@ if(isset($_POST['sendform'])) {
         Adresse: ".$adress_parent2_for_mail." <br>
         E-Mail-Adresse: ".$email_parent2."<br>
         Handynummer: ".$mobilenumber_parent2."<br>
-        Telefonnummer (Festznetz): ".$phonenumber_parent2_for_mail."<br>";
+        Telefonnummer (Festznetz): ".$phonenumber_parent2_for_mail."<br><br>";
       } else {
         $data_from_parent2_for_mail = "";
       }
@@ -455,7 +455,7 @@ if(isset($_POST['sendform'])) {
      }
 
      if($lifejacket == 1) {
-       $lifejacket_for_mail = "Ihr Kind besitzt eine eigene Schwimmwese, welche am Anfang der Woche mitgebracht wird und dann die Woche über am Verein bleibt.";
+       $lifejacket_for_mail = "Ihr Kind besitzt eine eigene Schwimmweste, welche am Anfang der Woche mitgebracht wird und dann die Woche über am Verein bleibt.";
      } else {
        $lifejacket_for_mail = "Ihr Kind besitzt keine eigene Schwimmweste. Diese wird vom Verein für die Woche zur Verfügung gestellt.";
      }
@@ -472,16 +472,18 @@ if(isset($_POST['sendform'])) {
        $publishphotos_for_mail = "Es werden keine Fotografien, auf denen Ihr Kind erkennbar ist und keine weiteren personenbezogenen Daten Ihres Kindes veröffentlicht. Als Ausnahme gilt, der Name in der WhatsApp-Gruppe. Dies ist aus organisatorischen Gründen leider nicht anders möglich.";
      }
 
-      $text_bestaetigung1 = "Hallo ".$firstname_parent1." ".$lastname_parent1.", <br>Es freut uns, dass Ihr Kind ".$name_child." für das Sommercamp bei der Seglergemeinschaft Lohheider See e. V. (47199 Duisburg, Orsoyer Allee 121) angemeldet wurde. Dies ist die Bestätigungs-E-Mail für die Anmeldung. Bitte kontrollieren Sie ob die von Ihnen angegebenen Daten richtig sind:<br>
+      $text_bestaetigung1 = "Hallo ".$firstname_parent1." ".$lastname_parent1.", <br>
+      Es freut uns, dass Ihr Kind ".$name_child." für das Sommercamp bei der Seglergemeinschaft Lohheider See e. V. (47199 Duisburg, Orsoyer Allee 121) angemeldet wurde. Dies ist die Bestätigungs-E-Mail für die Anmeldung. Bitte kontrollieren Sie, ob die von Ihnen angegebenen Daten richtig sind:<br>
+      <br>
       <strong>Eltern: </strong><br>
       ".$firstname_parent1." ".$lastname_parent1." <br>
       Adresse: ".$plz_parent1." ".$town_parent1." ".$street_parent1." ".$housenumber_parent1."<br>
       E-Mail-Adresse: ".$email_parent1."<br>
       Handynummer: ".$mobilenumber_parent1."<br>
-      Telefonnummer (Festznetz): ".$phonenumber_parent1."<br>
+      Telefonnummer (Festnetz): ".$phonenumber_parent1."<br>
       <br>
-      ".$data_from_parent2_for_mail."<br>
-      Kind: <br>
+      ".$data_from_parent2_for_mail."
+      <strong>Kind: </strong><br>
       ".$name_child."<br>
       Geburtsdatum: ".$birthdate."<br>
       Allergien / Unverträglichkeiten: ".$allergy."<br>
@@ -490,19 +492,19 @@ if(isset($_POST['sendform'])) {
       Segelerfahrung: ".$sailingexperience_for_mail."<br>
       T-Shirt Größe: ".$clothingsize_for_mail."<br>
       ".$lifejacket_for_mail."<br>
-      <br>
       Sonstiges: ".$other."<br>
-      Sie, oder das andere Elternteil hat den Haftungsausschlusses bestätigt:<br>
-      <blockquote>Eine Haftung des Veranstalters, gleich aus welchem Rechtsgrund, für Sach- und Vermögensschäden jeder Art und deren Folgen, die dem Teilnehmer während oder im Zusammenhang mit der Teilnahme an der Veranstaltung durch ein Verhalten des Veranstalters, seiner Vertreter, Erfüllungsgehilfen oder Beauftragten entstehen, ist bei der Verletzung von Pflichten, die nicht Haupt-/bzw. vertragswesentliche Pflichten (Kardinalpflichten) sind, beschränkt auf Schäden, die vorsätzlich oder grob fahrlässig verursacht wurden. Bei der Verletzung von Kardinalpflichten ist die Haftung des Veranstalters in Fällen einfacher Fahrlässigkeit beschränkt auf vorhersehbare, typischerweise eintretende Schäden. Soweit die Schadenersatzhaftung des Veranstalters ausgeschlossen oder eingeschränkt ist, befreit der Teilnehmer von der persönlichen Schadenersatzhaftung auch alle anderen Personen, denen im Zusammenhang mit der Durchführung der Veranstaltung ein Auftrag erteilt worden ist.</blockquote><br>
-      Sie oder das andere Elternteil hat bestätigt, dass alle Angaben richtig sind, dem Kind erklärt, dass am, auf und im Wasser Schwimmwestenpflicht besteht und dem Kind die besonderen Coronaschutz Verhaltensregeln erklärt. Diese finden Sie unter <a href='https://www.land.nrw/corona'>land.nrw/corona</a>. Sollten Sie festgestellt haben, dass die Angaben doch nicht richtig sind, teilen Sie uns dies bitte mit, dann können wir diese für Sie anpassen. Dazu können Sie ganz einfach auf diese E-Mail antworten.<br>
-      Sie oder das andere Elternteil hat bestätigt, dass wenn Ihr Kind innerhalb 14 Tage vor und/oder während dem Segelcamp Corona-Symptome (Husten, Fieber (37,9+ °C), Schnupfen, Störung des Geruchs- und/oder Geschmackssinns) hat, es nur mit einem negativen <abbr title='Polymerase Chain Reaction Test; deutsch: Polymerasekettenreaktion-Test. Die Richtigkeit liegt bei 99 %.'>PCR-Test</abbr> an dem Camp teilnehmen kann. Gegebenenfalls reicht Situationsbedingt auch ein <abbr title='Point-of-Care-Antigen-Test auf SARS-CoV-2 (Schnelltest; Testergebnis nach weniger als 30 Minuten, jedoch mit einer höheren Falsch-Positiv-Rate)'>PoC-Test</abbr>. Sollte kein PCR-Test/PoC-Test vorliegen oder dieser positiv sein, kann das Geld von unserer Seite leider nicht erstattet werden. Wenn das Segelcamp aufgrund der <abbr title='Coronaschutzverordnung: Verordnung zum Schutz vor Neuinfizierungen mit dem Coronavirus SARS-CoV-2'>CoronaSchVO</abbr> ausfallen muss, wird das Geld erstattet.<br>
-      ".$whatsapp_for_mail."<br>
-      ".$publishphotos_for_mail."<br>
+      <br>
+      Sie, oder das andere Elternteil hat den Haftungsausschluss bestätigt:<br>
+      <p>Eine Haftung des Veranstalters, gleich aus welchem Rechtsgrund, für Sach- und Vermögensschäden jeder Art und deren Folgen, die dem Teilnehmer während oder im Zusammenhang mit der Teilnahme an der Veranstaltung durch ein Verhalten des Veranstalters, seiner Vertreter, Erfüllungsgehilfen oder Beauftragten entstehen, ist bei der Verletzung von Pflichten, die nicht Haupt-/bzw. vertragswesentliche Pflichten (Kardinalpflichten) sind, beschränkt auf Schäden, die vorsätzlich oder grob fahrlässig verursacht wurden. Bei der Verletzung von Kardinalpflichten ist die Haftung des Veranstalters in Fällen einfacher Fahrlässigkeit beschränkt auf vorhersehbare, typischerweise eintretende Schäden. Soweit die Schadenersatzhaftung des Veranstalters ausgeschlossen oder eingeschränkt ist, befreit der Teilnehmer von der persönlichen Schadenersatzhaftung auch alle anderen Personen, denen im Zusammenhang mit der Durchführung der Veranstaltung ein Auftrag erteilt worden ist.</p><br>
+      <p>Sie oder das andere Elternteil hat bestätigt, dass alle Angaben richtig sind, dem Kind erklärt, dass am, auf und im Wasser Schwimmwestenpflicht besteht und dem Kind die besonderen Coronaschutz Verhaltensregeln erklärt. Diese finden Sie unter <a href='https://www.land.nrw/corona'>land.nrw/corona</a>. Sollten Sie festgestellt haben, dass die Angaben doch nicht richtig sind, teilen Sie uns dies bitte mit, dann können wir diese für Sie anpassen. Dazu können Sie ganz einfach auf diese E-Mail antworten.</p><br>
+      <p>Sie oder das andere Elternteil hat bestätigt, dass wenn Ihr Kind innerhalb 14 Tage vor und/oder während dem Segelcamp Corona-Symptome (Husten, Fieber (37,9+ °C), Schnupfen, Störung des Geruchs- und/oder Geschmackssinns) hat, es nur mit einem negativen <abbr title='Polymerase Chain Reaction Test; deutsch: Polymerasekettenreaktion-Test. Die Richtigkeit liegt bei 99 %.'>PCR-Test</abbr> an dem Camp teilnehmen kann. Gegebenenfalls reicht Situationsbedingt auch ein <abbr title='Point-of-Care-Antigen-Test auf SARS-CoV-2 (Schnelltest; Testergebnis nach weniger als 30 Minuten, jedoch mit einer höheren Falsch-Positiv-Rate)'>PoC-Test</abbr>. Sollte kein PCR-Test/PoC-Test vorliegen oder dieser positiv sein, kann das Geld von unserer Seite leider nicht erstattet werden. Wenn das Segelcamp aufgrund der <abbr title='Coronaschutzverordnung: Verordnung zum Schutz vor Neuinfizierungen mit dem Coronavirus SARS-CoV-2'>CoronaSchVO</abbr> ausfallen muss, wird das Geld erstattet.</p><br>
+      <p>".$whatsapp_for_mail."</p><br>
+      <p>".$publishphotos_for_mail."</p><br>
       <hr>
-      Bitte überweisen Sie, nachdem Sie die Anmeldung von uns akzeptiert wurde, <strong>120 €</strong> an:<br>
+      Bitte überweisen Sie, nachdem die Anmeldung von uns akzeptiert wurde, <strong>120 €</strong> an:<br>
       Kontoinhaber: SLS Jugendabteilung<br>
       IBAN: DE26 35461106 1200 7900 29<br>
-      BIC: GENODED1NRH
+      BIC: GENODED1NRH<br>
       Verwendungszweck: Segelcamp ".$name_child."<br>
       Betrag: 120 €<br>
       <br>
@@ -513,16 +515,18 @@ if(isset($_POST['sendform'])) {
       Wir freuen uns auf euch,<br>
       Eure Jugend der Seglergemeinschaft Lohheider See e. V.";
 
-      $text_bestaetigung2 = "Hallo ".$firstname_parent1." ".$lastname_parent2_for_mail.", <br>Es freut uns, dass Ihr Kind ".$name_child." für das Sommercamp bei der Seglergemeinschaft Lohheider See e. V. (47199 Duisburg, Orsoyer Allee 121) angemeldet wurde. Dies ist die Bestätigungs-E-Mail für die Anmeldung. Bitte kontrollieren Sie ob die von Ihnen angegebenen Daten richtig sind:<br>
+      $text_bestaetigung2 = "Hallo ".$firstname_parent2." ".$lastname_parent2_for_mail.", <br>
+      Es freut uns, dass Ihr Kind ".$name_child." für das Sommercamp bei der Seglergemeinschaft Lohheider See e. V. (47199 Duisburg, Orsoyer Allee 121) angemeldet wurde. Dies ist die Bestätigungs-E-Mail für die Anmeldung. Bitte kontrollieren Sie, ob die von Ihnen angegebenen Daten richtig sind:<br>
+      <br>
       <strong>Eltern: </strong><br>
       ".$firstname_parent1." ".$lastname_parent1." <br>
       Adresse: ".$plz_parent1." ".$town_parent1." ".$street_parent1." ".$housenumber_parent1."<br>
       E-Mail-Adresse: ".$email_parent1."<br>
       Handynummer: ".$mobilenumber_parent1."<br>
-      Telefonnummer (Festznetz): ".$phonenumber_parent1."<br>
+      Telefonnummer (Festnetz): ".$phonenumber_parent1."<br>
       <br>
-      ".$data_from_parent2_for_mail."<br>
-      Kind: <br>
+      ".$data_from_parent2_for_mail."
+      <strong>Kind: </strong><br>
       ".$name_child."<br>
       Geburtsdatum: ".$birthdate."<br>
       Allergien / Unverträglichkeiten: ".$allergy."<br>
@@ -531,19 +535,19 @@ if(isset($_POST['sendform'])) {
       Segelerfahrung: ".$sailingexperience_for_mail."<br>
       T-Shirt Größe: ".$clothingsize_for_mail."<br>
       ".$lifejacket_for_mail."<br>
-      <br>
       Sonstiges: ".$other."<br>
-      Sie, oder das andere Elternteil hat den Haftungsausschlusses bestätigt:<br>
-      <blockquote>Eine Haftung des Veranstalters, gleich aus welchem Rechtsgrund, für Sach- und Vermögensschäden jeder Art und deren Folgen, die dem Teilnehmer während oder im Zusammenhang mit der Teilnahme an der Veranstaltung durch ein Verhalten des Veranstalters, seiner Vertreter, Erfüllungsgehilfen oder Beauftragten entstehen, ist bei der Verletzung von Pflichten, die nicht Haupt-/bzw. vertragswesentliche Pflichten (Kardinalpflichten) sind, beschränkt auf Schäden, die vorsätzlich oder grob fahrlässig verursacht wurden. Bei der Verletzung von Kardinalpflichten ist die Haftung des Veranstalters in Fällen einfacher Fahrlässigkeit beschränkt auf vorhersehbare, typischerweise eintretende Schäden. Soweit die Schadenersatzhaftung des Veranstalters ausgeschlossen oder eingeschränkt ist, befreit der Teilnehmer von der persönlichen Schadenersatzhaftung auch alle anderen Personen, denen im Zusammenhang mit der Durchführung der Veranstaltung ein Auftrag erteilt worden ist.</blockquote><br>
-      Sie oder das andere Elternteil hat bestätigt, dass alle Angaben richtig sind, dem Kind erklärt, dass am, auf und im Wasser Schwimmwestenpflicht besteht und dem Kind die besonderen Coronaschutz Verhaltensregeln erklärt. Diese finden Sie unter <a href='https://www.land.nrw/corona'>land.nrw/corona</a>. Sollten Sie festgestellt haben, dass die Angaben doch nicht richtig sind, teilen Sie uns dies bitte mit, dann können wir diese für Sie anpassen. Dazu können Sie ganz einfach auf diese E-Mail antworten.<br>
-      Sie oder das andere Elternteil hat bestätigt, dass wenn Ihr Kind innerhalb 14 Tage vor und/oder während dem Segelcamp Corona-Symptome (Husten, Fieber (37,9+ °C), Schnupfen, Störung des Geruchs- und/oder Geschmackssinns) hat, es nur mit einem negativen <abbr title='Polymerase Chain Reaction Test; deutsch: Polymerasekettenreaktion-Test. Die Richtigkeit liegt bei 99 %.'>PCR-Test</abbr> an dem Camp teilnehmen kann. Gegebenenfalls reicht Situationsbedingt auch ein <abbr title='Point-of-Care-Antigen-Test auf SARS-CoV-2 (Schnelltest; Testergebnis nach weniger als 30 Minuten, jedoch mit einer höheren Falsch-Positiv-Rate)'>PoC-Test</abbr>. Sollte kein PCR-Test/PoC-Test vorliegen oder dieser positiv sein, kann das Geld von unserer Seite leider nicht erstattet werden. Wenn das Segelcamp aufgrund der <abbr title='Coronaschutzverordnung: Verordnung zum Schutz vor Neuinfizierungen mit dem Coronavirus SARS-CoV-2'>CoronaSchVO</abbr> ausfallen muss, wird das Geld erstattet.<br>
-      ".$whatsapp_for_mail."<br>
-      ".$publishphotos_for_mail."<br>
+      <br>
+      Sie, oder das andere Elternteil hat den Haftungsausschluss bestätigt:<br>
+      <p>Eine Haftung des Veranstalters, gleich aus welchem Rechtsgrund, für Sach- und Vermögensschäden jeder Art und deren Folgen, die dem Teilnehmer während oder im Zusammenhang mit der Teilnahme an der Veranstaltung durch ein Verhalten des Veranstalters, seiner Vertreter, Erfüllungsgehilfen oder Beauftragten entstehen, ist bei der Verletzung von Pflichten, die nicht Haupt-/bzw. vertragswesentliche Pflichten (Kardinalpflichten) sind, beschränkt auf Schäden, die vorsätzlich oder grob fahrlässig verursacht wurden. Bei der Verletzung von Kardinalpflichten ist die Haftung des Veranstalters in Fällen einfacher Fahrlässigkeit beschränkt auf vorhersehbare, typischerweise eintretende Schäden. Soweit die Schadenersatzhaftung des Veranstalters ausgeschlossen oder eingeschränkt ist, befreit der Teilnehmer von der persönlichen Schadenersatzhaftung auch alle anderen Personen, denen im Zusammenhang mit der Durchführung der Veranstaltung ein Auftrag erteilt worden ist.</p><br>
+      <p>Sie oder das andere Elternteil hat bestätigt, dass alle Angaben richtig sind, dem Kind erklärt, dass am, auf und im Wasser Schwimmwestenpflicht besteht und dem Kind die besonderen Coronaschutz Verhaltensregeln erklärt. Diese finden Sie unter <a href='https://www.land.nrw/corona'>land.nrw/corona</a>. Sollten Sie festgestellt haben, dass die Angaben doch nicht richtig sind, teilen Sie uns dies bitte mit, dann können wir diese für Sie anpassen. Dazu können Sie ganz einfach auf diese E-Mail antworten.</p><br>
+      <p>Sie oder das andere Elternteil hat bestätigt, dass wenn Ihr Kind innerhalb 14 Tage vor und/oder während dem Segelcamp Corona-Symptome (Husten, Fieber (37,9+ °C), Schnupfen, Störung des Geruchs- und/oder Geschmackssinns) hat, es nur mit einem negativen <abbr title='Polymerase Chain Reaction Test; deutsch: Polymerasekettenreaktion-Test. Die Richtigkeit liegt bei 99 %.'>PCR-Test</abbr> an dem Camp teilnehmen kann. Gegebenenfalls reicht Situationsbedingt auch ein <abbr title='Point-of-Care-Antigen-Test auf SARS-CoV-2 (Schnelltest; Testergebnis nach weniger als 30 Minuten, jedoch mit einer höheren Falsch-Positiv-Rate)'>PoC-Test</abbr>. Sollte kein PCR-Test/PoC-Test vorliegen oder dieser positiv sein, kann das Geld von unserer Seite leider nicht erstattet werden. Wenn das Segelcamp aufgrund der <abbr title='Coronaschutzverordnung: Verordnung zum Schutz vor Neuinfizierungen mit dem Coronavirus SARS-CoV-2'>CoronaSchVO</abbr> ausfallen muss, wird das Geld erstattet.</p><br>
+      <p>".$whatsapp_for_mail."</p><br>
+      <p>".$publishphotos_for_mail."</p><br>
       <hr>
-      Bitte überweisen Sie, nachdem Sie die Anmeldung von uns akzeptiert wurde, <strong>120 €</strong> an:<br>
+      Bitte überweisen Sie, nachdem die Anmeldung von uns akzeptiert wurde, <strong>120 €</strong> an:<br>
       Kontoinhaber: SLS Jugendabteilung<br>
       IBAN: DE26 35461106 1200 7900 29<br>
-      BIC: GENODED1NRH
+      BIC: GENODED1NRH<br>
       Verwendungszweck: Segelcamp ".$name_child."<br>
       Betrag: 120 €<br>
       <br>
