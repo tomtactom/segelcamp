@@ -386,7 +386,7 @@ if(isset($_POST['sendform'])) {
 
       if(!empty($firstname_parent2)) {
         if(!empty($housenumber_parent2)) {
-          if($housenumber_parent1 != $housenumber_parent2) {
+          if(!empty($housenumber_parent2)) {
             $adress_parent2_for_mail = $plz_parent2." ".$town_parent2." ".$street_parent2." ".$housenumber_parent2;
           } else {
             $adress_parent2_for_mail = $plz_parent1." ".$town_parent1." ".$street_parent1." ".$housenumber_parent1;
@@ -461,9 +461,9 @@ if(isset($_POST['sendform'])) {
      }
 
      if($whatsapp == 1) {
-       $whatsapp_for_mail = "Sie sind damit einverstanden, dass die oben angegebenen Telefonnummern und vollen Namen in eine WhatsApp-Gruppe hinzugefügt werden und die Kommunikation, auch über personenbezogene Daten, per WhatsApp stattfinden darf. Sie erklären sich damit einverstanden die geteilten personenbezogenen Daten der anderen nicht weiterzugeben. Die WhatsApp-Gruppe nutzen wir um alle Eltern und Erziehungsberechtigten auf dem Laufenden zu halten. Da die Einwilligung freiwillig ist, können Sie diese jederzeit widerrufen, indem Sie die WhatsApp-Gruppe verlassen.";
+       $whatsapp_for_mail = "Sie sind damit einverstanden, dass die oben angegebenen Telefonnummern und vollen Namen in eine WhatsApp-Gruppe hinzugefügt werden und die Kommunikation, auch über personenbezogene Daten, per WhatsApp stattfinden darf. Sie erklären sich damit einverstanden die geteilten personenbezogenen Daten der anderen nicht weiterzugeben. Die WhatsApp-Gruppe nutzen wir um alle Eltern und Erziehungsberechtigten auf dem Laufenden zu halten. <i>Da die Einwilligung freiwillig ist, können Sie diese jederzeit widerrufen, indem Sie die WhatsApp-Gruppe verlassen.</i>";
      } else {
-       $whatsapp_for_mail = "Sie sind nicht damit einverstanden in die WhatsApp-Gruppe hinzugefügt zu werden. Wir werden Sie nur per E-Mail kontaktieren. Die anderen teilnehmenden Eltern werden lediglich den Namen Ihres Kindes als personenbezogene Daten mitgeteilt bekommen. Sollten Sie doch zur WhatsApp-Gruppe hinzugefügt werden wollen, schreiben Sie uns dies gerne, dass Sie den Datanschutzbedingungen zustimmen.";
+       $whatsapp_for_mail = "Sie sind nicht damit einverstanden in die WhatsApp-Gruppe hinzugefügt zu werden. Wir werden Sie nur per E-Mail kontaktieren. Die anderen teilnehmenden Eltern werden lediglich den Namen Ihres Kindes als personenbezogene Daten mitgeteilt bekommen. <i>Sollten Sie doch zur WhatsApp-Gruppe hinzugefügt werden wollen, schreiben Sie uns dies gerne, dass Sie den Datanschutzbedingungen zustimmen.</i>";
      }
 
      if($publishphotos == 1) {
@@ -473,7 +473,8 @@ if(isset($_POST['sendform'])) {
      }
 
       $text_bestaetigung1 = "Hallo ".$firstname_parent1." ".$lastname_parent1.", <br>
-      Es freut uns, dass Ihr Kind ".$name_child." für das Sommercamp bei der Seglergemeinschaft Lohheider See e. V. (47199 Duisburg, Orsoyer Allee 121) angemeldet wurde. Dies ist die Bestätigungs-E-Mail für die Anmeldung. Bitte kontrollieren Sie, ob die von Ihnen angegebenen Daten richtig sind:<br>
+      Es freut uns, dass Ihr Kind ".$name_child." für das Sommercamp bei der <a href='https://lohheider-see.de'>Seglergemeinschaft Lohheider See e. V.</a> (<a href='https://g.page/seglergemeinschaft-lohheider-see'>47199 Duisburg, Orsoyer Allee 121</a>) angemeldet wurde. <br>
+      Dies ist die Bestätigungs-E-Mail für die Anmeldung. Bitte kontrollieren Sie, ob die von Ihnen angegebenen Daten richtig sind:<br>
       <br>
       <strong>Eltern: </strong><br>
       ".$firstname_parent1." ".$lastname_parent1." <br>
@@ -515,8 +516,9 @@ if(isset($_POST['sendform'])) {
       Wir freuen uns auf euch,<br>
       Eure Jugend der Seglergemeinschaft Lohheider See e. V.";
 
-      $text_bestaetigung2 = "Hallo ".$firstname_parent2." ".$lastname_parent2_for_mail.", <br>
-      Es freut uns, dass Ihr Kind ".$name_child." für das Sommercamp bei der Seglergemeinschaft Lohheider See e. V. (47199 Duisburg, Orsoyer Allee 121) angemeldet wurde. Dies ist die Bestätigungs-E-Mail für die Anmeldung. Bitte kontrollieren Sie, ob die von Ihnen angegebenen Daten richtig sind:<br>
+      $text_bestaetigung1 = "Hallo ".$firstname_parent1." ".$lastname_parent2_for_mail.", <br>
+      Es freut uns, dass Ihr Kind ".$name_child." für das Sommercamp bei der <a href='https://lohheider-see.de'>Seglergemeinschaft Lohheider See e. V.</a> (<a href='https://g.page/seglergemeinschaft-lohheider-see'>47199 Duisburg, Orsoyer Allee 121</a>) angemeldet wurde. <br>
+      Dies ist die Bestätigungs-E-Mail für die Anmeldung. Bitte kontrollieren Sie, ob die von Ihnen angegebenen Daten richtig sind:<br>
       <br>
       <strong>Eltern: </strong><br>
       ".$firstname_parent1." ".$lastname_parent1." <br>
@@ -560,7 +562,7 @@ if(isset($_POST['sendform'])) {
 
       $mail1 = send_mail($email_parent1, $betreff_bestaetigung, $text_bestaetigung1);
       if(!empty($email_parent2)) {
-        $mail2 = send_mail($email_parent1, $betreff_bestaetigung, $text_bestaetigung2);
+        $mail2 = send_mail($email_parent2, $betreff_bestaetigung, $text_bestaetigung2);
       }
       $msg = 'Ihr Kind wurde erfolgreich zum Segelcamp angemeldet. Wir melden und umgehend bei Ihnen.';
       $registered = true;
