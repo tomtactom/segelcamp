@@ -98,7 +98,9 @@
 															$row = $statement->fetch();
 														if($max_value > $row['anzahl']) {
 													 ?>
-													<big>Es sind <?php echo $row['anzahl']; ?> von <?php echo $max_value; ?> Plätze belegt.</big>
+													<p>
+														 <strong>Es sind <?php echo $row['anzahl']; ?> von <?php echo $max_value; ?> Plätzen belegt.</big>
+													</p>
                           <form method="post" action="#anmelden">
 														<div class="row gtr-uniform">
 															<div class="col-6 col-12-xsmall">
