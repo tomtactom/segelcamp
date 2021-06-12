@@ -47,10 +47,41 @@
 								</tr>
 								<tr>
 									<th>Geburtsdatum</th>
+									<td><?php echo $row['birthdate']; ?></td>
 								</tr>
 								<tr>
 									<th>Alter</th>
+									<td><?php echo $row_age; ?></td>
 								</tr>
+								<tr>
+									<th>Allergie</th>
+									<td><?php echo $row['allergy']; ?></td>
+								</tr>
+								<tr>
+									<th>Medikamente</th>
+									<td><?php echo $row['medication']; ?></td>
+								</tr>
+								<tr>
+									<th>Schwimmabzeichen</th>
+									<td><?php echo $row['swimmingbadge']; ?></td>
+								</tr>
+								<tr>
+									<th>Segelerfahrung</th>
+									<td><?php echo $row['sailingexperience']; ?></td>
+								</tr>
+								<tr>
+									<th>Kleidungsgröße</th>
+									<td><?php #echo $row['']; ?></td>
+								</tr>
+								<tr>
+									<th>Schwimmweste</th>
+									<td><?php echo $row['']; ?></td>
+								</tr>
+								<tr>
+									<th>Example</th>
+									<td><?php echo $row['']; ?></td>
+								</tr>
+
 							</tbody>
 						</table>
 					<?php }
