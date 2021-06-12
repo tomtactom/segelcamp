@@ -568,7 +568,8 @@ if(isset($_POST['sendform'])) {
         whatsapp,
         publishphotos,
         user_ip,
-        user_useragent
+        user_useragent,
+        accepted
       ) VALUES (
         :name_child,
         :birthdate,
@@ -603,7 +604,8 @@ if(isset($_POST['sendform'])) {
         :whatsapp,
         :publishphotos,
         :user_ip,
-        :user_useragent
+        :user_useragent,
+        :accepted
       )");
 	$result = $statement->execute(array(
         'name_child' => $name_child,
@@ -639,7 +641,8 @@ if(isset($_POST['sendform'])) {
         'whatsapp' => $whatsapp,
         'publishphotos' => $publishphotos,
         'user_ip' => $user_ip,
-        'user_useragent' => $user_useragent
+        'user_useragent' => $user_useragent,
+        'accepted' => 1
       ));
     }
   }
