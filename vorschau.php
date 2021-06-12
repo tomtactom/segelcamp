@@ -87,7 +87,11 @@
 											<li class="list-group-item"><strong>Name: </strong><?php echo $row['firstname_parent1']." ".$row['lastname_parent1']; ?></li>
 											<li class="list-group-item"><strong>E-Mail-Adresse: </strong><a href="mailto:<?php echo $row['email_parent1']; ?>"><?php echo $row['email_parent1']; ?></a></li>
 											<li class="list-group-item"><strong>Handynummer: </strong><?php echo $row['mobilenumber_parent1']; ?></li>
-											<li class="list-group-item"><strong>Telefonnummer (Festnetz): </strong><?php echo $row['phonenumber_parent1']; ?></li>
+											<?php
+												if(!empty($row['phonenumber_parent1'])) {
+											?>
+												<li class="list-group-item"><strong>Telefonnummer (Festnetz): </strong><?php echo $row['phonenumber_parent1']; ?></li>
+											<?php } ?>
 											<?php $row_adress_parent1 = $row['plz_parent1']." ".$row['town_parent1'].", ".$row['street_parent1']." ".$row['housenumber_parent1']; ?>
 											<li class="list-group-item"><strong>Adresse: </strong><?php echo $row_adress_parent1; ?></li>
 										</ul>
@@ -115,13 +119,12 @@
 													$row_phonenumber_parent2 = $row['phonenumber_parent2'];
 												}	elseif(empty($row['plz_parent2']) && !empty($row['phonenumber_parent1'])) {
 													$row_phonenumber_parent2 = $row['phonenumber_parent1'];
-												} else {
-													$row_phonenumber_parent2 = "";
 												}
+												if(!empty($row_phonenumber_parent2)) {
 											?>
-											<li class="list-group-item"><strong>Telefonnummer (Festnetz): </strong><?php echo $row_phonenumber_parent2; ?></li>
-
+												<li class="list-group-item"><strong>Telefonnummer (Festnetz): </strong><?php echo $row_phonenumber_parent2; ?></li>
 											<?php
+												}
 												if(empty($row['plz_parent2'])) {
 													$row_adress_parent2 = $row_adress_parent1;
 												} else {
@@ -131,6 +134,29 @@
 											<li class="list-group-item"><strong>Adresse: </strong><?php echo $row_adress_parent2; ?></li>
 										</ul>
 									</td>
+								</tr>
+								<?php
+									if(!empty($row['other'])) {
+								?>
+								<tr>
+									<th>Sonstiges</th>
+									<td><?php echo $row['other']; ?></td>
+								</tr>
+								<?php
+									}
+								?>
+								<tr>
+									<th>Datenschutz</th>
+									<td>
+										<ul class="list-group">
+											<li class="list-group-item"><strong>Per WhatsApp kontaktieren: </strong><?php if($row['whatsapp'] == true) { echo "Ja"; } else { echo "Nein"; } ?></li>
+											<li class="list-group-item"><strong>Foto hochladen: </strong><?php if($row['publishphotos'] == true) { echo "Ja"; } else { echo "Nein"; } ?></li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th>Bootsname</th>
+									<td><?php echo $row['boat_name']; ?></td>
 								</tr>
 								<?php
 									}
