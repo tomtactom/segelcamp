@@ -42,12 +42,9 @@
 						$row_age = $diff->format('%y').' Jahre und '.$diff->format('%m').' Monate';
 					}
 					?>
+						<h2><?php echo $row['name_child']; ?></h2>
 						<table>
 							<tbody>
-								<tr>
-									<th>Name des Kindes</th>
-									<td><?php echo $row['name_child']; ?></td>
-								</tr>
 								<tr>
 									<th>Geburtsdatum</th>
 									<td><?php echo $row['birthdate']; ?></td>
@@ -163,7 +160,7 @@
 								?>
 
 							</tbody>
-						</table><br><br><hr style="height: 15px;"><br><br>
+						</table><br><br><hr style="height: 5px; background-color: lightgrey;"><br><br>
 					<?php }
 							}
 						}
