@@ -163,7 +163,7 @@
 								?>
 
 							</tbody>
-						</table><br><br><hr><br><br>
+						</table><br><br><hr size="4"><br><br>
 					<?php }
 							}
 						}
