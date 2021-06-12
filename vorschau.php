@@ -32,7 +32,7 @@
 					$result = $statement->execute();
 					$count = 1;
 					?>
-					<a href="javascript:self.print()"><img scr="/images/drucker.png" alt="Seite Drucken"></a>
+					<a href="javascript:self.print()" style="display:block;text-decoration:none;float:right;"><img src="/images/drucker.png" alt="Seite Drucken"></a>
 					<?php
 					while($row = $statement->fetch()) {
 					$today = date("Y-m-d");
