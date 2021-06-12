@@ -81,8 +81,17 @@
 									<td><?php if($row['lifejacket'] == 1) { echo "Ja"; } else { echo "Nein"; } ?></td>
 								</tr>
 								<tr>
-									<th>Example</th>
-									<td><?php #echo $row['']; ?></td>
+									<th>1. Elternteil</th>
+									<td>
+										<ul class="list-group">
+											<li class="list-group-item"><strong>Name: </strong><?php echo $row['firstname_parent1']." ".$row['lastname_parent1']; ?></li>
+											<li class="list-group-item"><strong>E-Mail-Adresse: </strong><a href="mailto:<?php echo $row['email_parent1']; ?>"><?php echo $row['email_parent1']; ?></a></li>
+											<li class="list-group-item"></li>
+											<li class="list-group-item"></li>
+											<li class="list-group-item"></li>
+											<li class="list-group-item"></li>
+										</ul>
+									</td>
 								</tr>
 
 							</tbody>
