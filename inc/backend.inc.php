@@ -28,15 +28,14 @@ function send_mail($empfaenger, $betreff, $text) {
   return $mail;
 }
 
-function send_acception_mail($sender_name, $sender_mail, $betreff_bestaetigung) {
+function send_acception_mail($sender_name, $sender_mail) {
   global $name_child, $birthdate, $allergy, $medication, $swimmingbadge, $sailingexperience, $clothingsize, $lifejacket, $firstname_parent1, $lastname_parent1, $email_parent1, $mobilenumber_parent1, $phonenumber_parent1, $plz_parent1, $town_parent1, $street_parent1, $housenumber_parent1, $firstname_parent2, $lastname_parent2, $email_parent2, $mobilenumber_parent2, $phonenumber_parent2, $plz_parent2, $town_parent2, $street_parent2, $housenumber_parent2, $other, $disclaimer, $coronasymptoms, $whatsapp, $correctinformation, $publishphotos;
+  $betreff_bestaetigung = "Bestätigung zur Anmeldung von ".$name_child." für das Sommercamp 2021 der SLS";
   if(!empty($firstname_parent2)) {
     if(!empty($housenumber_parent2)) {
-      if(!empty($housenumber_parent2)) {
-        $adress_parent2_for_mail = $plz_parent2." ".$town_parent2." ".$street_parent2." ".$housenumber_parent2;
-      } else {
-        $adress_parent2_for_mail = $plz_parent1." ".$town_parent1." ".$street_parent1." ".$housenumber_parent1;
-      }
+      $adress_parent2_for_mail = $plz_parent2." ".$town_parent2." ".$street_parent2." ".$housenumber_parent2;
+    } else {
+      $adress_parent2_for_mail = $plz_parent1." ".$town_parent1." ".$street_parent1." ".$housenumber_parent1;
     }
     if(!empty($lastname_parent2)) {
       $lastname_parent2_for_mail = $lastname_parent2;
@@ -162,7 +161,7 @@ function send_acception_mail($sender_name, $sender_mail, $betreff_bestaetigung) 
   Wir freuen uns auf euch,<br>
   Eure Jugend der Seglergemeinschaft Lohheider See e. V.";
 
-  return send_mail($sender_mail, $sender_name, $text_bestaetigung);
+  return send_mail($sender_mail, $betreff_bestaetigung, $text_bestaetigung);
 }
 
 
@@ -520,17 +519,16 @@ if(isset($_POST['sendform'])) {
       }
       $user_ip = htmlspecialchars(trim($_SERVER['REMOTE_ADDR']));
       $user_useragent = htmlspecialchars(trim($_SERVER['HTTP_USER_AGENT']));
-      $betreff_bestaetigung = "Bestätigung zur Anmeldung von ".$name_child." für das Sommercamp 2021 der SLS";
 
       // Mail senden
-      send_acception_mail($firstname_parent1." ".$lastname_parent1, $email_parent1, $betreff_bestaetigung);
+      send_acception_mail($firstname_parent1." ".$lastname_parent1, $email_parent1);
       if(!empty($email_parent2)) {
         if (empty($lastname_parent2)) {
           $lastname_parent2_for_mail = $lastname_parent1;
         } else {
           $lastname_parent2_for_mail = $lastname_parent2;
         }
-        send_acception_mail($firstname_parent2." ".$lastname_parent2_for_mail, $email_parent2, $betreff_bestaetigung);
+        send_acception_mail($firstname_parent2." ".$lastname_parent2_for_mail, $email_parent2);
       }
       $msg = 'Ihr Kind wurde erfolgreich zum Segelcamp angemeldet. Wir melden und umgehend bei Ihnen.';
       $registered = true;
