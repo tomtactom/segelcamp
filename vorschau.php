@@ -31,6 +31,9 @@
 					$statement = $pdo->prepare("SELECT * FROM `registrations` ORDER BY id");
 					$result = $statement->execute();
 					$count = 1;
+					?>
+					<a href="javascript:self.print()"><img scr="/images/drucker.png" alt="Seite Drucken"></a>
+					<?php
 					while($row = $statement->fetch()) {
 					$today = date("Y-m-d");
 				  $diff = date_diff(date_create($row['birthdate']), date_create($today));
