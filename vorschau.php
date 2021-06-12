@@ -86,13 +86,55 @@
 										<ul class="list-group">
 											<li class="list-group-item"><strong>Name: </strong><?php echo $row['firstname_parent1']." ".$row['lastname_parent1']; ?></li>
 											<li class="list-group-item"><strong>E-Mail-Adresse: </strong><a href="mailto:<?php echo $row['email_parent1']; ?>"><?php echo $row['email_parent1']; ?></a></li>
-											<li class="list-group-item"></li>
-											<li class="list-group-item"></li>
-											<li class="list-group-item"></li>
-											<li class="list-group-item"></li>
+											<li class="list-group-item"><strong>Handynummer: </strong><?php echo $row['mobilenumber_parent1']; ?></li>
+											<li class="list-group-item"><strong>Telefonnummer (Festnetz): </strong><?php echo $row['phonenumber_parent1']; ?></li>
+											<?php $row_adress_parent1 = $row['plz_parent1']." ".$row['town_parent1'].", ".$row['street_parent1']." ".$row['housenumber_parent1']; ?>
+											<li class="list-group-item"><strong>Adresse: </strong><?php echo $row_adress_parent1; ?></li>
 										</ul>
 									</td>
 								</tr>
+								<?php
+									if(!empty($row['firstname_parent2'])) {
+								?>
+								<tr>
+									<th>2. Elternteil</th>
+									<td>
+										<ul class="list-group">
+											<?php
+												if(empty($row['lastname_parent2'])) {
+													$row_lastname_parent2 = $row['lastname_parent1'];
+												} else {
+													$row_lastname_parent2 = $row['lastname_parent2'];
+												}
+											?>
+											<li class="list-group-item"><strong>Name: </strong><?php echo $row['firstname_parent2']." ".$row_lastname_parent2; ?></li>
+											<li class="list-group-item"><strong>E-Mail-Adresse: </strong><a href="mailto:<?php echo $row['email_parent2']; ?>"><?php echo $row['email_parent2']; ?></a></li>
+											<li class="list-group-item"><strong>Handynummer: </strong><?php echo $row['mobilenumber_parent2']; ?></li>
+											<?php
+												if(!empty($row['phonenumber_parent2'])) {
+													$row_phonenumber_parent2 = $row['phonenumber_parent2'];
+												}	elseif(empty($row['plz_parent2']) && !empty($row['phonenumber_parent1'])) {
+													$row_phonenumber_parent2 = $row['phonenumber_parent1'];
+												} else {
+													$row_phonenumber_parent2 = "";
+												}
+											?>
+											<li class="list-group-item"><strong>Telefonnummer (Festnetz): </strong><?php echo $row_phonenumber_parent2; ?></li>
+
+											<?php
+												if(empty($row['plz_parent2'])) {
+													$row_adress_parent2 = $row_adress_parent1;
+												} else {
+													$row_adress_parent2 = $row['plz_parent2']." ".$row['town_parent2'].", ".$row['street_parent2']." ".$row['housenumber_parent2'];
+												}
+											?>
+											<li class="list-group-item"><strong>Adresse: </strong><?php echo $row_adress_parent2; ?></li>
+										</ul>
+									</td>
+								</tr>
+								<?php
+									}
+								?>
 
 							</tbody>
 						</table>
