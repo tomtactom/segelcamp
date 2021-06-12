@@ -531,7 +531,7 @@ if(isset($_POST['sendform'])) {
         }
         send_acception_mail($firstname_parent2." ".$lastname_parent2_for_mail, $email_parent2);
       }
-      $msg = 'Ihr Kind wurde erfolgreich zum Segelcamp angemeldet. Wir melden und umgehend bei Ihnen.';
+      $msg = 'Ihr Kind wurde erfolgreich zum Segelcamp angemeldet. Wir melden uns umgehend bei Ihnen.';
       $registered = true;
 
       $statement = $pdo->prepare("INSERT INTO registrations (
