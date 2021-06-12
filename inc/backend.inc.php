@@ -526,9 +526,9 @@ if(isset($_POST['sendform'])) {
       send_acception_mail($firstname_parent1." ".$lastname_parent1, $email_parent1, $betreff_bestaetigung);
       if(!empty($email_parent2)) {
         if (empty($lastname_parent2)) {
-          $lastname_parent2_for_mail = $lastname_parent1
+          $lastname_parent2_for_mail = $lastname_parent1;
         } else {
-          $lastname_parent2_for_mail = $lastname_parent2
+          $lastname_parent2_for_mail = $lastname_parent2;
         }
         send_acception_mail($firstname_parent2." ".$lastname_parent2_for_mail, $email_parent2, $betreff_bestaetigung);
       }
