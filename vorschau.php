@@ -163,7 +163,7 @@
 								?>
 
 							</tbody>
-						</table>
+						</table><br><br><hr><br><br>
 					<?php }
 							}
 						}
