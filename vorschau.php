@@ -39,7 +39,7 @@
 				  $diff = date_diff(date_create($row['birthdate']), date_create($today));
 				  $row_age = $diff->format('%y').' Jahre';
 					if ($diff->format('%m') > 0) {
-						$row_age = ' und '.$diff->format('%m').' Monate';
+						$row_age = $diff->format('%y').' Jahre und '.$diff->format('%m').' Monate';
 					}
 					?>
 						<table>
@@ -74,15 +74,15 @@
 								</tr>
 								<tr>
 									<th>Kleidungsgröße</th>
-									<td><?php #echo $row['']; ?></td>
+									<td><?php echo $row['clothingsize']; ?></td>
 								</tr>
 								<tr>
 									<th>Schwimmweste</th>
-									<td><?php echo $row['']; ?></td>
+									<td><?php echo $row['lifejacket']; ?></td>
 								</tr>
 								<tr>
 									<th>Example</th>
-									<td><?php echo $row['']; ?></td>
+									<td><?php #echo $row['']; ?></td>
 								</tr>
 
 							</tbody>
