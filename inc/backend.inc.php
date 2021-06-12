@@ -54,7 +54,7 @@ function send_acception_mail($sender_name, $sender_mail) {
     Handynummer: ".$mobilenumber_parent2."<br>
     Telefonnummer (Festznetz): ".$phonenumber_parent2_for_mail."<br><br>";
   } else {
-    $data_from_parent2_for_mail = "";
+    $data_from_parent2_for_mail = "<br>";
   }
 
   if($swimmingbadge == 1) {
@@ -106,9 +106,10 @@ function send_acception_mail($sender_name, $sender_mail) {
  }
 
  if($whatsapp == 1) {
-   $whatsapp_for_mail = "Sie sind damit einverstanden, dass die oben angegebenen Telefonnummern und vollen Namen in eine WhatsApp-Gruppe hinzugefügt werden und die Kommunikation, auch über personenbezogene Daten, per WhatsApp stattfinden darf. Sie erklären sich damit einverstanden die geteilten personenbezogenen Daten der anderen nicht weiterzugeben. Die WhatsApp-Gruppe nutzen wir um alle Eltern und Erziehungsberechtigten auf dem Laufenden zu halten. <i>Da die Einwilligung freiwillig ist, können Sie diese jederzeit widerrufen, indem Sie die WhatsApp-Gruppe verlassen.</i>";
+   $whatsapp_for_mail = "Sie sind damit einverstanden, dass die oben angegebenen Telefonnummern und vollen Namen in eine WhatsApp-Gruppe hinzugefügt werden und die Kommunikation, auch über personenbezogene Daten, per WhatsApp stattfinden darf. Sie erklären sich damit einverstanden die geteilten personenbezogenen Daten der anderen nicht weiterzugeben. Die WhatsApp-Gruppe nutzen wir um alle Eltern und Erziehungsberechtigten auf dem Laufenden zu halten. <i>Da die Einwilligung freiwillig ist, können Sie diese jederzeit widerrufen, indem Sie die WhatsApp-Gruppe verlassen.</i><br>
+   <a href='https://chat.whatsapp.com/Ly3P7NHVsyk6dK1grVkb8b'>Klicken Sie hier um direkt der Gruppe beizutreten: <strong>chat.whatsapp.com/Ly3P7NHVsyk6dK1grVkb8b</strong></a>. Ansonsten fügen wir Sie im laufe der Zeit hinzu.";
  } else {
-   $whatsapp_for_mail = "Sie sind nicht damit einverstanden in die WhatsApp-Gruppe hinzugefügt zu werden. Wir werden Sie nur per E-Mail kontaktieren. Die anderen teilnehmenden Eltern werden lediglich den Namen Ihres Kindes als personenbezogene Daten mitgeteilt bekommen. <i>Sollten Sie doch zur WhatsApp-Gruppe hinzugefügt werden wollen, schreiben Sie uns dies gerne, dass Sie den Datanschutzbedingungen zustimmen.</i>";
+   $whatsapp_for_mail = "Sie sind nicht damit einverstanden in die WhatsApp-Gruppe hinzugefügt zu werden. Wir werden Sie nur per E-Mail kontaktieren. Die anderen teilnehmenden Eltern werden lediglich den Namen Ihres Kindes als personenbezogene Daten mitgeteilt bekommen. <i>Sollten Sie doch zur WhatsApp-Gruppe hinzugefügt werden wollen, schreiben Sie uns gerne.</i>";
  }
 
  if($publishphotos == 1) {
@@ -147,15 +148,15 @@ function send_acception_mail($sender_name, $sender_mail) {
   <p>".$whatsapp_for_mail."</p><br>
   <p>".$publishphotos_for_mail."</p><br>
   <hr>
-  Bitte überweisen Sie, nachdem die Anmeldung von uns akzeptiert wurde, <strong>120 €</strong> an:<br>
-  Kontoinhaber: SLS Jugendabteilung<br>
-  IBAN: DE26 35461106 1200 7900 29<br>
-  BIC: GENODED1NRH<br>
-  Verwendungszweck: Segelcamp ".$name_child."<br>
-  Betrag: 120 €<br>
+  Bitte überweisen Sie so bald wie möglich <strong>120 €</strong> an:<br>
+  <i>Kontoinhaber:</i> SLS Jugendabteilung<br>
+  <i>IBAN:</i> DE26 35461106 1200 7900 29<br>
+  <i>BIC:</i> GENODED1NRH<br>
+  <i>Verwendungszweck:</i> Segelcamp ".$name_child."<br>
+  <i>Betrag:</i> 120 €<br>
   <br>
-  Das Segelcamp findet vom <strong>26.07.2021 bis zum 30.07.2021, jeweils von 10:00 bis 18:00 Uhr</strong>, statt.
-  Leider können wir, aufgrund der Coronaschutz-Situation nur eine begrenzte Anzahl an Teilnehmern annehmen. Aus diesem Grund kann es sein, dass wir die Anmeldung leider nicht annehmen können. Sollte die Anmeldung von ".$name_child." angenommen werden, werden wir Sie umgehend per E-Mail oder WhatsApp kontaktieren.<br>
+  Das Segelcamp findet vom <strong>26.07.2021 bis zum 30.07.2021, jeweils von 10:00 bis 18:00 Uhr</strong>, statt.<br>
+  Leider können wir, aufgrund der Coronaschutz-Situation nur eine begrenzte Anzahl an Teilnehmern annehmen. Aus diesem Grund, kann es passieren, dass wir einige Anmeldungen ggf. stornieren müssen. In dem Fall erhalten Sie Ihr Geld natürlich wieder.<br>
   Die Kinder sollten, falls vorhanden, Segelsachen, Schwimmsachen, Wechselkleidung und Wetterabhängige Kleidung mitbringen. Sonnencreme, eine Kopfbedeckung und eine Sonnenbrille sind auch empfehlenswert.<br>
   <br>
   Wir freuen uns auf euch,<br>
