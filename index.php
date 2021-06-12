@@ -224,7 +224,7 @@
                                             </div>
 													</form>
 													<?php } else { ?>
-														<h2>Leider können wir keine weiteren Anmeldungen mehr annehmen. Gerne können Sie uns dazu per E-Mail kontaktieren: <a href="mailto:info@lohheider-see.de">info@lohheider-see.de.</a></h2>
+														<h2>Leider können wir keine weiteren Anmeldungen mehr annehmen. Gerne können Sie uns dazu per E-Mail kontaktieren: <a href="mailto:info@lohheider-see.de">info@lohheider-see.de</a>.</h2>
 													<?php } ?>
                         </div>
 									<div class="features">
