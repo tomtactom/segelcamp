@@ -15,14 +15,6 @@ if(isset($_POST['admin_login'])) {
   }
 }
 
-$stmt = $pdo->prepare("SELECT * FROM registrations WHERE name_child=?");
-$stmt->execute(["Tom Aschmannn"]);
-if($stmt->fetch()) {
-  echo "Existiert bereits";
-} else {
-  echo "Existiert nicht";
-}
-
 if(isset($_GET['logout'])) {
   setcookie("token", "", time()-3600);
   header('Location: /');
@@ -328,10 +320,11 @@ if(isset($_POST['sendform'])) {
     }
     $stmt = $pdo->prepare("SELECT * FROM registrations WHERE name_child=?");
     $stmt->execute([htmlspecialchars($name_child)]);
-    if($error == true || $stmt->fetch()) {
-      $msg = "Es wurde bereits ein Kind mit diesem Namen angemeldet.";
+    if($stmt->fetch()) {
+      $msg = 'Es wurde bereits ein Kind mit diesem Namen angemeldet.';
       $error = true;
-    } else {
+    }
+    if($error == false) {
       $name_child = htmlspecialchars($name_child);
       $birthdate = htmlspecialchars($birthdate);
       $allergy = htmlspecialchars($allergy);
