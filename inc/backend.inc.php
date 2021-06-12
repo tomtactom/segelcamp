@@ -15,6 +15,14 @@ if(isset($_POST['admin_login'])) {
   }
 }
 
+$stmt = $pdo->prepare("SELECT * FROM registrations WHERE name_child=?");
+$stmt->execute(["Tom Aschmann"]);
+if($stmt->fetch()) {
+  echo "Existiert bereits";
+} else {
+  echo "Existiert nicht";
+}
+
 if(isset($_GET['logout'])) {
   setcookie("token", "", time()-3600);
   header('Location: /');
