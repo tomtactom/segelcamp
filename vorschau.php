@@ -77,7 +77,7 @@
 									<td><?php if($row['clothingsize'] == 1) { echo "122"; } elseif($row['clothingsize'] == 2) { echo "128"; } elseif($row['clothingsize'] == 3) { echo "134"; } elseif($row['clothingsize'] == 4) { echo "140"; } elseif($row['clothingsize'] == 5) { echo "152"; } elseif($row['clothingsize'] == 6) { echo "158"; } elseif($row['clothingsize'] == 7) { echo "164"; } elseif($row['clothingsize'] == 8) { echo "170"; } ?></td>
 								</tr>
 								<tr>
-									<th>Schwimmweste</th>
+									<th>Eigene Schwimmweste</th>
 									<td><?php if($row['lifejacket'] == 1) { echo "Ja"; } else { echo "Nein"; } ?></td>
 								</tr>
 								<tr>
