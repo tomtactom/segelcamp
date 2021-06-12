@@ -178,7 +178,8 @@
 							$vcard[$row['id']][0] .= "LABEL;HOME;PREF:".$row_adress_parent1."\r\n";
 							$vcard[$row['id']][0] .= "EMAIL;PREF;INTERNET:".$row['email_parent1']."\r\n";
 							$vcard[$row['id']][0] .= "END:VCARD\r\n";
-							file_put_contents('./test.vcf', iconv("CP1257", "UTF-8", $vcard[$row['id']][0]));
+							header('Content-Type: text/html; charset =utf-8');
+							file_put_contents('./test.vcf', $vcard[$row['id']][0]);
 							}
 							}
 						}
