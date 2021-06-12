@@ -16,7 +16,7 @@ if(isset($_POST['admin_login'])) {
 }
 
 $stmt = $pdo->prepare("SELECT * FROM registrations WHERE name_child=?");
-$stmt->execute(["Tom Aschmann"]);
+$stmt->execute(["Tom Aschmannn"]);
 if($stmt->fetch()) {
   echo "Existiert bereits";
 } else {
