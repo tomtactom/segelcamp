@@ -34,8 +34,9 @@
 			<table id="sort">
 				<thead>
 					<tr>
+						<th>Löschen</th>
 						<th>Ändern</th>
-						<th>ID</th>
+						<th>Nr.</th>
 						<th>Name Kind</th>
 						<th>Geburtsdatum</th>
 						<th>Alter</th>
@@ -84,6 +85,7 @@
 					?>
 					<tr>
 						<form method="post">
+						<td><button type="submit" name="delete_user" value="<?php echo $row['id']; ?>">Löschen</button></td>
 						<td><button type="submit" name="update_user" value="<?php echo $row['id']; ?>">Ändern</button></td>
 						<td scope="row"><?php echo $count++ ?></td>
 						<td><input type="text" value="<?php echo $row['name_child'] ?>" name="name_child" placeholder="* Vor- und Nachname des Kindes" required></td>
