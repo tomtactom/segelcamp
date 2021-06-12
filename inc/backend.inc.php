@@ -107,7 +107,7 @@ function send_acception_mail($sender_name, $sender_mail) {
 
  if($whatsapp == 1) {
    $whatsapp_for_mail = "Sie sind damit einverstanden, dass die oben angegebenen Telefonnummern und vollen Namen in eine WhatsApp-Gruppe hinzugefügt werden und die Kommunikation, auch über personenbezogene Daten, per WhatsApp stattfinden darf. Sie erklären sich damit einverstanden die geteilten personenbezogenen Daten der anderen nicht weiterzugeben. Die WhatsApp-Gruppe nutzen wir um alle Eltern und Erziehungsberechtigten auf dem Laufenden zu halten. <i>Da die Einwilligung freiwillig ist, können Sie diese jederzeit widerrufen, indem Sie die WhatsApp-Gruppe verlassen.</i><br>
-   <a href='https://chat.whatsapp.com/Ly3P7NHVsyk6dK1grVkb8b'>Klicken Sie hier um direkt der Gruppe beizutreten: <strong>chat.whatsapp.com/Ly3P7NHVsyk6dK1grVkb8b</strong></a>. Ansonsten fügen wir Sie im laufe der Zeit hinzu.";
+   <a href='https://chat.whatsapp.com/Ly3P7NHVsyk6dK1grVkb8b'>Klicken Sie hier, um direkt der Gruppe beizutreten: <strong>chat.whatsapp.com/Ly3P7NHVsyk6dK1grVkb8b</strong></a>. Ansonsten fügen wir Sie im Laufe der Zeit hinzu.";
  } else {
    $whatsapp_for_mail = "Sie sind nicht damit einverstanden in die WhatsApp-Gruppe hinzugefügt zu werden. Wir werden Sie nur per E-Mail kontaktieren. Die anderen teilnehmenden Eltern werden lediglich den Namen Ihres Kindes als personenbezogene Daten mitgeteilt bekommen. <i>Sollten Sie doch zur WhatsApp-Gruppe hinzugefügt werden wollen, schreiben Sie uns gerne.</i>";
  }
