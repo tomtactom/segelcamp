@@ -91,6 +91,14 @@
 														Unsere Teilnehmeranzahl ist begrenzt und kann aufgrund der Coronasituation abweichen. Wir handeln nach der aktuellsten <abbr title="Coronaschutzverordnung: Verordnung zum Schutz vor Neuinfizierungen mit dem Coronavirus SARS-CoV-2">CoronaSchVO</abbr>, daher kann es zu kurzfristigen Änderungen des Sommercamps kommen. Das Camp findet <strong>vom 26.07.2021 bis zum 30.07.2021, jeweils von 10:00 bis 18:00 Uhr</strong>, statt. Die Kosten belaufen sich auf <strong>120 €</strong> inkl. Betreuung, Nutzung der Boote und Verpflegung. Das Geld wird an die, in der Bestätigungs-E-Mail stehenden Bankdaten überwiesen.
 														Die Kinder sollten, falls vorhanden, Segelsachen, Schwimmsachen, Wechselkleidung und Wetterabhängige Kleidung mitbringen. Wenn vorhanden auch gerne eine eigene Schwimmweste. Ansonsten werden welche vom Verein gestellt. Weitere Informationen dazu folgen, dann in der WhatsApp-Gruppe oder per E-Mail.
 													</p>
+													<?php
+															$max_value = 14;
+															$statement = $pdo->prepare("SELECT COUNT(*) AS anzahl FROM registrations");
+															$statement->execute();
+															$row = $statement->fetch();
+														if($max_value > $row['anzahl']) {
+													 ?>
+													<big>Es sind <?php echo $row['anzahl']; ?> von <?php echo $max_value; ?> Plätze belegt.</big>
                           <form method="post" action="#anmelden">
 														<div class="row gtr-uniform">
 															<div class="col-6 col-12-xsmall">
@@ -213,7 +221,10 @@
                                                             <hr style="width: 100%" />
                                             </div>
 													</form>
-                                    </div>
+													<?php } else { ?>
+														<h2>Leider können wir keine weiteren Anmeldungen mehr annehmen. Gerne können Sie uns dazu per E-Mail kontaktieren: <a href="mailto:info@lohheider-see.de">info@lohheider-see.de.</a></h2>
+													<?php } ?>
+                        </div>
 									<div class="features">
 										<article>
 											<span class="icon fa-gem"></span>
