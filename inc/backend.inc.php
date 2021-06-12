@@ -28,6 +28,10 @@ function send_mail($empfaenger, $betreff, $text) {
   return $mail;
 }
 
+function send_acception_mail() {
+
+}
+
 
 if(isset($_POST['sendform'])) {
     $name_child = ucfirst(trim($_POST['name_child']));
@@ -517,7 +521,7 @@ if(isset($_POST['sendform'])) {
       Wir freuen uns auf euch,<br>
       Eure Jugend der Seglergemeinschaft Lohheider See e. V.";
 
-      $text_bestaetigung1 = "Hallo ".$firstname_parent1." ".$lastname_parent2_for_mail.", <br>
+      $text_bestaetigung2 = "Hallo ".$firstname_parent2." ".$lastname_parent2_for_mail.", <br>
       Es freut uns, dass Ihr Kind ".$name_child." für das Sommercamp bei der <a href='https://lohheider-see.de'>Seglergemeinschaft Lohheider See e. V.</a> (<a href='https://g.page/seglergemeinschaft-lohheider-see'>47199 Duisburg, Orsoyer Allee 121</a>) angemeldet wurde. <br>
       Dies ist die Bestätigungs-E-Mail für die Anmeldung. Bitte kontrollieren Sie, ob die von Ihnen angegebenen Daten richtig sind:<br>
       <br>
