@@ -151,17 +151,35 @@
 										</ul>
 									</td>
 								</tr>
+								<?php
+									if(!empty($row['boat_name'])) {
+								?>
 								<tr>
 									<th>Bootsname</th>
 									<td><?php echo $row['boat_name']; ?></td>
 								</tr>
 								<?php
 									}
+										}
 								?>
 
 							</tbody>
 						</table><br><br><hr style="height: 5px; background-color: lightgrey;"><br><br>
-					<?php }
+					<?php
+							$vcard[$row['id']][0] = "BEGIN:VCARD\r\n";
+							$vcard[$row['id']][0] .= "VERSION:2.1\r\n";
+							$vcard[$row['id']][0] .= "N;LANGUAGE=de:".$row['lastname_parent1'].";".$row['firstname_parent1']."\r\n";
+							$vcard[$row['id']][0] .= "FN:".$row['firstname_parent1']." ".$row['lastname_parent1']."\r\n";
+							if(!empty($row['phonenumber_parent1'])) {
+								$vcard[$row['id']][0] .= "TEL;HOME;VOICE:".$row['phonenumber_parent1']."\r\n";
+							}
+							$vcard[$row['id']][0] .= "TEL;CELL;VOICE:".$row['mobilenumber_parent1']."\r\n";
+							$vcard[$row['id']][0] .= "ADR;HOME;PREF:;;".$row['street_parent1']." ".$row['housenumber_parent1'].";".$row['town_parent1'].";;".$row['plz_parent1'].";Deutschland\r\n";
+							$vcard[$row['id']][0] .= "LABEL;HOME;PREF:".$row_adress_parent1."\r\n";
+							$vcard[$row['id']][0] .= "EMAIL;PREF;INTERNET:".$row['email_parent1']."\r\n";
+							$vcard[$row['id']][0] .= "END:VCARD\r\n";
+							file_put_contents('./test.vcf', $vcard[$row['id']][0]);
+							}
 							}
 						}
 					?>
