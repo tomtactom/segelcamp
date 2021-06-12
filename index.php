@@ -99,7 +99,7 @@
 														if($max_value > $row['anzahl']) {
 													 ?>
 													<p>
-														 <strong>Es sind <?php echo $row['anzahl']; ?> von <?php echo $max_value; ?> Plätzen belegt.</big>
+														 <strong>Es sind <?php echo $row['anzahl']; ?> von <?php echo $max_value; ?> Plätzen belegt.</strong>
 													</p>
                           <form method="post" action="#anmelden">
 														<div class="row gtr-uniform">
