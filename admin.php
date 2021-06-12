@@ -151,7 +151,7 @@
 						<td><input type="text" value="<?php if($row['publishphotos'] == 1) { echo 'Ja';} else { echo 'Nein'; } ?>" disabled></td>
 						<td><?php echo $row['user_ip'] ?></td>
 						<td><small><?php echo $row['user_useragent'] ?></small></td>
-						<td><select name="accepted">
+						<td><select name="accepted" disabled>
 							<option value="1"<?php if($row['accepted']==1) { echo ' selected'; } ?>>Ja</option>
 							<option value="0"<?php if($row['accepted']!=1) { echo ' selected'; } ?>>Noch nicht</option>
 						</select></td>
