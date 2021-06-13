@@ -30,7 +30,7 @@ section, summary, time, mark, audio, video {
 
 @media print {
     #header {
-      display: block;
+      display: unset;
       border: 0;
     }
 	  .not_print,
