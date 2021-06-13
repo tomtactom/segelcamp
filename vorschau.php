@@ -61,11 +61,15 @@
 									<th>Allergie</th>
 									<td><?php echo $row['allergy']; ?></td>
 								</tr>
-								<?php } ?>
+								<?php
+									}
+									if(!empty($row['allergy'])) {
+								?>
 								<tr>
 									<th>Medikamente</th>
 									<td><?php echo $row['medication']; ?></td>
 								</tr>
+								<?php } ?>
 								<tr>
 									<th>Schwimmabzeichen</th>
 									<td><?php if($row['swimmingbadge'] == 1) { echo "Seepferdchen"; } elseif($row['swimmingbadge'] == 2) { echo "Bronze"; } elseif($row['swimmingbadge'] == 3) { echo "Silber"; } elseif($row['swimmingbadge'] == 4) { echo "Gold"; } ?></td>
