@@ -206,7 +206,7 @@
 							$total_vcard = "";
 							foreach($vcard as $v) {
 								foreach($v as $i) {
-									$total_$vcard .= $i."\r\n";
+									$total_vcard .= $i."\r\n";
 								}
 							}
 							$fp = fopen('./assets/all_contacts.vcf', "wb");
