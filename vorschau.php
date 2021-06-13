@@ -44,7 +44,9 @@
 					if ($diff->format('%m') > 0) {
 						$row_age = $diff->format('%y').' Jahre und '.$diff->format('%m').' Monate';
 					}
-					$row_birthday_year, $row_birthday_month, $row_birthday_day = explode("-", $row['birthdate']);
+					$row_birthday_year = explode("-", $row['birthdate'])[0];
+					$row_birthday_month = explode("-", $row['birthdate'])[1];
+					$row_birthday_day = explode("-", $row['birthdate'])[2];
 					?>
 						<h2 class="print"><?php echo $row['name_child']; ?></h2>
 						<table class="print">
