@@ -44,13 +44,14 @@
 					if ($diff->format('%m') > 0) {
 						$row_age = $diff->format('%y').' Jahre und '.$diff->format('%m').' Monate';
 					}
+					$row_birthday_year, $row_birthday_month, $row_birthday_day = $row['birthdate'];
 					?>
 						<h2 class="print"><?php echo $row['name_child']; ?></h2>
 						<table class="print">
 							<tbody>
 								<tr>
 									<th>Geburtsdatum</th>
-									<td><?php echo $row['birthdate']; ?></td>
+									<td><?php echo $row_birthday_day.".".$row_birthday_month.".".$row_birthday_year; ?></td>
 								</tr>
 								<tr>
 									<th>Alter</th>
