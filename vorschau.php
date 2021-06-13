@@ -212,7 +212,7 @@
 							} else {
 								$total_mails = $maby_both_mails."; ";
 							}
-							$count++
+							$count++;
 							}
 							$total_vcard = "";
 							foreach($vcard as $v) {
