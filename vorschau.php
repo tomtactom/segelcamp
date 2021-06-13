@@ -1,15 +1,3 @@
-<style>
-	@media print {
-	  .not_print {
-	    display: none;
-	  }
-		@media print {
-  .print {
-    display: block;
-  }
-}
-	}
-</style>
 <?php require('./inc/backend.inc.php'); ?>
 <?php $page_title = 'Übersicht'; ?>
 <?php require('./inc/header.inc.php'); ?>
