@@ -100,7 +100,7 @@
 														if($max_value > $row['anzahl']) {
 													 ?>
 													<p>
-														 <strong>Es <?php if($row['anzahl'] == 1) { echo "ist"; } else { echo "sind"; } echo $row['anzahl']; ?> von <?php echo $max_value; ?> Plätzen belegt.</strong>
+														 <strong>Es <?php if($row['anzahl'] == 1) { echo "ist "; } else { echo "sind "; } echo $row['anzahl']; ?> von <?php echo $max_value; ?> Plätzen belegt.</strong>
 													</p>
                           <form method="post" action="#anmelden">
 														<div class="row gtr-uniform">
