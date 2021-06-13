@@ -42,6 +42,9 @@ section, summary, time, mark, audio, video {
   body {
     margin: 1,6cm;
   }
+  #header {
+    border: 0;
+  }
 }
 
 td input,
