@@ -3,7 +3,7 @@
 <?php require('./inc/header.inc.php'); ?>
 <section>
 	<header class="major not_print">
-		<h2>Übersicht Bereich<?php if(isset($_COOKIE['token'])) { echo ' - <u><a href="?logout">Abmelden</a></u>'; }?></h2>
+		<h2>Übersicht Bereich<?php if(isset($_COOKIE['token'])) { echo ' - <u><a href="?logout">Abmelden</a></u>'; }?> | <u><a href="./admin">Daten ändern</a></u></h2>
 	</header>
   <div class="content">
 		<?php if(isset($msg_field)) { echo $msg_field; } ?>
