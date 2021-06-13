@@ -118,7 +118,7 @@
 											fwrite($fp, $vcard[$row['id']][0]);
 											fclose($fp);
 										?>
-										<a href="/assets/<?php echo $row['id']; ?>_1.vcf" class="not_print">vCard</a>
+										<a href="/assets/<?php echo $row['id']; ?>_1.vcf" title="Speichern Sie <?php echo $row['firstname_parent2']." ".$row['lastname_parent1']; ?> als Kontakt ab." class="not_print">vCard</a>
 									</td>
 								</tr>
 								<?php
@@ -174,7 +174,7 @@
 											fwrite($fp, $vcard[$row['id']][1]);
 											fclose($fp);
 										?>
-										<a href="/assets/<?php echo $row['id']; ?>_2.vcf" title="Speichern Sie <?php echo $row['firstname_parent2']." ".$row_lastname_parent2; ?> als Kontakt ab.">vCard</a>
+										<a href="/assets/<?php echo $row['id']; ?>_2.vcf" title="Speichern Sie <?php echo $row['firstname_parent2']." ".$row_lastname_parent2; ?> als Kontakt ab." class="not_print">vCard</a>
 									</td>
 								</tr>
 								<?php
