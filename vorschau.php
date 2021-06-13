@@ -105,7 +105,7 @@
 											$vcard[$row['id']][0] .= "LABEL;HOME;PREF:".$row_adress_parent1."\r\n";
 											$vcard[$row['id']][0] .= "EMAIL;PREF;INTERNET:".$row['email_parent1']."\r\n";
 											$vcard[$row['id']][0] .= "END:VCARD\r\n";
-											$fp = fopen('/assets/'.$row['id'].'_1.vcf', "wb");
+											$fp = fopen('./assets/'.$row['id'].'_1.vcf', "wb");
 											fwrite($fp, $vcard[$row['id']][0]);
 											fclose($fp);
 										?>
