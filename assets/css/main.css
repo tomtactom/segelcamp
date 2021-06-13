@@ -29,6 +29,10 @@ section, summary, time, mark, audio, video {
 }
 
 @media print {
+    #header {
+      display: block;
+      border: 0;
+    }
 	  .not_print,
     #header {
 	    display: none;
@@ -41,9 +45,6 @@ section, summary, time, mark, audio, video {
   }
   body {
     margin: 1,6cm;
-  }
-  #header {
-    border: 0;
   }
 }
 
