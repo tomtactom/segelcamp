@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="de">
+<html lang="de" moznomarginboxes mozdisallowselectionprint>
 	<head>
 	  <meta charset="utf-8" />
 		<title><?php if(!empty($page_title)) { echo $page_title.' | '; } ?>Seglergemeinschaft Lohheider See e.V.</title>
