@@ -1,6 +1,6 @@
 <style>
 	@media print {
-	  body {
+	  .not_print {
 	    display: none;
 	  }
 		@media print {
@@ -14,7 +14,7 @@
 <?php $page_title = 'Übersicht'; ?>
 <?php require('./inc/header.inc.php'); ?>
 <section>
-	<header class="major">
+	<header class="major not_print">
 		<h2>Übersicht Bereich<?php if(isset($_COOKIE['token'])) { echo ' - <u><a href="?logout">Abmelden</a></u>'; }?></h2>
 	</header>
   <div class="content">

@@ -1,4 +1,4 @@
-    <footer>
+    <footer class="not_print">
       <nav>
         <ul>
           <li style="float: left; list-style: none; margin: 20px;"><a href="./impressum" rel="external" target="_blank">Impressum</a></li>
