@@ -170,9 +170,9 @@
                                                                 <input type="text" name="housenumber_parent1" id="housenumber_parent1" value="<?php if(!empty($housenumber_parent1)) { echo $housenumber_parent1; } ?>" placeholder="* Hausnummer" pattern="[0-9]+[a-z]|[0-9]*|[0-9]+[ ][a-z]|[0-9]+[A-Z]|[0-9]+[ ][A-Z]" maxlength="6" required  style="width: 34%; display: inline;" />
                                                                 <hr>
                                                             </div>
-																														<strong>Wenn Sie nicht alleinerziehend sind, geben Sie bitte BEIDE Elternteile an!</strong>
                                                             <!-- Zweites Elternteil -->
                                                             <div class="col-6 col-12-xsmall">
+																																<strong>Wenn Sie nicht alleinerziehend sind, geben Sie bitte BEIDE Elternteile an!</strong>
                                                                 <input type="text" name="firstname_parent2" id="firstname_parent2" value="<?php if(!empty($firstname_parent2)) { echo $firstname_parent2; } ?>" placeholder="Vorname" pattern="[a-zA-ZÁÀȦÂÄǞǍĂĀÃÅǺǼǢĆĊĈČĎḌḐḒÉÈĖÊËĚĔĒẼE̊ẸǴĠĜǦĞG̃ĢĤḤáàȧâäǟǎăāãåǻǽǣćċĉčďḍḑḓéèėêëěĕēẽe̊ẹǵġĝǧğg̃ģĥḥÍÌİÎÏǏĬĪĨỊĴĶǨĹĻĽĿḼM̂M̄ʼNŃN̂ṄN̈ŇN̄ÑŅṊÓÒȮȰÔÖȪǑŎŌÕȬŐỌǾƠíìiîïǐĭīĩịĵķǩĺļľŀḽm̂m̄ŉńn̂ṅn̈ňn̄ñņṋóòôȯȱöȫǒŏōõȭőọǿơP̄ŔŘŖŚŜṠŠȘṢŤȚṬṰÚÙÛÜǓŬŪŨŰŮỤẂẀŴẄÝỲŶŸȲỸŹŻŽẒǮp̄ŕřŗśŝṡšşṣťțṭṱúùûüǔŭūũűůụẃẁŵẅýỳŷÿȳỹźżžẓǯßœŒçÇ \-]*" title="Bitte gebe den gültigen Vor und Nachnamen des Kindes an." minlenght="2" maxlength="32" />
                                                                 <details style="cursor: pointer;">
                                                                     <summary>Nachname abweichend</summary>
