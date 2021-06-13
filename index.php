@@ -7,9 +7,9 @@
 											<h1>Opti Sommer Segelcamp 2021</h1>
 											<p>Segeln macht Fre(n)de</p>
 										</header>
-                    <strong>Momentan sind leider noch keine Anmeldungen möglich und können noch nicht über das Anmeldeformular verarbeitet werden.</strong>
+                    <strong>Am sofort sind Anmeldungen hier über das Anmeldeformular möglich.</strong>
                     <p>
-											Auch in diesem Jahr findet unser Sommer Segelcamp für eine Woche statt. Das Camp ist für Anfänger und Fortgeschrittene, um Segeln zu lernen oder die vorhandenen Fähigkeiten zu verbessern. Wie in den letzten Jahren wird das Camp von unserer Jugend geleitet. Wir sind derzeit 6 TrainerInnen, die Spaß an der Arbeit mit Kindern und am Segeln haben. Wir sorgen für die Getränke und das Mittagessen. Die Nutzung der Boote ist ebenfalls in dem Preis mit inbegriffen. Falls Sie weitere Fragen haben, schreiben Sie uns gerne über <a href="https://www.instagram.com/sls_jugend" title="@sls_jugend">Instagram</a> oder über unsere E-Mail-Adresse <a href="mailto:segelcamp@lohheider-see.de">segelcamp@lohheider-see.de</a> an. Die genauen Informationen, wie den Preis finden Sie über dem Anmeldeformular.<br>
+											Auch in diesem Jahr findet unser Sommer Segelcamp für eine Woche statt. Das Camp ist für Anfänger und Fortgeschrittene, im Alter von 8-12 Jahren gedacht, um Segeln zu lernen oder die vorhandenen Fähigkeiten zu verbessern. Sollte Ihr Kind älter oder jünger sein, schreiben Sie uns gerne eine E-Mail. Das Camp ist für Anfänger und Fortgeschrittene, um Segeln zu lernen oder die vorhandenen Fähigkeiten zu verbessern. Wie in den letzten Jahren wird das Camp von unserer Jugend geleitet. Wir sind derzeit 6 TrainerInnen, die Spaß an der Arbeit mit Kindern und am Segeln haben. Wir sorgen für die Getränke und das Mittagessen. Die Nutzung der Boote ist ebenfalls in dem Preis mit inbegriffen. Falls Sie weitere Fragen haben, schreiben Sie uns gerne über <a href="https://www.instagram.com/sls_jugend" title="@sls_jugend">Instagram</a> oder über unsere E-Mail-Adresse <a href="mailto:segelcamp@lohheider-see.de">segelcamp@lohheider-see.de</a> an. Die genauen Informationen, wie den Preis finden Sie über dem Anmeldeformular.<br>
 											Wir freuen uns auf eine schöne Segelwoche 🙂!
 										</p>
 										<ul class="actions">
@@ -53,7 +53,7 @@
 										<article>
 											<span class="image"><img src="images/pic05.jpg" alt="" /></span>
 											<h3>Spaß</h3>
-											<p>In unserem Camp geht es nicht nur darum segeln zu lernen, sondern auch darum Spaß zu haben. Es werden Spiele an Land und auch im Wasser gespielt.</p>
+											<p>In unserem Camp geht es nicht nur darum Segeln zu lernen, sondern auch darum Spaß zu haben. Es werden Spiele an Land und auch im Wasser gespielt.</p>
 										</article>
                     <article>
 											<span class="image"><img src="images/pic06.jpg" alt="" /></span>
@@ -90,7 +90,7 @@
 													<p>
 														Unsere Teilnehmeranzahl ist begrenzt und kann aufgrund der Coronasituation abweichen. Wir handeln nach der aktuellsten <abbr title="Coronaschutzverordnung: Verordnung zum Schutz vor Neuinfizierungen mit dem Coronavirus SARS-CoV-2">CoronaSchVO</abbr>, daher kann es zu kurzfristigen Änderungen des Sommercamps kommen. Das Camp findet <strong>vom 26.07.2021 bis zum 30.07.2021, jeweils von 10:00 bis 18:00 Uhr</strong>, statt. Die Kosten belaufen sich auf <strong>120 €</strong> inkl. Betreuung, Nutzung der Boote und Verpflegung. Das Geld wird an die, in der Bestätigungs-E-Mail stehenden Bankdaten überwiesen.
 														Die Kinder sollten, falls vorhanden, Segelsachen, Schwimmsachen, Wechselkleidung und Wetterabhängige Kleidung mitbringen. Wenn vorhanden auch gerne eine eigene Schwimmweste. Ansonsten werden welche vom Verein gestellt. Weitere Informationen dazu folgen, dann in der WhatsApp-Gruppe oder per E-Mail.<br>
-														<strong>Das Segelcamp ist für Kinder von 8 bis 12 Jahren. Sollte Ihr Kind älter oder jünger sein, schreiben Sie uns bitte per E-Mail, dann können wir im Einzelfall abwägen ob Ihr Kind trotzdem an dem Camp teilnehmen kann.
+														<strong>Das Segelcamp ist für Kinder von 8 bis 12 Jahren. Sollte Ihr Kind älter oder jünger sein, schreiben Sie uns bitte per E-Mail, dann können wir im Einzelfall abwägen ob Ihr Kind trotzdem an dem Camp teilnehmen kann.</strong>
 													</p>
 													<?php
 															$max_value = 14;
@@ -170,6 +170,7 @@
                                                                 <input type="text" name="housenumber_parent1" id="housenumber_parent1" value="<?php if(!empty($housenumber_parent1)) { echo $housenumber_parent1; } ?>" placeholder="* Hausnummer" pattern="[0-9]+[a-z]|[0-9]*|[0-9]+[ ][a-z]|[0-9]+[A-Z]|[0-9]+[ ][A-Z]" maxlength="6" required  style="width: 34%; display: inline;" />
                                                                 <hr>
                                                             </div>
+																														<strong>Wenn Sie nicht alleinerziehend sind, geben Sie bitte BEIDE Elternteile an!</strong>
                                                             <!-- Zweites Elternteil -->
                                                             <div class="col-6 col-12-xsmall">
                                                                 <input type="text" name="firstname_parent2" id="firstname_parent2" value="<?php if(!empty($firstname_parent2)) { echo $firstname_parent2; } ?>" placeholder="Vorname" pattern="[a-zA-ZÁÀȦÂÄǞǍĂĀÃÅǺǼǢĆĊĈČĎḌḐḒÉÈĖÊËĚĔĒẼE̊ẸǴĠĜǦĞG̃ĢĤḤáàȧâäǟǎăāãåǻǽǣćċĉčďḍḑḓéèėêëěĕēẽe̊ẹǵġĝǧğg̃ģĥḥÍÌİÎÏǏĬĪĨỊĴĶǨĹĻĽĿḼM̂M̄ʼNŃN̂ṄN̈ŇN̄ÑŅṊÓÒȮȰÔÖȪǑŎŌÕȬŐỌǾƠíìiîïǐĭīĩịĵķǩĺļľŀḽm̂m̄ŉńn̂ṅn̈ňn̄ñņṋóòôȯȱöȫǒŏōõȭőọǿơP̄ŔŘŖŚŜṠŠȘṢŤȚṬṰÚÙÛÜǓŬŪŨŰŮỤẂẀŴẄÝỲŶŸȲỸŹŻŽẒǮp̄ŕřŗśŝṡšşṣťțṭṱúùûüǔŭūũűůụẃẁŵẅýỳŷÿȳỹźżžẓǯßœŒçÇ \-]*" title="Bitte gebe den gültigen Vor und Nachnamen des Kindes an." minlenght="2" maxlength="32" />
