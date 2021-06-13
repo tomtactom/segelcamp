@@ -40,8 +40,8 @@
 			<div id="main">
 				<div class="inner">
 					<header id="header" class="not_print">
-						<span class="logo" class="not_print"><a href="/"><strong>Segelcamp</strong> Seglergemeinschaft Lohheider See e.V.</a></span>
-						<ul class="icons" class="not_print">
+						<span class="logo not_print"><a href="/"><strong>Segelcamp</strong> Seglergemeinschaft Lohheider See e.V.</a></span>
+						<ul class="icons not_print">
 							<li class="not_print"><a href="https://www.facebook.com/segelvereinsls" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 							<li class="not_print"><a href="https://www.instagram.com/sls_jugend" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 	            <li class="not_print"><a href="https://github.com/tomtactom/segelcamp" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
