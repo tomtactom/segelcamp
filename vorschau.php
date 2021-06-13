@@ -22,7 +22,7 @@
 			</div>
 		<?php
 			} else {
-				$statement = $pdo->prepare("SELECT * FROM `registrations` ORDER BY id");
+				$statement = $pdo->prepare("SELECT * FROM `registrations` ORDER BY sailingexperience");
 				$result = $statement->execute();
 				if(!$statement->fetch()) {
 					?>
