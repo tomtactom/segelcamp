@@ -233,9 +233,9 @@
 							fwrite($fp, $total_vcard);
 							fclose($fp);
 							?>
-							<blockquote>
-								<p class="not_print">Alle Eltern als Kontakt herunterladen: <a href="./assets/all_contacts.vcf" rel="download">vCard</a></p>
-								<p class="not_print">An alle Eltern eine E-Mail schreiben (bitte nur per <a href="https://webmail01.webhosting.systems" target="_blank" title="E-Mail-Web-Programm öffnen. (Das Passwort ist in der WhatsApp-Gruppe)">segelcamp@lohheider-see.de</a>): <strong><a href="mailto:?bcc=<?php echo $total_mails; ?>&subject=Information%20zum%20Segelcamp%202021&body=Hallo%20zusammen%2C%0A%0A%0AViele%20Gr%C3%BC%C3%9Fe%0AEuer%20SLS-Jugend-Team">Verteiler</a></strong></p>
+							<blockquote class="not_print">
+								<p>Alle Eltern als Kontakt herunterladen: <a href="./assets/all_contacts.vcf" rel="download">vCard</a></p>
+								<p>An alle Eltern eine E-Mail schreiben (bitte nur per <a href="https://webmail01.webhosting.systems" target="_blank" title="E-Mail-Web-Programm öffnen. (Das Passwort ist in der WhatsApp-Gruppe)">segelcamp@lohheider-see.de</a>): <strong><a href="mailto:?bcc=<?php echo $total_mails; ?>&subject=Information%20zum%20Segelcamp%202021&body=Hallo%20zusammen%2C%0A%0A%0AViele%20Gr%C3%BC%C3%9Fe%0AEuer%20SLS-Jugend-Team">Verteiler</a></strong></p>
 							</blockquote>
 							<?php
 							}
