@@ -101,7 +101,7 @@
 												$vcard[$row['id']][0] .= "TEL;HOME;VOICE:".$row['phonenumber_parent1']."\r\n";
 											}
 											$vcard[$row['id']][0] .= "TEL;CELL;VOICE:".$row['mobilenumber_parent1']."\r\n";
-											$vcard[$row['id']][0] .= "ADR;HOME;PREF:;;".$row['street_parent1']." ".$row['housenumber_parent1'].";".$row['town_parent1'].";;".$row['plz_parent1'].";Deutschland\r\n";
+											$vcard[$row['id']][0] .= "ADR;HOME;PREF:;;".$row_adress_parent1."\r\n";
 											$vcard[$row['id']][0] .= "LABEL;HOME;PREF:".$row_adress_parent1."\r\n";
 											$vcard[$row['id']][0] .= "EMAIL;PREF;INTERNET:".$row['email_parent1']."\r\n";
 											$vcard[$row['id']][0] .= "END:VCARD\r\n";
@@ -148,6 +148,24 @@
 											?>
 											<li class="list-group-item"><strong>Adresse: </strong><?php echo $row_adress_parent2; ?></li>
 										</ul>
+										<?php
+											$vcard[$row['id']][1] = "BEGIN:VCARD\r\n";
+											$vcard[$row['id']][1] .= "VERSION:2.1\r\n";
+											$vcard[$row['id']][1] .= "N;LANGUAGE=de:".$row_lastname_parent2.";".$row['firstname_parent2']."\r\n";
+											$vcard[$row['id']][1] .= "FN:".$row['firstname_parent2']." ".$row_lastname_parent2."\r\n";
+											if(!empty($row_phonenumber_parent2)) {
+												$vcard[$row['id']][1] .= "TEL;HOME;VOICE:".$row_phonenumber_parent2."\r\n";
+											}
+											$vcard[$row['id']][1] .= "TEL;CELL;VOICE:".$row['mobilenumber_parent2']."\r\n";
+											$vcard[$row['id']][1] .= "ADR;HOME;PREF:;;".$row_adress_parent2."\r\n";
+											$vcard[$row['id']][1] .= "LABEL;HOME;PREF:".$row_adress_parent2."\r\n";
+											$vcard[$row['id']][1] .= "EMAIL;PREF;INTERNET:".$row['email_parent2']."\r\n";
+											$vcard[$row['id']][1] .= "END:VCARD\r\n";
+											$fp = fopen('./assets/'.$row['id'].'_2.vcf', "wb");
+											fwrite($fp, $vcard[$row['id']][1]);
+											fclose($fp);
+										?>
+										<a href="/assets/<?php echo $row['id']; ?>_2.vcf">vCard</a>
 									</td>
 								</tr>
 								<?php
