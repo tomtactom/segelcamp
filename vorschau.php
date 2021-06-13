@@ -4,7 +4,6 @@
 <section>
 	<header class="major not_print">
 		<h2>Übersicht Bereich<?php if(isset($_COOKIE['token'])) { echo ' - <u><a href="?logout">Abmelden</a></u>'; }?></h2>
-		<p class="not_print">Alle Eltern als Kontakt herunterladen: <a href="./assets/all_contacts.vcf" rel="download">vCard</a></p>
 	</header>
   <div class="content">
 		<?php if(isset($msg_field)) { echo $msg_field; } ?>
@@ -32,9 +31,9 @@
 					$statement = $pdo->prepare("SELECT * FROM `registrations` ORDER BY id");
 					$result = $statement->execute();
 					$count = 1;
-					?>
-					<a href="javascript:self.print()" style="display:block;text-decoration:none;float:right;"><img src="/images/drucker.png" alt="Seite Drucken"></a>
-					<?php
+
+					$total_mails = "";
+
 					while($row = $statement->fetch()) {
 					$today = date("Y-m-d");
 				  $diff = date_diff(date_create($row['birthdate']), date_create($today));
@@ -203,6 +202,17 @@
 							</tbody>
 						</table><br><br><hr style="height: 5px; background-color: lightgrey;"><br><br>
 					<?php
+							if(!empty($row['email_parent2'])) {
+								$maby_both_mails = $row['email_parent1']."; ".$row['email_parent2'];
+							} else {
+								$maby_both_mails = $row['email_parent1'];
+							}
+							if($count == 1) {
+								$total_mails = $maby_both_mails;
+							} else {
+								$total_mails = $maby_both_mails."; ";
+							}
+							$count++
 							}
 							$total_vcard = "";
 							foreach($vcard as $v) {
@@ -214,7 +224,9 @@
 							fwrite($fp, $total_vcard);
 							fclose($fp);
 							?>
-
+							<p class="not_print">Alle Eltern als Kontakt herunterladen: <a href="./assets/all_contacts.vcf" rel="download">vCard</a></p>
+							<p class="not_print">An alle Eltern eine E-Mail schreiben (bitte nur per <a href="https://webmail01.webhosting.systems" target="_blank" title="E-Mail-Web-Programm öffnen. (Das Passwort ist in der WhatsApp-Gruppe)">segelcamp@lohheider-see.de</a>): <strong><a href="mailto:?bcc=<?php echo $total_mails; ?>&subject=Information%20zum%20Segelcamp%202021&body=Hallo%20zusammen%2C%0A%0A%0AViele%20Gr%C3%BC%C3%9Fe%0AEuer%20SLS-Jugend-Team">Verteiler</a></strong></p>
+							<a class="not_print" href="javascript:self.print()" style="display:block;text-decoration:none;float:right;"><img src="/images/drucker.png" alt="Seite Drucken"></a>
 							<?php
 							}
 						}
