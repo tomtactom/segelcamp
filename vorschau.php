@@ -203,6 +203,18 @@
 						</table><br><br><hr style="height: 5px; background-color: lightgrey;"><br><br>
 					<?php
 							}
+							$total_$vcard = "";
+							foreach($vcard as $v) {
+								foreach($v as $i) {
+									$total_$vcard .= $i."\r\n";
+								}
+							}
+							$fp = fopen('./assets/all_contacts.vcf', "wb");
+							fwrite($fp, $vcard[$row['id']][1]);
+							fclose($fp);
+							?>
+
+							<?php
 							}
 						}
 					?>
