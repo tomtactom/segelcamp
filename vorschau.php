@@ -118,7 +118,7 @@
 											fwrite($fp, $vcard[$row['id']][0]);
 											fclose($fp);
 										?>
-										<a href="/assets/<?php echo $row['id']; ?>_1.vcf">vCard</a>
+										<a href="/assets/<?php echo $row['id']; ?>_1.vcf" class="not_print">vCard</a>
 									</td>
 								</tr>
 								<?php
