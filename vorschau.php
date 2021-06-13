@@ -209,7 +209,7 @@
 								?>
 
 							</tbody>
-						</table><br class="not_print"><br class="not_print"><hr style="height: 5px; background-color: lightgrey;" class="not_print"><br class="not_print"><br class="not_print">
+						</table><br><br class="not_print"><hr style="height: 5px; background-color: lightgrey;" class="not_print"><br class="not_print"><br class="not_print">
 					<?php
 							if(!empty($row['email_parent2'])) {
 								$maby_both_mails = $row['email_parent1']."; ".$row['email_parent2'];
