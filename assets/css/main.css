@@ -54,6 +54,12 @@ section, summary, time, mark, audio, video {
   }
 }
 
+* {
+  -webkit-print-color-adjust: exact !important;   /* Chrome, Safari */
+  color-adjust: exact !important;                 /*Firefox*/
+}
+
+
 td input,
 td select {
   all: revert !important;
