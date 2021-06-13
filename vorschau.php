@@ -56,10 +56,12 @@
 									<th>Alter</th>
 									<td><?php echo $row_age; ?></td>
 								</tr>
+								<?php if(!empty($row['allergy'])) { ?>
 								<tr>
 									<th>Allergie</th>
 									<td><?php echo $row['allergy']; ?></td>
 								</tr>
+								<?php } ?>
 								<tr>
 									<th>Medikamente</th>
 									<td><?php echo $row['medication']; ?></td>
