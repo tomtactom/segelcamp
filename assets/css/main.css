@@ -28,6 +28,15 @@ section, summary, time, mark, audio, video {
   color: #ffffff;
 }
 
+@media print {
+	  .not_print {
+	    display: none;
+	  }
+  .print {
+    display: block;
+  }
+}
+
 td input,
 td select {
   all: revert !important;
