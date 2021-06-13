@@ -1,6 +1,6 @@
 <style>
 	@media print {
-	  * {
+	  body {
 	    display: none;
 	  }
 		@media print {
