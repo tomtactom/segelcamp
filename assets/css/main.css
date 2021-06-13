@@ -29,7 +29,8 @@ section, summary, time, mark, audio, video {
 }
 
 @media print {
-	  .not_print {
+	  .not_print,
+    #header {
 	    display: none;
 	  }
   .print {
