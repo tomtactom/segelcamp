@@ -95,11 +95,11 @@
 										<ul class="list-group">
 											<li class="list-group-item"><strong>Name: </strong><?php echo $row['firstname_parent1']." ".$row['lastname_parent1']; ?></li>
 											<li class="list-group-item"><strong>E-Mail-Adresse: </strong><a href="mailto:<?php echo $row['email_parent1']; ?>"><?php echo $row['email_parent1']; ?></a></li>
-											<li class="list-group-item"><strong>Handynummer: </strong><?php echo $row['mobilenumber_parent1']; ?></li>
+											<li class="list-group-item"><strong>Handynummer: </strong><a href="tel:<?php echo $row['mobilenumber_parent1']; ?>"><?php echo $row['mobilenumber_parent1']; ?></a></li>
 											<?php
 												if(!empty($row['phonenumber_parent1'])) {
 											?>
-												<li class="list-group-item"><strong>Telefonnummer (Festnetz): </strong><?php echo $row['phonenumber_parent1']; ?></li>
+												<li class="list-group-item"><strong>Telefonnummer (Festnetz): </strong><a href="tel:<?php echo $row['phonenumber_parent1']; ?>"><?php echo $row['phonenumber_parent1']; ?></a></li>
 											<?php } ?>
 											<?php $row_adress_parent1 = $row['plz_parent1']." ".$row['town_parent1'].", ".$row['street_parent1']." ".$row['housenumber_parent1']; ?>
 											<li class="list-group-item"><strong>Adresse: </strong><?php echo $row_adress_parent1; ?></li>
@@ -140,7 +140,7 @@
 											?>
 											<li class="list-group-item"><strong>Name: </strong><?php echo $row['firstname_parent2']." ".$row_lastname_parent2; ?></li>
 											<li class="list-group-item"><strong>E-Mail-Adresse: </strong><a href="mailto:<?php echo $row['email_parent2']; ?>"><?php echo $row['email_parent2']; ?></a></li>
-											<li class="list-group-item"><strong>Handynummer: </strong><?php echo $row['mobilenumber_parent2']; ?></li>
+											<li class="list-group-item"><strong>Handynummer: </strong><a href="tel:<?php echo $row['mobilenumber_parent2']; ?>"><?php echo $row['mobilenumber_parent2']; ?></a></li>
 											<?php
 												if(!empty($row['phonenumber_parent2'])) {
 													$row_phonenumber_parent2 = $row['phonenumber_parent2'];
@@ -149,7 +149,7 @@
 												}
 												if(!empty($row_phonenumber_parent2)) {
 											?>
-												<li class="list-group-item"><strong>Telefonnummer (Festnetz): </strong><?php echo $row_phonenumber_parent2; ?></li>
+												<li class="list-group-item"><strong>Telefonnummer (Festnetz): </strong><a href="tel:<?php echo $row_phonenumber_parent2; ?>"><?php echo $row_phonenumber_parent2; ?></a></li>
 											<?php
 												}
 												if(empty($row['plz_parent2'])) {
