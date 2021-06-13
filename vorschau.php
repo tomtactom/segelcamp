@@ -15,7 +15,7 @@
 						<input type="password" name="password" placeholder="Passwort" required autofocus autocomplete="off">
 					</div>
 					<div class="col-6 col-12-xsmall">
-						<input type="submit" name="admin_login" value="Einloggen">
+						<input type="submit" name="vorschau_login" value="Einloggen">
 					</div>
 				</form>
 			</div>
