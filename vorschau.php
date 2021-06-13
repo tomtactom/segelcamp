@@ -4,6 +4,7 @@
 <section>
 	<header class="major not_print">
 		<h2>Übersicht Bereich<?php if(isset($_COOKIE['token'])) { echo ' - <u><a href="?logout">Abmelden</a></u>'; }?></h2>
+		<p class="not_print">Alle Eltern als Kontakt herunterladen: <a href="./assets/all_contacts.vcf" rel="download">vCard</a></p>
 	</header>
   <div class="content">
 		<?php if(isset($msg_field)) { echo $msg_field; } ?>
