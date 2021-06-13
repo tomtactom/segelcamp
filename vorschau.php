@@ -210,7 +210,7 @@
 							if($count == 1) {
 								$total_mails = $maby_both_mails;
 							} else {
-								$total_mails = $maby_both_mails."; ";
+								$total_mails .= $maby_both_mails."; ";
 							}
 							$count++;
 							}
