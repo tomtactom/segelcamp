@@ -34,7 +34,7 @@
 
 					$total_mails = "";
 					?>
-					<a class="not_print" href="javascript:self.print()" style="display:block;text-decoration:none;float:right;"><img src="/assets/icons/printer.png" alt="Seite Drucken" class="not_print"></a>
+					<a class="not_print" href="javascript:self.print()" style="display:block;text-decoration:none;float:right;border:0;"><img src="/assets/icons/printer.png" alt="Seite Drucken" class="not_print"></a>
 					<?php
 
 					while($row = $statement->fetch()) {
