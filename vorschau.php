@@ -102,7 +102,7 @@
 												<li class="list-group-item"><strong>Telefonnummer (Festnetz): </strong><a href="tel:<?php echo $row['phonenumber_parent1']; ?>"><?php echo $row['phonenumber_parent1']; ?></a></li>
 											<?php } ?>
 											<?php $row_adress_parent1 = $row['plz_parent1']." ".$row['town_parent1'].", ".$row['street_parent1']." ".$row['housenumber_parent1']; ?>
-											<li class="list-group-item"><strong>Adresse: </strong><?php echo $row_adress_parent1; ?></li>
+											<li class="list-group-item"><strong>Adresse: </strong><a href="https://www.google.de/maps/search/<?php echo urlencode($row_adress_parent1); ?>" rel="external" title="Auf Google Maps anzeigen." target="_blank"><?php echo $row_adress_parent1; ?></a></li>
 										</ul>
 										<?php
 											$vcard[$row['id']][0] = "BEGIN:VCARD\r\n";
@@ -158,7 +158,7 @@
 													$row_adress_parent2 = $row['plz_parent2']." ".$row['town_parent2'].", ".$row['street_parent2']." ".$row['housenumber_parent2'];
 												}
 											?>
-											<li class="list-group-item"><strong>Adresse: </strong><?php echo $row_adress_parent2; ?></li>
+											<li class="list-group-item"><strong>Adresse: </strong><a href="https://www.google.de/maps/search/<?php echo urlencode($row_adress_parent2); ?>" rel="external" title="Auf Google Maps anzeigen." target="_blank"><?php echo $row_adress_parent2; ?></a></li>
 										</ul>
 										<?php
 											$vcard[$row['id']][1] = "BEGIN:VCARD\r\n";
