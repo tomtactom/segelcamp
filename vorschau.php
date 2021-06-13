@@ -1,3 +1,15 @@
+<style>
+	@media print {
+	  * {
+	    display: none;
+	  }
+		@media print {
+  .print {
+    display: block;
+  }
+}
+	}
+</style>
 <?php require('./inc/backend.inc.php'); ?>
 <?php $page_title = 'Übersicht'; ?>
 <?php require('./inc/header.inc.php'); ?>
@@ -42,8 +54,8 @@
 						$row_age = $diff->format('%y').' Jahre und '.$diff->format('%m').' Monate';
 					}
 					?>
-						<h2><?php echo $row['name_child']; ?></h2>
-						<table>
+						<h2 class="print"><?php echo $row['name_child']; ?></h2>
+						<table class="print">
 							<tbody>
 								<tr>
 									<th>Geburtsdatum</th>
@@ -165,7 +177,7 @@
 											fwrite($fp, $vcard[$row['id']][1]);
 											fclose($fp);
 										?>
-										<a href="/assets/<?php echo $row['id']; ?>_2.vcf">vCard</a>
+										<a href="/assets/<?php echo $row['id']; ?>_2.vcf" title="Speichern Sie <?php echo $row['firstname_parent2']." ".$row_lastname_parent2; ?> als Kontakt ab.">vCard</a>
 									</td>
 								</tr>
 								<?php
