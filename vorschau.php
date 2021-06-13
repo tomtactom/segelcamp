@@ -92,6 +92,24 @@
 											<?php $row_adress_parent1 = $row['plz_parent1']." ".$row['town_parent1'].", ".$row['street_parent1']." ".$row['housenumber_parent1']; ?>
 											<li class="list-group-item"><strong>Adresse: </strong><?php echo $row_adress_parent1; ?></li>
 										</ul>
+										<?php
+											$vcard[$row['id']][0] = "BEGIN:VCARD\r\n";
+											$vcard[$row['id']][0] .= "VERSION:2.1\r\n";
+											$vcard[$row['id']][0] .= "N;LANGUAGE=de:".$row['lastname_parent1'].";".$row['firstname_parent1']."\r\n";
+											$vcard[$row['id']][0] .= "FN:".$row['firstname_parent1']." ".$row['lastname_parent1']."\r\n";
+											if(!empty($row['phonenumber_parent1'])) {
+												$vcard[$row['id']][0] .= "TEL;HOME;VOICE:".$row['phonenumber_parent1']."\r\n";
+											}
+											$vcard[$row['id']][0] .= "TEL;CELL;VOICE:".$row['mobilenumber_parent1']."\r\n";
+											$vcard[$row['id']][0] .= "ADR;HOME;PREF:;;".$row['street_parent1']." ".$row['housenumber_parent1'].";".$row['town_parent1'].";;".$row['plz_parent1'].";Deutschland\r\n";
+											$vcard[$row['id']][0] .= "LABEL;HOME;PREF:".$row_adress_parent1."\r\n";
+											$vcard[$row['id']][0] .= "EMAIL;PREF;INTERNET:".$row['email_parent1']."\r\n";
+											$vcard[$row['id']][0] .= "END:VCARD\r\n";
+											$fp = fopen('/assets/'.$row['id'].'_1.vcf', "wb");
+											fwrite($fp, $vcard[$row['id']][0]);
+											fclose($fp);
+										?>
+										<a href="/assets/<?php echo $row['id']; ?>_1.vcf">vCard</a>
 									</td>
 								</tr>
 								<?php
@@ -166,21 +184,6 @@
 							</tbody>
 						</table><br><br><hr style="height: 5px; background-color: lightgrey;"><br><br>
 					<?php
-							$vcard[$row['id']][0] = "BEGIN:VCARD\r\n";
-							$vcard[$row['id']][0] .= "VERSION:2.1\r\n";
-							$vcard[$row['id']][0] .= "N;LANGUAGE=de:".$row['lastname_parent1'].";".$row['firstname_parent1']."\r\n";
-							$vcard[$row['id']][0] .= "FN:".$row['firstname_parent1']." ".$row['lastname_parent1']."\r\n";
-							if(!empty($row['phonenumber_parent1'])) {
-								$vcard[$row['id']][0] .= "TEL;HOME;VOICE:".$row['phonenumber_parent1']."\r\n";
-							}
-							$vcard[$row['id']][0] .= "TEL;CELL;VOICE:".$row['mobilenumber_parent1']."\r\n";
-							$vcard[$row['id']][0] .= "ADR;HOME;PREF:;;".$row['street_parent1']." ".$row['housenumber_parent1'].";".$row['town_parent1'].";;".$row['plz_parent1'].";Deutschland\r\n";
-							$vcard[$row['id']][0] .= "LABEL;HOME;PREF:".$row_adress_parent1."\r\n";
-							$vcard[$row['id']][0] .= "EMAIL;PREF;INTERNET:".$row['email_parent1']."\r\n";
-							$vcard[$row['id']][0] .= "END:VCARD\r\n";
-							$fp = fopen('./test.vcf', "wb");
-						  fwrite($fp, $vcard[$row['id']][0]);
-						  fclose($fp);
 							}
 							}
 						}
