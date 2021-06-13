@@ -225,6 +225,10 @@
 								$total_mails .= "; ".$maby_both_mails;
 							}
 							$count++;
+							unset($row_phonenumber_parent2);
+							unset($row_lastname_parent2);
+							unset($row_adress_parent1);
+							unset($row_adress_parent2);
 							}
 							$total_vcard = "";
 							foreach($vcard as $v) {
