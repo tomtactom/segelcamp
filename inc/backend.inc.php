@@ -535,6 +535,7 @@ if(isset($_POST['sendform'])) {
         }
         send_acception_mail($firstname_parent2." ".$lastname_parent2_for_mail, $email_parent2);
       }
+      send_acception_mail("SLS-Jugendteam, \r\nDies ist eine automatisierte E-Mail, welche die unveränderten Angaben bei der Anmeldung des Kindes darstellt. Dies gilt als offizielle Kopie der Anmeldung. Nachträglich veränderte Daten werden dementsprechend auf der Webseite gekennzeichnet. Im folgenden wird mit 'Sie' etc. das jeweilige Elternteil angesprochen", "segelcamp@lohheider-see.de");
       $msg = 'Ihr Kind wurde erfolgreich zum Segelcamp angemeldet. Wir melden uns umgehend bei Ihnen.';
       $registered = true;
 
