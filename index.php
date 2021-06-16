@@ -5,7 +5,7 @@
 									<div class="content">
 										<header>
 											<h1>Opti Sommer Segelcamp 2021</h1>
-											<p>Segeln macht Fre(n)de</p>
+											<p>Segeln macht Freu(n)de</p>
 										</header>
                     <strong>Ab sofort sind Anmeldungen hier über das Anmeldeformular möglich.</strong>
                     <p>
