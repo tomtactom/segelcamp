@@ -664,6 +664,7 @@ if(isset($_POST['sendform'])) {
     }
     echo "test2";
     if(isset($_POST['update_user'])) {
+      echo "test3";
       $statement = $pdo->prepare("UPDATE registrations SET
           name_child = :name_child,
           birthdate = :birthdate,
