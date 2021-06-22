@@ -733,7 +733,7 @@ if(isset($_POST['sendform'])) {
               'changed_by_admin' => htmlspecialchars($_POST['changed_by_admin']),
               'id' => intval($_POST['update_user'])
             ));
-            echo $result;
+            print_r($result);
     }
   }
 
