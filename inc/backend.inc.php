@@ -662,6 +662,7 @@ if(isset($_POST['sendform'])) {
       $statement = $pdo->prepare("DELETE FROM registrations WHERE id = ?");
       $statement->execute(array(intval($_POST['delete_user'])));
     }
+    echo "test";
     if(isset($_POST['update_user'])) {
       $statement = $pdo->prepare("UPDATE registrations SET
           name_child = :name_child,
