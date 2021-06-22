@@ -160,6 +160,7 @@
 						<td><input type="text" value="<?php if (empty($row['changed_by_admin'])) { echo "Nein"; } else { echo $row['changed_by_admin']; } ?>" disabled></td>
 						<input type="hidden" name="changed_by_admin" value="Ja">
 						<td><?php echo $row['created_at'] ?></td>
+						</form>
 					</tr>
 				<?php } ?>
 				</tbody>
