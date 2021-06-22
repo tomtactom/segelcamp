@@ -655,16 +655,13 @@ if(isset($_POST['sendform'])) {
     setcookie('msg', $msg, time() + 60);
     header('Location: /');
   }
-    echo "test1";
   // Admin-Bereich
   if($_COOKIE['token'] == $admin_cookie_hash) {
     if(isset($_POST['delete_user'])) {
       $statement = $pdo->prepare("DELETE FROM registrations WHERE id = ?");
       $statement->execute(array(intval($_POST['delete_user'])));
     }
-    echo "test2";
     if(isset($_POST['update_user'])) {
-      echo "test3";
       $statement = $pdo->prepare("UPDATE registrations SET
           name_child = :name_child,
           birthdate = :birthdate,
@@ -733,7 +730,6 @@ if(isset($_POST['sendform'])) {
               'changed_by_admin' => htmlspecialchars($_POST['changed_by_admin']),
               'id' => intval($_POST['update_user'])
             ));
-            print_r($result);
     }
   }
 
