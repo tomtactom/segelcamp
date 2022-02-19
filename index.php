@@ -4,17 +4,17 @@
 								<section id="banner">
 									<div class="content">
 										<header>
-											<h1>Opti Sommer Segelcamp 2021</h1>
+											<h1>Opti Sommer Segelcamp 2022</h1>
 											<p>Segeln macht Freu(n)de</p>
 										</header>
-                    <strong>Ab sofort sind Anmeldungen hier über das Anmeldeformular möglich.</strong>
-                    <p>
+                    <strong>Zurzeit sind leider noch keine Anmeldungen möglich.</strong>
+                    <!--<p>
 											Auch in diesem Jahr findet unser Sommer Segelcamp für eine Woche statt. Das Camp ist für Anfänger und Fortgeschrittene, im Alter von <strong>8-12 Jahren</strong> gedacht, um Segeln zu lernen oder die vorhandenen Fähigkeiten zu verbessern. Sollte Ihr Kind älter oder jünger sein, schreiben Sie uns gerne eine <a href="mailto:segelcamp@lohheider-see.de?subject=Mein%20Kind%20ist%20%C3%A4lter%20oder%20j%C3%BCnger%20als%208-12%20Jahre&body=Hallo%20SLS-Jugend-Team%2C%0A%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen%0A">E-Mail</a>. Das Camp ist für Anfänger und Fortgeschrittene, um Segeln zu lernen oder die vorhandenen Fähigkeiten zu verbessern. Wie in den letzten Jahren wird das Camp von unserer Jugend geleitet. Wir sind derzeit 6 TrainerInnen, die Spaß an der Arbeit mit Kindern und am Segeln haben. Wir sorgen für die Getränke und das Mittagessen. Die Nutzung der Boote ist ebenfalls in dem Preis mit inbegriffen. Falls Sie weitere Fragen haben, schreiben Sie uns gerne über <a href="https://www.instagram.com/sls_jugend" title="@sls_jugend">Instagram</a> oder über unsere E-Mail-Adresse <a href="mailto:segelcamp@lohheider-see.de?subject=Mein%20Kind%20ist%20%C3%A4lter%20oder%20j%C3%BCnger%20als%208-12%20Jahre&body=Hallo%20SLS-Jugend-Team%2C%0A%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen%0A">segelcamp@lohheider-see.de</a> an. Die genauen Informationen, wie den Preis finden Sie über dem Anmeldeformular.<br>
 											Wir freuen uns auf eine schöne Segelwoche 🙂!
 										</p>
 										<ul class="actions">
 											<li><a href="#anmelden" class="button big">Jetzt Anmelden</a></li>
-										</ul>
+										</ul>-->
 									</div>
 									<span class="image object">
 										<img src="images/pic10.jpg" alt="" />
@@ -87,11 +87,11 @@
                           </style>
                           <p>(*) Erforderliche Felder</p>
 													<?php if(isset($msg_field)) { echo $msg_field; } ?>
-													<p>
+													<!--<p>
 														Unsere Teilnehmeranzahl ist begrenzt und kann aufgrund der Coronasituation abweichen. Wir handeln nach der aktuellsten <abbr title="Coronaschutzverordnung: Verordnung zum Schutz vor Neuinfizierungen mit dem Coronavirus SARS-CoV-2">CoronaSchVO</abbr>, daher kann es zu kurzfristigen Änderungen des Sommercamps kommen. Das Camp findet <strong>vom 26.07.2021 bis zum 30.07.2021, jeweils von 10:00 bis 18:00 Uhr</strong>, statt. Die Kosten belaufen sich auf <strong>120 €</strong> inkl. Betreuung, Nutzung der Boote und Verpflegung. Das Geld wird an die, in der Bestätigungs-E-Mail stehenden Bankdaten überwiesen.
 														Die Kinder sollten, falls vorhanden, Segelsachen, Schwimmsachen, Wechselkleidung und Wetterabhängige Kleidung mitbringen. Wenn vorhanden auch gerne eine eigene Schwimmweste. Ansonsten werden welche vom Verein gestellt. Weitere Informationen dazu folgen, dann in der WhatsApp-Gruppe oder per <a href="mailto:segelcamp@lohheider-see.de?body=Hallo%20SLS-Jugend-Team%2C%0A%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen">E-Mail</a>.<br>
 														<strong>Das Segelcamp ist für Kinder von 8 bis 12 Jahren. Sollte Ihr Kind älter oder jünger sein, schreiben Sie uns bitte per <a href="mailto:segelcamp@lohheider-see.de?subject=Mein%20Kind%20ist%20%C3%A4lter%20oder%20j%C3%BCnger%20als%208-12%20Jahre&body=Hallo%20SLS-Jugend-Team%2C%0A%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen%0A">E-Mail</a>, dann können wir im Einzelfall abwägen ob Ihr Kind trotzdem an dem Camp teilnehmen kann.</strong>
-													</p>
+													</p>-->
 													<?php
 															$max_value = 11;
 															$statement = $pdo->prepare("SELECT COUNT(*) AS anzahl FROM registrations");
@@ -234,14 +234,14 @@
 											<span class="icon fa-gem"></span>
 											<div class="content">
 												<h3>Erfahrene Segeltrainer</h3>
-												<p>Wir sind ein Team aus mehreren Segeltrainern zwischen 18 und 19 Jahren, bringen bereits seit mehreren Jahren Kindern das Segeln bei und haben in den letzten Jahren immer wieder mit viel Erfolg das Segelcamp geleitet und organisiert.</p>
+												<p>Wir sind ein Team aus mehreren Segeltrainern zwischen 19 und 20 Jahren, bringen bereits seit mehreren Jahren Kindern das Segeln bei und haben in den letzten Jahren immer wieder mit viel Erfolg das Segelcamp geleitet und organisiert.</p>
 											</div>
 										</article>
 										<article>
 											<span class="icon solid fa-paper-plane"></span>
 											<div class="content">
 												<h3>Gute Kommunikation</h3>
-												<p>Nicht nur Spaß, sondern auch Erfahrung bleibt an den Kindern hängen. Wir halten euch während des gesamten Camps auf dem Laufenden. Sollte die  <abbr title="Coronaschutzverordnung: Verordnung zum Schutz vor Neuinfizierungen mit dem Coronavirus SARS-CoV-2">CoronaSchVO</abbr> dies zulassen, könnt ihr am letzten Tag euren Kindern bei ihren Segelfortschritten zusehen. Das gemeinsame grillen muss leider ausfallen. Nach dem Camp besteht weiterhin die Möglichkeit, einmal die Woche am Segeltraining teilzunehmen.</p>
+												<p>Nicht nur Spaß, sondern auch Erfahrung bleibt an den Kindern hängen. Wir halten euch während des gesamten Camps auf dem Laufenden. Sollte die  <abbr title="Coronaschutzverordnung: Verordnung zum Schutz vor Neuinfizierungen mit dem Coronavirus SARS-CoV-2">CoronaSchVO</abbr> dies zulassen, könnt ihr am letzten Tag euren Kindern bei ihren Segelfortschritten zusehen. <!--Das gemeinsame grillen muss leider ausfallen. Nach dem Camp besteht weiterhin die Möglichkeit, einmal die Woche am Segeltraining teilzunehmen.--></p>
 											</div>
 										</article>
 										<article>
