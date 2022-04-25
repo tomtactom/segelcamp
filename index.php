@@ -1,5 +1,5 @@
 <?php require('./inc/backend.inc.php'); ?>
-<?php $page_title = 'Segelcamp 2021'; ?>
+<?php $page_title = 'Segelcamp 2022'; ?>
 <?php require('./inc/header.inc.php'); ?>
 								<section id="banner">
 									<div class="content">
@@ -8,13 +8,13 @@
 											<p>Segeln macht Freu(n)de</p>
 										</header>
                     <strong>Zurzeit sind leider noch keine Anmeldungen möglich.</strong>
-                    <!--<p>
+                    <p>
 											Auch in diesem Jahr findet unser Sommer Segelcamp für eine Woche statt. Das Camp ist für Anfänger und Fortgeschrittene, im Alter von <strong>8-12 Jahren</strong> gedacht, um Segeln zu lernen oder die vorhandenen Fähigkeiten zu verbessern. Sollte Ihr Kind älter oder jünger sein, schreiben Sie uns gerne eine <a href="mailto:segelcamp@lohheider-see.de?subject=Mein%20Kind%20ist%20%C3%A4lter%20oder%20j%C3%BCnger%20als%208-12%20Jahre&body=Hallo%20SLS-Jugend-Team%2C%0A%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen%0A">E-Mail</a>. Das Camp ist für Anfänger und Fortgeschrittene, um Segeln zu lernen oder die vorhandenen Fähigkeiten zu verbessern. Wie in den letzten Jahren wird das Camp von unserer Jugend geleitet. Wir sind derzeit 6 TrainerInnen, die Spaß an der Arbeit mit Kindern und am Segeln haben. Wir sorgen für die Getränke und das Mittagessen. Die Nutzung der Boote ist ebenfalls in dem Preis mit inbegriffen. Falls Sie weitere Fragen haben, schreiben Sie uns gerne über <a href="https://www.instagram.com/sls_jugend" title="@sls_jugend">Instagram</a> oder über unsere E-Mail-Adresse <a href="mailto:segelcamp@lohheider-see.de?subject=Mein%20Kind%20ist%20%C3%A4lter%20oder%20j%C3%BCnger%20als%208-12%20Jahre&body=Hallo%20SLS-Jugend-Team%2C%0A%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen%0A">segelcamp@lohheider-see.de</a> an. Die genauen Informationen, wie den Preis finden Sie über dem Anmeldeformular.<br>
 											Wir freuen uns auf eine schöne Segelwoche 🙂!
 										</p>
 										<ul class="actions">
 											<li><a href="#anmelden" class="button big">Jetzt Anmelden</a></li>
-										</ul>-->
+										</ul>
 									</div>
 									<span class="image object">
 										<img src="images/pic10.jpg" alt="" />
@@ -87,11 +87,11 @@
                           </style>
                           <p>(*) Erforderliche Felder</p>
 													<?php if(isset($msg_field)) { echo $msg_field; } ?>
-													<!--<p>
-														Unsere Teilnehmeranzahl ist begrenzt und kann aufgrund der Coronasituation abweichen. Wir handeln nach der aktuellsten <abbr title="Coronaschutzverordnung: Verordnung zum Schutz vor Neuinfizierungen mit dem Coronavirus SARS-CoV-2">CoronaSchVO</abbr>, daher kann es zu kurzfristigen Änderungen des Sommercamps kommen. Das Camp findet <strong>vom 26.07.2021 bis zum 30.07.2021, jeweils von 10:00 bis 18:00 Uhr</strong>, statt. Die Kosten belaufen sich auf <strong>120 €</strong> inkl. Betreuung, Nutzung der Boote und Verpflegung. Das Geld wird an die, in der Bestätigungs-E-Mail stehenden Bankdaten überwiesen.
+													<p>
+														Das Camp findet <strong>vom 25.07.2022 bis zum 29.07.2022, jeweils von 10:00 bis 18:00 Uhr</strong>, statt. Die Kosten belaufen sich auf <strong>120 €</strong> inkl. Betreuung, Nutzung der Boote und Verpflegung. Das Geld wird an die, in der Bestätigungs-E-Mail stehenden Bankdaten überwiesen.
 														Die Kinder sollten, falls vorhanden, Segelsachen, Schwimmsachen, Wechselkleidung und Wetterabhängige Kleidung mitbringen. Wenn vorhanden auch gerne eine eigene Schwimmweste. Ansonsten werden welche vom Verein gestellt. Weitere Informationen dazu folgen, dann in der WhatsApp-Gruppe oder per <a href="mailto:segelcamp@lohheider-see.de?body=Hallo%20SLS-Jugend-Team%2C%0A%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen">E-Mail</a>.<br>
 														<strong>Das Segelcamp ist für Kinder von 8 bis 12 Jahren. Sollte Ihr Kind älter oder jünger sein, schreiben Sie uns bitte per <a href="mailto:segelcamp@lohheider-see.de?subject=Mein%20Kind%20ist%20%C3%A4lter%20oder%20j%C3%BCnger%20als%208-12%20Jahre&body=Hallo%20SLS-Jugend-Team%2C%0A%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen%0A">E-Mail</a>, dann können wir im Einzelfall abwägen ob Ihr Kind trotzdem an dem Camp teilnehmen kann.</strong>
-													</p>-->
+													</p>
 													<?php
 															$max_value = 11;
 															$statement = $pdo->prepare("SELECT COUNT(*) AS anzahl FROM registrations");
@@ -205,10 +205,10 @@
                                                             </div>
                                                             <div class="col-12">
                                                                 <input type="checkbox" id="correctinformation" name="correctinformation" value="1"<?php if($correctinformation=="1") { echo ' checked'; }?> required>
-																<label for="correctinformation">* Ich bestätige, dass alle Angaben richtig sind, habe meinem Kind erklärt, dass am, auf und im Wasser Schwimmwestenpflicht besteht und habe meinem Kind die besonderen Coronaschutz Verhaltensregeln erklärt.</label>
+																<label for="correctinformation">* Ich bestätige, dass alle Angaben richtig sind, habe meinem Kind erklärt, dass am, auf und im Wasser Schwimmwestenpflicht besteht.</label>
 
-                                                                <input type="checkbox" id="coronasymptoms" name="coronasymptoms" value="1"<?php if($coronasymptoms=="1") { echo ' checked'; }?> required>
-                                                                <label for="coronasymptoms">* Ich bestätige, dass wenn mein Kind innerhalb 14 Tage vor und/oder während dem Segelcamp Corona-Symptome (Husten, Fieber (37,9+ °C), Schnupfen, Störung des Geruchs- und/oder Geschmackssinns) hat, es nur mit einem negativen <abbr title="Polymerase Chain Reaction Test; deutsch: Polymerasekettenreaktion-Test. Die Richtigkeit liegt bei 99 %.">PCR-Test</abbr> an dem Camp teilnehmen kann. Gegebenenfalls reicht Situationsbedingt auch ein <abbr title="Point-of-Care-Antigen-Test auf SARS-CoV-2 (Schnelltest; Testergebnis nach weniger als 30 Minuten, jedoch mit einer höheren Falsch-Positiv-Rate)">PoC-Test</abbr>. Sollte kein PCR-Test/PoC-Test vorliegen oder dieser positiv sein, kann das Geld von unserer Seite leider nicht erstattet werden. Wenn das Segelcamp aufgrund der <abbr title="Coronaschutzverordnung: Verordnung zum Schutz vor Neuinfizierungen mit dem Coronavirus SARS-CoV-2">CoronaSchVO</abbr> ausfallen muss, wird das Geld erstattet.</label>
+                                                                <input type="hidden" id="coronasymptoms" name="coronasymptoms" value="1"<?php if($coronasymptoms=="1") { echo ' checked'; }?> checked>
+                                                                <!--<label for="coronasymptoms">* Ich bestätige, dass wenn mein Kind innerhalb 14 Tage vor und/oder während dem Segelcamp Corona-Symptome (Husten, Fieber (37,9+ °C), Schnupfen, Störung des Geruchs- und/oder Geschmackssinns) hat, es nur mit einem negativen <abbr title="Polymerase Chain Reaction Test; deutsch: Polymerasekettenreaktion-Test. Die Richtigkeit liegt bei 99 %.">PCR-Test</abbr> an dem Camp teilnehmen kann. Gegebenenfalls reicht Situationsbedingt auch ein . Sollte kein PoC-Test vorliegen oder dieser positiv sein, kann das Geld von unserer Seite leider nicht erstattet werden. Wenn das Segelcamp aufgrund der <abbr title="Coronaschutzverordnung: Verordnung zum Schutz vor Neuinfizierungen mit dem Coronavirus SARS-CoV-2">CoronaSchVO</abbr> ausfallen muss, wird das Geld erstattet.</label>-->
 
                                                                 <input type="checkbox" id="whatsapp" name="whatsapp" value="1"<?php if($whatsapp=="1") { echo ' checked'; }?>>
                                                                 <label for="whatsapp">Ich bin damit einverstanden, dass die oben angegebenen Telefonnummern und vollen Namen in eine <a href="https://www.whatsapp.com/" target="_blank">WhatsApp</a>-Gruppe hinzugefügt werden und die Kommunikation, auch über personenbezogene Daten, per WhatsApp stattfinden darf. Ich erkläre mich damit einverstanden die geteilten personenbezogenen Daten der anderen nicht weiterzugeben. Die WhatsApp-Gruppe nutzen wir um alle Eltern und Erziehungsberechtigten auf dem Laufenden zu halten. <i>Diese Einwilligung ist freiwillig und kann jederzeit widerrufen werden, indem die WhatsApp-Gruppe verlassen wird.</i></label>
@@ -241,7 +241,7 @@
 											<span class="icon solid fa-paper-plane"></span>
 											<div class="content">
 												<h3>Gute Kommunikation</h3>
-												<p>Nicht nur Spaß, sondern auch Erfahrung bleibt an den Kindern hängen. Wir halten euch während des gesamten Camps auf dem Laufenden. Sollte die  <abbr title="Coronaschutzverordnung: Verordnung zum Schutz vor Neuinfizierungen mit dem Coronavirus SARS-CoV-2">CoronaSchVO</abbr> dies zulassen, könnt ihr am letzten Tag euren Kindern bei ihren Segelfortschritten zusehen. <!--Das gemeinsame grillen muss leider ausfallen. Nach dem Camp besteht weiterhin die Möglichkeit, einmal die Woche am Segeltraining teilzunehmen.--></p>
+												<p>Nicht nur Spaß, sondern auch Erfahrung bleibt an den Kindern hängen. Wir halten euch während des gesamten Camps auf dem Laufenden. Am letzten Tag könnt ihr euren Kindern bei ihren Segelfortschritten zusehen. Außerdem findet am Ende ein gemeinsames Grillen statt. Nach dem Camp besteht weiterhin die Möglichkeit, einmal die Woche am Segeltraining teilzunehmen.</p>
 											</div>
 										</article>
 										<article>
@@ -255,7 +255,7 @@
 											<span class="icon solid fa-signal"></span>
 											<div class="content">
 												<h3>Schutz der Gesundheit</h3>
-												<p>Bei uns ist Ihr Kind in guten Händen. Wir sind alle in der Ersten Hilfe geschult, teilweise Rettungsschwimmer und dem Infektionsschutzgesetz geschult. Es gilt also Sicherheit und Spaß miteinander zu vereinen. Sollte doch etwas passieren, kümmern wir uns um Ihr Kind und informieren Sie natürlich umgehend. Aufgrund der Coronasituation, halten wir uns streng an die Vorgaben, lüften regelmäßig und desinfizieren Kontaktflächen.</p>
+												<p>Bei uns ist Ihr Kind in guten Händen. Wir sind alle in der Ersten Hilfe geschult, teilweise Rettungsschwimmer und dem Infektionsschutzgesetz geschult. Es gilt also Sicherheit und Spaß miteinander zu vereinen. Sollte doch etwas passieren, kümmern wir uns um Ihr Kind und informieren Sie natürlich umgehend.</p>
 											</div>
 										</article>
 									</div>

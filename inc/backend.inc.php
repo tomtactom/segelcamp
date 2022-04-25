@@ -34,7 +34,7 @@ function send_mail($empfaenger, $betreff, $text) {
 
 function send_acception_mail($sender_name, $sender_mail) {
   global $name_child, $birthdate, $allergy, $medication, $swimmingbadge, $sailingexperience, $clothingsize, $lifejacket, $firstname_parent1, $lastname_parent1, $email_parent1, $mobilenumber_parent1, $phonenumber_parent1, $plz_parent1, $town_parent1, $street_parent1, $housenumber_parent1, $firstname_parent2, $lastname_parent2, $email_parent2, $mobilenumber_parent2, $phonenumber_parent2, $plz_parent2, $town_parent2, $street_parent2, $housenumber_parent2, $other, $disclaimer, $coronasymptoms, $whatsapp, $correctinformation, $publishphotos;
-  $betreff_bestaetigung = "Bestätigung zur Anmeldung von ".$name_child." für das Sommercamp 2021 der SLS";
+  $betreff_bestaetigung = "Bestätigung zur Anmeldung von ".$name_child." für das Sommercamp 2022 der SLS";
   if(!empty($firstname_parent2)) {
     if(!empty($housenumber_parent2)) {
       $adress_parent2_for_mail = $plz_parent2." ".$town_parent2." ".$street_parent2." ".$housenumber_parent2;
@@ -111,7 +111,7 @@ function send_acception_mail($sender_name, $sender_mail) {
 
  if($whatsapp == 1) {
    $whatsapp_for_mail = "Sie sind damit einverstanden, dass die oben angegebenen Telefonnummern und vollen Namen in eine WhatsApp-Gruppe hinzugefügt werden und die Kommunikation, auch über personenbezogene Daten, per WhatsApp stattfinden darf. Sie erklären sich damit einverstanden die geteilten personenbezogenen Daten der anderen nicht weiterzugeben. Die WhatsApp-Gruppe nutzen wir um alle Eltern und Erziehungsberechtigten auf dem Laufenden zu halten. <i>Da die Einwilligung freiwillig ist, können Sie diese jederzeit widerrufen, indem Sie die WhatsApp-Gruppe verlassen.</i><br>
-   <a href='https://chat.whatsapp.com/Ly3P7NHVsyk6dK1grVkb8b'>Klicken Sie hier, um direkt der Gruppe beizutreten: <strong>chat.whatsapp.com/Ly3P7NHVsyk6dK1grVkb8b</strong></a>. Ansonsten fügen wir Sie im Laufe der Zeit hinzu.";
+   <a href='https://chat.whatsapp.com/Luiyz4UX51y7CMnXYFNJ7P'>Klicken Sie hier, um direkt der Gruppe beizutreten: <strong>chat.whatsapp.com/Ly3P7NHVsyk6dK1grVkb8b</strong></a>. Ansonsten fügen wir Sie im Laufe der Zeit hinzu.";
  } else {
    $whatsapp_for_mail = "Sie sind nicht damit einverstanden in die WhatsApp-Gruppe hinzugefügt zu werden. Wir werden Sie nur per E-Mail kontaktieren. Die anderen teilnehmenden Eltern werden lediglich den Namen Ihres Kindes als personenbezogene Daten mitgeteilt bekommen. <i>Sollten Sie doch zur WhatsApp-Gruppe hinzugefügt werden wollen, schreiben Sie uns gerne.</i>";
  }
@@ -148,7 +148,6 @@ function send_acception_mail($sender_name, $sender_mail) {
   Sie, oder das andere Elternteil hat den Haftungsausschluss bestätigt:<br>
   <p>Eine Haftung des Veranstalters, gleich aus welchem Rechtsgrund, für Sach- und Vermögensschäden jeder Art und deren Folgen, die dem Teilnehmer während oder im Zusammenhang mit der Teilnahme an der Veranstaltung durch ein Verhalten des Veranstalters, seiner Vertreter, Erfüllungsgehilfen oder Beauftragten entstehen, ist bei der Verletzung von Pflichten, die nicht Haupt-/bzw. vertragswesentliche Pflichten (Kardinalpflichten) sind, beschränkt auf Schäden, die vorsätzlich oder grob fahrlässig verursacht wurden. Bei der Verletzung von Kardinalpflichten ist die Haftung des Veranstalters in Fällen einfacher Fahrlässigkeit beschränkt auf vorhersehbare, typischerweise eintretende Schäden. Soweit die Schadenersatzhaftung des Veranstalters ausgeschlossen oder eingeschränkt ist, befreit der Teilnehmer von der persönlichen Schadenersatzhaftung auch alle anderen Personen, denen im Zusammenhang mit der Durchführung der Veranstaltung ein Auftrag erteilt worden ist.</p><br>
   <p>Sie oder das andere Elternteil hat bestätigt, dass alle Angaben richtig sind, dem Kind erklärt, dass am, auf und im Wasser Schwimmwestenpflicht besteht und dem Kind die besonderen Coronaschutz Verhaltensregeln erklärt. Diese finden Sie unter <a href='https://www.land.nrw/corona'>land.nrw/corona</a>. Sollten Sie festgestellt haben, dass die Angaben doch nicht richtig sind, teilen Sie uns dies bitte mit, dann können wir diese für Sie anpassen. Dazu können Sie ganz einfach auf diese E-Mail antworten.</p><br>
-  <p>Sie oder das andere Elternteil hat bestätigt, dass wenn Ihr Kind innerhalb 14 Tage vor und/oder während dem Segelcamp Corona-Symptome (Husten, Fieber (37,9+ °C), Schnupfen, Störung des Geruchs- und/oder Geschmackssinns) hat, es nur mit einem negativen <abbr title='Polymerase Chain Reaction Test; deutsch: Polymerasekettenreaktion-Test. Die Richtigkeit liegt bei 99 %.'>PCR-Test</abbr> an dem Camp teilnehmen kann. Gegebenenfalls reicht Situationsbedingt auch ein <abbr title='Point-of-Care-Antigen-Test auf SARS-CoV-2 (Schnelltest; Testergebnis nach weniger als 30 Minuten, jedoch mit einer höheren Falsch-Positiv-Rate)'>PoC-Test</abbr>. Sollte kein PCR-Test/PoC-Test vorliegen oder dieser positiv sein, kann das Geld von unserer Seite leider nicht erstattet werden. Wenn das Segelcamp aufgrund der <abbr title='Coronaschutzverordnung: Verordnung zum Schutz vor Neuinfizierungen mit dem Coronavirus SARS-CoV-2'>CoronaSchVO</abbr> ausfallen muss, wird das Geld erstattet.</p><br>
   <p>".$whatsapp_for_mail."</p><br>
   <p>".$publishphotos_for_mail."</p><br>
   <hr>
@@ -159,8 +158,7 @@ function send_acception_mail($sender_name, $sender_mail) {
   <i>Verwendungszweck:</i> Segelcamp ".$name_child."<br>
   <i>Betrag:</i> 120 €<br>
   <br>
-  Das Segelcamp findet vom <strong>26.07.2021 bis zum 30.07.2021, jeweils von 10:00 bis 18:00 Uhr</strong>, statt.<br>
-  Leider können wir, aufgrund der Coronaschutz-Situation nur eine begrenzte Anzahl an Teilnehmern annehmen. Aus diesem Grund, kann es passieren, dass wir einige Anmeldungen ggf. stornieren müssen. In dem Fall erhalten Sie Ihr Geld natürlich wieder.<br>
+  Das Segelcamp findet vom <strong>25.07.2022 bis zum 29.07.2021, jeweils von 10:00 bis 18:00 Uhr</strong>, statt.<br>
   Die Kinder sollten, falls vorhanden, Segelsachen, Schwimmsachen, Wechselkleidung und Wetterabhängige Kleidung mitbringen. Sonnencreme, eine Kopfbedeckung und eine Sonnenbrille sind auch empfehlenswert.<br>
   <br>
   Wir freuen uns auf euch,<br>
