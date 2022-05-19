@@ -151,12 +151,12 @@ function send_acception_mail($sender_name, $sender_mail) {
   <p>".$whatsapp_for_mail."</p><br>
   <p>".$publishphotos_for_mail."</p><br>
   <hr>
-  Bitte überweisen Sie so bald wie möglich <strong>120 €</strong> an:<br>
+  Bitte überweisen Sie so bald wie möglich <strong>150 €</strong> (bzw. 120 € für Vereinsmitglieder) an:<br>
   <i>Kontoinhaber:</i> SLS Jugendabteilung<br>
   <i>IBAN:</i> DE26 35461106 1200 7900 29<br>
   <i>BIC:</i> GENODED1NRH<br>
   <i>Verwendungszweck:</i> Segelcamp ".$name_child."<br>
-  <i>Betrag:</i> 120 €<br>
+  <i>Betrag:</i> 150 € (bzw. 120 € für Vereinsmitglieder)<br>
   <br>
   Das Segelcamp findet vom <strong>25.07.2022 bis zum 29.07.2021, jeweils von 10:00 bis 18:00 Uhr</strong>, statt.<br>
   Die Kinder sollten, falls vorhanden, Segelsachen, Schwimmsachen, Wechselkleidung und Wetterabhängige Kleidung mitbringen. Sonnencreme, eine Kopfbedeckung und eine Sonnenbrille sind auch empfehlenswert.<br>

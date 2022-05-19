@@ -88,7 +88,7 @@
                           <p>(*) Erforderliche Felder</p>
 													<?php if(isset($msg_field)) { echo $msg_field; } ?>
 													<p>
-														Das Camp findet <strong>vom 25.07.2022 bis zum 29.07.2022, jeweils von 10:00 bis 18:00 Uhr</strong>, statt. Die Kosten belaufen sich auf <strong>120 €</strong> inkl. Betreuung, Nutzung der Boote und Verpflegung. Das Geld wird an die, in der Bestätigungs-E-Mail stehenden Bankdaten überwiesen.
+														Das Camp findet <strong>vom 25.07.2022 bis zum 29.07.2022, jeweils von 10:00 bis 18:00 Uhr</strong>, statt. Die Kosten belaufen sich auf <strong>150 €</strong> (120 € für Vereinsmitglieder) inkl. Betreuung, Nutzung der Boote und Verpflegung. Das Geld wird an die, in der Bestätigungs-E-Mail stehenden Bankdaten überwiesen.
 														Die Kinder sollten, falls vorhanden, Segelsachen, Schwimmsachen, Wechselkleidung und Wetterabhängige Kleidung mitbringen. Wenn vorhanden auch gerne eine eigene Schwimmweste. Ansonsten werden welche vom Verein gestellt. Weitere Informationen dazu folgen, dann in der WhatsApp-Gruppe oder per <a href="mailto:segelcamp@lohheider-see.de?body=Hallo%20SLS-Jugend-Team%2C%0A%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen">E-Mail</a>.<br>
 														<strong>Das Segelcamp ist für Kinder von 8 bis 12 Jahren. Sollte Ihr Kind älter oder jünger sein, schreiben Sie uns bitte per <a href="mailto:segelcamp@lohheider-see.de?subject=Mein%20Kind%20ist%20%C3%A4lter%20oder%20j%C3%BCnger%20als%208-12%20Jahre&body=Hallo%20SLS-Jugend-Team%2C%0A%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen%0A">E-Mail</a>, dann können wir im Einzelfall abwägen ob Ihr Kind trotzdem an dem Camp teilnehmen kann.</strong>
 													</p>
