@@ -93,7 +93,7 @@
 														<strong>Das Segelcamp ist für Kinder von 8 bis 12 Jahren. Sollte Ihr Kind älter oder jünger sein, schreiben Sie uns bitte per <a href="mailto:segelcamp@lohheider-see.de?subject=Mein%20Kind%20ist%20%C3%A4lter%20oder%20j%C3%BCnger%20als%208-12%20Jahre&body=Hallo%20SLS-Jugend-Team%2C%0A%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen%0A">E-Mail</a>, dann können wir im Einzelfall abwägen ob Ihr Kind trotzdem an dem Camp teilnehmen kann.</strong>
 													</p>
 													<?php
-															$max_value = 18;
+															$max_value = 20;
 															$statement = $pdo->prepare("SELECT COUNT(*) AS anzahl FROM registrations");
 															$statement->execute();
 															$row = $statement->fetch();
