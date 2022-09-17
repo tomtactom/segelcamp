@@ -5,6 +5,13 @@ if (!file_exists('./inc/config.inc.php')) {
   require('./inc/config.inc.php');
 }
 
+// Grundlegende Einstellungen
+if (!file_exists('./inc/settings.inc.php')) {
+  die('<span style="font-family: sans-serif;">Leider fehlt die Datei <i>settings.inc.php</i>. Bitte nehmen Sie die grundlegenden Einstellungen vor.</span>');
+} else {
+  require('./inc/settings.inc.php');
+}
+
 if(isset($_POST['admin_login']) || isset($_POST['vorschau_login'])) {
   if(hash('sha256', $salt1.$_POST['password'].$salt2) == $admin_password) {
     setcookie("token", $admin_cookie_hash, time()+(3600*24)); # 24 Stunden
