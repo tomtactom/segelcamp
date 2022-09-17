@@ -9,7 +9,7 @@
 	  <meta name="audience" content="Kinder, Eltern, Familien, Segler">
 	  <meta name="page-type" content="Formular">
 	  <meta name="page-topic" content="Ferienfreizeit">
-	  <meta name="description" content="Melden Sie Ihr Kind jetzt für das Segelcamp 2023 an und erfahren Sie weitere Informationen über dieses. Wir freuen uns auf Euch.">
+	  <meta name="description" content="Melden Sie Ihr Kind jetzt für das Segelcamp <?php echo $sommercampyear; ?> an und erfahren Sie weitere Informationen über dieses. Wir freuen uns auf Euch.">
 	  <meta name="robots" content="index, follow">
 	  <meta http-equiv="language" content="german, de">
 	  <meta name="author" content="Tom Aschmann">

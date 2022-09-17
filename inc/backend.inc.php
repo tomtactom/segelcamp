@@ -41,7 +41,7 @@ function send_mail($empfaenger, $betreff, $text) {
 
 function send_acception_mail($sender_name, $sender_mail) {
   global $name_child, $birthdate, $allergy, $medication, $swimmingbadge, $sailingexperience, $clothingsize, $lifejacket, $firstname_parent1, $lastname_parent1, $email_parent1, $mobilenumber_parent1, $phonenumber_parent1, $plz_parent1, $town_parent1, $street_parent1, $housenumber_parent1, $firstname_parent2, $lastname_parent2, $email_parent2, $mobilenumber_parent2, $phonenumber_parent2, $plz_parent2, $town_parent2, $street_parent2, $housenumber_parent2, $other, $disclaimer, $coronasymptoms, $whatsapp, $correctinformation, $publishphotos;
-  $betreff_bestaetigung = "Bestätigung zur Anmeldung von ".$name_child." für das Sommercamp 2023 der SLS";
+  $betreff_bestaetigung = "Bestätigung zur Anmeldung von ".$name_child." für das Sommercamp ".$sommercampyear." der SLS";
   if(!empty($firstname_parent2)) {
     if(!empty($housenumber_parent2)) {
       $adress_parent2_for_mail = $plz_parent2." ".$town_parent2." ".$street_parent2." ".$housenumber_parent2;
@@ -118,7 +118,7 @@ function send_acception_mail($sender_name, $sender_mail) {
 
  if($whatsapp == 1) {
    $whatsapp_for_mail = "Sie sind damit einverstanden, dass die oben angegebenen Telefonnummern und vollen Namen in eine WhatsApp-Gruppe hinzugefügt werden und die Kommunikation, auch über personenbezogene Daten, per WhatsApp stattfinden darf. Sie erklären sich damit einverstanden die geteilten personenbezogenen Daten der anderen nicht weiterzugeben. Die WhatsApp-Gruppe nutzen wir um alle Eltern und Erziehungsberechtigten auf dem Laufenden zu halten. <i>Da die Einwilligung freiwillig ist, können Sie diese jederzeit widerrufen, indem Sie die WhatsApp-Gruppe verlassen.</i><br>
-   <a href='https://chat.whatsapp.com/Luiyz4UX51y7CMnXYFNJ7P'>Klicken Sie hier, um direkt der Gruppe beizutreten: <strong>chat.whatsapp.com/Ly3P7NHVsyk6dK1grVkb8b</strong></a>. Ansonsten fügen wir Sie im Laufe der Zeit hinzu.";
+   <a href='".$whatsappgrouplink."'>Klicken Sie hier, um direkt der Gruppe beizutreten: <strong>".$whatsappgrouplink."</strong></a>. Ansonsten fügen wir Sie im Laufe der Zeit hinzu.";
  } else {
    $whatsapp_for_mail = "Sie sind nicht damit einverstanden in die WhatsApp-Gruppe hinzugefügt zu werden. Wir werden Sie nur per E-Mail kontaktieren. Die anderen teilnehmenden Eltern werden lediglich den Namen Ihres Kindes als personenbezogene Daten mitgeteilt bekommen. <i>Sollten Sie doch zur WhatsApp-Gruppe hinzugefügt werden wollen, schreiben Sie uns gerne.</i>";
  }
@@ -158,14 +158,14 @@ function send_acception_mail($sender_name, $sender_mail) {
   <p>".$whatsapp_for_mail."</p><br>
   <p>".$publishphotos_for_mail."</p><br>
   <hr>
-  Bitte überweisen Sie so bald wie möglich <strong>150 €</strong> (bzw. 120 € für Vereinsmitglieder) an:<br>
+  Bitte überweisen Sie so bald wie möglich ".$costs." an:<br>
   <i>Kontoinhaber:</i> SLS Jugendabteilung<br>
   <i>IBAN:</i> DE26 35461106 1200 7900 29<br>
   <i>BIC:</i> GENODED1NRH<br>
   <i>Verwendungszweck:</i> Segelcamp ".$name_child."<br>
-  <i>Betrag:</i> 150 € (bzw. 120 € für Vereinsmitglieder)<br>
+  <i>Betrag:</i> ".$costs."<br>
   <br>
-  <!--Das Segelcamp findet vom <strong>25.07.2022 bis zum 29.07.2021, jeweils von 10:00 bis 18:00 Uhr</strong>, statt.<br>-->
+  Das Segelcamp findet vom <strong>".$datestart." bis zum ".$dateend.", jeweils von ".$timestart." bis ".$timeend." Uhr</strong>, statt.<br>
   Die Kinder sollten, falls vorhanden, Segelsachen, Schwimmsachen, Wechselkleidung und Wetterabhängige Kleidung mitbringen. Sonnencreme, eine Kopfbedeckung und eine Sonnenbrille sind auch empfehlenswert.<br>
   <br>
   Wir freuen uns auf euch,<br>
@@ -530,7 +530,7 @@ if(isset($_POST['sendform'])) {
       $user_ip = htmlspecialchars(trim($_SERVER['REMOTE_ADDR']));
       $user_useragent = htmlspecialchars(trim($_SERVER['HTTP_USER_AGENT']));
 
-      // Mail senden
+      // E-Mail senden
       send_acception_mail($firstname_parent1." ".$lastname_parent1, $email_parent1);
       if(!empty($email_parent2)) {
         if (empty($lastname_parent2)) {
@@ -541,6 +541,7 @@ if(isset($_POST['sendform'])) {
         send_acception_mail($firstname_parent2." ".$lastname_parent2_for_mail, $email_parent2);
       }
       send_acception_mail("SLS-Jugendteam, \r\nDies ist eine automatisierte E-Mail, welche die unveränderten Angaben bei der Anmeldung des Kindes darstellt. Dies gilt als offizielle Kopie der Anmeldung. Nachträglich veränderte Daten werden dementsprechend auf der Webseite gekennzeichnet. Im folgenden wird mit 'Sie' etc. das jeweilige Elternteil angesprochen", "segelcamp@lohheider-see.de");
+
       $msg = 'Ihr Kind wurde erfolgreich zum Segelcamp angemeldet. Wir melden uns umgehend bei Ihnen.';
       $registered = true;
 
@@ -617,6 +618,7 @@ if(isset($_POST['sendform'])) {
         :user_useragent,
         :accepted
       )");
+
 	$result = $statement->execute(array(
         'name_child' => $name_child,
         'birthdate' => $birthdate,
@@ -656,10 +658,12 @@ if(isset($_POST['sendform'])) {
       ));
     }
   }
+
   if($error == true && !empty($msg)) {
     setcookie('msg', $msg, time() + 60);
     header('Location: /');
   }
+
   // Admin-Bereich
   if($_COOKIE['token'] == $admin_cookie_hash) {
     if(isset($_POST['delete_user'])) {
@@ -737,8 +741,6 @@ if(isset($_POST['sendform'])) {
             ));
     }
   }
-
-
 
   // Nachricht die in Cookie an die nächste Seite übermittelt wurde in $msg abspeichern
   if(!empty($_COOKIE['msg'])) {
