@@ -88,7 +88,7 @@
                           <p>(*) Erforderliche Felder</p>
 													<?php if(isset($msg_field)) { echo $msg_field; } ?>
 													<p>
-														Das Camp findet <strong>vom <?php echo $datestart; ?> bis zum <?php echo $dateend; ?>, jeweils von <?php echo $timestart; ?> bis <?php echo $timeend; ?> Uhr</strong>, statt. Die Kosten belaufen sich auf <?php echo $costs; ?> inkl. Betreuung, Nutzung der Boote und Verpflegung. Das Geld wird an die, in der Bestätigungs-E-Mail stehenden Bankdaten überwiesen.
+														<!--Das Camp findet <strong>vom <?php echo $datestart; ?> bis zum <?php echo $dateend; ?>, jeweils von <?php echo $timestart; ?> bis <?php echo $timeend; ?> Uhr</strong>, statt.--> Die Kosten belaufen sich auf <?php echo $costs; ?> inkl. Betreuung, Nutzung der Boote und Verpflegung. Das Geld wird an die, in der Bestätigungs-E-Mail stehenden Bankdaten überwiesen.
 														Die Kinder sollten, falls vorhanden, Segelsachen, Schwimmsachen, Wechselkleidung und Wetterabhängige Kleidung mitbringen. Wenn vorhanden auch gerne eine eigene Schwimmweste. Ansonsten werden welche vom Verein gestellt. Weitere Informationen dazu folgen, dann in der WhatsApp-Gruppe oder per <a href="mailto:segelcamp@lohheider-see.de?body=Hallo%20SLS-Jugend-Team%2C%0A%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen">E-Mail</a>.<br>
 														<strong>Das Segelcamp ist für Kinder von 8 bis 12 Jahren. Sollte Ihr Kind älter oder jünger sein, schreiben Sie uns bitte per <a href="mailto:segelcamp@lohheider-see.de?subject=Mein%20Kind%20ist%20%C3%A4lter%20oder%20j%C3%BCnger%20als%208-12%20Jahre&body=Hallo%20SLS-Jugend-Team%2C%0A%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen%0A">E-Mail</a>, dann können wir im Einzelfall abwägen ob Ihr Kind trotzdem an dem Camp teilnehmen kann.</strong>
 													</p>
@@ -226,7 +226,7 @@
                                             </div>
 													</form>
 													<?php } else { ?>
-														<h2>Leider können wir (momentan) keine weiteren Anmeldungen (mehr) annehmen. Gerne können Sie uns dazu per E-Mail kontaktieren: <a href="mailto:segelcamp@lohheider-see.de?subject=Anfrage%20f%C3%BCr%20Anmeldung%20trotz%20maximaler%20Teilnehmeranzahl&body=Hallo%20SLS-Jugend-Team%2C%0A%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen">segelcamp@lohheider-see.de</a>.</h2>
+														<h2>Leider können wir momentan noch keine weiteren Anmeldungen annehmen. Gerne können Sie uns dazu per E-Mail kontaktieren: <a href="mailto:segelcamp@lohheider-see.de?subject=Anfrage%20f%C3%BCr%20Anmeldung%20trotz%20maximaler%20Teilnehmeranzahl&body=Hallo%20SLS-Jugend-Team%2C%0A%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen">segelcamp@lohheider-see.de</a>.</h2>
 													<?php } ?>
                         </div>
 									<div class="features">
