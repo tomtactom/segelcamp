@@ -226,7 +226,7 @@
                                             </div>
 													</form>
 													<?php } else { ?>
-														<h2>Leider können wir momentan noch keine weiteren Anmeldungen annehmen. Gerne können Sie uns dazu per E-Mail kontaktieren: <a href="mailto:segelcamp@lohheider-see.de?subject=Anfrage%20f%C3%BCr%20Anmeldung%20trotz%20maximaler%20Teilnehmeranzahl&body=Hallo%20SLS-Jugend-Team%2C%0A%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen">segelcamp@lohheider-see.de</a>.</h2>
+														<h2>Leider können wir momentan noch keine Anmeldungen annehmen. Gerne können Sie uns dazu per E-Mail kontaktieren: <a href="mailto:segelcamp@lohheider-see.de?subject=Anfrage%20f%C3%BCr%20Anmeldung%20trotz%20maximaler%20Teilnehmeranzahl&body=Hallo%20SLS-Jugend-Team%2C%0A%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen">segelcamp@lohheider-see.de</a>.</h2>
 													<?php } ?>
                         </div>
 									<div class="features">
