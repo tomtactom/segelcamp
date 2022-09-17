@@ -41,7 +41,7 @@ function send_mail($empfaenger, $betreff, $text) {
 
 function send_acception_mail($sender_name, $sender_mail) {
   global $name_child, $birthdate, $allergy, $medication, $swimmingbadge, $sailingexperience, $clothingsize, $lifejacket, $firstname_parent1, $lastname_parent1, $email_parent1, $mobilenumber_parent1, $phonenumber_parent1, $plz_parent1, $town_parent1, $street_parent1, $housenumber_parent1, $firstname_parent2, $lastname_parent2, $email_parent2, $mobilenumber_parent2, $phonenumber_parent2, $plz_parent2, $town_parent2, $street_parent2, $housenumber_parent2, $other, $disclaimer, $coronasymptoms, $whatsapp, $correctinformation, $publishphotos;
-  $betreff_bestaetigung = "Bestätigung zur Anmeldung von ".$name_child." für das Sommercamp 2022 der SLS";
+  $betreff_bestaetigung = "Bestätigung zur Anmeldung von ".$name_child." für das Sommercamp 2023 der SLS";
   if(!empty($firstname_parent2)) {
     if(!empty($housenumber_parent2)) {
       $adress_parent2_for_mail = $plz_parent2." ".$town_parent2." ".$street_parent2." ".$housenumber_parent2;
@@ -165,7 +165,7 @@ function send_acception_mail($sender_name, $sender_mail) {
   <i>Verwendungszweck:</i> Segelcamp ".$name_child."<br>
   <i>Betrag:</i> 150 € (bzw. 120 € für Vereinsmitglieder)<br>
   <br>
-  Das Segelcamp findet vom <strong>25.07.2022 bis zum 29.07.2021, jeweils von 10:00 bis 18:00 Uhr</strong>, statt.<br>
+  <!--Das Segelcamp findet vom <strong>25.07.2022 bis zum 29.07.2021, jeweils von 10:00 bis 18:00 Uhr</strong>, statt.<br>-->
   Die Kinder sollten, falls vorhanden, Segelsachen, Schwimmsachen, Wechselkleidung und Wetterabhängige Kleidung mitbringen. Sonnencreme, eine Kopfbedeckung und eine Sonnenbrille sind auch empfehlenswert.<br>
   <br>
   Wir freuen uns auf euch,<br>

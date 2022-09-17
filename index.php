@@ -1,15 +1,15 @@
 <?php require('./inc/backend.inc.php'); ?>
-<?php $page_title = 'Segelcamp 2022'; ?>
+<?php $page_title = 'Segelcamp 2023'; ?>
 <?php require('./inc/header.inc.php'); ?>
 								<section id="banner">
 									<div class="content">
 										<header>
-											<h1>Opti Sommer Segelcamp 2022</h1>
+											<h1>Opti Sommer Segelcamp 2023</h1>
 											<p>Segeln macht Freu(n)de</p>
 										</header>
-                    <!--<strong>Zurzeit sind leider noch keine Anmeldungen möglich.</strong>-->
+                    <strong>Zurzeit sind leider noch keine Anmeldungen möglich.</strong>
                     <p>
-											Auch in diesem Jahr findet unser Sommer Segelcamp für eine Woche statt. Das Camp ist für Anfänger und Fortgeschrittene, im Alter von <strong>8-12 Jahren</strong> gedacht, um Segeln zu lernen oder die vorhandenen Fähigkeiten zu verbessern. Sollte Ihr Kind älter oder jünger sein, schreiben Sie uns gerne eine <a href="mailto:segelcamp@lohheider-see.de?subject=Mein%20Kind%20ist%20%C3%A4lter%20oder%20j%C3%BCnger%20als%208-12%20Jahre&body=Hallo%20SLS-Jugend-Team%2C%0A%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen%0A">E-Mail</a>. Das Camp ist für Anfänger und Fortgeschrittene, um Segeln zu lernen oder die vorhandenen Fähigkeiten zu verbessern. Wie in den letzten Jahren wird das Camp von unserer Jugend geleitet. Wir sind derzeit 6 TrainerInnen, die Spaß an der Arbeit mit Kindern und am Segeln haben. Wir sorgen für die Getränke und das Mittagessen. Die Nutzung der Boote ist ebenfalls in dem Preis mit inbegriffen. Falls Sie weitere Fragen haben, schreiben Sie uns gerne über <a href="https://www.instagram.com/sls_jugend" title="@sls_jugend">Instagram</a> oder über unsere E-Mail-Adresse <a href="mailto:segelcamp@lohheider-see.de?subject=Mein%20Kind%20ist%20%C3%A4lter%20oder%20j%C3%BCnger%20als%208-12%20Jahre&body=Hallo%20SLS-Jugend-Team%2C%0A%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen%0A">segelcamp@lohheider-see.de</a> an. Die genauen Informationen, wie den Preis finden Sie über dem Anmeldeformular.<br>
+											Auch in diesem Jahr findet unser Sommer Segelcamp für eine Woche statt. Das Camp ist für Anfänger und Fortgeschrittene, im Alter von <strong>8-12 Jahren</strong> gedacht, um Segeln zu lernen oder die vorhandenen Fähigkeiten zu verbessern. Sollte Ihr Kind älter oder jünger sein, schreiben Sie uns gerne eine <a href="mailto:segelcamp@lohheider-see.de?subject=Mein%20Kind%20ist%20%C3%A4lter%20oder%20j%C3%BCnger%20als%208-12%20Jahre&body=Hallo%20SLS-Jugend-Team%2C%0A%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen%0A">E-Mail</a>. Das Camp ist für Anfänger und Fortgeschrittene, um Segeln zu lernen oder die vorhandenen Fähigkeiten zu verbessern. Wie in den letzten Jahren wird das Camp von unserer Jugend geleitet. <!--Wir sind derzeit 6 TrainerInnen, die Spaß an der Arbeit mit Kindern und am Segeln haben.--> Wir sorgen für die Getränke und das Mittagessen. Die Nutzung der Boote ist ebenfalls in dem Preis mit inbegriffen. Falls Sie weitere Fragen haben, schreiben Sie uns gerne über <a href="https://www.instagram.com/sls_jugend" title="@sls_jugend">Instagram</a> oder über unsere E-Mail-Adresse <a href="mailto:segelcamp@lohheider-see.de?subject=Mein%20Kind%20ist%20%C3%A4lter%20oder%20j%C3%BCnger%20als%208-12%20Jahre&body=Hallo%20SLS-Jugend-Team%2C%0A%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen%0A">segelcamp@lohheider-see.de</a> an. Die genauen Informationen, wie den Preis, finden Sie über dem Anmeldeformular.<br>
 											Wir freuen uns auf eine schöne Segelwoche 🙂!
 										</p>
 										<ul class="actions">
@@ -88,7 +88,7 @@
                           <p>(*) Erforderliche Felder</p>
 													<?php if(isset($msg_field)) { echo $msg_field; } ?>
 													<p>
-														Das Camp findet <strong>vom 25.07.2022 bis zum 29.07.2022, jeweils von 10:00 bis 18:00 Uhr</strong>, statt. Die Kosten belaufen sich auf <strong>150 €</strong> (120 € für Vereinsmitglieder) inkl. Betreuung, Nutzung der Boote und Verpflegung. Das Geld wird an die, in der Bestätigungs-E-Mail stehenden Bankdaten überwiesen.
+														<!--Das Camp findet <strong>vom 25.07.2022 bis zum 29.07.2022, jeweils von 10:00 bis 18:00 Uhr</strong>, statt.--> Die Kosten belaufen sich auf <strong>150 €</strong> (120 € für Vereinsmitglieder) inkl. Betreuung, Nutzung der Boote und Verpflegung. Das Geld wird an die, in der Bestätigungs-E-Mail stehenden Bankdaten überwiesen.
 														Die Kinder sollten, falls vorhanden, Segelsachen, Schwimmsachen, Wechselkleidung und Wetterabhängige Kleidung mitbringen. Wenn vorhanden auch gerne eine eigene Schwimmweste. Ansonsten werden welche vom Verein gestellt. Weitere Informationen dazu folgen, dann in der WhatsApp-Gruppe oder per <a href="mailto:segelcamp@lohheider-see.de?body=Hallo%20SLS-Jugend-Team%2C%0A%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen">E-Mail</a>.<br>
 														<strong>Das Segelcamp ist für Kinder von 8 bis 12 Jahren. Sollte Ihr Kind älter oder jünger sein, schreiben Sie uns bitte per <a href="mailto:segelcamp@lohheider-see.de?subject=Mein%20Kind%20ist%20%C3%A4lter%20oder%20j%C3%BCnger%20als%208-12%20Jahre&body=Hallo%20SLS-Jugend-Team%2C%0A%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen%0A">E-Mail</a>, dann können wir im Einzelfall abwägen ob Ihr Kind trotzdem an dem Camp teilnehmen kann.</strong>
 													</p>
@@ -226,7 +226,7 @@
                                             </div>
 													</form>
 													<?php } else { ?>
-														<h2>Leider können wir keine weiteren Anmeldungen mehr annehmen. Gerne können Sie uns dazu per E-Mail kontaktieren: <a href="mailto:segelcamp@lohheider-see.de?subject=Anfrage%20f%C3%BCr%20Anmeldung%20trotz%20maximaler%20Teilnehmeranzahl&body=Hallo%20SLS-Jugend-Team%2C%0A%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen">segelcamp@lohheider-see.de</a>.</h2>
+														<h2>Leider können wir (momentan) keine weiteren Anmeldungen (mehr) annehmen. Gerne können Sie uns dazu per E-Mail kontaktieren: <a href="mailto:segelcamp@lohheider-see.de?subject=Anfrage%20f%C3%BCr%20Anmeldung%20trotz%20maximaler%20Teilnehmeranzahl&body=Hallo%20SLS-Jugend-Team%2C%0A%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen">segelcamp@lohheider-see.de</a>.</h2>
 													<?php } ?>
                         </div>
 									<div class="features">
@@ -234,7 +234,7 @@
 											<span class="icon fa-gem"></span>
 											<div class="content">
 												<h3>Erfahrene Segeltrainer</h3>
-												<p>Wir sind ein Team aus mehreren Segeltrainern zwischen 19 und 20 Jahren, bringen bereits seit mehreren Jahren Kindern das Segeln bei und haben in den letzten Jahren immer wieder mit viel Erfolg das Segelcamp geleitet und organisiert.</p>
+												<p>Wir sind ein Team aus mehreren ausgebildeten Segeltrainern zwischen 20 und 21 Jahren, bringen bereits seit mehreren Jahren Kindern das Segeln bei und haben in den letzten Jahren immer wieder mit viel Erfolg das Segelcamp geleitet und organisiert.</p>
 											</div>
 										</article>
 										<article>
