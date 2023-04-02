@@ -45,9 +45,12 @@ Aufgrund der Corona Situation und auch im verlauf der weitreichenden Digitalisie
 * 0.0.1.1
     * Kleine Änderungen und Vereinfachungen
 
+* 0.0.1.2
+    * Anpassung der Daten an das Segelcamp 2023
+
 ## Metadaten
 
-Tom – [Github: @tomtactom](https://github.com/tomtactom) – [WhatsApp](http://wa.me/00491788724382/?text=Hallo+Tom%2C%0D%0AIch+habe+auf+GitHub+dein+Projekt:+Segelcamp+-+https%3A%2F%2Fgithub.com%2Ftomtactom%2Fsegelcamp.git+gefunden+und+habe+eine+Anmerkung+dazu.)
+Tom – [Github: @tomtactom](https://github.com/tomtactom) – [WhatsApp](http://wa.me/004915754088299/?text=Hallo+Tom%2C%0D%0AIch+habe+auf+GitHub+dein+Projekt:+Segelcamp+-+https%3A%2F%2Fgithub.com%2Ftomtactom%2Fsegelcamp.git+gefunden+und+habe+eine+Anmerkung+dazu.)
 
  _Wenn du bei dem Projekt mitarbeiten möchtest, schreibe einem der Entwickler per WhatsApp_
 
