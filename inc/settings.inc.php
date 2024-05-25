@@ -1,8 +1,8 @@
 <?php
   $costs = "150 € (bzw. 120 € für Vereinsmitglieder)";
-  $datestart = "17.07.2023";
-  $dateend = "21.07.2023";
+  $datestart = "29.07.2024";
+  $dateend = "08.08.2024";
   $timestart = "10:00";
   $timeend = "18:00";
-  $whatsappgrouplink = "https://chat.whatsapp.com/LSVN9gm3eZsBiRNTWfCZyN";
-  $sommercampyear = "2023";
+  $whatsappgrouplink = "https://chat.whatsapp.com/LfaZpiiaQ7OErtvmubwEyK";
+  $sommercampyear = "2024";
